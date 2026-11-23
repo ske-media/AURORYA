@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.next/
+.expo/
+.turbo/
+coverage/
+*.tsbuildinfo
+.DS_Store
+
+# Secrets : jamais dans le dépôt (SPEC §21.1)
+.env
+.env.*
+!.env.example
