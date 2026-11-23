@@ -1,6 +1,6 @@
 // Dépendances injectées dans les routes : tout ce qui touche l'extérieur passe par ces ports,
 // ce qui rend l'API testable sans réseau.
-import type { LlmPort, RoastPrompts } from '@aurorya/ai';
+import type { LlmPort, RoastPrompts, RoleCatalog } from '@aurorya/ai';
 import type { EngineConfig } from '@aurorya/astro-engine';
 import type { createLogger } from './log';
 
@@ -29,6 +29,8 @@ export type AppDeps = Readonly<{
   llm: LlmPort | null;
   prompts: Readonly<Record<'fr' | 'en', Readonly<Record<'soft' | 'cash' | 'expert', RoastPrompts>>>>;
   engineConfig: EngineConfig;
+  /** Catalogue des rôles de groupe (content/roles). */
+  roleCatalog: RoleCatalog;
   /** Adresse publique du site, pour les liens d'invitation. Null tant que le domaine n'existe pas (O-06). */
   publicSiteUrl: string | null;
   /** Envoi d'e-mails (Resend). Absent tant que le service n'est pas configuré : l'inscription est enregistrée sans envoi. */

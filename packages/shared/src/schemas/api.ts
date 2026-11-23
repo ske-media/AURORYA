@@ -103,3 +103,13 @@ export const JoinGroupInputSchema = z
     consentVersion: z.string().min(1).max(20),
   })
   .refine((v) => (v.token === undefined) !== (v.code === undefined), { path: ['token'], message: 'jeton ou code, l’un des deux' });
+
+export const PostGroupReadingInputSchema = z.strictObject({ kind: z.enum(['roles_duos', 'weekly_weather']), mode: z.enum(TONE_MODES) });
+export const GroupReadingSchema = z.strictObject({
+  kind: z.literal('roles_duos'),
+  /** « structure » : rôles et duos calculés, textes pas encore rédigés (aucun fournisseur d'IA). */
+  status: z.enum(['ok', 'fallback', 'structure']),
+  roles: z.array(z.strictObject({ userId: z.string().uuid(), displayName: z.string(), roleId: z.string(), label: z.string(), line: z.string().nullable(), detail: z.string().nullable(), locked: z.boolean() })),
+  duos: z.array(z.strictObject({ kind: z.enum(['duo_fusion', 'duo_sparks']), a: z.string().uuid(), b: z.string().uuid(), title: z.string().nullable(), line: z.string().nullable(), detail: z.string().nullable(), locked: z.boolean() })),
+});
+export type GroupReading = z.infer<typeof GroupReadingSchema>;

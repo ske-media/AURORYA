@@ -1,7 +1,9 @@
 // Tests de contrat de l'API contre un vrai Postgres (migrations appliquées) : entrée invalide,
 // non authentifié, sans droit, cas nominal (SPEC §22.2).
 import type { LlmPort, RoastPrompts } from '@aurorya/ai';
+import { RoleCatalogSchema } from '@aurorya/ai';
 import { DEFAULT_ENGINE_CONFIG } from '@aurorya/astro-engine';
+import rolesJson from '../../../../content/roles/roles.v1.json';
 import { ChartSummarySchema, type KbEntry, type RoastOutput, RoastResponseSchema, SECTION_KEYS, err, ok } from '@aurorya/shared';
 import { afterAll, beforeAll, beforeEach, describe, expect, inject, it } from 'vitest';
 import type { AppDeps, AuthPort } from './deps';
@@ -13,6 +15,7 @@ import { ageOn, postCharts } from './routes/charts';
 import { getConfig, putProfile } from './routes/profile';
 import { postRoasts, roastSheetFor } from './routes/roasts';
 
+const roleCatalog = RoleCatalogSchema.parse(rolesJson);
 const pg = inject('pg');
 const { sql, close } = createPgSql({ host: pg.host, port: pg.port, user: 'postgres', database: 'postgres' });
 const USERS = { lea: '00000000-0000-4000-8000-0000000000a1', ines: '00000000-0000-4000-8000-0000000000a2' };
@@ -24,7 +27,7 @@ const prompt = (id: string): RoastPrompts => ({ system: id, judgeSystem: 'juge',
 const prompts = { fr: { soft: prompt('fr-soft'), cash: prompt('fr-cash'), expert: prompt('fr-expert') }, en: { soft: prompt('en-soft'), cash: prompt('en-cash'), expert: prompt('en-expert') } };
 const deps = (): AppDeps => ({
   sql, auth, logger: createLogger((line) => logs.push(line)), now: () => clock, llm, prompts,
-  engineConfig: DEFAULT_ENGINE_CONFIG, publicSiteUrl: null, nameFilter: createNameFilter(['salope']),
+  engineConfig: DEFAULT_ENGINE_CONFIG, roleCatalog, publicSiteUrl: null, nameFilter: createNameFilter(['salope']),
 });
 
 const call = (route: (r: Request, d: AppDeps) => Promise<Response>, method: string, body: unknown, token: string | null = 'lea', headers: Record<string, string> = {}) =>

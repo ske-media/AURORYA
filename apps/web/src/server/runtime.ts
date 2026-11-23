@@ -1,6 +1,7 @@
 // Câblage des dépendances réelles à partir de l'environnement (SPEC §21.1 : secrets côté serveur uniquement).
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
+import { RoleCatalogSchema } from '@aurorya/ai';
 import { DEFAULT_ENGINE_CONFIG } from '@aurorya/astro-engine';
 import { createSupabaseAuth } from './auth-supabase';
 import type { AppDeps } from './deps';
@@ -43,6 +44,7 @@ export function getDeps(): AppDeps {
     llm: null,
     prompts: buildRoastPrompts((path) => readContent(`prompts/${path}`), brand.personaName),
     engineConfig: DEFAULT_ENGINE_CONFIG,
+    roleCatalog: RoleCatalogSchema.parse(JSON.parse(readContent('roles/roles.v1.json') ?? '{}')),
     publicSiteUrl: process.env.PUBLIC_SITE_URL?.replace(/\/$/, '') || null,
     nameFilter: createNameFilter(blocklist),
   };

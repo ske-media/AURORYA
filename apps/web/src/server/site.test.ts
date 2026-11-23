@@ -1,5 +1,7 @@
 import { readFileSync } from 'node:fs';
+import { RoleCatalogSchema } from '@aurorya/ai';
 import { DEFAULT_ENGINE_CONFIG } from '@aurorya/astro-engine';
+import rolesJson from '../../../../content/roles/roles.v1.json';
 import { SignJWT, createLocalJWKSet, exportJWK, generateKeyPair } from 'jose';
 import { afterAll, beforeEach, describe, expect, inject, it } from 'vitest';
 import mobileFr from '../../../mobile/src/i18n/locales/fr/common.json';
@@ -12,6 +14,7 @@ import { buildRoastPrompts, stripFrontMatter } from './prompts';
 import { invalidateConfigCache } from './remote-config';
 import { confirmWaitlist, postWaitlist, unsubscribeWaitlist } from './waitlist';
 
+const roleCatalog = RoleCatalogSchema.parse(rolesJson);
 const root = new URL('../../../../content/', import.meta.url);
 const read = (path: string): string | null => {
   try { return readFileSync(new URL(path, root), 'utf8'); } catch { return null; }
@@ -75,7 +78,7 @@ describe('liste d’attente', () => {
   const logs: string[] = [];
   const deps: AppDeps = {
     sql, auth: { verify: async () => null }, logger: createLogger((l) => logs.push(l)), now: () => new Date('2026-11-23T10:00:00Z'), llm: null,
-    prompts: {} as AppDeps['prompts'], engineConfig: DEFAULT_ENGINE_CONFIG, publicSiteUrl: null, nameFilter: createNameFilter([]),
+    prompts: {} as AppDeps['prompts'], engineConfig: DEFAULT_ENGINE_CONFIG, roleCatalog, publicSiteUrl: null, nameFilter: createNameFilter([]),
     sendEmail: async (email) => void sent.push(email),
   };
   const post = (body: unknown, ip = '203.0.113.7') =>

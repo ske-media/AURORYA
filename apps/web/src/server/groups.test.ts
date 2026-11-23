@@ -1,4 +1,6 @@
+import { RoleCatalogSchema } from '@aurorya/ai';
 import { DEFAULT_ENGINE_CONFIG } from '@aurorya/astro-engine';
+import rolesJson from '../../../../content/roles/roles.v1.json';
 import { afterAll, beforeAll, beforeEach, describe, expect, inject, it } from 'vitest';
 import type { AppDeps, AuthPort } from './deps';
 import { createLogger } from './log';
@@ -7,8 +9,11 @@ import { createPgSql } from './pg-sql';
 import { invalidateConfigCache } from './remote-config';
 import { postCharts } from './routes/charts';
 import { deleteGroup, deleteGroupMember, deleteInvite, getInvite, patchGroup, postGroupInvites, postGroupLeave, postGroups, postGroupsJoin, postInvitesResolve } from './routes/groups';
+import { postGroupReadings } from './routes/group-readings';
 import { putProfile } from './routes/profile';
+import { GroupReadingSchema } from '@aurorya/shared';
 
+const roleCatalog = RoleCatalogSchema.parse(rolesJson);
 const pg = inject('pg');
 const { sql, close } = createPgSql({ host: pg.host, port: pg.port, user: 'postgres', database: 'postgres' });
 const id = (n: number): string => `00000000-0000-4000-8000-0000000000b${n}`;
@@ -22,7 +27,7 @@ const clock = new Date('2026-11-23T10:00:00Z');
 let now = clock;
 const deps = (): AppDeps => ({
   sql, auth, logger: createLogger(() => undefined), now: () => now, llm: null, prompts: {} as AppDeps['prompts'],
-  engineConfig: DEFAULT_ENGINE_CONFIG, publicSiteUrl: 'https://exemple.invalid', nameFilter: createNameFilter(['salope']),
+  engineConfig: DEFAULT_ENGINE_CONFIG, roleCatalog, publicSiteUrl: 'https://exemple.invalid', nameFilter: createNameFilter(['salope']),
 });
 type Route = (r: Request, d: AppDeps, p?: Record<string, string>) => Promise<Response>;
 const call = (route: Route, method: string, token: string | null, body?: unknown, params: Record<string, string> = {}) =>
@@ -121,6 +126,25 @@ describe('groupes', () => {
     expect(full.error).toMatchObject({ code: 'CONFLICT', details: { reason: 'group_full' } });
     expect((await (await call(getInvite, 'GET', null, undefined, { token: invite.token })).json()).valid).toBe(false);
     expect((await call(postGroupInvites, 'POST', 'owner', undefined, { id: groupId })).status).toBe(409);
+  });
+
+  it('attribue un rôle différent à chaque membre et choisit deux duos, sans jamais exposer de score', async () => {
+    const response = await call(postGroupReadings, 'POST', 'amie', { kind: 'roles_duos', mode: 'cash' }, { id: groupId });
+    expect(response.status).toBe(200);
+    const text = await response.text();
+    const reading = GroupReadingSchema.parse(JSON.parse(text));
+    expect(reading.roles).toHaveLength(8);
+    expect(new Set(reading.roles.map((r) => r.roleId)).size).toBe(8);
+    expect(reading.roles.every((r) => r.label.length > 0 && r.locked)).toBe(true);
+    expect(reading.duos.map((d) => d.kind)).toEqual(['duo_fusion', 'duo_sparks']);
+    expect(text).not.toMatch(/harmony|tension|payload|longitude/);
+    const again = await (await call(postGroupReadings, 'POST', 'owner', { kind: 'roles_duos', mode: 'soft' }, { id: groupId })).json();
+    expect(again.roles.map((r: { roleId: string }) => r.roleId)).toEqual(reading.roles.map((r) => r.roleId));
+  });
+
+  it('refuse la lecture à une non-membre et réserve la météo au Premium', async () => {
+    expect((await call(postGroupReadings, 'POST', 'x6', { kind: 'roles_duos', mode: 'cash' }, { id: groupId })).status).toBe(404);
+    expect((await (await call(postGroupReadings, 'POST', 'amie', { kind: 'weekly_weather', mode: 'cash' }, { id: groupId })).json()).error.code).toBe('PREMIUM_REQUIRED');
   });
 
   it('réserve le renommage, le retrait et la suppression à la propriétaire', async () => {
