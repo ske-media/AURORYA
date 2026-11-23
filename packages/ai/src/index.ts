@@ -10,3 +10,7 @@ export { sectionFacts } from './sections';
 export { MEMBER_TOKENS, type MemberToken, NAME_TOKEN, replaceTokens, tokensIn } from './tokens';
 export { applyTypography } from './typography';
 export { type Failure, type FailureCode, type TextContext, checkText } from './validation/checks';
+export {
+  type Criterion, type Duos, type PairScore, type Role, type RoleAssignment, type RoleCatalog, RoleCatalogSchema,
+  assignRoles, criterionAnchors, pickDuos, scoreRole,
+} from './groups/roles';
