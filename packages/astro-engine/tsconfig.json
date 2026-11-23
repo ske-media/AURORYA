@@ -1,4 +1,13 @@
 {
   "extends": "../../tsconfig.base.json",
-  "include": ["src/**/*"]
+  "include": [
+    "src/**/*",
+    "__fixtures__/**/*.json",
+    "config/*.json"
+  ],
+  "compilerOptions": {
+    "types": [
+      "node"
+    ]
+  }
 }

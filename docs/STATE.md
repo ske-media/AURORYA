@@ -1,11 +1,14 @@
 # État du projet
 
-Mis à jour : 2026-11-23, fin de T-002.
+Mis à jour : 2026-11-23, fin de T-011 (moteur).
 
 ## Fait
 - **T-001** — Monorepo pnpm, `CLAUDE.md`, fichiers vivants, lint avec frontières entre paquets, contrôle de secrets, CI minimale, versions verrouillées.
 - **T-002** — `packages/shared` : identifiants canoniques (§3) et tokens (couleurs, typographie, espacements, mouvement) avec test de contraste ; polices ; logos de l'Annexe C ; registre des fichiers (`assets.manifest.json`, 126 entrées) ; commandes `assets:placeholders`, `assets:check` (`--promote`, `--release`), `assets:build`, `assets:report` ; 100 fichiers provisoires ; `docs/ASSETS.md`.
   Vérifié dans la session : `pnpm lint`, `pnpm typecheck`, `pnpm test` (119 tests), `pnpm assets:check` passent. `pnpm assets:check --release` échoue comme attendu (93 fichiers provisoires bloquants).
+- **T-004, T-005, T-010, T-011** — Moteur complet dans `packages/astro-engine` : port d'éphémérides et adaptateur `astronomy-engine`, maisons, résolution des fuseaux, `computeChart`, `computeTransits`, `computeSynastry`, `computeSky`, configuration versionnée, schémas Zod du thème dans `packages/shared`.
+  Vérifié dans la session : 173 tests passent, dont la comparaison aux éphémérides de la NASA, le contrôle géométrique des angles sur 240 cas, la définition de Placidus, et la concordance des fuseaux avec la base du système.
+  Limites : tolérance de 0,01° au lieu de 0,001° (ADR-012) ; essai sur Vercel non fait ; contrôle croisé humain non fait (Q-09) ; couverture de code non mesurée.
 - `docs/SPEC.md` : copie à l'octet près du texte fourni par le fondateur.
 
 ## Écarts et limites de T-002
@@ -24,14 +27,16 @@ Mis à jour : 2026-11-23, fin de T-002.
 - `apps/mobile` et `apps/web` sont des squelettes sans Expo ni Next.js.
 
 ## Prochaine action
-T-003 (app Expo : navigation, thème, i18n, composants de base, galerie) puis T-004 (moteur, voie C).
-T-003 peut démarrer sans compte ; un build iOS exigera le compte Expo.
+T-003 (app Expo : navigation, thème, i18n, composants de base, galerie). Peut démarrer sans compte ; un build iOS exigera le compte Expo.
+Ensuite, sans compte : `packages/ai` (T-030, T-031), contenus, catalogue des rôles (T-042 côté calcul).
 
 ## Bloqué, en attente d'un fondateur
 - Comptes à ouvrir : Supabase (T-006), Vercel payant (T-004, T-008, T-009), Expo/EAS (build de T-003), puis RevenueCat, Sentry, Resend, fournisseur d'IA.
 - Soumission à Apple : structure juridique (O-05), domaine (O-06), disponibilité du nom (O-01), textes légaux relus.
 
 ## Pièges découverts
+- L'environnement distant « aurorya » n'autorise que `ssd.jpl.nasa.gov` en plus des registres de paquets. `fetch` de Node ignore le proxy : utiliser curl.
+- Les scripts lancés par `node` ne peuvent pas importer les sources du moteur (imports sans extension) : les mesures passent par Vitest.
 - TypeScript 7.0.2 est la dernière version, mais `typescript-eslint` 8.73.0 exige `<6.1.0` : TypeScript est verrouillé en 6.0.3.
 - La session distante impose la branche `claude/hopeful-fermat-ttya03`, et non `feat/T-xxx-…` (§1.5).
 - Node 22 exécute directement les scripts `.ts` (types retirés à la volée) : les imports entre scripts portent l'extension `.ts`.

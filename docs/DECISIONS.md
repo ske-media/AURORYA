@@ -84,3 +84,30 @@ Contexte : ADR-007 demande un violet profond en second plan et des halos ciblés
 Décision : palette `aubergine` `#1B1830` et `nebula` `#3B3360` ; rôles `backdrop`, `backdropTint` (fond nébuleux) et `glow` (halo, `rgba(233,214,172,0.35)` en thème sombre). Tous les textes et éléments graphiques passent le test de contraste sur ces fonds.
 Conséquences : valeurs choisies par le développement, à ajuster par le design sans toucher au code des composants.
 Validé par : en attente.
+
+## ADR-012 — Moteur : bibliothèque `astronomy-engine`, tolérance de 0,01° (2026-11-23)
+Statut : accepté
+Contexte : ADR-001 retient une bibliothèque sous licence permissive. Mesure faite contre les éphémérides DE441 de la NASA (JPL Horizons) sur 48 instants de 1900 à 2030 : écart maximal en longitude de 2 à 5″ (Soleil, Lune, Mars, Pluton), 8 à 10″ (Mercure, Vénus, Jupiter, Saturne), 12 à 18″ (Uranus, Neptune). La SPEC §11.8 demandait 0,001° (3,6″).
+Décision : `astronomy-engine` 2.1.19 (MIT) derrière `EphemerisPort`. Maisons (Placidus, repli Porphyre) et nœud vrai écrits en interne. Tolérance des tests de référence : 0,01° (36″) sur les positions, au lieu de 0,001°. Fuseaux : `@js-joda/timezone` 3.2.1 (BSD-3-Clause, base IANA 2026f embarquée). Références : fichier `horizons.v1.json`, produit par `pnpm engine:golden:fetch` qui enregistre chaque requête ; l'outil de Swiss Ephemeris n'est pas utilisé.
+Conséquences : aucun effet sur les signes, maisons et aspects, sauf naissance dans les heures entourant un changement de signe d'une planète lente (jusqu'à environ 19 h pour Neptune). La minute affichée peut différer d'une unité d'un site de référence. La fiche App Store et la note aux examinateurs ne doivent pas revendiquer un « moteur d'éphémérides de référence » (Annexe D à adapter). Amélioration possible sans toucher au reste : lire les éphémérides publiques du JPL dans un autre adaptateur du port (OPEN_QUESTIONS Q-08). Temps de calcul mesuré : 0,8 ms par thème à chaud, 30 ms au premier appel. L'essai dans une fonction Vercel reste à faire (pas de compte).
+Validé par : décision prise en mode autonome (ADR-013), à confirmer par un fondateur.
+
+## ADR-013 — Mode autonome (2026-11-23)
+Statut : accepté
+Contexte : le fondateur demande que le développement se poursuive seul jusqu'au bout, sans validation intermédiaire.
+Décision : Claude Code tranche lui-même les points ouverts et les ambiguïtés, enchaîne les tickets sans attendre de validation de plan, et consigne chaque décision ici avec la mention « mode autonome ». Restent soumis à un humain : les actions irréversibles de la loi 15 (produits App Store, envoi à Apple, migration destructive, suppression de données), l'ouverture de comptes, tout engagement de dépense, et ce qui relève du juriste.
+Conséquences : remplace, pour la durée de cette consigne, l'attente de validation du §1.5 étape 4 et l'arrêt systématique du §1.4 sur les points non irréversibles.
+Validé par : fondateur, en session.
+
+## ADR-014 — Détails de calcul fixés par le développement (2026-11-23)
+Statut : accepté (mode autonome), à faire relire par l'astrologue (O-14)
+Contexte : la SPEC §11.5 et §11.7 laisse plusieurs règles implicites.
+Décision :
+- Longitudes arrondies à 10⁻⁶ degré dans le thème ; signe, degré et minute déduits de la valeur arrondie.
+- Deux angles (Ascendant, Milieu du Ciel) ne forment pas d'aspect entre eux.
+- Corps angulaire : planète à moins de `angularOrb` de l'un des quatre angles.
+- Stelliums et dominantes : les dix planètes seulement (pas le nœud) ; un corps au signe incertain est ignoré.
+- Maîtrises modernes et traditionnelles, classement des transits et poids de synastrie : tables dans `engine-config.v1.json`. En synastrie, le nœud et le Milieu du Ciel sont exclus ; une conjonction impliquant Mars, Saturne, Uranus ou Pluton sans Vénus ni Jupiter compte comme tension.
+- `computeTransits` renvoie `{ hits, moon }` au lieu d'une simple liste, pour porter le climat lunaire.
+- Ciel du jour : orbe de 2° (`skyOrb`), changement de signe détecté entre 00:00 et 24:00 UTC.
+Validé par : mode autonome.

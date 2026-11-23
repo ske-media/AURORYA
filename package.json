@@ -13,7 +13,9 @@
     "assets:placeholders": "node scripts/assets/placeholders.ts",
     "assets:check": "node scripts/assets/check.ts",
     "assets:build": "node scripts/assets/build.ts",
-    "assets:report": "node scripts/assets/report.ts"
+    "assets:report": "node scripts/assets/report.ts",
+    "engine:golden": "vitest run packages/astro-engine",
+    "engine:golden:fetch": "node scripts/engine/make-golden.ts"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",

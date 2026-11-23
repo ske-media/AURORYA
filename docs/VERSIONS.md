@@ -18,6 +18,9 @@ Protocole : SPEC §1.3. Aucune plage flottante (`.npmrc` : `save-exact=true`).
 | zod | 4.6.7 | MIT | registre npm, `package.json` du paquet | Validation du registre des fichiers (racine). Servira aux schémas partagés. |
 | sharp | 0.35.5 | Apache-2.0 | registre npm, `package.json` du paquet | Outil de développement : fichiers provisoires et mesure des images. Piège : voir STATE. |
 | lucide-static | 1.78.0 | ISC | registre npm, fichier `LICENSE` | Source des 18 icônes d'interface copiées dans le registre. Pas utilisé à l'exécution. |
+| astronomy-engine | 2.1.19 | MIT | `package.json` et `astronomy.d.ts` du paquet ; précision mesurée contre JPL Horizons (ADR-012) | Moteur. Traite UTC et UT1 comme identiques. `GeoVector(…, true)` : temps de lumière et aberration ; `Rotation_EQJ_ECT` : écliptique vraie de la date. |
+| @js-joda/core | 6.3.2 | BSD-3-Clause | typings du paquet | Fuseaux. `ZoneRules.validOffsets()` renvoie 0, 1 ou 2 décalages (saut, normal, heure répétée). |
+| @js-joda/timezone | 3.2.1 | BSD-3-Clause | README du paquet | Base IANA 2026f embarquée (version non exposée par le code : constante vérifiée par un test). Importer le paquet complet, jamais une variante « year-range ». Concorde avec la base du système pour Paris, Zurich, Bruxelles, Luxembourg, Toronto de 1900 à 2026 (test). |
 
 ## Relevé, pas encore installé
 
@@ -40,3 +43,9 @@ Protocole : SPEC §1.3. Aucune plage flottante (`.npmrc` : `save-exact=true`).
 | Manrope-SemiBold | google/fonts, `ofl/manrope/Manrope[wght].ttf` | OFL-1.1 | Instance statique (wght 600) produite avec fontTools 4.68.0. Aucun nom réservé déclaré. |
 
 Les textes de licence sont dans `apps/mobile/assets/fonts/licenses/`.
+
+## Services externes
+
+| Service | Usage | Vérifié le | Remarques |
+|---|---|---|---|
+| JPL Horizons (`ssd.jpl.nasa.gov/api/horizons.api`) | Valeurs de référence du moteur (DE441) | 2026-11-23 | Quantité 31 : longitude et latitude écliptiques apparentes de la date. Temps universel pour les tables d'observation, TDB pour les éléments. Connexions parfois coupées : le script réessaie. Depuis Node, passer par curl. |

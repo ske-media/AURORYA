@@ -1,0 +1,38 @@
+{
+  "configVersion": "1",
+  "zodiac": "tropical",
+  "houseSystem": "placidus",
+  "houseSystemFallback": "porphyry",
+  "polarLatitudeThreshold": 66.0,
+  "node": "true",
+  "natalOrbs": { "conjunction": 8, "opposition": 8, "trine": 7, "square": 7, "sextile": 5 },
+  "luminaryBonus": 2,
+  "pointOrbFactor": 0.5,
+  "transitOrbs": { "conjunction": 2, "opposition": 2, "trine": 1.5, "square": 2, "sextile": 1 },
+  "synastryOrbs": { "conjunction": 6, "opposition": 6, "trine": 5, "square": 5, "sextile": 4 },
+  "skyOrb": 2,
+  "angularOrb": 8,
+  "stelliumMinBodies": 3,
+  "rulers": {
+    "modern": { "aries": "mars", "taurus": "venus", "gemini": "mercury", "cancer": "moon", "leo": "sun", "virgo": "mercury", "libra": "venus", "scorpio": "pluto", "sagittarius": "jupiter", "capricorn": "saturn", "aquarius": "uranus", "pisces": "neptune" },
+    "traditional": { "aries": "mars", "taurus": "venus", "gemini": "mercury", "cancer": "moon", "leo": "sun", "virgo": "mercury", "libra": "venus", "scorpio": "mars", "sagittarius": "jupiter", "capricorn": "saturn", "aquarius": "saturn", "pisces": "jupiter" }
+  },
+  "transitRanking": {
+    "slowBodies": ["jupiter", "saturn", "uranus", "neptune", "pluto"],
+    "personalPoints": ["sun", "moon", "asc", "mc", "mercury", "venus", "mars"]
+  },
+  "synastryWeights": {
+    "aspects": {
+      "trine": { "harmony": 3, "tension": 0 },
+      "sextile": { "harmony": 2, "tension": 0 },
+      "square": { "harmony": 0, "tension": 3 },
+      "opposition": { "harmony": 0, "tension": 2 },
+      "conjunction": { "harmony": 3, "tension": 0 },
+      "conjunctionHard": { "harmony": 0, "tension": 3 }
+    },
+    "hardConjunctionBodies": ["mars", "saturn", "uranus", "pluto"],
+    "softeningBodies": ["venus", "jupiter"],
+    "personalBodies": ["sun", "moon", "mercury", "venus", "mars", "asc"],
+    "personalWeight": 2
+  }
+}

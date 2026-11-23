@@ -68,8 +68,28 @@ importers:
       '@aurorya/shared':
         specifier: workspace:*
         version: link:../shared
+      '@js-joda/core':
+        specifier: 6.3.2
+        version: 6.3.2
+      '@js-joda/timezone':
+        specifier: 3.2.1
+        version: 3.2.1(@js-joda/core@6.3.2)
+      astronomy-engine:
+        specifier: 2.1.19
+        version: 2.1.19
+      zod:
+        specifier: 4.6.7
+        version: 4.6.7
+    devDependencies:
+      '@types/node':
+        specifier: 22.20.5
+        version: 22.20.5
 
-  packages/shared: {}
+  packages/shared:
+    dependencies:
+      zod:
+        specifier: 4.6.7
+        version: 4.6.7
 
 packages:
 
@@ -309,6 +329,14 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
+  '@js-joda/core@6.3.2':
+    resolution: {integrity: sha512-BVsYu84Gut8YTNR1v5/PnifmqXv4SVcfA/hVIM/mXADZfIocip/DfNppBtv+4am5hGH1XuH6FSoU8OHkBvZMeA==}
+
+  '@js-joda/timezone@3.2.1':
+    resolution: {integrity: sha512-0a0y7kcaIrbEGyOozsbqO25ac64PEDQNezXnOmmmrWww93LgKQrHERoey0Kt85LbEkjyLTfChOWM1pJ1fAVSfQ==}
+    peerDependencies:
+      '@js-joda/core': '>=5.7.0'
+
   '@keyv/bigmap@1.3.1':
     resolution: {integrity: sha512-WbzE9sdmQtKy8vrNPa9BRnwZh5UF4s1KTmSK0KUVLo3eff5BlQNNWDnFOouNpKfPKDnms9xynJjsMYjMaT/aFQ==}
     engines: {node: '>= 18'}
@@ -540,6 +568,9 @@ packages:
   assertion-error@2.0.1:
     resolution: {integrity: sha512-Izi8RQcffqCeNVgFigKli1ssklIbpHnCYc6AknXGYoB6grJqyeby7jv12JUQgmTAnIDnbck1uxksT4dzN3PWBA==}
     engines: {node: '>=12'}
+
+  astronomy-engine@2.1.19:
+    resolution: {integrity: sha512-8yWKNf7UeNbH458h3sAJ6ZgAjE5jTXp/mNNRFoC20j2SHwZIjAQeEsBB2Q3uCFRaTCCJRv33K2XhkhZQMXoX6w==}
 
   balanced-match@4.0.4:
     resolution: {integrity: sha512-BLrgEcRTwX2o6gGxGOCNyMvGSp35YofuYzw9h1IMTRmKqttAZZVU67bdb9Pr2vUHA8+j3i2tJfjO6C6+4myGTA==}
@@ -1248,6 +1279,12 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.3
       '@jridgewell/sourcemap-codec': 1.6.0
 
+  '@js-joda/core@6.3.2': {}
+
+  '@js-joda/timezone@3.2.1(@js-joda/core@6.3.2)':
+    dependencies:
+      '@js-joda/core': 6.3.2
+
   '@keyv/bigmap@1.3.1(keyv@5.6.0)':
     dependencies:
       hashery: 1.5.1
@@ -1461,6 +1498,8 @@ snapshots:
       uri-js: 4.4.1
 
   assertion-error@2.0.1: {}
+
+  astronomy-engine@2.1.19: {}
 
   balanced-match@4.0.4: {}
 

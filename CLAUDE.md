@@ -24,7 +24,7 @@ Source de vérité : `docs/SPEC.md`. En cas de doute, la lire. Ne jamais la cont
 - `pnpm --filter mobile start` · `pnpm --filter web dev`
 - `pnpm db:reset` (local uniquement) · `pnpm db:types`
 - `pnpm assets:check` · `pnpm assets:placeholders` · `pnpm assets:report`
-- `pnpm engine:golden` (tests de référence du moteur)
+- `pnpm engine:golden` (tests de référence du moteur) · `pnpm engine:golden:fetch` (retélécharge les références)
 - `pnpm evals` (évaluations des prompts)
 
 ## Conventions
@@ -35,8 +35,9 @@ Source de vérité : `docs/SPEC.md`. En cas de doute, la lire. Ne jamais la cont
 - Textes visibles : clés i18n, `fr` et `en` toujours ensemble.
 - Fichiers visuels : uniquement via `getAsset('id')`.
 
-## Questions aux fondateurs
-Toute question se pose sous forme de questionnaire à cliquer (choix à sélectionner), jamais en texte libre dans la réponse. Demande explicite d'un fondateur, 2026-11-23.
+## Autonomie et questions aux fondateurs
+- Mode autonome (ADR-013) : trancher seul, enchaîner les tickets, consigner chaque décision dans `docs/DECISIONS.md`. Ne solliciter un fondateur que pour l'irréversible (loi 15), l'ouverture de comptes, une dépense ou le juridique.
+- Quand une question est inévitable : questionnaire à cliquer, jamais de question en texte libre.
 
 ## Fin de ticket
 Exécuter la Definition of Done (SPEC §1.6), mettre à jour `docs/STATE.md`, résumer honnêtement.
