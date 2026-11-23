@@ -1,7 +1,7 @@
 // Accès au serveur : session Supabase (anonyme d'abord, A-003), lectures directes sous RLS,
 // écritures par l'API uniquement (A-002).
 import {
-  ChartSummarySchema, type PostChartsInput, type PostRoastsInput, ProfileSchema, type PutProfileInput, RoastResponseSchema,
+  ChartSummarySchema, DailyResponseSchema, GroupReadingSchema, GroupSchema, type GroupType, InviteCreatedSchema, InvitePreviewSchema, type PostChartsInput, type ToneMode, type PostRoastsInput, ProfileSchema, type PutProfileInput, RoastResponseSchema,
 } from '@aurorya/shared';
 import { type SupabaseClient, createClient } from '@supabase/supabase-js';
 import * as Application from 'expo-application';
@@ -47,6 +47,14 @@ export const endpoints = (b: Backend) => ({
   putProfile: (input: PutProfileInput) => b.api.request({ method: 'PUT', path: '/profile', body: input, output: ProfileSchema }),
   postCharts: (input: PostChartsInput) => b.api.request({ method: 'POST', path: '/charts', body: input, output: ChartSummarySchema, idempotencyKey: randomUUID() }),
   postRoasts: (input: Pick<PostRoastsInput, 'chartId' | 'mode'>) => b.api.request({ method: 'POST', path: '/roasts', body: { ...input, regenerate: false }, output: RoastResponseSchema }),
+  getDaily: (date: string, mode: ToneMode) => b.api.request({ method: 'GET', path: `/daily?date=${date}&mode=${mode}`, output: DailyResponseSchema }),
+  postGroups: (name: string, type: GroupType) => b.api.request({ method: 'POST', path: '/groups', body: { name, type }, output: GroupSchema, idempotencyKey: randomUUID() }),
+  postGroupInvite: (groupId: string) => b.api.request({ method: 'POST', path: `/groups/${groupId}/invites`, output: InviteCreatedSchema }),
+  resolveInvite: (code: string) => b.api.request({ method: 'POST', path: '/invites/resolve', body: { code }, output: InvitePreviewSchema }),
+  joinGroup: (input: { code?: string; token?: string; displayName: string; consentVersion: string }) =>
+    b.api.request({ method: 'POST', path: '/groups/join', body: { ...input, consentGroupShare: true }, output: GroupSchema }),
+  leaveGroup: (groupId: string) => b.api.request({ method: 'POST', path: `/groups/${groupId}/leave`, output: null }),
+  postGroupReading: (groupId: string, mode: ToneMode) => b.api.request({ method: 'POST', path: `/groups/${groupId}/readings`, body: { kind: 'roles_duos', mode }, output: GroupReadingSchema }),
   /** Lecture directe sous RLS : aucune donnée de naissance ne part chez un tiers (A-007). */
   searchPlaces: async (query: string, locale: 'fr' | 'en'): Promise<PlaceResult[]> => {
     const { data, error } = await b.supabase.rpc('search_places', { q: query, lang: locale, max_results: 8 });

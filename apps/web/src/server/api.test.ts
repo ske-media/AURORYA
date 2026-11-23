@@ -45,6 +45,11 @@ const kbEntry: KbEntry = {
 };
 
 beforeAll(async () => {
+  // Les fichiers de test partagent une base : on repart d'une base de règles vide et de la configuration initiale.
+  await sql.query('delete from public.interpretation_kb');
+  await sql.query(`update public.remote_config set value = '3' where key = 'quota.birth_edits_per_30d'`);
+  await sql.query(`update public.remote_config set value = '10' where key = 'limits.charts_per_hour'`);
+  await sql.query(`update public.remote_config set value = '20' where key = 'limits.roasts_per_hour'`);
   await sql.query('insert into auth.users (id, is_anonymous) values ($1, true), ($2, true)', [USERS.lea, USERS.ines]);
   await sql.query(`insert into public.geo_places (geoname_id, name, ascii_name, name_fr, admin1_name, country_code, latitude, longitude, population, tz_iana, search_text)
     values (2996944, 'Lyon', 'Lyon', 'Lyon', 'Auvergne-Rhône-Alpes', 'FR', 45.74846, 4.84671, 472317, 'Europe/Paris', 'lyon')`);

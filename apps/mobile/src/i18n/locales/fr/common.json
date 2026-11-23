@@ -14,11 +14,31 @@
   },
   "today": {
     "title": "Aujourd’hui",
+    "greeting": "Bonjour {{name}}",
+    "moon": "Lune en {{sign}} · {{phase}}",
+    "questionLabel": "La question du jour",
+    "horoscopeLabel": "Ton signe aujourd’hui",
+    "personalLocked": "Ton horoscope personnel, calculé sur ton thème, fait partie d’Aurorya Premium.",
+    "phase": {
+      "new_moon": "nouvelle lune",
+      "waxing_crescent": "premier croissant",
+      "first_quarter": "premier quartier",
+      "waxing_gibbous": "lune gibbeuse croissante",
+      "full_moon": "pleine lune",
+      "waning_gibbous": "lune gibbeuse décroissante",
+      "last_quarter": "dernier quartier",
+      "waning_crescent": "dernier croissant"
+    },
     "state": {
       "empty": {
         "title": "Rien à lire pour l’instant",
         "body": "Ton horoscope du jour s’affichera ici."
-      }
+      },
+      "error": {
+        "title": "La page du jour n’a pas pu être chargée",
+        "body": "Vérifie ta connexion, puis réessaie."
+      },
+      "noHoroscope": "L’horoscope de ton signe n’est pas encore prêt pour aujourd’hui."
     }
   },
   "sky": {
@@ -57,8 +77,55 @@
     "state": {
       "empty": {
         "title": "Aucun groupe pour l’instant",
-        "body": "Tes groupes s’afficheront ici."
+        "body": "Crée un groupe ou rejoins-en un avec un code."
+      },
+      "error": {
+        "title": "Tes groupes n’ont pas pu être chargés",
+        "body": "Vérifie ta connexion, puis réessaie."
       }
+    },
+    "create": {
+      "title": "Créer un groupe",
+      "name": "Nom du groupe",
+      "submit": "Créer",
+      "type": {
+        "friends": "Copines",
+        "couple": "Couple",
+        "family": "Famille",
+        "colleagues": "Collègues"
+      }
+    },
+    "join": {
+      "title": "Rejoindre avec un code",
+      "code": "Code d’invitation",
+      "check": "Vérifier le code",
+      "preview": "{{inviter}} t’invite à rejoindre « {{group}} ».",
+      "consent": "En rejoignant ce groupe, les autres membres verront ton prénom, tes signes (Soleil, Lune, Ascendant) et ta place dans la lecture du groupe. Ils ne verront jamais ta date, ton heure ni ton lieu de naissance.",
+      "displayName": "Prénom affiché dans ce groupe",
+      "accept": "J’accepte et je rejoins",
+      "invalid": "Ce code n’est pas valide ou a expiré."
+    },
+    "error": {
+      "ACCOUNT_REQUIRED": "Crée ton compte pour pouvoir créer un groupe : sans compte, tu le perdrais en changeant de téléphone.",
+      "NAME_REJECTED": "Ce nom n’est pas accepté.",
+      "QUOTA_EXCEEDED": "Tu as atteint le nombre maximal de groupes.",
+      "CONFLICT": "Tu fais déjà partie de ce groupe, ou il est complet.",
+      "generic": "L’action n’a pas abouti. Réessaie dans un instant."
+    },
+    "detail": {
+      "members": "{{count}} membres",
+      "invite": "Inviter",
+      "inviteMessage": "Rejoins mon groupe « {{group}} » sur Aurorya avec le code {{code}}.",
+      "inviteMessageWithLink": "Rejoins mon groupe « {{group}} » sur Aurorya : {{url}} (code {{code}}).",
+      "roles": "Les rôles du groupe",
+      "duos": "Les duos",
+      "duo_fusion": "Le duo le plus accordé",
+      "duo_sparks": "Le duo le plus électrique",
+      "and": "{{a}} et {{b}}",
+      "needTwo": "Invite au moins une personne pour lire les rôles du groupe.",
+      "unavailable": "La lecture de ce groupe n’est pas encore disponible.",
+      "leave": "Quitter le groupe",
+      "open": "Ouvrir"
     }
   },
   "common": {

@@ -1,0 +1,230 @@
+{
+  "planet_sign:pluto:aries": {
+    "keywords": ["volonté radicale", "commencement", "combat intérieur", "affirmation"],
+    "essence": "Pluton en Bélier concentre l’intensité sur l’affirmation de soi : une génération qui transforme le monde en osant y entrer de force. Chez une personne, le besoin de maîtrise passe par l’initiative, et chaque blocage devient une affaire personnelle.",
+    "light": ["Volonté capable de repartir de zéro", "Courage devant les situations que d’autres jugent perdues", "Instinct pour déclencher un changement nécessaire"],
+    "shadow": ["Rapport de force engagé au moindre obstacle", "Difficulté à céder, même sur un détail", "Impatience qui force les transformations"],
+    "behaviors": ["Transformer une simple partie de cartes en affaire d’honneur", "Recommencer un projet depuis le début plutôt que le corriger", "Prendre la tête d’un groupe sans attendre la moindre invitation"],
+    "summary": {
+      "soft": "Il y a en toi une force de commencement très profonde. Quand tout semble figé, tu trouves l’énergie de rouvrir une voie, et cette volonté entraîne ceux qui n’osaient plus.",
+      "cash": "Tu ne veux pas gagner, tu veux qu’il soit bien clair que personne ne t’a laissé gagner.",
+      "expert": "Pluton en Bélier, placement générationnel, lie la transformation à l’affirmation individuelle. Chez vous, le rapport au pouvoir se joue dans l’initiative et la capacité à imposer un commencement."
+    },
+    "roastAngles": {
+      "soft": ["Tu as cette flamme obstinée qui rallume le feu quand tout le monde croyait la soirée finie."],
+      "cash": ["Tu abordes une partie de jeu de société avec le regard de quelqu’un qui défend un territoire.", "Quand on te dit « c’est impossible », tu entends surtout une invitation personnelle."],
+      "expert": ["Pluton en Bélier : la volonté s’y exerce par la percée, et tolère mal la résistance d’autrui."]
+    },
+    "roastWeight": 0,
+    "avoid": ["Parler de violence ou d’agressivité comme d’un fait", "Tout vocabulaire de disparition ou de sexualité"]
+  },
+  "planet_sign:pluto:taurus": {
+    "keywords": ["possession", "endurance", "sécurité matérielle", "ténacité"],
+    "essence": "Pluton en Taureau porte l’intensité sur la matière : ressources, territoire, sécurité. Une génération qui transforme lentement ses bases ; chez une personne, le besoin de maîtrise s’attache à ce qui se possède et se conserve.",
+    "light": ["Endurance hors du commun", "Capacité à reconstruire patiemment après un bouleversement", "Loyauté profonde envers ce qui a été choisi"],
+    "shadow": ["Possessivité envers les biens comme envers les proches", "Résistance farouche à toute perte de contrôle matériel", "Rancune tenace quand une limite est franchie"],
+    "behaviors": ["Savoir exactement qui a emprunté quel livre et depuis quand", "Garder ses provisions comme une réserve stratégique", "Refuser de prêter son fauteuil, même pour cinq minutes"],
+    "summary": {
+      "soft": "Tu as une force tranquille, enracinée. Ce que tu construis, tu le protèges avec une constance rare, et les tiens savent qu’avec toi le sol ne se dérobe pas.",
+      "cash": "Tu partages volontiers, à condition de savoir où part chaque chose et quand elle revient.",
+      "expert": "Pluton en Taureau est en exil : l’intensité s’y fixe sur la possession et la sécurité matérielle. Chez vous, la transformation passe par le rapport aux ressources, et progresse avec lenteur."
+    },
+    "roastAngles": {
+      "soft": ["Tu tiens à ce que tu aimes comme un arbre tient à sa terre : sans bruit, et pour longtemps."],
+      "cash": ["Tu prêtes un stylo et tu en suis la trace comme celle d’un colis recommandé.", "Ton frigo a des zones réservées, et tout le monde à la maison connaît les frontières."],
+      "expert": ["Pluton en Taureau, en exil : attachement intense au tangible, transformation consentie par nécessité seulement."]
+    },
+    "roastWeight": 0,
+    "avoid": ["Donner un conseil d’argent", "Présenter la possessivité comme un défaut de la personne plutôt que comme un comportement"]
+  },
+  "planet_sign:pluto:gemini": {
+    "keywords": ["parole qui transforme", "curiosité obstinée", "enquête", "idées puissantes"],
+    "essence": "Pluton en Gémeaux concentre l’intensité sur l’esprit : savoir, parole, information. Une génération pour qui les idées changent le cours des choses ; chez une personne, le besoin de maîtrise passe par ce qu’elle sait et par ce qu’elle choisit de dire.",
+    "light": ["Esprit d’enquête qui va au bout d’une question", "Parole capable de faire basculer une discussion", "Capacité à changer en profondeur de façon de penser"],
+    "shadow": ["Usage de l’information comme d’un levier", "Questions insistantes qui virent à l’interrogatoire", "Pensées qui tournent en boucle sans s’arrêter"],
+    "behaviors": ["Poser « juste une dernière question » six fois de suite", "Lire toute la discussion d’un groupe avant d’y écrire un seul mot", "Retenir mot pour mot une phrase dite à la légère"],
+    "summary": {
+      "soft": "Ton esprit ne se contente pas de la surface. Tu cherches le mot exact, la vraie raison, et quand tu parles, tes phrases ont le pouvoir de déplacer quelque chose chez l’autre.",
+      "cash": "Tu poses une question anodine, puis onze autres. À la fin, l’autre a tout avoué sans savoir quoi.",
+      "expert": "Pluton en Gémeaux, signe mutable d’air, porte la transformation sur le mental et la communication. Chez vous, le rapport au pouvoir passe par l’information : la détenir, la relier, la formuler."
+    },
+    "roastAngles": {
+      "soft": ["Tu poses les questions qui font réfléchir longtemps après que la conversation est finie."],
+      "cash": ["Tu te souviens d’une phrase que l’autre a dite en passant, et tu la ressors avec le jour et l’heure.", "Tu lis les conditions d’utilisation en entier, au cas où quelqu’un te cacherait quelque chose."],
+      "expert": ["Pluton en Gémeaux : la curiosité y devient enquête, et le verbe un instrument d’influence."]
+    },
+    "roastWeight": 0,
+    "avoid": ["Parler de manipulation comme d’un trait de la personne", "Évoquer des pensées obsédantes sur un mode médical"]
+  },
+  "planet_sign:pluto:cancer": {
+    "keywords": ["clan", "protection farouche", "mémoire", "attachement"],
+    "essence": "Pluton en Cancer concentre l’intensité sur le foyer et l’appartenance. Une génération marquée par la transformation des familles et des racines ; chez une personne, le besoin de maîtrise prend la forme d’une protection sans relâche des siens.",
+    "light": ["Loyauté indéfectible envers le cercle proche", "Force de protection dans les moments difficiles", "Mémoire affective qui soude un groupe"],
+    "shadow": ["Emprise affective au nom du soin", "Difficulté à laisser les proches s’éloigner", "Vieux griefs gardés intacts"],
+    "behaviors": ["Demander un message à l’arrivée, même pour un trajet de dix minutes", "Nourrir tout le monde, y compris ceux qui n’ont pas faim", "Ressortir un vieux reproche de famille pendant le repas de fête"],
+    "summary": {
+      "soft": "Tu aimes avec une force de racine. Les tiens peuvent compter sur toi dans la tempête, et cette fidélité fait de toi un abri, pourvu que tu laisses la porte ouverte.",
+      "cash": "Tu protèges les tiens comme un coffre-fort protège des bijoux : avec amour, et sans leur demander leur avis.",
+      "expert": "Pluton en Cancer, signe cardinal d’eau, porte la transformation sur la famille et la sécurité affective. Chez vous, l’intensité s’exprime par l’attachement, avec un enjeu de contrôle au sein du cercle intime."
+    },
+    "roastAngles": {
+      "soft": ["Tu gardes les tiens au chaud avec une constance qui tient tête à tous les hivers."],
+      "cash": ["Tu dis « fais comme tu veux » avec la voix de quelqu’un qui a déjà préparé la chambre.", "Tu ressers du gratin à des gens qui ont posé leur fourchette depuis longtemps."],
+      "expert": ["Pluton en Cancer : l’attachement y devient un enjeu absolu, d’où une protection volontiers enveloppante."]
+    },
+    "roastWeight": 0,
+    "avoid": ["Supposer une histoire familiale douloureuse", "Tout vocabulaire de perte ou de disparition"]
+  },
+  "planet_sign:pluto:leo": {
+    "keywords": ["fierté", "pouvoir créateur", "rayonnement intense", "autorité personnelle"],
+    "essence": "Pluton en Lion concentre l’intensité sur l’affirmation et la création. Une génération qui transforme le rapport à l’individu et à son pouvoir ; chez une personne, le besoin de maîtrise passe par la fierté, le rôle tenu et la marque laissée.",
+    "light": ["Force créatrice qui va jusqu’au bout de son geste", "Générosité protectrice envers les siens", "Capacité à se relever avec panache"],
+    "shadow": ["Orgueil qui transforme un désaccord en affront", "Besoin de garder le premier rôle", "Difficulté à reconnaître une erreur en public"],
+    "behaviors": ["Refuser de demander son chemin par principe", "Organiser la fête, choisir la musique et placer les invités", "Raconter un échec comme une victoire stratégique"],
+    "summary": {
+      "soft": "Tu as un cœur entier et une présence qui compte. Quand tu crois en quelque chose ou en quelqu’un, tu y mets toute ta force, et cette ardeur réchauffe largement autour de toi.",
+      "cash": "Tu acceptes très bien la critique, à condition qu’elle arrive avec des fleurs et commence par un compliment.",
+      "expert": "Pluton en Lion, signe fixe de feu, porte la transformation sur l’identité et la puissance créatrice. Chez vous, le rapport au pouvoir est personnel : il engage la fierté et le besoin de reconnaissance."
+    },
+    "roastAngles": {
+      "soft": ["Tu donnes à ceux que tu aimes une place au premier rang, et tu ne la reprends pas."],
+      "cash": ["Tu reconnais une erreur environ une fois par décennie, et tu attends qu’on salue le geste.", "Tu délègues volontiers, puis tu refais tout derrière, « juste pour harmoniser »."],
+      "expert": ["Pluton en Lion : volonté de puissance créatrice, où l’amour-propre devient le point sensible."]
+    },
+    "roastWeight": 1,
+    "avoid": ["Traiter la personne de tyrannique ou d’égocentrique", "Commenter l’apparence"]
+  },
+  "planet_sign:pluto:virgo": {
+    "keywords": ["contrôle par le détail", "perfectionnement", "analyse", "travail en profondeur"],
+    "essence": "Pluton en Vierge concentre l’intensité sur le travail, la méthode et l’amélioration. Une génération qui transforme par l’analyse et l’effort minutieux ; chez une personne, le besoin de maîtrise se loge dans le détail et la tâche accomplie sans défaut.",
+    "light": ["Capacité à réparer ce qui semblait irrécupérable", "Rigueur qui transforme un chaos en système", "Dévouement entier au travail entrepris"],
+    "shadow": ["Contrôle exercé par la critique du détail", "Exigence envers soi qui ne connaît pas de pause", "Difficulté à déléguer sans vérifier"],
+    "behaviors": ["Vider le lave-vaisselle rempli par quelqu’un d’autre pour le remplir « correctement »", "Tenir un fichier pour suivre ses autres fichiers", "Repérer la coquille en page de garde avant de lire le titre"],
+    "summary": {
+      "soft": "Tu as le don de réparer, d’affiner, de remettre en état. Ton exigence vient d’un vrai respect pour le travail bien fait, et elle transforme en profondeur ce que tu touches.",
+      "cash": "Tu ne contrôles pas tout, non. Tu vérifies seulement que tout a été fait comme tu l’aurais fait.",
+      "expert": "Pluton en Vierge, signe mutable de terre, porte la transformation sur le travail et les méthodes. Chez vous, l’intensité prend la forme du perfectionnement, et le contrôle passe par l’analyse du détail."
+    },
+    "roastAngles": {
+      "soft": ["Tu améliores les choses en silence, et on s’aperçoit de ton passage au fait que tout marche."],
+      "cash": ["Tu repasses derrière quelqu’un qui vient de ranger, avec la discrétion d’une inspection officielle.", "Tu as une méthode pour plier les sacs, et un avis très net sur ceux qui n’en ont pas."],
+      "expert": ["Pluton en Vierge : pouvoir exercé par la compétence et la critique, exigence tournée d’abord contre soi."]
+    },
+    "roastWeight": 1,
+    "avoid": ["Tout sujet médical ou d’hygiène de vie", "Parler d’obsession sur un mode clinique"]
+  },
+  "planet_sign:pluto:libra": {
+    "keywords": ["relations intenses", "justice", "rapport de force feutré", "engagement"],
+    "essence": "Pluton en Balance concentre l’intensité sur le lien : couple, alliance, équité. Une génération qui transforme les règles de l’engagement ; chez une personne, le besoin de maîtrise s’exprime en douceur, par la négociation et le souci de l’équilibre.",
+    "light": ["Sens aigu de la justice dans les relations", "Capacité à transformer un conflit en accord", "Engagement profond une fois le lien choisi"],
+    "shadow": ["Contrôle exercé sous couvert de gentillesse", "Comptabilité silencieuse de qui a donné quoi", "Difficulté à supporter le désaccord ouvert"],
+    "behaviors": ["Tenir mentalement le compte exact des services rendus", "Obtenir gain de cause en laissant l’autre croire que l’idée venait de lui", "Rouvrir une discussion close parce qu’elle n’était « pas équitable »"],
+    "summary": {
+      "soft": "Tu prends les liens très au sérieux. Derrière ta douceur, il y a une exigence de justice et de vérité à deux qui rend tes relations profondes et capables d’évoluer.",
+      "cash": "Tu ne t’énerves jamais. Tu souris, tu reformules, et à la fin tout le monde fait ce que tu avais prévu.",
+      "expert": "Pluton en Balance, signe cardinal d’air, porte la transformation sur la relation et le contrat. Chez vous, le rapport de force existe mais demeure feutré : il passe par la négociation et l’exigence d’équité."
+    },
+    "roastAngles": {
+      "soft": ["Tu cherches la justesse dans chaque lien, avec une patience d’orfèvre."],
+      "cash": ["Tu sais exactement qui a payé le dernier café, et tu attends avec élégance que ça se rééquilibre.", "Tu dis « on décide ensemble » en tendant une liste où il ne reste qu’une option."],
+      "expert": ["Pluton en Balance : pouvoir exercé par l’accord et la mesure, intensité relationnelle sous des dehors policés."]
+    },
+    "roastWeight": 1,
+    "avoid": ["Annoncer une rupture ou juger la vie de couple", "Tout conseil d’ordre juridique"]
+  },
+  "planet_sign:pluto:scorpio": {
+    "keywords": ["tout ou rien", "profondeur", "métamorphose", "secret"],
+    "essence": "Pluton en Scorpion se trouve dans le signe qu’il gouverne : intensité, secret et transformation y sont à leur comble. Une génération qui regarde en face ce qui est caché ; chez une personne, tout se vit à fond, et la maîtrise de soi devient un enjeu central.",
+    "light": ["Lucidité psychologique peu commune", "Capacité à traverser une crise et à en sortir autrement", "Loyauté absolue une fois la confiance donnée"],
+    "shadow": ["Méfiance qui met chaque proche à l’épreuve", "Contrôle des informations livrées sur soi", "Rancune conservée avec méthode"],
+    "behaviors": ["Tout savoir sur quelqu’un avant la première rencontre, sans avoir posé une question", "Répondre « rien » quand quelque chose ne va manifestement pas", "Couper les ponts sans un mot, puis ne jamais revenir dessus"],
+    "summary": {
+      "soft": "Tu vis les choses en profondeur, sans demi-teinte. Cette intensité te donne une force de transformation rare : tu sais muer, repartir, et reconnaître la vérité quand elle se présente.",
+      "cash": "Tu fais confiance après une enquête complète, trois mises à l’épreuve et une période d’observation.",
+      "expert": "Pluton en Scorpion est en domicile : ses significations de profondeur, de contrôle et de métamorphose s’y expriment pleinement. Chez vous, l’intensité est une norme, et la confiance s’accorde par étapes."
+    },
+    "roastAngles": {
+      "soft": ["Tu vois clair dans les gens, et tu as la délicatesse de ne pas toujours le leur dire."],
+      "cash": ["Tu réponds « je sais » à une confidence qu’on te faisait pour la première fois.", "Tu pardonnes, bien sûr. Tu ranges juste le dossier dans un tiroir dont tu gardes la clé."],
+      "expert": ["Pluton en Scorpion, en domicile : exigence de vérité, contrôle de l’intime, transformation par crises successives."]
+    },
+    "roastWeight": 1,
+    "avoid": ["Tout vocabulaire de disparition, de perte ou de sexualité", "Le cliché du personnage dangereux ou vengeur"]
+  },
+  "planet_sign:pluto:sagittarius": {
+    "keywords": ["convictions profondes", "quête de vérité", "horizons transformés", "franc-parler"],
+    "essence": "Pluton en Sagittaire concentre l’intensité sur les convictions, le savoir et l’ailleurs. Une génération qui transforme les croyances et élargit le monde ; chez une personne, le besoin de maîtrise passe par la certitude d’avoir trouvé le sens.",
+    "light": ["Soif de vérité qui ne se contente pas de réponses toutes faites", "Capacité à changer radicalement de vision", "Franchise entraînante"],
+    "shadow": ["Convictions défendues comme des territoires", "Besoin d’avoir raison jusqu’au bout de la nuit", "Tendance à prêcher plutôt qu’à écouter"],
+    "behaviors": ["Envoyer un long article à toute la famille avec la mention « à lire absolument »", "Transformer un apéritif en débat de fond", "Partir loin pour « comprendre quelque chose », sans préciser quoi"],
+    "summary": {
+      "soft": "Tu cherches le sens avec une ardeur entière. Quand une idée te touche, elle te transforme vraiment, et ta soif de vérité pousse les autres à regarder plus loin.",
+      "cash": "Tu n’as pas des opinions, tu as des missions. Et le dîner n’est pas fini tant que la tablée n’est pas convaincue.",
+      "expert": "Pluton en Sagittaire, signe mutable de feu, porte la transformation sur les croyances et les systèmes de sens. Chez vous, l’intensité s’attache à la conviction, avec un enjeu de pouvoir autour de la vérité."
+    },
+    "roastAngles": {
+      "soft": ["Tu poursuis la vérité comme un grand voyage, et tu envoies des nouvelles en chemin."],
+      "cash": ["Tu commences par « je ne veux pas te convaincre », et quarante minutes plus tard, si.", "Tu as changé de vision du monde, et tes proches ont reçu le communiqué à l’aube."],
+      "expert": ["Pluton en Sagittaire : conviction vécue comme un absolu, où la quête de sens peut se durcir en doctrine."]
+    },
+    "roastWeight": 1,
+    "avoid": ["Viser une croyance, une confession ou une opinion précise", "Traiter la personne de fanatique"]
+  },
+  "planet_sign:pluto:capricorn": {
+    "keywords": ["ambition profonde", "structures transformées", "maîtrise", "endurance"],
+    "essence": "Pluton en Capricorne concentre l’intensité sur l’ambition, les structures et l’autorité. Une génération qui voit les cadres établis se transformer ; chez une personne, le besoin de maîtrise passe par la compétence, la durée et le contrôle de sa trajectoire.",
+    "light": ["Détermination qui tient sur la longue distance", "Sens des responsabilités dans les moments critiques", "Capacité à rebâtir une structure sur des bases saines"],
+    "shadow": ["Contrôle exercé par la retenue et le silence", "Travail utilisé comme une armure", "Difficulté à montrer une faille"],
+    "behaviors": ["Répondre « ça avance » à toute question personnelle", "Préparer un plan de secours pour le plan de secours", "Travailler pendant les vacances « juste pour garder la main »"],
+    "summary": {
+      "soft": "Tu as une force de fond, patiente et sérieuse. Tu sais ce que coûte une chose bien construite, et ta détermination transforme lentement mais sûrement ce que tu prends en charge.",
+      "cash": "Tu te détends très bien, à condition d’avoir un objectif de détente et un moyen de mesurer le résultat.",
+      "expert": "Pluton en Capricorne, signe cardinal de terre, porte la transformation sur les structures de pouvoir et la réussite sociale. Chez vous, l’intensité prend la forme de l’ambition contenue et de la maîtrise de soi."
+    },
+    "roastAngles": {
+      "soft": ["Tu portes beaucoup sans le dire, avec une solidité qui rassure tout le monde autour."],
+      "cash": ["Tu réponds « je gère » avec le calme de quelqu’un qui a déjà trois scénarios de repli.", "Tu ne demandes pas d’aide : tu attends d’avoir fini pour dire que c’était un peu lourd."],
+      "expert": ["Pluton en Capricorne : volonté de maîtrise appliquée à la carrière et au statut, émotion tenue sous contrôle."]
+    },
+    "roastWeight": 1,
+    "avoid": ["Donner un conseil de carrière ou d’argent", "Commenter des institutions ou des opinions"]
+  },
+  "planet_sign:pluto:aquarius": {
+    "keywords": ["collectif transformé", "idées radicales", "réseaux", "indépendance farouche"],
+    "essence": "Pluton en Verseau concentre l’intensité sur le collectif, les idées et les réseaux. Une génération qui transforme les façons de faire société ; chez une personne, le besoin de maîtrise passe par l’indépendance d’esprit et l’influence au sein du groupe.",
+    "light": ["Vision capable de réinventer un fonctionnement commun", "Fidélité profonde à ses idéaux", "Lucidité sur les dynamiques de groupe"],
+    "shadow": ["Certitude froide d’avoir compris avant les autres", "Emprise par les idées plutôt que par les sentiments", "Détachement utilisé pour garder le contrôle"],
+    "behaviors": ["Quitter un groupe par principe, avec un texte d’explication argumenté", "Analyser les rapports d’influence d’une simple bande de copains", "Défendre une idée impopulaire jusqu’à ce qu’elle devienne la règle"],
+    "summary": {
+      "soft": "Tu portes une exigence profonde pour le collectif. Tu vois ce qui pourrait fonctionner autrement entre les gens, et ta fidélité à tes idées donne de la portée à ta parole.",
+      "cash": "Tu observes le groupe de loin, tu comprends qui influence qui, et tu fais semblant de n’y attacher aucune importance.",
+      "expert": "Pluton en Verseau, signe fixe d’air, porte la transformation sur le collectif et les systèmes d’idées. Chez vous, le rapport au pouvoir se joue dans le groupe : influence, indépendance, adhésion."
+    },
+    "roastAngles": {
+      "soft": ["Tu crois aux idées qui changent les règles du jeu, et tu sais attendre qu’elles fassent leur chemin."],
+      "cash": ["Tu ne cherches pas à diriger le groupe : tu veux juste en avoir écrit le règlement.", "Tu te tiens à l’écart de la conversation, puis tu la résumes mieux que ceux qui y étaient."],
+      "expert": ["Pluton en Verseau : pouvoir des idées et des réseaux, intensité intellectualisée, attachement tenu à distance."]
+    },
+    "roastWeight": 0,
+    "avoid": ["Associer le placement à un camp, à une idéologie ou à une prédiction de société", "Présenter le détachement comme de l’insensibilité"]
+  },
+  "planet_sign:pluto:pisces": {
+    "keywords": ["dissolution", "compassion profonde", "foi", "lâcher-prise"],
+    "essence": "Pluton en Poissons concentre l’intensité sur l’imaginaire, la compassion et l’invisible. Une génération qui transforme en dissolvant plutôt qu’en affrontant ; chez une personne, la maîtrise passe paradoxalement par l’abandon et la confiance.",
+    "light": ["Compassion qui va jusqu’au fond des choses", "Capacité à se transformer en lâchant prise", "Intuition puissante des courants collectifs"],
+    "shadow": ["Sacrifice de soi utilisé comme moyen d’influence", "Fuite devant les rapports de force", "Émotions envahissantes, difficiles à nommer"],
+    "behaviors": ["Tout donner à une cause, puis disparaître quelques jours pour récupérer", "Pressentir l’ambiance d’une pièce avant d’y entrer", "Céder dans une dispute et l’emporter par la douceur"],
+    "summary": {
+      "soft": "Ta force est une force d’eau : elle ne casse rien, elle transforme en profondeur. Tu ressens intensément ce qui relie les êtres, et tu sais changer en acceptant de lâcher.",
+      "cash": "Tu ne luttes pas, tu infuses. Trois semaines plus tard, tout le monde fait comme toi sans savoir pourquoi.",
+      "expert": "Pluton en Poissons, signe mutable d’eau, porte la transformation sur la sensibilité collective et l’imaginaire. Chez vous, l’intensité agit par imprégnation, et le contrôle cède la place à la dissolution."
+    },
+    "roastAngles": {
+      "soft": ["Tu changes les choses comme la marée change le rivage : sans bruit, mais pour de bon."],
+      "cash": ["Tu dis « ce n’est pas grave » avec une douceur telle que l’autre culpabilise toute la semaine.", "Tu te dévoues corps et âme, et tu fais discrètement savoir que c’était corps et âme."],
+      "expert": ["Pluton en Poissons : intensité diffuse, pouvoir par l’abnégation, transformation vécue comme un abandon."]
+    },
+    "roastWeight": 0,
+    "avoid": ["Viser une croyance ou une spiritualité précise", "Tout vocabulaire de disparition, de perte ou de fragilité psychique"]
+  }
+}

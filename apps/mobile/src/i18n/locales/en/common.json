@@ -14,11 +14,31 @@
   },
   "today": {
     "title": "Today",
+    "greeting": "Hello {{name}}",
+    "moon": "Moon in {{sign}} · {{phase}}",
+    "questionLabel": "Question of the day",
+    "horoscopeLabel": "Your sign today",
+    "personalLocked": "Your personal horoscope, based on your chart, is part of Aurorya Premium.",
+    "phase": {
+      "new_moon": "new moon",
+      "waxing_crescent": "waxing crescent",
+      "first_quarter": "first quarter",
+      "waxing_gibbous": "waxing gibbous",
+      "full_moon": "full moon",
+      "waning_gibbous": "waning gibbous",
+      "last_quarter": "last quarter",
+      "waning_crescent": "waning crescent"
+    },
     "state": {
       "empty": {
         "title": "Nothing to read yet",
         "body": "Your daily horoscope will appear here."
-      }
+      },
+      "error": {
+        "title": "Today’s page could not be loaded",
+        "body": "Check your connection, then try again."
+      },
+      "noHoroscope": "Your sign’s horoscope is not ready for today yet."
     }
   },
   "sky": {
@@ -57,8 +77,55 @@
     "state": {
       "empty": {
         "title": "No groups yet",
-        "body": "Your groups will appear here."
+        "body": "Create a group or join one with a code."
+      },
+      "error": {
+        "title": "Your groups could not be loaded",
+        "body": "Check your connection, then try again."
       }
+    },
+    "create": {
+      "title": "Create a group",
+      "name": "Group name",
+      "submit": "Create",
+      "type": {
+        "friends": "Friends",
+        "couple": "Couple",
+        "family": "Family",
+        "colleagues": "Colleagues"
+      }
+    },
+    "join": {
+      "title": "Join with a code",
+      "code": "Invitation code",
+      "check": "Check the code",
+      "preview": "{{inviter}} invites you to join “{{group}}”.",
+      "consent": "By joining this group, other members will see your first name, your signs (Sun, Moon, Rising) and your place in the group reading. They will never see your date, time or place of birth.",
+      "displayName": "First name shown in this group",
+      "accept": "I agree and join",
+      "invalid": "This code is not valid or has expired."
+    },
+    "error": {
+      "ACCOUNT_REQUIRED": "Create your account to create a group: without one, you would lose it when changing phones.",
+      "NAME_REJECTED": "This name is not accepted.",
+      "QUOTA_EXCEEDED": "You have reached the maximum number of groups.",
+      "CONFLICT": "You are already in this group, or it is full.",
+      "generic": "That did not go through. Try again in a moment."
+    },
+    "detail": {
+      "members": "{{count}} members",
+      "invite": "Invite",
+      "inviteMessage": "Join my group “{{group}}” on Aurorya with the code {{code}}.",
+      "inviteMessageWithLink": "Join my group “{{group}}” on Aurorya: {{url}} (code {{code}}).",
+      "roles": "Group roles",
+      "duos": "Duos",
+      "duo_fusion": "The most attuned duo",
+      "duo_sparks": "The most electric duo",
+      "and": "{{a}} and {{b}}",
+      "needTwo": "Invite at least one person to read the group roles.",
+      "unavailable": "This group’s reading is not available yet.",
+      "leave": "Leave the group",
+      "open": "Open"
     }
   },
   "common": {

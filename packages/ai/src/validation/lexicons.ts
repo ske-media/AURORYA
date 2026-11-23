@@ -54,7 +54,7 @@ const PREDICTION_SOURCES: Record<Locale, RegExp[]> = {
     // Futur simple à la deuxième personne : terminaisons régulières et verbes irréguliers courants.
     // Le présent des verbes en -rer (« vous montrez », « vous préférez ») n'est pas un futur.
     /\b(?:tu|vous)\s+(?:(?:ne|n’|te|t’|vous|se|s’|en|y|le|la|les|lui)\s*)*(?:\p{L}+(?:eras|iras|erez|irez)|(?:ser|aur|fer|verr|pourr|devr|viendr|saur|voudr|faudr|tiendr|recevr|conna[iî]tr|prendr|mettr|dir|vivr|rencontrer|trouver)(?:as|ez))\b/iu,
-    /\b(?:il|elle|ça|cela)\s+(?:t’|te |vous )(?:arrivera|attend(?:ra)?|tombera dessus)\b/iu,
+    /\b(?:il|elle|ça|cela)\s+(?:t’|te |vous )(?:arrivera|attendra|tombera dessus)\b/iu,
     /\b(?:bientôt|prochainement|demain|d’ici (?:peu|là|quelques)|l’an prochain|l’année prochaine|le mois prochain|la semaine prochaine|cette année|dans (?:les|quelques|\p{L}+) (?:jours|semaines|mois|années|ans))\b/iu,
     /\b(?:janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre)\s+(?:19|20)\d\d\b/iu,
     /\b(?:19|20)\d\d\b/u,
@@ -75,8 +75,8 @@ export const PREDICTION_PATTERNS: Record<Locale, RegExp[]> = { fr: PREDICTION_SO
 const FORBIDDEN_SOURCES: Record<Locale, Readonly<Record<string, RegExp>>> = {
   fr: {
     body: /\b(?:poids|gross\p{L}*|maigr\p{L}*|mince\p{L}*|kilos?|laid\p{L}*|moche\p{L}*|belle|beau|beauté|jolie?|physique|rides?|silhouette|ton corps|votre corps|tes fesses|ton visage|votre visage)\b/iu,
-    health: /\b(?:malad\p{L}*|cancer(?:s|eux|euse)?(?= du| de la| des| d’)|santé|médica\p{L}*|médecin\p{L}*|thérap\p{L}*|traitement\p{L}*|dépress\p{L}*|anxi\p{L}*|bipolaire\p{L}*|trouble\p{L}*|diagnosti\p{L}*|mort\p{L}*|mourir|meur\p{L}*|décès|décéd\p{L}*|deuil\p{L}*|suicid\p{L}*|enceinte\p{L}*|grossesse\p{L}*|accident\p{L}*|hôpita\p{L}*)\b/iu,
-    advice: /\b(?:invest\p{L}*|placement financier|bourse|crypto\p{L}*|démissionn\p{L}*|quitte ton (?:travail|job|mec|mari|copain)|quittez votre|divorc\p{L}*|avocat\p{L}*|procès|porte plainte|arrête ton traitement)\b/iu,
+    health: /\b(?:malad(?:e|es|ie|ies|if|ive)|cancer(?:s|eux|euse)?(?= du| de la| des| d’)|santé|médica\p{L}*|médecin\p{L}*|thérap\p{L}*|traitement\p{L}*|dépress\p{L}*|anxi\p{L}*|bipolaire\p{L}*|trouble\p{L}*|diagnosti\p{L}*|mort\p{L}*|mourir|meur\p{L}*|décès|décéd\p{L}*|deuil\p{L}*|suicid\p{L}*|enceinte\p{L}*|grossesse\p{L}*|accident\p{L}*|hôpita\p{L}*)\b/iu,
+    advice: /\b(?:investi(?:r|s|ssement|ssements|sseur)\b(?! dans (?:une|la|cette|sa|ta) (?:relation|amitié))|placement financier|bourse|crypto\p{L}*|démissionn\p{L}*|quitte ton (?:travail|job|mec|mari|copain)|quittez votre|divorc\p{L}*|avocat\p{L}*|procès|porte plainte|arrête ton traitement)\b/iu,
     identity: /\b(?:religi\p{L}*|musulman\p{L}*|chrétien\p{L}*|catholique\p{L}*|juif\p{L}*|juive\p{L}*|athée\p{L}*|homosexuel\p{L}*|hétéro\p{L}*|lesbienne\p{L}*|gay|bisexuel\p{L}*|handicap\p{L}*|origine ethnique|race|raciale?|politique\p{L}*|de gauche|de droite)\b/iu,
     explicit: /\b(?:sexe|sexuel\p{L}*|orgasm\p{L}*|baise\p{L}*|coucher avec|au lit avec|nue?s?|porno\p{L}*)\b/iu,
     insult: /\b(?:idiot\p{L}*|stupide\p{L}*|con|conne|connard\p{L}*|débile\p{L}*|nul|nulle|pathétique\p{L}*|minable\p{L}*|raté\p{L}*|salope\p{L}*|pute\p{L}*|bête comme)\b/iu,
@@ -84,7 +84,7 @@ const FORBIDDEN_SOURCES: Record<Locale, Readonly<Record<string, RegExp>>> = {
   en: {
     body: /\b(?:weight|fat|skinny|thin|ugly|pretty|beautiful|handsome|looks|wrinkles?|your body|your face)\b/iu,
     health: /\b(?:sick\p{L}*|illness\p{L}*|disease\p{L}*|health|medic\p{L}*|doctor\p{L}*|therap\p{L}*|depress\p{L}*|anxiety|anxious|bipolar|disorder\p{L}*|diagnos\p{L}*|death|dead|die|dies|dying|grief|griev\p{L}*|suicid\p{L}*|pregnan\p{L}*|accident\p{L}*|hospital\p{L}*)\b/iu,
-    advice: /\b(?:invest\p{L}*|stocks?|crypto\p{L}*|quit your (?:job|husband|boyfriend)|resign|divorc\p{L}*|lawyer\p{L}*|lawsuit\p{L}*|sue|stop your medication)\b/iu,
+    advice: /\b(?:investi(?:r|s|ssement|ssements|sseur)\b(?! dans (?:une|la|cette|sa|ta) (?:relation|amitié))|stocks?|crypto\p{L}*|quit your (?:job|husband|boyfriend)|resign|divorc\p{L}*|lawyer\p{L}*|lawsuit\p{L}*|sue|stop your medication)\b/iu,
     identity: /\b(?:religio\p{L}*|muslim\p{L}*|christian\p{L}*|catholic\p{L}*|jewish|atheist\p{L}*|homosexual\p{L}*|straight|lesbian\p{L}*|gay|bisexual\p{L}*|disab\p{L}*|ethnic\p{L}*|race|racial|politic\p{L}*|left-wing|right-wing)\b/iu,
     explicit: /\b(?:sex|sexual\p{L}*|orgasm\p{L}*|in bed with|naked|nude|porn\p{L}*)\b/iu,
     insult: /\b(?:idiot\p{L}*|stupid\p{L}*|dumb|moron\p{L}*|pathetic|loser\p{L}*|worthless|bitch\p{L}*|slut\p{L}*)\b/iu,
@@ -95,7 +95,7 @@ const mapValues = (o: Readonly<Record<string, RegExp>>): Record<string, RegExp> 
 export const FORBIDDEN_PATTERNS: Record<Locale, Readonly<Record<string, RegExp>>> = { fr: mapValues(FORBIDDEN_SOURCES.fr), en: mapValues(FORBIDDEN_SOURCES.en) };
 
 /** V6 — adresse. Tutoiement en Lune et Mars, vouvoiement en Saturne (D-009). L'anglais n'a pas cette distinction. */
-export const FORMAL_FR = u(/\b(?:vous|votre|vos|vôtres?)\b/iu);
+export const FORMAL_FR = u(/(?<!rendez-)\b(?:vous|votre|vos|vôtres?)\b/iu);
 export const INFORMAL_FR = u(/\b(?:tu|te|toi|ton|ta|tes|tien(?:ne)?s?)\b|\bt’/iu);
 
 /** V6 — écriture épicène quand l'accord est neutre : formes genrées repérables. */

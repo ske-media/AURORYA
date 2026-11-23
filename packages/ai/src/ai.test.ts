@@ -256,3 +256,22 @@ describe('roast', () => {
     expect(r).toEqual({ ok: false, error: { code: 'GENERATION_UNAVAILABLE', detail: 'punchlines de secours' } });
   });
 });
+
+describe('faux positifs corrigés du validateur', () => {
+  const ok = (text: string, mode: 'cash' | 'expert' = 'cash') =>
+    checkText(text, { field: 't', locale: 'fr', mode, gender: 'n', allowedMentions: new Set(), allowedTokens: [], maxLength: 200 }).map((f) => f.code);
+  it('ne prend pas un présent pour un futur', () => {
+    expect(ok('Tu sais toujours où tu vas, même sans plan.')).toEqual([]);
+    expect(ok('Vous préférez observer, vous montrez peu, vous mesurez tout.', 'expert')).toEqual([]);
+    expect(ok('La douceur de ne rien prévoir : elle t’attend sans rancune.')).toEqual([]);
+    expect(ok('Tu vas rencontrer quelqu’un.')).toContain('V7_PREDICTION');
+    expect(ok('Vous rencontrerez quelqu’un.', 'expert')).toContain('V7_PREDICTION');
+    expect(ok('Tu seras bien entouré de monde.')).toContain('V7_PREDICTION');
+  });
+  it('accepte « rendez-vous » et « maladroit », refuse toujours le vouvoiement et la maladie', () => {
+    expect(ok('Tu arrives en avance à chaque rendez-vous, par principe.')).toEqual([]);
+    expect(ok('Un geste maladroit, et tu ris avant tout le monde.')).toEqual([]);
+    expect(ok('Vous arrivez en avance.')).toContain('V6_ADDRESS');
+    expect(ok('Tu tombes malade dès que tu ralentis.')).toContain('V8_FORBIDDEN');
+  });
+});

@@ -1,0 +1,230 @@
+{
+  "planet_sign:north_node:aries": {
+    "keywords": ["affirmation de soi", "courage", "autonomie", "oser déplaire"],
+    "essence": "Le Nœud Nord en Bélier indique une direction de croissance : apprendre à s’affirmer, à décider par soi-même et à passer en premier sans s’excuser. Le réflexe ancien consiste à s’ajuster aux autres jusqu’à ne plus savoir ce qui est voulu pour soi.",
+    "light": ["Courage qui grandit à chaque décision prise pour soi", "Franchise de plus en plus assumée", "Capacité naissante à entreprendre sans validation"],
+    "shadow": ["Habitude de chercher l’accord de tous avant d’agir", "Désirs personnels tus pour préserver la paix", "Agacement rentré faute d’avoir dit non à temps"],
+    "behaviors": ["Demander l’avis de cinq personnes avant de choisir un plat", "Répondre « peu importe » alors que la préférence existe bel et bien", "S’excuser d’avoir un avis au moment de le donner"],
+    "summary": {
+      "soft": "Ta route va vers toi. Tu as appris à faire de la place aux autres ; il s’agit maintenant d’oser dire ce que tu veux, simplement, et de découvrir que le lien y résiste très bien.",
+      "cash": "Tu sais ce que tout le monde veut manger ce soir, sauf toi. Ton chemin tient en trois lettres : « moi ».",
+      "expert": "Le Nœud Nord en Bélier oriente la croissance vers l’autonomie et l’initiative. L’axe invite à quitter la recherche systématique de consensus pour assumer une volonté propre, quitte à déplaire."
+    },
+    "roastAngles": {
+      "soft": ["Tu as tant écouté les autres que ta propre voix mérite enfin le micro."],
+      "cash": ["Tu dis « ça m’est égal » alors que tu as déjà choisi, et tu boudes si personne ne devine.", "Tu t’excuses quand quelqu’un te marche sur le pied, par réflexe et avec le sourire."],
+      "expert": ["Le Nœud Nord en Bélier : passer du compromis réflexe à la décision assumée, tel est l’apprentissage."]
+    },
+    "roastWeight": 2,
+    "avoid": ["Encourager l’égoïsme ou la rupture d’une relation", "Présenter la direction de croissance comme un destin écrit"]
+  },
+  "planet_sign:north_node:taurus": {
+    "keywords": ["simplicité", "stabilité", "confiance en ses ressources", "calme"],
+    "essence": "Le Nœud Nord en Taureau indique une direction de croissance : construire du simple, du stable, du tangible, et s’appuyer sur ses propres ressources. Le réflexe ancien consiste à chercher l’intensité et les situations compliquées pour se sentir vivre.",
+    "light": ["Goût grandissant pour ce qui dure", "Capacité à se rassurer par des gestes concrets", "Patience qui s’apprend et finit par payer"],
+    "shadow": ["Attirance pour les situations dramatiques", "Méfiance devant ce qui se passe trop bien", "Tendance à tout remettre en jeu quand le calme s’installe"],
+    "behaviors": ["Chercher le problème caché dans une journée sans histoire", "Compliquer un projet simple pour le rendre intéressant", "Découvrir avec surprise le plaisir d’un dimanche où rien n’arrive"],
+    "summary": {
+      "soft": "Ta route va vers la paix. Tu connais bien les tempêtes ; il s’agit maintenant de te fier à ce qui est simple, de bâtir doucement, et de goûter ce que tu as sans craindre de le perdre.",
+      "cash": "Quand tout va bien, tu trouves ça louche. Ton chemin : apprendre qu’une soirée calme n’est pas un piège.",
+      "expert": "Le Nœud Nord en Taureau oriente la croissance vers la stabilité, la valeur propre et le rapport simple au concret. L’axe invite à délaisser la logique de crise pour celle de la construction patiente."
+    },
+    "roastAngles": {
+      "soft": ["Tu as le droit de te sentir bien sans raison, et de laisser le calme durer plus d’une soirée."],
+      "cash": ["Tu te méfies d’une relation sans drame comme d’un contrat sans petites lignes.", "Tu appelles « ennui » ce que les autres appellent « une semaine normale »."],
+      "expert": ["Le Nœud Nord en Taureau : apprendre la permanence et la suffisance, contre l’attrait de l’intensité."]
+    },
+    "roastWeight": 1,
+    "avoid": ["Donner un conseil d’argent", "Supposer un passé douloureux ou des crises réelles"]
+  },
+  "planet_sign:north_node:gemini": {
+    "keywords": ["curiosité", "écoute", "légèreté", "questions"],
+    "essence": "Le Nœud Nord en Gémeaux indique une direction de croissance : poser des questions, écouter, s’intéresser au détail et au voisin de table. Le réflexe ancien consiste à détenir la vérité, à généraliser et à préférer les grandes théories aux échanges réels.",
+    "light": ["Curiosité qui s’ouvre aux points de vue différents", "Souplesse d’esprit en progrès constant", "Plaisir croissant de la conversation simple"],
+    "shadow": ["Habitude de conclure avant d’avoir écouté", "Certitudes servies comme des évidences", "Impatience devant les nuances et les détails"],
+    "behaviors": ["Répondre par un grand principe à une question pratique", "Donner un avis définitif sur un livre lu à moitié", "Découvrir qu’une question bien posée apprend plus qu’un exposé"],
+    "summary": {
+      "soft": "Ta route va vers la curiosité. Tu as le sens des grandes vérités ; il s’agit maintenant d’écouter, de demander, de laisser les autres t’apprendre quelque chose que tu ne savais pas.",
+      "cash": "On te demande où est la gare et tu réponds par ta philosophie du voyage. Ton chemin : la réponse courte.",
+      "expert": "Le Nœud Nord en Gémeaux oriente la croissance vers l’échange, la curiosité et la pensée nuancée. L’axe invite à passer de la conviction globale à l’information précise et au dialogue."
+    },
+    "roastAngles": {
+      "soft": ["Tu as beaucoup de réponses ; ta chance est de découvrir le plaisir des questions."],
+      "cash": ["Tu commences par « en fait, c’est très simple », et vingt minutes plus tard personne n’a pu parler.", "Tu as un avis tranché sur un pays où tu as fait une escale de deux heures."],
+      "expert": ["Le Nœud Nord en Gémeaux : troquer la certitude doctrinale contre la curiosité et l’écoute du particulier."]
+    },
+    "roastWeight": 1,
+    "avoid": ["Viser les convictions ou croyances de la personne", "Présenter la légèreté comme de la superficialité"]
+  },
+  "planet_sign:north_node:cancer": {
+    "keywords": ["tendresse", "vulnérabilité", "foyer", "accueil des émotions"],
+    "essence": "Le Nœud Nord en Cancer indique une direction de croissance : accueillir ses émotions, prendre soin, se créer un lieu où se poser. Le réflexe ancien consiste à tout maîtriser, à se définir par le travail et à tenir debout sans jamais rien demander.",
+    "light": ["Tendresse qui apprend à se dire", "Capacité grandissante à demander du soutien", "Sens du foyer en construction"],
+    "shadow": ["Refuge dans le travail quand l’émotion monte", "Besoin de garder le contrôle en toute circonstance", "Pudeur qui passe pour de la froideur"],
+    "behaviors": ["Répondre « j’ai beaucoup de travail » à la question « comment ça va »", "Organiser les vacances comme un projet avec livrables", "Avoir du mal à accepter un plat préparé par quelqu’un d’autre"],
+    "summary": {
+      "soft": "Ta route va vers la douceur. Tu sais tenir, assumer, réussir ; il s’agit maintenant de te laisser toucher, de dire ce que tu ressens, et de découvrir qu’on peut s’appuyer sur quelqu’un.",
+      "cash": "Tu gères une crise au travail sans ciller, mais écrire « tu me manques » te demande trois brouillons.",
+      "expert": "Le Nœud Nord en Cancer oriente la croissance vers la vie affective, l’intime et le soin. L’axe invite à relâcher l’exigence de maîtrise et de statut pour reconnaître le besoin d’attachement."
+    },
+    "roastAngles": {
+      "soft": ["Tu portes beaucoup pour les autres ; ta chance est d’apprendre à te laisser porter un peu."],
+      "cash": ["Tu réponds « ça va, je gère » avec une valise dans chaque main et un carton sous le bras.", "Tu as un plan pour tout, sauf pour le moment où quelqu’un te demande ce que tu ressens."],
+      "expert": ["Le Nœud Nord en Cancer : apprendre la vulnérabilité et l’intime, là où le devoir tenait lieu d’identité."]
+    },
+    "roastWeight": 2,
+    "avoid": ["Conseiller de quitter un travail ou de fonder une famille", "Supposer quoi que ce soit sur la famille réelle"]
+  },
+  "planet_sign:north_node:leo": {
+    "keywords": ["oser briller", "créativité", "cœur", "place personnelle"],
+    "essence": "Le Nœud Nord en Lion indique une direction de croissance : prendre sa place, créer, se montrer et parler avec le cœur. Le réflexe ancien consiste à se fondre dans le groupe, à observer de loin et à préférer l’idée à l’élan.",
+    "light": ["Joie qui grandit quand elle s’exprime", "Créativité personnelle en plein éveil", "Chaleur capable d’entraîner un groupe"],
+    "shadow": ["Habitude de se cacher derrière le collectif", "Détachement affiché pour éviter de s’exposer", "Compliments reçus avec gêne puis écartés"],
+    "behaviors": ["Proposer une idée en commençant par « quelqu’un devrait »", "Répondre à un compliment en parlant du travail des autres", "S’installer au fond de la salle par réflexe"],
+    "summary": {
+      "soft": "Ta route va vers la lumière. Tu sais te fondre dans un groupe ; il s’agit maintenant d’oser te montrer, de créer quelque chose qui te ressemble et d’y mettre tout ton cœur.",
+      "cash": "Tu as un talent évident et une technique très au point pour que personne ne le remarque.",
+      "expert": "Le Nœud Nord en Lion oriente la croissance vers l’expression personnelle, la création et l’engagement du cœur. L’axe invite à quitter la réserve du collectif pour assumer une place singulière."
+    },
+    "roastAngles": {
+      "soft": ["Tu as une lumière que tu ranges trop souvent dans un tiroir ; elle mérite une lampe."],
+      "cash": ["On te félicite et tu réponds « c’est surtout grâce à l’équipe », alors que tu as travaillé sans personne.", "Tu fais un cadeau magnifique et tu le signes « de la part de tout le monde »."],
+      "expert": ["Le Nœud Nord en Lion : passer de la neutralité du groupe à l’affirmation créatrice, voilà l’enjeu de l’axe."]
+    },
+    "roastWeight": 2,
+    "avoid": ["Encourager la vanité ou la recherche d’attention", "Commenter l’apparence"]
+  },
+  "planet_sign:north_node:virgo": {
+    "keywords": ["concret", "méthode", "discernement", "service utile"],
+    "essence": "Le Nœud Nord en Vierge indique une direction de croissance : ordonner, trier, s’occuper du concret et rendre service utilement. Le réflexe ancien consiste à se laisser porter, à rêver la solution et à attendre que les choses s’arrangent d’elles-mêmes.",
+    "light": ["Discernement qui s’affine avec la pratique", "Satisfaction croissante du travail bien fini", "Capacité à transformer une intuition en méthode"],
+    "shadow": ["Flou entretenu pour éviter de choisir", "Habitude de s’en remettre au hasard", "Retards expliqués par de très bonnes histoires"],
+    "behaviors": ["Compter sur l’inspiration pour remplir un formulaire", "Retrouver ses clés grâce à une intuition plutôt qu’à un rangement", "Découvrir le plaisir inattendu d’une liste entièrement cochée"],
+    "summary": {
+      "soft": "Ta route va vers le concret. Tu as une intuition immense ; il s’agit maintenant de lui donner des mains, un ordre, un rythme, et de voir tes rêves prendre forme au quotidien.",
+      "cash": "Tu fais confiance à l’univers pour tes dossiers administratifs. L’univers, lui, attend toujours la pièce jointe.",
+      "expert": "Le Nœud Nord en Vierge oriente la croissance vers la méthode, le discernement et le service concret. L’axe invite à quitter le flou et la remise à plus tard pour l’organisation du réel."
+    },
+    "roastAngles": {
+      "soft": ["Tu as des rêves immenses ; ta chance est d’apprendre à leur donner un agenda."],
+      "cash": ["Tu réponds « ça se fera tout seul » à propos d’une chose qui ne s’est jamais faite toute seule.", "Tu arrives en retard avec une explication si poétique que personne n’ose regarder sa montre."],
+      "expert": ["Le Nœud Nord en Vierge : donner forme et rigueur à ce qui demeurait intuition, sans renoncer à la sensibilité."]
+    },
+    "roastWeight": 1,
+    "avoid": ["Tout sujet médical ou d’hygiène de vie", "Opposer rêve et sérieux comme si l’un valait moins que l’autre"]
+  },
+  "planet_sign:north_node:libra": {
+    "keywords": ["coopération", "écoute de l’autre", "diplomatie", "partage"],
+    "essence": "Le Nœud Nord en Balance indique une direction de croissance : coopérer, écouter, tenir compte de l’autre et bâtir à deux. Le réflexe ancien consiste à foncer en solitaire, à décider vite pour soi et à vivre la concession comme une défaite.",
+    "light": ["Sens du partenariat en plein apprentissage", "Tact qui adoucit une franchise naturelle", "Capacité grandissante à demander un avis"],
+    "shadow": ["Habitude de tout faire sans personne pour aller plus vite", "Impatience devant la lenteur des autres", "Réflexe de trancher avant d’avoir consulté"],
+    "behaviors": ["Annoncer une décision commune déjà prise en solo", "Finir le travail de groupe pendant que le groupe en discute encore", "Marcher dix mètres devant les autres dans la rue"],
+    "summary": {
+      "soft": "Ta route va vers l’autre. Tu sais avancer sans attendre personne ; il s’agit maintenant de ralentir d’un pas, d’écouter, et de découvrir qu’à deux le chemin mène plus loin.",
+      "cash": "Tu dis « on en parle » une fois que tout est réservé, payé et confirmé. Ton chemin : demander avant.",
+      "expert": "Le Nœud Nord en Balance oriente la croissance vers la relation, la coopération et la recherche d’équilibre. L’axe invite à tempérer l’initiative solitaire par la prise en compte d’autrui."
+    },
+    "roastAngles": {
+      "soft": ["Tu sais très bien avancer ; ta chance est de découvrir la joie d’attendre quelqu’un."],
+      "cash": ["Tu demandes « on fait quoi ce soir ? » avec les billets déjà dans la poche.", "Tu appelles « travail d’équipe » le moment où les autres valident ce que tu as fini hier."],
+      "expert": ["Le Nœud Nord en Balance : apprendre l’accord et la réciprocité, là où primait l’élan individuel."]
+    },
+    "roastWeight": 2,
+    "avoid": ["Annoncer une rencontre ou une mise en couple", "Encourager à s’effacer devant l’autre"]
+  },
+  "planet_sign:north_node:scorpio": {
+    "keywords": ["profondeur", "lâcher le confort", "confiance partagée", "transformation"],
+    "essence": "Le Nœud Nord en Scorpion indique une direction de croissance : aller au fond des choses, partager vraiment, accepter de changer. Le réflexe ancien consiste à s’accrocher au confort, aux habitudes et à ce qui est acquis, quitte à éviter tout ce qui remue.",
+    "light": ["Courage émotionnel qui se découvre peu à peu", "Capacité à lâcher ce qui ne sert plus", "Intimité de plus en plus authentique"],
+    "shadow": ["Attachement aux habitudes par peur du changement", "Tendance à tout garder pour soi, objets comme sentiments", "Résistance passive devant une conversation délicate"],
+    "behaviors": ["Changer de sujet dès qu’une discussion devient sérieuse", "Garder un vieux pull, un vieux poste et une vieille opinion par confort", "Dire « tout est très bien comme ça » en regardant ailleurs"],
+    "summary": {
+      "soft": "Ta route va vers la profondeur. Tu sais créer du confort ; il s’agit maintenant d’oser les vraies conversations, de partager ce qui compte, et de te laisser transformer par ce que tu vis.",
+      "cash": "Dès qu’une discussion devient sérieuse, tu proposes de reprendre du dessert. Ton chemin passe après le dessert.",
+      "expert": "Le Nœud Nord en Scorpion oriente la croissance vers l’engagement émotionnel, le partage et la transformation. L’axe invite à desserrer l’attachement au confort et à l’acquis."
+    },
+    "roastAngles": {
+      "soft": ["Tu construis des abris solides ; ta chance est d’oser en sortir quand le vent t’appelle."],
+      "cash": ["Tu réponds « on est bien, là, non ? » à quelqu’un qui venait de dire « il faut qu’on parle ».", "Tu gardes le même fauteuil, le même plat et le même avis depuis toujours, par principe de précaution."],
+      "expert": ["Le Nœud Nord en Scorpion : consentir à la crise féconde et au partage, plutôt qu’à la conservation."]
+    },
+    "roastWeight": 2,
+    "avoid": ["Tout vocabulaire de sexualité, de perte ou de disparition", "Donner un conseil d’argent ou de patrimoine"]
+  },
+  "planet_sign:north_node:sagittarius": {
+    "keywords": ["vision d’ensemble", "confiance", "aventure", "sens"],
+    "essence": "Le Nœud Nord en Sagittaire indique une direction de croissance : prendre de la hauteur, se fier à son intuition, partir voir plus loin. Le réflexe ancien consiste à accumuler les informations, à peser chaque avis et à tourner autour de la décision.",
+    "light": ["Confiance qui grandit en osant choisir", "Goût de l’aventure en train de s’éveiller", "Capacité à dégager l’essentiel du détail"],
+    "shadow": ["Dispersion entre mille informations contradictoires", "Besoin de consulter tout le monde avant de trancher", "Bavardage qui remplace la décision"],
+    "behaviors": ["Comparer douze avis en ligne avant d’acheter une bouilloire", "Solliciter l’avis de tout le voisinage sur une question déjà résolue", "Découvrir qu’un départ improvisé se passe très bien"],
+    "summary": {
+      "soft": "Ta route va vers le large. Tu sais t’informer, comparer, discuter ; il s’agit maintenant de te fier à ce que tu sens, de choisir une direction et d’oser partir sans tout savoir.",
+      "cash": "Tu as lu tous les avis, comparé toutes les options et ouvert vingt onglets. Ton chemin : en fermer dix-neuf.",
+      "expert": "Le Nœud Nord en Sagittaire oriente la croissance vers la vision d’ensemble, la conviction et l’exploration. L’axe invite à dépasser l’accumulation d’informations pour dégager un sens et s’y tenir."
+    },
+    "roastAngles": {
+      "soft": ["Tu as toutes les cartes en main ; ta chance est d’oser enfin choisir une route."],
+      "cash": ["Tu fais un sondage auprès de six personnes pour savoir si tu as vraiment envie d’y aller.", "Tu connais les horaires, les tarifs et la météo du voyage que tu n’as toujours pas réservé."],
+      "expert": ["Le Nœud Nord en Sagittaire : passer de la collecte de faits à la conviction, du commentaire à l’engagement."]
+    },
+    "roastWeight": 1,
+    "avoid": ["Annoncer un voyage ou un départ", "Viser une croyance précise"]
+  },
+  "planet_sign:north_node:capricorn": {
+    "keywords": ["responsabilité", "autonomie", "construction", "maturité"],
+    "essence": "Le Nœud Nord en Capricorne indique une direction de croissance : prendre ses responsabilités, se fixer un cap et bâtir dans la durée. Le réflexe ancien consiste à se réfugier dans le cocon, à dépendre de l’humeur du moment et à attendre une prise en charge.",
+    "light": ["Autorité intérieure qui se construit pas à pas", "Fierté grandissante de tenir un engagement", "Capacité à transformer la sensibilité en solidité"],
+    "shadow": ["Repli sur le cocon quand l’enjeu grandit", "Décisions prises selon l’humeur du jour", "Attente qu’un proche règle la situation"],
+    "behaviors": ["Appeler un parent avant de prendre une décision d’adulte", "Annuler un engagement parce que « ce n’était pas le bon jour »", "Découvrir la satisfaction d’un objectif tenu jusqu’au bout"],
+    "summary": {
+      "soft": "Ta route va vers la solidité. Tu as une sensibilité précieuse ; il s’agit maintenant de te faire confiance, de tenir un cap, et de devenir pour toi l’appui que tu cherchais ailleurs.",
+      "cash": "Tu as de grandes ambitions, juste après la sieste et si l’ambiance s’y prête. Ton chemin : y aller quand même.",
+      "expert": "Le Nœud Nord en Capricorne oriente la croissance vers la responsabilité, la structure et l’accomplissement. L’axe invite à quitter la dépendance affective et l’humeur pour l’engagement durable."
+    },
+    "roastAngles": {
+      "soft": ["Tu as le cœur tendre ; ta chance est de découvrir que tu as aussi les épaules."],
+      "cash": ["Tu repousses une échéance importante parce que la journée « ne le sentait pas ».", "Tu postes ton formulaire à remplir dans le groupe de famille, au cas où quelqu’un s’en chargerait."],
+      "expert": ["Le Nœud Nord en Capricorne : apprendre l’autonomie et la tenue dans le temps, au-delà du besoin de protection."]
+    },
+    "roastWeight": 2,
+    "avoid": ["Donner un conseil de carrière", "Traiter la personne d’immature"]
+  },
+  "planet_sign:north_node:aquarius": {
+    "keywords": ["collectif", "détachement", "amitié", "contribution"],
+    "essence": "Le Nœud Nord en Verseau indique une direction de croissance : contribuer à un projet commun, prendre du recul, traiter chacun en égal. Le réflexe ancien consiste à chercher les applaudissements et à vivre chaque remarque comme une affaire d’honneur.",
+    "light": ["Sens du collectif en plein essor", "Recul qui apaise l’amour-propre", "Générosité tournée vers le projet plutôt que vers le rôle"],
+    "shadow": ["Besoin d’attention difficile à mettre en veille", "Susceptibilité quand le premier rôle échappe", "Habitude de prendre les choses personnellement"],
+    "behaviors": ["Vérifier combien de personnes ont réagi à sa publication", "Ramener doucement la conversation vers sa propre anecdote", "Découvrir le plaisir d’applaudir le succès de quelqu’un d’autre"],
+    "summary": {
+      "soft": "Ta route va vers les autres. Tu sais briller ; il s’agit maintenant de mettre cette chaleur au service d’un projet commun et de goûter la joie de compter parmi plusieurs.",
+      "cash": "Tu écoutes l’histoire de quelqu’un en préparant la tienne, qui est meilleure. Ton chemin : la garder pour plus tard.",
+      "expert": "Le Nœud Nord en Verseau oriente la croissance vers le collectif, l’amitié et la pensée détachée. L’axe invite à relativiser le besoin de reconnaissance personnelle au profit d’une contribution commune."
+    },
+    "roastAngles": {
+      "soft": ["Tu sais tenir la scène ; ta chance est de découvrir le bonheur de chanter dans le chœur."],
+      "cash": ["Tu offres un cadeau et tu surveilles le visage de l’autre comme un jury de concours.", "Tu prends un « bof » sur le choix du restaurant comme une critique de l’ensemble de ton œuvre."],
+      "expert": ["Le Nœud Nord en Verseau : dépasser la quête d’approbation pour une participation égalitaire au groupe."]
+    },
+    "roastWeight": 1,
+    "avoid": ["Traiter la personne d’égocentrique", "Associer le collectif à un camp ou à une cause précise"]
+  },
+  "planet_sign:north_node:pisces": {
+    "keywords": ["lâcher-prise", "confiance", "compassion", "intuition"],
+    "essence": "Le Nœud Nord en Poissons indique une direction de croissance : lâcher prise, faire confiance, accueillir ce qui ne se mesure pas. Le réflexe ancien consiste à tout vérifier, à corriger chaque détail et à s’inquiéter de ce qui pourrait ne pas être parfait.",
+    "light": ["Intuition qui gagne en assurance", "Indulgence grandissante envers soi et les autres", "Capacité à laisser venir sans tout prévoir"],
+    "shadow": ["Contrôle du détail au détriment de l’ensemble", "Autocritique rarement en repos", "Difficulté à supporter l’imprévu"],
+    "behaviors": ["Refaire une liste parce que l’ancienne était mal alignée", "Relire un itinéraire déjà connu par cœur avant de partir", "Découvrir qu’une journée sans programme peut très bien se passer"],
+    "summary": {
+      "soft": "Ta route va vers la confiance. Tu sais analyser, organiser, améliorer ; il s’agit maintenant de desserrer les mains, d’écouter ton intuition et de laisser la vie faire une part du travail.",
+      "cash": "Tu as un plan, un plan de rechange et un tableau pour comparer les deux. Ton chemin : poser le stylo.",
+      "expert": "Le Nœud Nord en Poissons oriente la croissance vers l’abandon confiant, la compassion et l’intuition. L’axe invite à relâcher l’exigence d’analyse et de contrôle du détail."
+    },
+    "roastAngles": {
+      "soft": ["Tu as pensé à tout, sauf à la douceur de ne penser à rien ; elle patiente sans rancune."],
+      "cash": ["Tu prépares une soirée détente avec un minutage précis et un point d’étape à mi-parcours.", "Tu lâches prise, oui, mais d’abord tu notes quand, comment et jusqu’à quelle heure."],
+      "expert": ["Le Nœud Nord en Poissons : passer du tri au tout, de la vérification à la confiance, sans perdre le discernement."]
+    },
+    "roastWeight": 2,
+    "avoid": ["Tout sujet médical ou d’inquiétude présentée comme un diagnostic", "Viser une croyance ou une spiritualité précise"]
+  }
+}

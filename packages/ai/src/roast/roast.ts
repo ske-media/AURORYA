@@ -78,7 +78,8 @@ export function fallbackRoast(ctx: RoastContext, sheet: readonly ScoredFact[]): 
   const bodies = new Set<string>();
   for (const { fact } of sheet) {
     if (punchlines.length === 3) break;
-    const angle = ctx.kb(fact.kbKey)?.roastAngles[ctx.mode][0];
+    // Deux faits peuvent partager une fiche (le maître de l'Ascendant et son placement) : jamais deux fois le même texte.
+    const angle = ctx.kb(fact.kbKey)?.roastAngles[ctx.mode].find((text) => !punchlines.some((p) => p.text === text));
     if (!angle) continue;
     // La troisième punchline doit garantir deux corps couverts.
     if (punchlines.length === 2 && bodies.size === 1 && fact.bodies.every((b) => bodies.has(b))) continue;

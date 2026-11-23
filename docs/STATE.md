@@ -1,6 +1,6 @@
 # État du projet
 
-Mis à jour : 2026-11-23, après le moteur, le socle IA, les rôles, les migrations, le socle de l'app et les premières routes de l'API.
+Mis à jour : 2026-11-23, après l'API complète des groupes, le site, l'onboarding, la roue et les contenus.
 
 ## Fait
 - **T-001** — Monorepo pnpm, `CLAUDE.md`, fichiers vivants, lint avec frontières entre paquets, contrôle de secrets, CI minimale, versions verrouillées.
@@ -40,9 +40,24 @@ Mis à jour : 2026-11-23, après le moteur, le socle IA, les rôles, les migrati
 - `.claude/rules/` et `.claude/agents/relecteur.md` (facultatifs) ne sont pas créés.
 - `apps/web` est un squelette sans Next.js (T-008, T-009).
 
+## Ajouts du 2026-11-23 (suite, mode autonome)
+- **Groupes (T-040, T-042)** : toutes les routes (création, invitation par lien et code, adhésion avec consentement, départ, transfert) et la lecture « rôles et duos » en structure déterministe. Écrans : onglet des groupes et détail.
+- **Site et API sous Next.js (T-008)** : enveloppes de toutes les routes, vérification des jetons, liste d'attente avec confirmation et désinscription, page d'invitation, en-têtes de sécurité. `next build` réussit.
+- **App (T-013, T-014, T-036)** : onboarding en cinq écrans, calcul, révélation du roast avec changement de mode, roue Skia interactive et liste accessible, onglet du jour. Le bundle iOS s'exporte (5,9 Mo).
+- **Contenus (T-032 partiel)** : 156 fiches et 120 questions (ADR-017), importables par `pnpm kb:seed` et `pnpm questions:seed`.
+- **Bout en bout** : avec les vraies fiches, un roast de repli valide sort dans les trois modes pour quatre thèmes différents, sans fournisseur d'IA.
+  Vérifié : `pnpm lint`, `pnpm typecheck`, `pnpm test` (320 tests), `pnpm db:test`.
+
+## Non fait ou non vérifié
+- Aucun écran n'a tourné sur un iPhone ou un simulateur. Aucun test de rendu de composant.
+- Compte (Apple, e-mail), paywall et RevenueCat, partage de carte, notifications, lecture complète, horoscopes générés, météo du groupe, membres fantômes, animation de l'aurore, feuille de placement détaillée, réglages, suppression et export du compte.
+- Textes des rôles et des duos (aucun fournisseur d'IA), libellés des rôles « famille » et « collègues », mini-roast par signe du site, pages légales.
+- Envoi d'e-mails (Resend), notifications distantes, tâches planifiées, Sentry, Mixpanel.
+- Les textes d'interface (onboarding, groupes, site) sont fonctionnels et rédigés par le développement : à relire par le design.
+- La CI n'a jamais tourné.
+
 ## Prochaine action
-Côté serveur : enveloppes Next.js et site (T-008), routes des groupes (T-040), lecture complète (T-035). Côté app : onboarding (T-013), dessin de la roue (T-014). Contenu : base de règles (T-032), sans laquelle le roast n'a pas de repli.
-Ensuite, sans compte : socle de l'API (T-009) contre le Postgres local, import des lieux (T-007), base de règles (T-032, demande un fournisseur d'IA).
+Dès que les comptes existent : appliquer les migrations et les imports sur Supabase, déployer sur Vercel, produire un build de développement iOS et dérouler l'onboarding sur appareil. Sans compte : compte et paywall côté serveur (webhook RevenueCat), carte partageable, lecture complète.
 
 ## Bloqué, en attente d'un fondateur
 - Comptes à ouvrir : Supabase (T-006), Vercel payant (T-004, T-008, T-009), Expo/EAS (build de T-003), puis RevenueCat, Sentry, Resend, fournisseur d'IA.

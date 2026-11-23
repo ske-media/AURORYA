@@ -128,3 +128,17 @@ Décision :
 - L'authentification est un port (`AuthPort`) ; l'adaptateur qui vérifie les jetons Supabase reste à écrire.
 Conséquences : en production, la chaîne de connexion (via le pooler de Supabase, mode transaction) devient le secret serveur à la place de la clé de service ; à vérifier avec le projet réel. `edit_count_30d` de `birth_data` n'est pas utilisé : le quota se déduit des dates des thèmes. Le coût par appel d'IA (`cost_microusd`) est enregistré à 0 tant que la table de tarifs n'existe pas (T-033).
 Validé par : mode autonome.
+
+## ADR-017 — Contenus rédigés par IA en mode autonome (2026-11-23)
+Statut : accepté (mode autonome), relecture humaine attendue
+Contexte : sans base de règles, le roast n'a aucun repli ; sans questions, l'onglet du jour est vide. Aucun fournisseur d'IA n'est choisi (O-08).
+Décision : 156 fiches d'interprétation françaises (dix planètes, Nœud Nord, Ascendant, Milieu du Ciel, dans les douze signes) et 120 questions du jour ont été rédigées par des agents Claude, sous contrôle d'un validateur automatique (schéma, longueurs, adresse, écriture épicène, sujets interdits, prédictions). Les fiches entrent en `draft_ai` ; les questions entrent en `approved` pour pouvoir être servies.
+Conséquences : la mention « relu par une astrologue » reste interdite (O-14). Les questions n'ont pas été relues par l'associé, contrairement au §14.9. Restent à écrire : corps en maison, aspects, dominantes, stelliums, rétrogrades, transits, synastrie, contenus anglais. Les agents ont mis `roastWeight` à 0 pour Neptune et Pluton dans les signes qu'aucun adulte vivant ne porte.
+Validé par : mode autonome.
+
+## ADR-018 — App : session dans le trousseau par morceaux, sans MMKV (2026-11-23)
+Statut : accepté (mode autonome)
+Contexte : la SPEC §15.4 prévoit MMKV chiffré. La version actuelle de `react-native-mmkv` exige un module natif supplémentaire, invérifiable sans build iOS.
+Décision : la session Supabase et le brouillon d'onboarding sont rangés dans le trousseau iOS (`expo-secure-store`), découpés en morceaux de 600 caractères. MMKV sera réévalué avec les membres fantômes.
+Conséquences : aucune dépendance native hors d'Expo pour le stockage. Les lectures sont plus lentes que MMKV ; acceptable pour de petites valeurs.
+Validé par : mode autonome.

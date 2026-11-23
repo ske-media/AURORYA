@@ -67,3 +67,66 @@ describe('GET /daily', () => {
     for (let i = 1; i < 7; i += 1) expect(body.questions[i].text).not.toBe(body.questions[i - 1].text);
   });
 });
+
+// Bout en bout avec les contenus réels du dépôt : fiches d'interprétation et questions importées par leurs
+// fichiers SQL, thème calculé par le moteur, roast servi par repli (aucun fournisseur d'IA).
+describe('contenus réels', async () => {
+  const { execFileSync } = await import('node:child_process');
+  const { validateRoast, buildRoastSheet } = await import('@aurorya/ai');
+  const { KbEntrySchema, ChartPayloadSchema, RoastResponseSchema, TONE_MODES } = await import('@aurorya/shared');
+  const { buildRoastPrompts } = await import('./prompts');
+  const { postCharts } = await import('./routes/charts');
+  const { putProfile } = await import('./routes/profile');
+  const { postRoasts } = await import('./routes/roasts');
+  const { readFileSync } = await import('node:fs');
+  const root = new URL('../../../../', import.meta.url);
+  const psql = (file: string): void => void execFileSync('psql', ['-X', '-q', '-v', 'ON_ERROR_STOP=1', '-h', pg.host, '-p', String(pg.port), '-U', 'postgres', '-d', 'postgres', '-f', new URL(file, root).pathname], { stdio: 'pipe' });
+  const real: AppDeps = { ...deps, prompts: buildRoastPrompts((p) => { try { return readFileSync(new URL(`content/prompts/${p}`, root), 'utf8'); } catch { return null; } }, 'Ava') };
+  const call = (route: (r: Request, d: AppDeps) => Promise<Response>, method: string, body: unknown) =>
+    route(new Request('https://test.invalid/x', { method, body: JSON.stringify(body), headers: { authorization: 'Bearer ok' } }), real);
+
+  it('importe les fiches et les questions', async () => {
+    psql('supabase/seed/kb.v1.sql');
+    psql('supabase/seed/questions.sql');
+    expect(Number((await sql.query<{ n: string }>(`select count(*) as n from public.interpretation_kb where locale = 'fr' and kb_version = '1' and review_status = 'draft_ai'`)).rows[0]?.n)).toBe(156);
+    expect(Number((await sql.query<{ n: string }>(`select count(*) as n from public.daily_questions where locale = 'fr' and status = 'approved'`)).rows[0]?.n)).toBe(120);
+    const question = (await (await get(getDaily, 'date=2026-11-23')).json()).question as string;
+    expect(question.endsWith('?')).toBe(true);
+  });
+
+  it('sert un roast de repli valide dans les trois modes, pour plusieurs thèmes', async () => {
+    await sql.query(`insert into public.geo_places (geoname_id, name, ascii_name, country_code, latitude, longitude, population, tz_iana, search_text)
+      values (6077243, 'Montréal', 'Montreal', 'CA', 45.50884, -73.58781, 1600000, 'America/Toronto', 'montreal') on conflict do nothing`);
+    await sql.query(`update public.remote_config set value = '50' where key in ('quota.birth_edits_per_30d', 'limits.charts_per_hour', 'limits.roasts_per_hour')`);
+    invalidateConfigCache(sql);
+    await call(putProfile, 'PUT', { firstName: 'Camille', grammaticalGender: 'n' });
+    const births = [
+      { date: '1993-04-17', time: '14:35', timePrecision: 'exact', timeWindow: null },
+      { date: '1988-11-02', time: null, timePrecision: 'unknown', timeWindow: null },
+      { date: '2001-07-29', time: '03:10', timePrecision: 'exact', timeWindow: null },
+      { date: '1975-01-09', time: null, timePrecision: 'approx', timeWindow: 'evening' },
+    ];
+    const seen = new Set<string>();
+    for (const birth of births) {
+      const chart = await (await call(postCharts, 'POST', { placeId: 6077243, ...birth })).json();
+      const payload = ChartPayloadSchema.parse((await sql.query<{ payload: unknown }>('select payload from public.charts where id = $1', [chart.chartId])).rows[0]?.payload);
+      const rows = (await sql.query<{ key: string; body: unknown }>(`select key, body from public.interpretation_kb where locale = 'fr'`)).rows;
+      const kb = new Map(rows.map((r) => [r.key, KbEntrySchema.parse(r.body)]));
+      for (const mode of TONE_MODES) {
+        const response = await call(postRoasts, 'POST', { chartId: chart.chartId, mode });
+        expect(response.status).toBe(201);
+        const roast = RoastResponseSchema.parse(await response.json());
+        expect(roast.status).toBe('fallback');
+        expect(roast.punchlines.every((p) => p.label.length > 0 && p.text.length >= 40)).toBe(true);
+        // Le repli passe lui-même la chaîne de validation complète, ancres et accroches comprises.
+        const ctx = { chart: payload, mode, locale: 'fr' as const, gender: 'n' as const, kb: (key: string) => kb.get(key) ?? null };
+        const stored = (await sql.query<{ content: unknown }>('select content from public.readings where id = $1', [roast.readingId])).rows[0]?.content;
+        const checked = validateRoast(stored, ctx, buildRoastSheet(ctx).sheet);
+        expect(checked.ok ? [] : checked.error).toEqual([]);
+        for (const p of roast.punchlines) seen.add(p.text);
+      }
+    }
+    // Des thèmes différents donnent des lectures différentes.
+    expect(seen.size).toBeGreaterThan(20);
+  });
+});
