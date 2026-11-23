@@ -1,0 +1,230 @@
+{
+  "planet_sign:neptune:aries": {
+    "keywords": ["idéal combatif", "héroïsme rêvé", "élan inspiré", "croisade"],
+    "essence": "Neptune en Bélier idéalise l’action : une génération qui rêve de commencements, de causes à défendre, de héros ordinaires. Chez une personne, l’inspiration pousse à foncer, mais la cible reste parfois floue.",
+    "light": ["Foi communicative dans les nouveaux départs", "Courage inspiré par un idéal plutôt que par l’intérêt", "Capacité à redonner de l’élan à une cause essoufflée"],
+    "shadow": ["Combats menés pour une image plutôt que pour un but", "Enthousiasme qui retombe dès que le réel résiste", "Confusion entre impulsion et vocation"],
+    "behaviors": ["S’engager dans une cause découverte la veille", "Annoncer un grand projet avant d’en connaître la première étape", "Défendre un inconnu dans une file d’attente"],
+    "summary": {
+      "soft": "Tu crois aux commencements. Il y a chez toi un idéal qui a besoin d’agir, de défendre, d’ouvrir un chemin, et cette foi dans le premier pas donne du courage autour de toi.",
+      "cash": "Tu pars sauver le monde avant le petit-déjeuner. Vers midi, tu as oublié lequel.",
+      "expert": "Neptune en Bélier, placement générationnel, projette l’idéal sur l’initiative et le combat. Chez vous, l’inspiration appelle l’acte, avec un risque de flou sur l’objectif poursuivi."
+    },
+    "roastAngles": {
+      "soft": ["Tu as dans le cœur un drapeau sans pays, et l’envie sincère de le planter quelque part d’utile."],
+      "cash": ["Tu signes la pétition, tu partages la pétition, et tu demandes ensuite de quoi elle parle.", "Ton héros intérieur a une cape magnifique et aucune idée de l’adresse où intervenir."],
+      "expert": ["Neptune en Bélier : idéalisation de l’élan pionnier, où la ferveur précède souvent la définition du but."]
+    },
+    "roastWeight": 0,
+    "avoid": ["Associer le placement à une cause ou à un camp précis", "Parler de violence ou de conflit armé"]
+  },
+  "planet_sign:neptune:taurus": {
+    "keywords": ["idéal de simplicité", "nature rêvée", "confort sacralisé", "sensorialité"],
+    "essence": "Neptune en Taureau idéalise la matière : la terre, le confort, les choses bien faites. Une génération qui rêve d’abondance tranquille ; chez une personne, l’imaginaire s’attache aux sensations, et la valeur des choses se brouille facilement.",
+    "light": ["Sens du geste artisanal et de la lenteur", "Capacité à trouver de la poésie dans le quotidien matériel", "Douceur apaisante pour l’entourage"],
+    "shadow": ["Attachement rêveur à des objets ou à des habitudes", "Flou dans la gestion des ressources", "Idéal de tranquillité qui évite tout effort de changement"],
+    "behaviors": ["Acheter un pain artisanal comme d’autres visitent un musée", "Garder un objet cassé « pour sa valeur sentimentale »", "Rêver d’une cabane à la campagne sans jamais regarder les annonces"],
+    "summary": {
+      "soft": "Tu rêves avec les mains et les sens. Un jardin, une matière, un repas partagé suffisent à nourrir ton imaginaire, et tu sais rendre le quotidien plus doux qu’il ne l’était.",
+      "cash": "Ton idéal de vie tient en une image : une table en bois, du soleil, personne qui te presse. Le reste, tu le remets à plus tard.",
+      "expert": "Neptune en Taureau, signe fixe de terre, attache l’idéal aux valeurs matérielles et sensorielles. Chez vous, l’imaginaire se fixe sur le tangible, au prix d’un certain flou dans l’évaluation des choses."
+    },
+    "roastAngles": {
+      "soft": ["Tu trouves du sacré dans une tomate bien mûre, et franchement, ça se défend."],
+      "cash": ["Tu appelles « besoin essentiel » une troisième couverture en laine, et tu y crois sincèrement.", "Ta méditation préférée ressemble beaucoup à une sieste, mais avec une bougie parfumée à côté."],
+      "expert": ["Neptune en Taureau : idéalisation du confort et de la permanence, avec une estimation volontiers approximative."]
+    },
+    "roastWeight": 0,
+    "avoid": ["Donner un conseil d’argent ou parler de dépenses réelles", "Commenter l’alimentation ou le corps"]
+  },
+  "planet_sign:neptune:gemini": {
+    "keywords": ["mots rêvés", "imagination verbale", "idées flottantes", "récit"],
+    "essence": "Neptune en Gémeaux idéalise la parole et les idées : une génération fascinée par les récits, les signes, la circulation des nouvelles. Chez une personne, l’imaginaire passe par les mots, et la frontière entre le fait et l’histoire bien racontée s’estompe.",
+    "light": ["Talent pour raconter, sens de l’image juste", "Écoute intuitive de ce qui se dit entre les lignes", "Esprit poétique appliqué aux échanges quotidiens"],
+    "shadow": ["Récits embellis sans intention de tromper", "Dispersion rêveuse entre trop d’idées", "Malentendus nés d’un message resté vague"],
+    "behaviors": ["Raconter la même anecdote avec un détail de plus à chaque fois", "Répondre à un message en pensée et croire l’avoir envoyé", "Collectionner des carnets dont seule la première page est écrite"],
+    "summary": {
+      "soft": "Chez toi, les mots ont des ailes. Tu sais raconter, suggérer, faire sentir, et ta façon de parler ouvre de petits mondes dans la conversation la plus ordinaire.",
+      "cash": "Tu ne mens pas : tu améliores. Ton anecdote de vacances a gagné un orage et deux personnages depuis l’été.",
+      "expert": "Neptune en Gémeaux, signe mutable d’air, porte l’idéal et le flou sur le langage et l’information. Chez vous, la pensée procède par images, avec une précision factuelle variable."
+    },
+    "roastAngles": {
+      "soft": ["Tu parles comme on fait des ricochets : c’est léger, précis, et ça porte plus loin que prévu."],
+      "cash": ["Tu as répondu à ce message dans ta tête, avec beaucoup d’esprit. Dans la vraie vie, toujours rien.", "Tu commences une phrase sans savoir où elle finit, et tu comptes sur elle pour te le dire."],
+      "expert": ["Neptune en Gémeaux : imagination verbale féconde, rapport plus lâche à l’exactitude des faits rapportés."]
+    },
+    "roastWeight": 0,
+    "avoid": ["Traiter la personne de menteuse", "Confondre rêverie et manque de sérieux"]
+  },
+  "planet_sign:neptune:cancer": {
+    "keywords": ["nostalgie", "foyer idéalisé", "mémoire rêvée", "tendresse"],
+    "essence": "Neptune en Cancer idéalise les racines : la maison, l’enfance, la famille telle qu’elle se raconte. Une génération portée par la nostalgie ; chez une personne, l’imaginaire revient sans cesse vers un refuge, réel ou reconstruit par le souvenir.",
+    "light": ["Tendresse qui rassemble et console", "Mémoire affective, attentive aux petites choses", "Don pour créer une atmosphère de refuge"],
+    "shadow": ["Passé embelli au détriment du présent", "Sensibilité qui absorbe l’humeur de toute la maisonnée", "Difficulté à quitter un lieu ou un rôle protecteur"],
+    "behaviors": ["Garder les cartes d’anniversaire de toute une vie dans une boîte à chaussures", "Refaire la recette d’enfance en regrettant qu’elle n’ait pas tout à fait le même goût", "Pleurer devant une vieille photo de vacances"],
+    "summary": {
+      "soft": "Tu portes en toi une maison idéale, faite de souvenirs, d’odeurs et de voix aimées. Cette tendresse pour ce qui a été te rend capable d’offrir un vrai refuge aux autres.",
+      "cash": "Tu regrettes une époque que tu as en partie inventée. Dans ton souvenir, même les trajets en voiture étaient merveilleux.",
+      "expert": "Neptune en Cancer, signe cardinal d’eau, attache l’idéal au foyer et à la mémoire. Chez vous, l’imaginaire se nourrit du passé, avec une tendance marquée à l’idéalisation des origines."
+    },
+    "roastAngles": {
+      "soft": ["Tu gardes les souvenirs au chaud comme d’autres gardent des braises, et on vient s’y réchauffer."],
+      "cash": ["Tu dis « c’était mieux avant » à propos d’une période où tu te plaignais déjà beaucoup.", "Tu ne jettes rien : chaque ticket de cinéma est une pièce de musée, avec visite guidée."],
+      "expert": ["Neptune en Cancer : la nostalgie y tient lieu d’idéal, et le souvenir y est volontiers retouché."]
+    },
+    "roastWeight": 0,
+    "avoid": ["Supposer quoi que ce soit sur l’enfance ou la famille réelle", "Évoquer une perte ou une absence"]
+  },
+  "planet_sign:neptune:leo": {
+    "keywords": ["romanesque", "éclat rêvé", "scène", "grand amour idéalisé"],
+    "essence": "Neptune en Lion idéalise l’éclat : le spectacle, la passion, la création. Une génération qui rêve en grand format ; chez une personne, l’imaginaire met de la mise en scène partout, et l’amour se vit volontiers comme un film.",
+    "light": ["Imagination généreuse, tournée vers la fête et la création", "Capacité à enchanter un moment ordinaire", "Foi dans le talent des autres comme dans le sien"],
+    "shadow": ["Goût du grandiose qui supporte mal la banalité", "Idéalisation des personnes admirées", "Déception quand les applaudissements manquent"],
+    "behaviors": ["Organiser un simple dîner comme une première de théâtre", "Tomber sous le charme d’un rôle plus que d’une personne", "Raconter sa journée avec des pauses dramatiques"],
+    "summary": {
+      "soft": "Tu as le sens du merveilleux. Tu vois le potentiel de lumière dans les gens et les moments, et quand tu t’y mets, la vie ressemble un peu plus à une fête.",
+      "cash": "Tu vis ta vie comme une bande-annonce : musique forte, grands gestes, et tout le monde attend encore le film.",
+      "expert": "Neptune en Lion, signe fixe de feu, projette l’idéal sur la création, l’amour et la représentation de soi. Chez vous, l’imaginaire cherche l’éclat, et s’accommode mal du prosaïque."
+    },
+    "roastAngles": {
+      "soft": ["Tu mets des projecteurs sur les autres avec la même générosité que sur toi."],
+      "cash": ["Tu ne craques pas pour une personne, tu craques pour son générique d’ouverture.", "Même pour annoncer que le lave-vaisselle est plein, tu ménages un effet de suspense."],
+      "expert": ["Neptune en Lion : idéalisation du geste créateur et du sentiment, au risque d’une théâtralité qui s’ignore."]
+    },
+    "roastWeight": 0,
+    "avoid": ["Réduire le placement à de la vanité", "Commenter l’apparence"]
+  },
+  "planet_sign:neptune:virgo": {
+    "keywords": ["idéal de service", "perfection rêvée", "doute", "dévouement discret"],
+    "essence": "Neptune en Vierge idéalise l’utile : le travail bien fait, le service, la pureté du détail. Une génération qui rêve d’un quotidien irréprochable ; chez une personne, l’idéal se loge dans les petites tâches, et le flou s’y glisse sous forme de doute.",
+    "light": ["Dévouement concret, sans besoin de reconnaissance", "Sens du détail mis au service d’un idéal", "Humilité devant le travail à accomplir"],
+    "shadow": ["Idéal de perfection jamais atteint, donc toujours reproché", "Doute qui grignote les décisions simples", "Tendance à se sacrifier dans des tâches sans fin"],
+    "behaviors": ["Relire un message d’une ligne avant de l’envoyer, puis après", "Proposer son aide avant d’avoir fini son propre travail", "Ranger pour réfléchir, puis oublier à quoi"],
+    "summary": {
+      "soft": "Ton idéal a les manches retroussées. Tu rêves d’un monde où chaque chose serait à sa place et chaque personne aidée, et tu y travailles par de petits gestes patients.",
+      "cash": "Tu rêves d’une vie parfaitement organisée. En attendant, tu as trois listes, et aucune ne sait où est passée la quatrième.",
+      "expert": "Neptune en Vierge est en exil : l’idéal y rencontre l’exigence d’analyse. Chez vous, l’imaginaire se discipline par le service et la méthode, mais le doute brouille l’évaluation de vos propres efforts."
+    },
+    "roastAngles": {
+      "soft": ["Tu soignes les détails comme d’autres allument des bougies : c’est ta façon d’honorer le quotidien."],
+      "cash": ["Tu t’excuses d’une faute de frappe dans un message que personne n’avait encore ouvert.", "Tu aides tout le monde à déménager, puis tu t’en veux d’avoir mal scotché un carton."],
+      "expert": ["Neptune en Vierge, en exil : l’idéal y devient scrupule, et la dévotion prend la forme du travail minutieux."]
+    },
+    "roastWeight": 1,
+    "avoid": ["Glisser vers l’hypocondrie ou tout sujet médical", "Présenter le doute comme une fragilité psychique"]
+  },
+  "planet_sign:neptune:libra": {
+    "keywords": ["amour idéalisé", "harmonie rêvée", "paix", "romantisme"],
+    "essence": "Neptune en Balance idéalise le lien : le couple, l’accord, la paix entre les êtres. Une génération qui rêve d’harmonie ; chez une personne, l’imaginaire embellit l’autre, et le désaccord est flouté plutôt qu’affronté.",
+    "light": ["Foi sincère dans la possibilité de s’entendre", "Délicatesse dans la manière d’aborder l’autre", "Sens esthétique qui adoucit les rapports"],
+    "shadow": ["Idéalisation du partenaire jusqu’à ne plus le voir", "Conflits évités au prix d’un flou durable", "Promesses d’accord faites pour préserver l’ambiance"],
+    "behaviors": ["Dire « tout va bien » avec un sourire très appliqué", "Imaginer toute une histoire à partir d’un seul regard", "Laisser l’autre choisir le restaurant pour éviter d’avoir un avis"],
+    "summary": {
+      "soft": "Tu crois à l’harmonie comme d’autres croient au printemps. Tu vois le meilleur chez l’autre, tu arrondis les angles, et ta douceur rend la rencontre possible.",
+      "cash": "Tu ne tombes pas sur des gens décevants : tu tombes sur des gens normaux que tu avais repeints en chefs-d’œuvre.",
+      "expert": "Neptune en Balance, signe cardinal d’air, porte l’idéal sur la relation et l’équilibre. Chez vous, l’autre est volontiers perçu à travers un filtre embellissant, et le conflit tend à se dissoudre dans le non-dit."
+    },
+    "roastAngles": {
+      "soft": ["Tu regardes les gens avec une lumière de fin d’après-midi : tout le monde y gagne."],
+      "cash": ["Tu as écrit toute la romance dans ta tête avant même que l’autre ait répondu « salut ».", "Pour éviter une dispute, tu acceptes un compromis que personne n’avait demandé, toi compris."],
+      "expert": ["Neptune en Balance : idéalisation du partenaire et de la concorde, au détriment de la confrontation utile."]
+    },
+    "roastWeight": 1,
+    "avoid": ["Annoncer une déception amoureuse", "Juger les relations passées de la personne"]
+  },
+  "planet_sign:neptune:scorpio": {
+    "keywords": ["mystère", "fascination", "profondeur rêvée", "secret"],
+    "essence": "Neptune en Scorpion idéalise la profondeur : le mystère, l’intensité, ce qui se cache sous la surface. Une génération attirée par l’invisible et les vérités enfouies ; chez une personne, l’imaginaire plonge, et le flou entoure les attachements les plus forts.",
+    "light": ["Intuition fine des motivations cachées", "Capacité à accompagner les autres dans leurs zones d’ombre", "Imaginaire puissant, nourri de symboles"],
+    "shadow": ["Fascination pour ce qui est compliqué ou inaccessible", "Soupçons construits sur des impressions", "Attachements fusionnels aux contours flous"],
+    "behaviors": ["Préférer le personnage énigmatique à celui qui dit clairement ce qu’il veut", "Deviner un secret, puis le garder comme un trésor", "Écouter la même chanson sombre en boucle pendant une semaine"],
+    "summary": {
+      "soft": "Tu sens ce qui se passe sous la surface. Le mystère ne t’effraie pas, il t’appelle, et cette profondeur te permet de comprendre des choses que les autres n’osent pas dire.",
+      "cash": "Quelqu’un de simple, disponible et clair t’ennuie un peu. Il te faut une énigme, de préférence avec des chapitres manquants.",
+      "expert": "Neptune en Scorpion, signe fixe d’eau, porte l’idéal sur l’intensité et sur ce qui demeure caché. Chez vous, l’imaginaire s’attache aux profondeurs, et la fusion brouille les limites."
+    },
+    "roastAngles": {
+      "soft": ["Tu lis dans les silences comme d’autres lisent dans les livres, avec la même gourmandise."],
+      "cash": ["Tu trouves quelqu’un « mystérieux » alors qu’il a juste oublié de répondre à ton message.", "Tu ne veux pas connaître quelqu’un : tu veux accéder à ses archives classées."],
+      "expert": ["Neptune en Scorpion : attrait pour le caché, où l’intuition psychologique côtoie la projection."]
+    },
+    "roastWeight": 1,
+    "avoid": ["Tout vocabulaire de sexualité, de dépendance ou de disparition", "Dramatiser l’attrait pour le mystère"]
+  },
+  "planet_sign:neptune:sagittarius": {
+    "keywords": ["quête de sens", "ailleurs idéalisé", "foi", "grand récit"],
+    "essence": "Neptune en Sagittaire idéalise le sens et le lointain : les voyages, les sagesses, les grandes explications. Une génération en quête d’une vérité plus vaste ; chez une personne, l’imaginaire regarde l’horizon, et l’ailleurs paraît plus lumineux qu’ici.",
+    "light": ["Optimisme inspiré, tourné vers le large", "Curiosité sincère pour les sagesses du monde", "Capacité à donner du sens à une épreuve"],
+    "shadow": ["Croyance enthousiaste accordée trop vite", "Ailleurs rêvé pour éviter l’ici", "Grands principes aux contours imprécis"],
+    "behaviors": ["Revenir d’un stage d’un week-end avec une nouvelle philosophie de vie", "Citer un proverbe lointain sans en connaître la provenance", "Planifier un tour du monde sur un coin de nappe"],
+    "summary": {
+      "soft": "Tu as besoin de croire que la vie mène quelque part. Tu cherches du sens dans les voyages, les rencontres, les idées, et ton espérance élargit l’horizon de ceux qui t’écoutent.",
+      "cash": "Il te manque toujours une retraite, un livre ou un billet d’avion pour atteindre la révélation.",
+      "expert": "Neptune en Sagittaire, signe mutable de feu, porte l’idéal sur la quête de sens et les horizons lointains. Chez vous, l’imaginaire appelle une vision d’ensemble, parfois adoptée avant d’être examinée."
+    },
+    "roastAngles": {
+      "soft": ["Tu regardes une carte du monde comme d’autres regardent un ciel étoilé : avec confiance."],
+      "cash": ["Tu as trouvé le sens de la vie trois fois ce trimestre, et chaque version annulait la précédente.", "Tu cites une sagesse ancestrale lue ce matin sur un sachet de tisane."],
+      "expert": ["Neptune en Sagittaire : idéalisation du lointain et du sens, avec une adhésion parfois plus rapide que l’examen."]
+    },
+    "roastWeight": 1,
+    "avoid": ["Viser une croyance, une pratique spirituelle ou une confession précise", "Traiter la personne de naïve"]
+  },
+  "planet_sign:neptune:capricorn": {
+    "keywords": ["réussite idéalisée", "structures rêvées", "désillusion lucide", "devoir"],
+    "essence": "Neptune en Capricorne idéalise la construction : la réussite, les institutions, l’effort qui mène au sommet. Une génération qui rêve de solidité ; chez une personne, l’idéal prend la forme d’un plan, et le flou touche l’ambition elle-même.",
+    "light": ["Idéal exigeant, traduit en efforts concrets", "Sens du devoir porté par une vision", "Capacité à donner une forme durable à un rêve"],
+    "shadow": ["Réussite poursuivie sans savoir pour qui", "Désenchantement devant les autorités admirées", "Sérieux qui étouffe la fantaisie"],
+    "behaviors": ["Rédiger un plan de carrière détaillé pour un métier pas encore choisi", "Travailler tard pour un objectif que personne n’a fixé", "Présenter ses rêves avec un tableau et des échéances"],
+    "summary": {
+      "soft": "Tu rêves de choses qui tiennent debout. Ton imaginaire aime les fondations, les projets au long cours, et tu sais donner à un idéal le sérieux qu’il mérite.",
+      "cash": "Tu as un rêve, bien sûr. Il a un échéancier, des indicateurs de suivi et aucune place pour la sieste.",
+      "expert": "Neptune en Capricorne, signe cardinal de terre, porte l’idéal sur les structures et l’accomplissement social. Chez vous, l’imaginaire cherche une forme, tandis que le flou touche le rapport à l’autorité."
+    },
+    "roastAngles": {
+      "soft": ["Tu bâtis des châteaux en Espagne, mais avec des plans, des fondations et un permis."],
+      "cash": ["Tu gravis la montagne avec application, et tu demandes au sommet qui avait choisi cette montagne.", "Même tes rêveries ont un ordre du jour, et tu arrives en avance à la réunion."],
+      "expert": ["Neptune en Capricorne : l’idéal y cherche une forme institutionnelle, et s’expose à la désillusion des cadres."]
+    },
+    "roastWeight": 1,
+    "avoid": ["Donner un conseil de carrière ou d’argent", "Commenter des institutions ou des opinions"]
+  },
+  "planet_sign:neptune:aquarius": {
+    "keywords": ["utopie collective", "monde connecté", "fraternité rêvée", "avenir idéalisé"],
+    "essence": "Neptune en Verseau idéalise le collectif : les réseaux, le progrès, la fraternité à grande échelle. Une génération qui rêve de communautés sans frontières ; chez une personne, le lien réel se confond parfois avec le lien à distance.",
+    "light": ["Idéal d’égalité vécu avec sincérité", "Imagination tournée vers les solutions communes", "Aisance à créer du lien au-delà des cercles habituels"],
+    "shadow": ["Proximité virtuelle prise pour de l’intimité", "Utopies défendues sans regarder leurs limites", "Flou sur sa place personnelle dans le groupe"],
+    "behaviors": ["Se sentir proche de quelqu’un jamais rencontré hors écran", "Rejoindre une communauté en ligne à minuit et la quitter à l’aube", "Débattre d’un monde meilleur dans un fil de commentaires"],
+    "summary": {
+      "soft": "Tu rêves à plusieurs. Ton imaginaire voit ce que les gens pourraient faire ensemble, et tu as cette foi tranquille dans l’idée que personne n’avance vraiment en solitaire.",
+      "cash": "Tu as des amitiés profondes avec des gens dont tu ne connais que le pseudonyme et l’avis sur une série.",
+      "expert": "Neptune en Verseau, signe fixe d’air, porte l’idéal sur le collectif et l’innovation. Chez vous, l’imaginaire se nourrit du réseau, avec une frontière incertaine entre communauté réelle et communauté rêvée."
+    },
+    "roastAngles": {
+      "soft": ["Tu crois encore qu’une bonne idée partagée peut changer la journée de quelqu’un, et tu as raison."],
+      "cash": ["Tu refais le monde dans une conversation de groupe, entre deux images de chats.", "Tu te sens en communion avec l’humanité, surtout quand le téléphone est en mode avion."],
+      "expert": ["Neptune en Verseau : utopie du lien généralisé, où l’idéal collectif peut masquer la distance individuelle."]
+    },
+    "roastWeight": 1,
+    "avoid": ["Moquer l’usage des écrans comme une dépendance", "Associer le placement à un camp ou à une idéologie"]
+  },
+  "planet_sign:neptune:pisces": {
+    "keywords": ["fusion", "compassion", "imaginaire sans bord", "évasion"],
+    "essence": "Neptune en Poissons se trouve dans le signe qu’il gouverne : l’idéal, le rêve et la compassion s’y déploient sans retenue. Une génération très perméable aux ambiances ; chez une personne, l’imaginaire déborde, et la limite entre soi et les autres s’efface.",
+    "light": ["Empathie spontanée, sans calcul", "Imagination artistique abondante", "Capacité à pardonner et à lâcher prise"],
+    "shadow": ["Évasion dès que le réel devient rugueux", "Limites personnelles difficiles à poser", "Tendance à absorber les émotions d’autrui"],
+    "behaviors": ["Pleurer devant une publicité pour des croquettes", "Manquer sa station parce qu’une chanson était trop prenante", "Dire oui à un service en espérant qu’il soit oublié"],
+    "summary": {
+      "soft": "Tu ressens le monde comme une mer : tout te traverse, tout te touche. Cette sensibilité immense est un don quand tu lui offres un rivage, une musique, une page, une présence.",
+      "cash": "Tu as les émotions de toute la rame de métro en plus des tiennes. Pas étonnant que tu regardes par la fenêtre.",
+      "expert": "Neptune en Poissons est en domicile : dissolution des limites, empathie et imaginaire s’y expriment pleinement. Chez vous, la sensibilité capte les ambiances collectives, et demande un cadre pour ne pas se diluer."
+    },
+    "roastAngles": {
+      "soft": ["Tu écoutes les gens comme la mer écoute les rivières : en leur faisant de la place."],
+      "cash": ["On te demande l’heure et tu réponds que le temps est une notion relative.", "Tu as dit « j’arrive » avec une sincérité totale, depuis ton canapé, les yeux fermés."],
+      "expert": ["Neptune en Poissons, en domicile : perméabilité maximale, inspiration abondante, contours personnels à préciser."]
+    },
+    "roastWeight": 1,
+    "avoid": ["Parler d’addiction, de fuite dans des substances ou de fragilité psychique", "Réduire le placement à de la naïveté"]
+  }
+}

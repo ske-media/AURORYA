@@ -1,0 +1,590 @@
+{
+  "asc_sign:aries": {
+    "keywords": [
+      "abord direct",
+      "rapidité",
+      "initiative",
+      "impatience",
+      "franchise"
+    ],
+    "essence": "L’Ascendant en Bélier, signe cardinal de feu, donne une manière d’aborder le monde directe, rapide et combative. La première impression est celle de quelqu’un qui va droit au but.",
+    "light": [
+      "Abord franc, qui met vite les choses au clair",
+      "Réactivité devant l’imprévu",
+      "Goût de prendre les devants"
+    ],
+    "shadow": [
+      "Entrée en matière brusque",
+      "Impatience visible dans les files d’attente et les réunions",
+      "Tendance à vivre chaque échange comme un bras de fer"
+    ],
+    "behaviors": [
+      "Traverser une pièce au pas de course",
+      "Tendre la main avant que l’autre ait fini d’arriver",
+      "Dire « bon, on y va ? » après deux minutes",
+      "Appuyer plusieurs fois sur le bouton de l’ascenseur",
+      "Répondre du tac au tac, puis nuancer"
+    ],
+    "summary": {
+      "soft": "Tu abordes la vie de face, le regard franc et le pas décidé. On sait tout de suite à qui on a affaire, et cette clarté met en confiance.",
+      "cash": "Tu entres dans une pièce comme si tu avais un train à prendre. La première impression que tu donnes : “bon, on commence ?”",
+      "expert": "L’Ascendant en Bélier, signe cardinal de feu, imprime à l’abord du monde un style direct et pionnier. Vous prenez l’initiative du contact ; la spontanéité prime chez vous sur la diplomatie."
+    },
+    "roastAngles": {
+      "soft": [
+        "Tu arrives comme un matin de printemps : d’un coup, avec de l’élan et l’envie que ça démarre."
+      ],
+      "cash": [
+        "Tu appuies quatre fois sur le bouton de l’ascenseur, au cas où il n’aurait pas saisi l’urgence.",
+        "Dans une file d’attente, tu soupires si fort que trois personnes se retournent pour demander pardon."
+      ],
+      "expert": [
+        "Ascendant en Bélier : abord cardinal, de feu. Vous en venez au fait sans préambule, ni précaution."
+      ]
+    },
+    "roastWeight": 3,
+    "avoid": [
+      "Décrire l’apparence ou le corps",
+      "Présenter la franchise comme de l’agressivité"
+    ]
+  },
+  "asc_sign:taurus": {
+    "keywords": [
+      "calme",
+      "patience",
+      "abord posé",
+      "prudence",
+      "constance"
+    ],
+    "essence": "L’Ascendant en Taureau, signe fixe de terre, donne une manière d’aborder le monde posée, patiente et rassurante. La première impression est celle d’un calme que rien ne presse.",
+    "light": [
+      "Présence tranquille, qui met à l’aise",
+      "Constance dans la façon d’être, quel que soit le public",
+      "Sens pratique dès le premier contact"
+    ],
+    "shadow": [
+      "Lenteur à s’ouvrir aux nouvelles têtes",
+      "Refus de se laisser bousculer, même pour de bonnes raisons",
+      "Méfiance devant tout ce qui change les habitudes"
+    ],
+    "behaviors": [
+      "Arriver à son rythme, sans courir",
+      "Choisir la chaise la plus confortable de la pièce",
+      "Écouter longuement avant de donner un avis",
+      "Répondre « rien ne presse » à quelqu’un de pressé",
+      "Observer le buffet avant les invités"
+    ],
+    "summary": {
+      "soft": "Tu arrives dans la vie des gens comme une après-midi tranquille. Ton calme rassure d’emblée, et l’on sent que tu ne joues aucun rôle.",
+      "cash": "Tu ne cours jamais, même sous la pluie, même pour le bus. À une soirée, tu repères d’abord le canapé, ensuite le buffet, enfin les gens.",
+      "expert": "L’Ascendant en Taureau, signe fixe de terre, confère un abord stable, mesuré et concret. Vous prenez le temps d’évaluer avant de vous lier ; votre réserve initiale relève de la prudence."
+    },
+    "roastAngles": {
+      "soft": [
+        "Tu prends le temps d’arriver, et dès que tu t’installes, tout le monde se détend d’un cran."
+      ],
+      "cash": [
+        "Le bus part sans toi et tu le regardes s’éloigner avec dignité : courir, ce n’est pas ton projet.",
+        "Il te faut six mois pour tutoyer la boulangère, mais après, c’est pour la vie entière."
+      ],
+      "expert": [
+        "Ascendant en Taureau : abord fixe, de terre. Vous vous laissez approcher lentement, et à vos conditions."
+      ]
+    },
+    "roastWeight": 2,
+    "avoid": [
+      "Décrire l’apparence ou le corps",
+      "Assimiler le calme à de la mollesse"
+    ]
+  },
+  "asc_sign:gemini": {
+    "keywords": [
+      "vivacité",
+      "curiosité",
+      "conversation",
+      "mobilité",
+      "nervosité"
+    ],
+    "essence": "L’Ascendant en Gémeaux, signe mutable d’air, donne une manière d’aborder le monde vive, curieuse et bavarde. La première impression est celle d’un esprit en mouvement, qui engage la conversation sans effort.",
+    "light": [
+      "Aisance à lier connaissance",
+      "Curiosité sincère pour chaque personne croisée",
+      "Humour rapide qui brise la glace"
+    ],
+    "shadow": [
+      "Attention qui papillonne en pleine conversation",
+      "Nervosité dans les moments d’attente",
+      "Difficulté à supporter le silence"
+    ],
+    "behaviors": [
+      "Parler avec les mains",
+      "Engager la conversation avec un inconnu dans une file",
+      "Consulter son téléphone tout en posant une question",
+      "Passer d’un groupe à l’autre dans une soirée",
+      "Connaître le prénom du serveur avant l’entrée"
+    ],
+    "summary": {
+      "soft": "Tu abordes le monde avec une question au bord des lèvres. Ta curiosité met les gens à l’aise : avec toi, la conversation démarre toute seule.",
+      "cash": "Tu connais la vie du chauffeur de taxi avant le premier feu rouge. Tu poses une question, et tu regardes ailleurs pendant la réponse.",
+      "expert": "L’Ascendant en Gémeaux, signe mutable d’air, donne un abord mobile, verbal et adaptable. Vous engagez le contact par la parole et la question ; l’attention se déplace vite d’un objet à l’autre."
+    },
+    "roastAngles": {
+      "soft": [
+        "Tu fais connaissance comme on ouvre un livre : avec gourmandise, et déjà l’envie du suivant."
+      ],
+      "cash": [
+        "En soirée, tu parles à tout le monde, et tu repars sans avoir fini une seule conversation.",
+        "Tu dis “non mais raconte”, et tu coupes au bout de quatre mots avec une anecdote à toi."
+      ],
+      "expert": [
+        "Ascendant en Gémeaux : abord mutable, d’air. Vous questionnez beaucoup, et écoutez la moitié des réponses."
+      ]
+    },
+    "roastWeight": 2,
+    "avoid": [
+      "Décrire l’apparence ou le corps",
+      "Parler de double visage"
+    ]
+  },
+  "asc_sign:cancer": {
+    "keywords": [
+      "réserve",
+      "prudence",
+      "douceur",
+      "réceptivité",
+      "protection"
+    ],
+    "essence": "L’Ascendant en Cancer, signe cardinal d’eau, donne une manière d’aborder le monde prudente, douce et protectrice. La première impression est celle d’une réserve attentive, qui s’ouvre une fois la confiance installée.",
+    "light": [
+      "Accueil chaleureux pour qui a passé la première barrière",
+      "Sensibilité immédiate à l’ambiance d’un lieu",
+      "Attention spontanée au confort des autres"
+    ],
+    "shadow": [
+      "Carapace levée devant les inconnus",
+      "Humeur qui se devine au premier coup d’œil",
+      "Repli rapide quand l’accueil est froid"
+    ],
+    "behaviors": [
+      "Rester près de la porte en arrivant dans une soirée",
+      "Proposer un verre d’eau, un coussin ou un gilet",
+      "Approcher les gens de biais, par petites touches",
+      "Sentir l’ambiance d’une pièce avant de dire bonjour",
+      "Partir sans dire au revoir quand l’atmosphère se tend"
+    ],
+    "summary": {
+      "soft": "Tu approches le monde à pas doux, en prenant la température avant d’entrer. Une fois la confiance là, on découvre un accueil d’une grande tendresse.",
+      "cash": "En soirée, tu restes près de la sortie le temps de vérifier les gens. Une heure plus tard, tu demandes à chacun s’il a assez mangé.",
+      "expert": "L’Ascendant en Cancer, signe cardinal d’eau, donne un abord réservé et réceptif. Vous captez le climat d’un lieu avant de vous y exposer ; la confiance conditionne chez vous toute ouverture."
+    },
+    "roastAngles": {
+      "soft": [
+        "Tu entres sur la pointe des pieds, et tu finis par border tout le monde : c’est ta signature."
+      ],
+      "cash": [
+        "Tu n’as pas encore dit bonjour que tu sais déjà qui ne t’aime pas, sur la foi d’un sourcil.",
+        "Tu arrives chez les gens avec un gâteau, un gilet de secours et un plan pour repartir tôt."
+      ],
+      "expert": [
+        "Ascendant en Cancer : abord cardinal, d’eau. Vous avancez latéralement, et jamais sans abri à portée."
+      ]
+    },
+    "roastWeight": 2,
+    "avoid": [
+      "Décrire l’apparence ou le corps",
+      "Présenter la réserve comme de la timidité excessive"
+    ]
+  },
+  "asc_sign:leo": {
+    "keywords": [
+      "présence",
+      "assurance",
+      "chaleur",
+      "expressivité",
+      "fierté"
+    ],
+    "essence": "L’Ascendant en Lion, signe fixe de feu, donne une manière d’aborder le monde chaleureuse, assurée et expressive. La première impression est celle d’une présence qui occupe naturellement le centre.",
+    "light": [
+      "Assurance qui inspire confiance",
+      "Chaleur immédiate dans le contact",
+      "Sens de la mise en scène et de la fête"
+    ],
+    "shadow": [
+      "Difficulté à rester en retrait, même quand il le faudrait",
+      "Fierté piquée par un accueil tiède",
+      "Tendance à occuper tout l’espace de parole"
+    ],
+    "behaviors": [
+      "Faire une entrée remarquée, même en retard",
+      "Parler assez fort pour que la table voisine suive",
+      "Saluer toute la salle, une personne après l’autre",
+      "Raconter une histoire debout",
+      "Remarquer qui n’a pas levé les yeux"
+    ],
+    "summary": {
+      "soft": "Tu entres et la pièce gagne quelques degrés. Ta présence est généreuse : tu donnes de la chaleur à chacun, et chacun se sent à sa place.",
+      "cash": "Tu ne passes pas une porte, tu fais une entrée. Même pour aller chercher du pain, il y a une intention de mise en scène.",
+      "expert": "L’Ascendant en Lion, signe fixe de feu, donne un abord affirmé, chaleureux et démonstratif. Vous occupez spontanément le premier plan ; l’image donnée engage votre fierté."
+    },
+    "roastAngles": {
+      "soft": [
+        "Tu arrives avec du soleil plein les poches, et tu en distribues à toute la tablée."
+      ],
+      "cash": [
+        "Tu racontes ton week-end à voix haute dans le train, et le wagon entier attend la suite.",
+        "Tu arrives en retard exprès : une entrée sans public, pour toi, c’est juste une porte."
+      ],
+      "expert": [
+        "Ascendant en Lion : abord fixe, de feu. Vous ne cherchez pas la scène ; vous la supposez acquise."
+      ]
+    },
+    "roastWeight": 3,
+    "avoid": [
+      "Décrire l’apparence, la chevelure ou le corps",
+      "Réduire le placement à la vantardise"
+    ]
+  },
+  "asc_sign:virgo": {
+    "keywords": [
+      "discrétion",
+      "observation",
+      "méthode",
+      "serviabilité",
+      "réserve"
+    ],
+    "essence": "L’Ascendant en Vierge, signe mutable de terre, donne une manière d’aborder le monde discrète, observatrice et méthodique. La première impression est celle d’une réserve polie, attentive au moindre détail.",
+    "light": [
+      "Sens de l’observation dès les premières minutes",
+      "Politesse sobre, sans effet de manche",
+      "Disponibilité pour rendre service"
+    ],
+    "shadow": [
+      "Réserve qui passe pour de la distance",
+      "Regard critique difficile à mettre en veille",
+      "Gêne dès que l’attention se porte sur soi"
+    ],
+    "behaviors": [
+      "Arriver dix minutes en avance et attendre dehors",
+      "Remarquer la tache sur la nappe avant de s’asseoir",
+      "Proposer de débarrasser chez des gens rencontrés une heure plus tôt",
+      "Demander pardon en entrant dans une pièce",
+      "Préparer ses phrases avant un appel téléphonique"
+    ],
+    "summary": {
+      "soft": "Tu abordes le monde avec délicatesse, en observant avant de parler. Rien ne t’échappe, et ta discrétion cache une vraie envie d’aider.",
+      "cash": "Tu arrives en avance, tu attends dehors pour ne pas déranger, et tu sonnes pile à l’heure. Puis tu proposes de faire la vaisselle.",
+      "expert": "L’Ascendant en Vierge, signe mutable de terre, donne un abord réservé, analytique et serviable. Vous observez avant de vous exposer ; le souci de bien faire règle votre présentation."
+    },
+    "roastAngles": {
+      "soft": [
+        "Tu entres sans bruit et tu remarques tout : avec toi, personne ne se sent jamais oublié."
+      ],
+      "cash": [
+        "Tu répètes ta commande dans ta tête avant le serveur, et tu dis quand même “euh, pardon”.",
+        "Chez les autres depuis dix minutes, tu as déjà repéré le cadre de travers et tu souffres en silence."
+      ],
+      "expert": [
+        "Ascendant en Vierge : abord mutable, de terre. Vous évaluez d’abord la situation, puis sa marge d’erreur."
+      ]
+    },
+    "roastWeight": 2,
+    "avoid": [
+      "Décrire l’apparence ou le corps",
+      "Présenter la réserve comme de la froideur"
+    ]
+  },
+  "asc_sign:libra": {
+    "keywords": [
+      "courtoisie",
+      "conciliation",
+      "charme relationnel",
+      "souci de plaire",
+      "médiation"
+    ],
+    "essence": "L’Ascendant en Balance, signe cardinal d’air, donne une manière d’aborder le monde aimable, conciliante et soignée. La première impression est celle d’une courtoisie qui cherche à plaire à chacun.",
+    "light": [
+      "Charme relationnel et sens de l’accueil",
+      "Art de mettre deux personnes en relation",
+      "Courtoisie constante, même sous tension"
+    ],
+    "shadow": [
+      "Difficulté à dire non en face",
+      "Opinion ajustée à l’interlocuteur",
+      "Souci constant de l’impression produite"
+    ],
+    "behaviors": [
+      "Sourire à quelqu’un qui vient de doubler dans la file",
+      "Complimenter l’hôte dès le pas de la porte",
+      "Dire « avec plaisir » à une invitation qui n’enchante pas",
+      "Demander l’avis de la tablée avant de commander",
+      "Présenter les gens les uns aux autres toute la soirée"
+    ],
+    "summary": {
+      "soft": "Tu abordes chacun avec une grâce qui met tout de suite à l’aise. Près de toi, les rencontres se font en douceur et personne ne reste dans son coin.",
+      "cash": "Tu dis “avec grand plaisir” à des invitations qui te donnent envie de changer de pays. Et tu y vas, avec un cadeau.",
+      "expert": "L’Ascendant en Balance, signe cardinal d’air, donne un abord courtois, conciliant et attentif à la forme. Vous abordez l’autre par la médiation ; plaire est chez vous une stratégie d’équilibre."
+    },
+    "roastAngles": {
+      "soft": [
+        "Tu arrondis les angles rien qu’en disant bonjour : c’est un talent, et il fait du bien."
+      ],
+      "cash": [
+        "Quelqu’un te marche sur le pied, et c’est toi qui demandes pardon, avec un sourire sincère.",
+        "Tu approuves la personne en face, puis sa voisine. Elles ne sont pas d’accord entre elles."
+      ],
+      "expert": [
+        "Ascendant en Balance : abord cardinal, d’air. Vous séduisez par principe, et tranchez par exception."
+      ]
+    },
+    "roastWeight": 2,
+    "avoid": [
+      "Décrire l’apparence, l’élégance vestimentaire ou le corps",
+      "Assimiler la courtoisie à de la fausseté"
+    ]
+  },
+  "asc_sign:scorpio": {
+    "keywords": [
+      "réserve",
+      "intensité",
+      "vigilance",
+      "perspicacité",
+      "mystère"
+    ],
+    "essence": "L’Ascendant en Scorpion, signe fixe d’eau, donne une manière d’aborder le monde réservée, intense et scrutatrice. La première impression est celle d’une présence magnétique, qui observe plus qu’elle ne se livre.",
+    "light": [
+      "Perspicacité immédiate sur les gens",
+      "Présence forte sans effort de parole",
+      "Discrétion à toute épreuve sur ce qui est confié"
+    ],
+    "shadow": [
+      "Abord impénétrable, qui intimide",
+      "Méfiance de principe devant les nouvelles têtes",
+      "Réticence à livrer la moindre information personnelle"
+    ],
+    "behaviors": [
+      "S’asseoir dos au mur, face à la porte",
+      "Fixer l’interlocuteur sans ciller",
+      "Répondre à une question par une autre question",
+      "Laisser un silence s’installer sans le combler",
+      "Retenir un détail lâché par mégarde trois mois plus tôt"
+    ],
+    "summary": {
+      "soft": "Tu abordes le monde en silence, avec une attention entière. Ce mystère n’a rien d’un mur : c’est une porte qui s’ouvre lentement, pour ceux qui le méritent.",
+      "cash": "Tu réponds “et toi ?” à toutes les questions personnelles. Au bout d’une heure, tu sais tout des gens, et eux connaissent ton prénom, à peu près.",
+      "expert": "L’Ascendant en Scorpion, signe fixe d’eau, donne un abord réservé, intense et vigilant. Vous sondez l’interlocuteur avant de vous découvrir ; la maîtrise de votre image est une protection."
+    },
+    "roastAngles": {
+      "soft": [
+        "Tu regardes les gens comme on lit entre les lignes, et tu gardes leurs secrets comme les tiens."
+      ],
+      "cash": [
+        "Au restaurant, tu prends la chaise face à la porte, comme si le dessert pouvait mal tourner.",
+        "On te demande “ça va ?” et tu plisses les yeux, le temps de comprendre ce qu’on veut vraiment."
+      ],
+      "expert": [
+        "Ascendant en Scorpion : abord fixe, d’eau. Vous laissez parler autrui ; c’est une méthode d’enquête."
+      ]
+    },
+    "roastWeight": 3,
+    "avoid": [
+      "Décrire le regard ou l’apparence comme un trait corporel",
+      "Faire du placement une figure inquiétante"
+    ]
+  },
+  "asc_sign:sagittarius": {
+    "keywords": [
+      "enthousiasme",
+      "ouverture",
+      "jovialité",
+      "aventure",
+      "familiarité"
+    ],
+    "essence": "L’Ascendant en Sagittaire, signe mutable de feu, donne une manière d’aborder le monde enthousiaste, ouverte et sans façons. La première impression est celle d’une bonne humeur franche, toujours prête à partir.",
+    "light": [
+      "Jovialité qui met tout le monde à l’aise",
+      "Confiance spontanée envers les inconnus",
+      "Goût de l’aventure dès qu’une porte s’entrouvre"
+    ],
+    "shadow": [
+      "Familiarité trop rapide",
+      "Gestes et paroles plus larges que la pièce",
+      "Engagements lancés dans l’élan de la rencontre"
+    ],
+    "behaviors": [
+      "Rire fort dans un endroit silencieux",
+      "Tutoyer tout le monde au bout de deux phrases",
+      "Renverser un verre en racontant une histoire",
+      "Inviter un inconnu à un projet de voyage",
+      "Dire « on s’appelle » avec une sincérité totale et sans suite"
+    ],
+    "summary": {
+      "soft": "Tu arrives avec le sourire large et l’envie de tout découvrir. Ta confiance en la vie ouvre les portes, et les gens te suivent sans trop savoir où.",
+      "cash": "Tu tutoies tout le monde au bout de deux phrases, y compris la directrice. Tu racontes avec les bras, et les verres le savent.",
+      "expert": "L’Ascendant en Sagittaire, signe mutable de feu, donne un abord expansif, confiant et direct. Vous abordez l’inconnu avec optimisme ; la retenue et le détail passent au second plan."
+    },
+    "roastAngles": {
+      "soft": [
+        "Tu abordes chaque rencontre comme un départ en voyage : sac léger, cœur grand ouvert."
+      ],
+      "cash": [
+        "Tu as invité à ton anniversaire quelqu’un croisé il y a dix minutes à l’arrêt de bus.",
+        "Tu ris si fort à la bibliothèque que même les livres te demandent de baisser d’un ton."
+      ],
+      "expert": [
+        "Ascendant en Sagittaire : abord mutable, de feu. Vous vous engagez large, avec une bonne foi entière."
+      ]
+    },
+    "roastWeight": 2,
+    "avoid": [
+      "Décrire l’apparence ou le corps",
+      "Présenter la spontanéité comme un manque de sérieux"
+    ]
+  },
+  "asc_sign:capricorn": {
+    "keywords": [
+      "sérieux",
+      "retenue",
+      "maîtrise",
+      "fiabilité",
+      "humour sec"
+    ],
+    "essence": "L’Ascendant en Capricorne, signe cardinal de terre, donne une manière d’aborder le monde sérieuse, réservée et maîtrisée. La première impression est celle d’une maturité qui inspire le respect avant la familiarité.",
+    "light": [
+      "Fiabilité perceptible dès la première rencontre",
+      "Sang-froid en public",
+      "Sens des convenances et de la mesure"
+    ],
+    "shadow": [
+      "Abord austère, qui tient à distance",
+      "Difficulté à se détendre devant des inconnus",
+      "Tendance à se présenter par sa fonction"
+    ],
+    "behaviors": [
+      "Tendre une main très officielle à une fête d’anniversaire",
+      "Parler de travail dès la deuxième phrase",
+      "Arriver à l’heure exacte, ni avant ni après",
+      "Garder son manteau la première demi-heure",
+      "Lâcher une blague pince-sans-rire que personne n’attendait"
+    ],
+    "summary": {
+      "soft": "Tu abordes le monde avec retenue, comme quelqu’un qui sait ce que valent les choses. Ta réserve fond avec le temps, et laisse voir un humour très tendre.",
+      "cash": "Tu as l’air de passer un entretien d’embauche, même à un barbecue. Tu te détends vers la troisième rencontre, sur réservation.",
+      "expert": "L’Ascendant en Capricorne, signe cardinal de terre, donne un abord sobre, contrôlé et responsable. Vous donnez d’abord une impression de sérieux ; la chaleur se révèle avec le temps et la confiance."
+    },
+    "roastAngles": {
+      "soft": [
+        "Tu ne te livres pas au premier venu, et ceux qui attendent découvrent quelqu’un de très drôle."
+      ],
+      "cash": [
+        "À la question “tu fais quoi dans la vie ?”, tu réponds avec un organigramme et des échéances.",
+        "Tu gardes ton manteau pendant l’apéritif, au cas où la soirée manquerait de sérieux."
+      ],
+      "expert": [
+        "Ascendant en Capricorne : abord cardinal, de terre. Vous faites d’abord bonne impression, puis seulement connaissance."
+      ]
+    },
+    "roastWeight": 2,
+    "avoid": [
+      "Décrire l’apparence, l’âge apparent ou le corps",
+      "Présenter la réserve comme de l’arrogance"
+    ]
+  },
+  "asc_sign:aquarius": {
+    "keywords": [
+      "cordialité",
+      "indépendance",
+      "originalité",
+      "égalité",
+      "distance amicale"
+    ],
+    "essence": "L’Ascendant en Verseau, signe fixe d’air, donne une manière d’aborder le monde amicale, indépendante et décalée. La première impression est celle d’une cordialité égale pour tous, teintée de distance.",
+    "light": [
+      "Camaraderie immédiate, sans hiérarchie",
+      "Originalité assumée dans la façon d’être",
+      "Ouverture d’esprit devant ce qui sort de l’ordinaire"
+    ],
+    "shadow": [
+      "Cordialité qui garde tout le monde à la même distance",
+      "Goût de surprendre, parfois au mauvais moment",
+      "Résistance aux codes, y compris aux plus utiles"
+    ],
+    "behaviors": [
+      "Parler à la direction et aux stagiaires exactement de la même façon",
+      "Lancer un sujet inattendu au milieu du repas",
+      "Ignorer le code d’une soirée sans même y penser",
+      "Quitter une fête sans prévenir, par simple besoin d’air",
+      "Poser la question que personne n’osait poser"
+    ],
+    "summary": {
+      "soft": "Tu abordes chacun en camarade, sans jamais te soucier des rangs. Ton originalité libère : près de toi, on ose un peu plus facilement sortir du cadre.",
+      "cash": "Tu parles au grand patron comme au livreur, ce qui amuse beaucoup le livreur. Tu quittes les soirées sans prévenir, par la méthode du fantôme.",
+      "expert": "L’Ascendant en Verseau, signe fixe d’air, donne un abord cordial, égalitaire et singulier. Vous engagez le contact par l’idée plutôt que par l’affect ; une distance amicale structure vos premiers échanges."
+    },
+    "roastAngles": {
+      "soft": [
+        "Tu arrives avec une idée neuve et un sourire libre : on ne sait jamais d’où tu viens, et tant mieux."
+      ],
+      "cash": [
+        "Au dîner, tu as lancé “et si on supprimait les lundis ?”, et le plat a refroidi pendant une heure.",
+        "Tout le monde t’adore, personne n’a ton adresse, et ça te convient parfaitement comme ça."
+      ],
+      "expert": [
+        "Ascendant en Verseau : abord fixe, d’air. Vous accueillez tout le monde, à égale et prudente distance."
+      ]
+    },
+    "roastWeight": 2,
+    "avoid": [
+      "Décrire l’apparence ou le style vestimentaire",
+      "Réduire le placement à la provocation"
+    ]
+  },
+  "asc_sign:pisces": {
+    "keywords": [
+      "douceur",
+      "réceptivité",
+      "rêverie",
+      "adaptation",
+      "flou"
+    ],
+    "essence": "L’Ascendant en Poissons, signe mutable d’eau, donne une manière d’aborder le monde douce, flottante et réceptive. La première impression est celle d’une présence rêveuse, qui épouse l’ambiance plus qu’elle ne s’impose.",
+    "light": [
+      "Douceur qui désarme les plus méfiants",
+      "Adaptation intuitive à chaque interlocuteur",
+      "Écoute enveloppante, sans jugement"
+    ],
+    "shadow": [
+      "Contours flous, difficiles à saisir pour les autres",
+      "Tendance à se fondre dans le décor",
+      "Retards et oublis mis sur le compte de la rêverie"
+    ],
+    "behaviors": [
+      "Arriver en retard sans avoir vu l’heure",
+      "Dire oui d’un air vague, puis demander de répéter",
+      "Se perdre sur un trajet pourtant connu",
+      "Prendre l’accent de la personne en face",
+      "Recevoir les confidences d’un inconnu dans le train"
+    ],
+    "summary": {
+      "soft": "Tu abordes le monde comme on entre dans l’eau : doucement, en te laissant porter. Les gens se confient à toi sans savoir pourquoi.",
+      "cash": "Tu arrives en retard avec l’air de sortir d’un rêve, et on te pardonne. Tu as dit “oui oui” à une question qui commençait par “où”.",
+      "expert": "L’Ascendant en Poissons, signe mutable d’eau, donne un abord souple, perméable et peu défini. Vous vous ajustez à l’ambiance plus que vous ne l’orientez ; la présence est réelle, mais diffuse."
+    },
+    "roastAngles": {
+      "soft": [
+        "Tu flottes un peu au-dessus du quotidien, et ta douceur fait baisser la voix de tout le monde."
+      ],
+      "cash": [
+        "Des inconnus te racontent leur vie dans le train. Tu voulais juste lire, mais tu connais déjà le chat.",
+        "Tu as réussi à te perdre sur le chemin de chez toi, celui que tu prends depuis des années."
+      ],
+      "expert": [
+        "Ascendant en Poissons : abord mutable, d’eau. Votre présence est réelle, mais réglée sur un fuseau horaire personnel."
+      ]
+    },
+    "roastWeight": 2,
+    "avoid": [
+      "Décrire l’apparence ou le regard comme un trait corporel",
+      "Présenter la rêverie comme de l’incompétence"
+    ]
+  }
+}

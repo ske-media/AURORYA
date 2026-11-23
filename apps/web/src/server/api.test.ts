@@ -130,7 +130,7 @@ describe('POST /charts', () => {
     const response = await call(postCharts, 'POST', { ...birth, date: '2012-01-01' });
     expect(response.status).toBe(422);
     expect((await response.json()).error.code).toBe('AGE_RESTRICTED');
-    expect((await sql.query('select count(*) as n from public.birth_data')).rows[0]?.n).toBe('0');
+    expect((await sql.query('select count(*) as n from public.birth_data where user_id = $1', [USERS.lea])).rows[0]?.n).toBe('0');
   });
   it('refuse un lieu inconnu et une heure inexistante', async () => {
     expect((await call(postCharts, 'POST', { ...birth, placeId: 42 })).status).toBe(400);

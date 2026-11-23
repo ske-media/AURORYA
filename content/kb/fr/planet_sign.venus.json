@@ -1,0 +1,230 @@
+{
+  "planet_sign:venus:aries": {
+    "keywords": ["coup de cœur", "conquête", "spontanéité", "impatience affective", "franchise amoureuse"],
+    "essence": "Vénus en Bélier est en exil : l’affection s’exprime avec fougue et sans détour, le goût va à la nouveauté et à la conquête, et l’intérêt retombe quand tout devient trop facile.",
+    "light": ["Spontanéité et franchise des sentiments", "Audace pour faire le premier pas", "Enthousiasme qui ranime la relation"],
+    "shadow": ["Impatience devant la lenteur de l’autre", "Intérêt qui faiblit une fois la conquête faite", "Tendance à transformer le lien en compétition"],
+    "behaviors": ["Faire le premier pas sans attendre de signe", "Déclarer sa flamme, puis réfléchir", "S’ennuyer dès que la relation ronronne", "Acheter sur un coup de tête et s’en lasser en une semaine"],
+    "summary": {
+      "soft": "Tu aimes comme on allume un feu : vite, franchement, de tout ton élan. Avec toi, personne n’a à deviner ce que tu ressens.",
+      "cash": "Tu adores courir après quelqu’un. Le problème commence quand la personne s’arrête et se retourne.",
+      "expert": "Vénus en Bélier est en exil, en feu cardinal : l’affect y est direct et conquérant ; vous aimez l’élan initial et supportez mal la routine du lien."
+    },
+    "roastAngles": {
+      "soft": ["Ton cœur démarre au quart de tour et ne sait pas faire semblant de ralentir."],
+      "cash": ["Tu envoies « tu me plais » pendant que les autres hésitent encore sur la ponctuation.", "Tu veux une histoire sérieuse, tout de suite, là, avant la fin de la soirée."],
+      "expert": ["Vénus en exil : chez vous, l’envie de plaire prend volontiers la forme d’un défi à relever."]
+    },
+    "roastWeight": 2,
+    "avoid": ["Présenter l’exil comme une incapacité à aimer", "Réduire ce placement à de l’inconstance"]
+  },
+  "planet_sign:venus:taurus": {
+    "keywords": ["plaisir des sens", "fidélité", "goût du confort", "possessivité", "gourmandise"],
+    "essence": "Vénus en Taureau est en domicile : l’affection est stable, tactile et fidèle, le goût va au confort, à la bonne table et aux matières agréables, et l’attachement se construit lentement.",
+    "light": ["Fidélité et constance dans l’attachement", "Art de créer du confort et de la douceur", "Goût sûr pour la qualité"],
+    "shadow": ["Possessivité envers les personnes comme envers les objets", "Résistance au changement dans la relation", "Tendance à confondre affection et habitude"],
+    "behaviors": ["Exprimer son affection par un bon repas plutôt que par un discours", "Garder la même adresse favorite pendant des années", "Toucher les tissus dans un magasin avant de regarder le prix", "Mettre longtemps à s’attacher, et plus longtemps encore à se détacher"],
+    "summary": {
+      "soft": "Tu aimes avec constance et douceur, comme on prend soin d’un jardin. Près de toi, on se sent au chaud et l’on a envie de rester.",
+      "cash": "Ta langue de l’amour, c’est le plaid, le fromage et la même série pour la troisième fois. Et personne ne touche à ton dessert.",
+      "expert": "Vénus en Taureau occupe son domicile de terre fixe : l’attachement y est durable et sensoriel ; vous aimez par la présence, le confort partagé et la fidélité aux habitudes."
+    },
+    "roastAngles": {
+      "soft": ["Ton affection a le goût du pain chaud : simple, généreuse, et l’on y revient toujours."],
+      "cash": ["Tu dis « je partage tout » mais ta fourchette monte la garde autour de l’assiette.", "Tu as le même parfum, le même canapé et le même plat préféré depuis le lycée."],
+      "expert": ["Vénus en domicile : vous jugez la qualité d’un lien à sa durée et à son confort."]
+    },
+    "roastWeight": 3,
+    "avoid": ["Réduire ce placement au matérialisme", "Présenter la fidélité comme de l’immobilisme"]
+  },
+  "planet_sign:venus:gemini": {
+    "keywords": ["séduction par l’esprit", "complicité", "légèreté", "besoin de variété", "humour"],
+    "essence": "Vénus en Gémeaux aime par l’échange : l’attirance naît de la conversation, de l’humour et de la curiosité, et l’affection a besoin de variété et de légèreté pour durer.",
+    "light": ["Complicité et humour dans la relation", "Curiosité sincère pour l’autre", "Capacité à garder le lien vivant et léger"],
+    "shadow": ["Difficulté à supporter les silences et la routine", "Papillonnage des goûts et des envies", "Tendance à plaisanter pour éviter le sérieux"],
+    "behaviors": ["Tomber sous le charme d’une répartie avant tout le reste", "Envoyer des messages toute la journée à la personne aimée", "Changer de style, de musique favorite et de passion tous les trimestres", "Répondre par une blague à une déclaration"],
+    "summary": {
+      "soft": "Chez toi, le cœur passe par les mots : tu aimes rire, apprendre, discuter jusqu’à tard. Ton affection est légère comme une conversation qui ne veut pas finir.",
+      "cash": "On te séduit avec une bonne répartie et on te perd avec un silence de dix minutes. Ton grand amour doit d’abord être une bonne conversation.",
+      "expert": "Vénus en Gémeaux, signe d’air mutable, fait de l’échange le cœur du lien : vous aimez par la parole et la complicité d’esprit, et la monotonie vous éloigne."
+    },
+    "roastAngles": {
+      "soft": ["Tu tombes sous le charme d’une phrase bien tournée comme d’autres d’un regard."],
+      "cash": ["Tu réponds « ahah » à « je t’aime », puis tu envoies une image drôle pour compenser.", "Tu flirtes par jeux de mots, et tu t’étonnes que la personne ait compris autre chose."],
+      "expert": ["Affect d’air mutable : vous vous attachez à qui renouvelle la conversation, plus qu’à qui la rassure."]
+    },
+    "roastWeight": 2,
+    "avoid": ["Présenter la légèreté comme de l’infidélité", "Dire que ce placement ne s’attache pas"]
+  },
+  "planet_sign:venus:cancer": {
+    "keywords": ["tendresse", "besoin de sécurité", "attachement", "protection", "nostalgie affective"],
+    "essence": "Vénus en Cancer aime en protégeant : l’affection se montre par le soin, la présence et les attentions du quotidien, et demande en retour un sentiment de sécurité.",
+    "light": ["Tendresse et dévouement envers les proches", "Mémoire des goûts et des dates qui comptent", "Capacité à créer un foyer chaleureux"],
+    "shadow": ["Susceptibilité quand l’attention se relâche", "Tendance à attendre que l’autre devine", "Difficulté à tourner la page d’une histoire"],
+    "behaviors": ["Préparer le plat préféré de l’autre sans attendre la demande", "Garder les tickets de cinéma et les petits mots", "Bouder en silence plutôt que formuler un reproche", "Réclamer un message à l’arrivée après chaque trajet"],
+    "summary": {
+      "soft": "Tu aimes en prenant soin : un plat, une couverture, un mot au bon moment. Ton affection est un abri, et tu n’oublies rien de ce qui compte pour l’autre.",
+      "cash": "Tu dis « fais comme tu veux » et tu notes la réponse. Tu gardes encore le ticket du premier cinéma, plié dans un tiroir.",
+      "expert": "Vénus en Cancer, signe d’eau cardinal, exprime l’affection par le soin et la protection ; vous cherchez la sécurité affective et retenez longtemps ce qui a touché le lien."
+    },
+    "roastAngles": {
+      "soft": ["Tu aimes comme on borde quelqu’un : avec soin, jusqu’au dernier coin de la couverture."],
+      "cash": ["Tu réponds « non non, tout va bien » avec la voix de quelqu’un pour qui rien ne va.", "Tu envoies « couvre-toi » à un adulte qui part acheter du pain."],
+      "expert": ["Affect d’eau cardinale : vous donnez beaucoup, et tenez un compte discret de la réciprocité."]
+    },
+    "roastWeight": 3,
+    "avoid": ["Présenter le besoin de sécurité comme de la dépendance", "Réduire ce placement à un rôle maternel"]
+  },
+  "planet_sign:venus:leo": {
+    "keywords": ["générosité", "romantisme", "besoin d’admiration", "loyauté", "goût du faste"],
+    "essence": "Vénus en Lion aime avec éclat et générosité : l’affection se déclare, se célèbre et se montre, et attend en retour admiration, loyauté et attentions visibles.",
+    "light": ["Générosité et chaleur dans l’affection", "Loyauté envers la personne choisie", "Sens de la fête et du geste romantique"],
+    "shadow": ["Besoin d’occuper le centre de l’attention de l’autre", "Fierté blessée par l’indifférence", "Tendance à la mise en scène des sentiments"],
+    "behaviors": ["Offrir un cadeau spectaculaire pour une petite occasion", "Attendre un compliment après un effort vestimentaire", "Organiser un anniversaire comme une première de gala", "Se vexer d’un message resté sans réponse enthousiaste"],
+    "summary": {
+      "soft": "Tu aimes en grand, avec le cœur sur la main. Tu sais faire sentir à quelqu’un qu’il compte, et tu donnes sans compter quand tu as choisi.",
+      "cash": "Tu donnes tout, en grand, avec des rubans. En échange tu demandes peu de chose : une admiration constante et sincère.",
+      "expert": "Vénus en Lion, signe de feu fixe, donne un affect généreux et démonstratif : vous aimez avec loyauté et panache, et l’indifférence vous atteint plus que le conflit."
+    },
+    "roastAngles": {
+      "soft": ["Ton amour arrive toujours avec un peu de lumière en plus, comme un jour de fête."],
+      "cash": ["Tu fais un cadeau somptueux, puis tu guettes la réaction comme un jury de concours.", "Tu dis « ce n’est rien » en attendant que quelqu’un insiste : c’est énorme."],
+      "expert": ["Affect fixe de feu : vous pardonnez une dispute plus aisément qu’un anniversaire oublié."]
+    },
+    "roastWeight": 3,
+    "avoid": ["Réduire ce placement à de la vanité", "Présenter le besoin d’admiration comme de l’égoïsme"]
+  },
+  "planet_sign:venus:virgo": {
+    "keywords": ["pudeur", "amour par le service", "discernement", "exigence", "attention aux détails"],
+    "essence": "Vénus en Vierge est en chute : l’affection se prouve par des gestes utiles plutôt que par des déclarations, avec pudeur, discernement et un regard exigeant sur le lien.",
+    "light": ["Attention concrète aux besoins de l’autre", "Fiabilité et constance discrète", "Goût de la simplicité soignée"],
+    "shadow": ["Tendance à analyser les sentiments au lieu de les dire", "Critique du détail qui masque la tendresse", "Difficulté à recevoir un compliment"],
+    "behaviors": ["Réparer, ranger ou organiser pour dire son affection", "Remarquer le petit défaut d’un cadeau avant de dire merci", "Répondre à un compliment par une explication technique", "Se souvenir de la marque de café et des horaires de chacun"],
+    "summary": {
+      "soft": "Tu aimes sans bruit, par mille gestes précis : un détail réglé, une chose réparée, une attention que personne d’autre n’aurait eue.",
+      "cash": "Tu ne dis pas « je t’aime », tu dis « j’ai rangé tes papiers et rempli le frigo ». C’est pareil, en plus utile.",
+      "expert": "Vénus en Vierge est en chute, en terre mutable : l’affect s’y exprime par le service et la retenue ; vous aimez avec discernement et l’abandon vous coûte."
+    },
+    "roastAngles": {
+      "soft": ["Ta tendresse se cache dans les détails, là où seuls les regards attentifs la trouvent."],
+      "cash": ["On te dit « tu me manques » et tu réponds avec un créneau dans l’agenda.", "Tu reçois un bouquet et tu recoupes les tiges avant de dire merci."],
+      "expert": ["Vénus en chute : chez vous, l’affection se démontre et la déclaration se fait attendre."]
+    },
+    "roastWeight": 2,
+    "avoid": ["Présenter la chute comme de la froideur", "Réduire ce placement à la critique permanente"]
+  },
+  "planet_sign:venus:libra": {
+    "keywords": ["harmonie", "charme", "goût du couple", "élégance", "évitement du conflit"],
+    "essence": "Vénus en Balance est en domicile : l’affection cherche l’harmonie, l’équité et l’élégance, le lien à deux est une priorité, et tout désaccord ouvert coûte beaucoup.",
+    "light": ["Charme, tact et art de mettre à l’aise", "Sens du partage équitable dans la relation", "Goût raffiné, sens des accords et des proportions"],
+    "shadow": ["Évitement du conflit jusqu’à l’accumulation", "Dépendance au regard et à l’approbation de l’autre", "Difficulté à dire non"],
+    "behaviors": ["Dire oui pour préserver l’ambiance, puis le regretter", "Accorder ses envies à celles de l’autre sans y penser", "Soigner la présentation d’une table, d’un message, d’un cadeau", "Préférer un compromis tiède à une dispute franche"],
+    "summary": {
+      "soft": "Tu as le don de l’accord : avec toi, les choses s’adoucissent et chacun trouve sa place. Tu aimes à deux, avec élégance et attention.",
+      "cash": "Tu détestes tellement les disputes que tu dis oui à tout, puis tu en veux à tout le monde, poliment, avec le sourire.",
+      "expert": "Vénus en Balance occupe son domicile d’air cardinal : l’affect y recherche l’accord et la réciprocité ; vous aimez dans le lien à deux et redoutez la dissonance."
+    },
+    "roastAngles": {
+      "soft": ["Tu arranges les cœurs comme un bouquet : chaque chose à sa place, rien qui dépasse."],
+      "cash": ["Tu réponds « comme tu préfères » alors que tu as une préférence très nette.", "Tu trouves du charme à tout le monde, ce qui complique sérieusement le tri."],
+      "expert": ["Vénus en domicile : vous cédez sur le fond pour sauver la forme, et le ressentiment s’accumule."]
+    },
+    "roastWeight": 3,
+    "avoid": ["Présenter le goût de l’harmonie comme de la superficialité", "Dire que ce placement ne sait pas vivre en solo"]
+  },
+  "planet_sign:venus:scorpio": {
+    "keywords": ["intensité", "exclusivité", "loyauté absolue", "jalousie", "profondeur du lien"],
+    "essence": "Vénus en Scorpion est en exil : l’affection est intense, exclusive et entière, le lien se veut total, et la confiance se donne rarement mais sans retour.",
+    "light": ["Loyauté profonde envers la personne aimée", "Capacité à s’engager entièrement", "Lucidité sur les sentiments, les siens et ceux d’autrui"],
+    "shadow": ["Jalousie et besoin de contrôle", "Difficulté à pardonner une trahison", "Mise à l’épreuve silencieuse de l’autre"],
+    "behaviors": ["Tout observer au début d’une relation sans rien montrer", "Tester la sincérité de l’autre avant d’accorder sa confiance", "Remarquer un prénom nouveau dans une conversation", "Rompre net, sans retour, après une déloyauté"],
+    "summary": {
+      "soft": "Tu aimes en profondeur, sans demi-mesure. Quand tu donnes ta confiance, c’est un trésor : tu restes là, même quand tout devient difficile.",
+      "cash": "Tu ne tombes pas sous le charme, tu mènes l’enquête. Avec toi c’est tout ou rien, et « rien » vient avec un blocage sur tous les réseaux.",
+      "expert": "Vénus en Scorpion est en exil, en eau fixe : l’affect y est absolu et possessif ; vous engagez tout dans le lien et supportez mal la tiédeur comme le partage."
+    },
+    "roastAngles": {
+      "soft": ["Ton cœur ne connaît pas la demi-saison : c’est le plein hiver ou le plein été."],
+      "cash": ["Tu dis « je ne surveille personne » en connaissant ses horaires par cœur.", "Tu as vu qui a aimé sa photo, et à quelle heure. Tu n’as rien dit. Pour l’instant."],
+      "expert": ["Vénus en exil : vous n’accordez pas l’affection, vous la confiez sous serment."]
+    },
+    "roastWeight": 3,
+    "avoid": ["Réduire ce placement à la jalousie", "Insister sur une dimension charnelle ou sulfureuse"]
+  },
+  "planet_sign:venus:sagittarius": {
+    "keywords": ["liberté", "enthousiasme", "goût de l’aventure", "franchise", "peur de l’enfermement"],
+    "essence": "Vénus en Sagittaire aime dans le mouvement : l’affection est joyeuse, franche et généreuse, attirée par l’ailleurs et la découverte, et se rétracte dès que le lien ressemble à une cage.",
+    "light": ["Enthousiasme et bonne humeur dans la relation", "Franchise sur ce qui est ressenti", "Goût de grandir et de découvrir à deux"],
+    "shadow": ["Fuite devant les attentes trop précises", "Serments lancés dans l’élan du moment", "Franchise qui manque parfois de délicatesse"],
+    "behaviors": ["Proposer un voyage au deuxième café", "Craquer pour un accent, un récit de voyage ou un rire sonore", "Répondre « rien ne presse » à toute question sur la suite", "Avoir besoin d’air après trois soirées d’affilée à la maison"],
+    "summary": {
+      "soft": "Tu aimes à ciel ouvert : avec joie, curiosité et franchise. Ton affection donne de l’air et l’envie d’aller voir plus loin.",
+      "cash": "Tu veux quelqu’un qui te suive au bout du monde et qui ne demande jamais à quelle heure tu rentres.",
+      "expert": "Vénus en Sagittaire, signe de feu mutable, associe l’affection à l’expansion : vous aimez qui élargit votre horizon et vivez mal toute attente perçue comme une entrave."
+    },
+    "roastAngles": {
+      "soft": ["Ton cœur voyage léger : beaucoup d’élan, peu de bagages, toujours une place à côté."],
+      "cash": ["Tu dis « j’ai besoin de liberté » à quelqu’un qui proposait juste un brunch dimanche.", "Tu craques pour quelqu’un à l’aéroport, et l’intérêt retombe à la douane."],
+      "expert": ["Affect mutable de feu : vous promettez fidélité à l’élan, plus rarement à l’emploi du temps."]
+    },
+    "roastWeight": 2,
+    "avoid": ["Dire que ce placement est incapable de s’engager", "Réduire le besoin d’espace à de l’inconstance"]
+  },
+  "planet_sign:venus:capricorn": {
+    "keywords": ["réserve", "engagement durable", "pudeur", "sens des responsabilités", "fidélité"],
+    "essence": "Vénus en Capricorne aime avec sérieux et retenue : l’affection se construit dans la durée, se prouve par des actes et des engagements tenus, et s’exprime peu en paroles.",
+    "light": ["Fiabilité et constance dans l’engagement", "Loyauté qui résiste au temps", "Goût sobre, attaché à ce qui dure"],
+    "shadow": ["Pudeur qui passe pour de la distance", "Difficulté à montrer sa vulnérabilité", "Tendance à faire passer le travail avant le lien"],
+    "behaviors": ["Montrer son affection en réglant un problème pratique", "Mettre des mois à dire ce qui est ressenti", "Évaluer le sérieux de l’autre avant de s’attacher", "Offrir un cadeau utile, choisi pour durer dix ans"],
+    "summary": {
+      "soft": "Tu aimes sans grands mots, mais on peut compter sur toi, année après année. Ton affection est une demeure solide, bâtie pierre à pierre.",
+      "cash": "Tu montres ton amour par ta fiabilité, ce qui est magnifique et totalement invisible. Ta déclaration tient en une ligne, relue deux fois.",
+      "expert": "Vénus en Capricorne, signe de terre cardinal, donne un affect réservé et durable : vous aimez par l’engagement tenu et la preuve dans le temps, plus que par l’effusion."
+    },
+    "roastAngles": {
+      "soft": ["Ton amour ne fait pas de bruit : il arrive à l’heure, et il reste."],
+      "cash": ["Tu dis « je tiens à toi » sur le ton d’une validation de budget annuel.", "Tu planifies une soirée romantique avec un ordre du jour et une heure de fin."],
+      "expert": ["Affect cardinal de terre : vous traitez l’engagement comme un contrat et l’honorez comme tel."]
+    },
+    "roastWeight": 2,
+    "avoid": ["Présenter la réserve comme une absence de sentiments", "Réduire ce placement à l’intérêt ou au calcul"]
+  },
+  "planet_sign:venus:aquarius": {
+    "keywords": ["amitié amoureuse", "indépendance", "originalité des goûts", "distance", "liberté mutuelle"],
+    "essence": "Vénus en Verseau aime dans la liberté et la complicité d’esprit : l’affection ressemble à une amitié élective, se méfie de la fusion et s’attache à ce qui sort de l’ordinaire.",
+    "light": ["Respect de l’indépendance de l’autre", "Loyauté de fond, proche de l’amitié", "Ouverture aux personnes et aux goûts atypiques"],
+    "shadow": ["Distance quand l’émotion devient trop proche", "Difficulté avec les démonstrations attendues", "Besoin d’espace perçu comme de l’indifférence"],
+    "behaviors": ["Nouer d’abord une complicité, s’attacher ensuite", "Oublier une date symbolique mais se souvenir d’une théorie évoquée deux ans plus tôt", "Préférer une soirée chacun de son côté suivie d’un long débrief", "Avoir des goûts que personne d’autre ne partage dans l’entourage"],
+    "summary": {
+      "soft": "Tu aimes en laissant de l’espace, comme on ouvre une fenêtre. Avec toi, chacun peut rester soi-même, et c’est une forme rare de tendresse.",
+      "cash": "Tu veux une relation fusionnelle, mais à distance, avec des jours sans nouvelles. Ton « je t’aime bien » est une déclaration majeure.",
+      "expert": "Vénus en Verseau, signe d’air fixe, fonde le lien sur l’affinité d’esprit et l’autonomie : vous aimez sans fusion, avec une fidélité de principe plus que d’effusion."
+    },
+    "roastAngles": {
+      "soft": ["Tu offres à ceux que tu aimes le plus précieux des cadeaux : la place d’être eux-mêmes."],
+      "cash": ["Tu réponds « c’est gentil » à une déclaration, puis tu parles d’un documentaire.", "Tu disparais trois jours, puis tu reviens avec un lien d’article et zéro explication."],
+      "expert": ["Affect fixe d’air : vous restez fidèle à une personne comme à une idée, de loin et longtemps."]
+    },
+    "roastWeight": 2,
+    "avoid": ["Présenter la distance comme de la froideur", "Dire que ce placement refuse l’attachement"]
+  },
+  "planet_sign:venus:pisces": {
+    "keywords": ["romantisme", "dévouement", "compassion", "idéalisation", "don de soi"],
+    "essence": "Vénus en Poissons est en exaltation : l’affection est sans frontière, tendre et compatissante, portée à idéaliser l’être aimé et à donner sans compter, jusqu’à s’oublier.",
+    "light": ["Tendresse et compassion sans condition", "Sensibilité artistique et romantique", "Capacité à pardonner"],
+    "shadow": ["Idéalisation de l’autre au mépris des faits", "Difficulté à poser des limites", "Attirance pour les personnes à sauver"],
+    "behaviors": ["Trouver des excuses à quelqu’un qui n’en a pas demandé", "Pleurer devant un film, une chanson, une publicité", "S’attacher à une histoire possible plus qu’à la personne réelle", "Tout donner, puis s’étonner de n’avoir plus rien en réserve"],
+    "summary": {
+      "soft": "Tu aimes sans mesure et sans calcul, avec une tendresse qui comprend tout. Ton cœur voit le meilleur en chacun, et c’est un cadeau rare.",
+      "cash": "Tu tombes sous le charme du potentiel des gens. On te dit « c’est compliqué chez moi » et tu entends « défi accepté ».",
+      "expert": "Vénus en Poissons est en exaltation, en eau mutable : l’affect y est oblatif et idéalisant ; vous aimez sans réserve et discernez tard les limites du lien."
+    },
+    "roastAngles": {
+      "soft": ["Ton cœur est une mer sans digue : tout le monde y trouve un peu de douceur."],
+      "cash": ["Tu as déjà imaginé toute l’histoire, emménagement compris, avant le premier café.", "Tu pardonnes avant même les excuses, et parfois avant la bêtise."],
+      "expert": ["Vénus exaltée : vous prêtez à l’être aimé des qualités que les faits n’ont pas encore confirmées."]
+    },
+    "roastWeight": 3,
+    "avoid": ["Présenter le dévouement comme de la naïveté", "Réduire ce placement au sacrifice"]
+  }
+}

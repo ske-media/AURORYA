@@ -7,6 +7,7 @@ import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
 import { getAsset } from '@/assets/registry';
 import { initI18n } from '@/i18n';
+import { QueryProvider } from '@/services/query';
 import { ThemeProvider, useTheme } from '@/theme/ThemeProvider';
 
 void SplashScreen.preventAutoHideAsync();
@@ -36,8 +37,10 @@ export default function RootLayout() {
   if (!loaded && !error) return null;
   return (
     <ThemeProvider>
-      <StatusBar style="light" />
-      <Navigator />
+      <QueryProvider>
+        <StatusBar style="light" />
+        <Navigator />
+      </QueryProvider>
     </ThemeProvider>
   );
 }

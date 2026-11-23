@@ -1,0 +1,230 @@
+{
+  "planet_sign:mercury:aries": {
+    "keywords": ["franc-parler", "vivacité", "impatience mentale", "répartie", "décision rapide"],
+    "essence": "Mercure en Bélier donne une pensée rapide, directe et combative : l’idée part avant d’être polie, et la parole sert à trancher plutôt qu’à nuancer.",
+    "light": ["Franchise qui évite les malentendus", "Capacité à décider vite et à lancer une idée", "Répartie immédiate dans le débat"],
+    "shadow": ["Tendance à couper la parole", "Avis tranché avant d’avoir tout entendu", "Lassitude rapide devant les explications longues"],
+    "behaviors": ["Répondre à un message avant de l’avoir lu jusqu’au bout", "Finir les phrases des autres pour gagner du temps", "Dire d’abord ce qui est pensé, arrondir les angles ensuite", "Apprendre en essayant plutôt qu’en lisant le mode d’emploi"],
+    "summary": {
+      "soft": "Ta pensée file comme une étincelle : tu dis les choses en face, sans détour, et cette franchise fait souvent gagner du temps à tout le monde.",
+      "cash": "Tu penses vite, tu parles encore plus vite. La nuance arrive après, en général par message d’excuse.",
+      "expert": "Mercure en Bélier, signe de feu cardinal, privilégie l’intuition immédiate et le verbe offensif ; vous tranchez d’abord, vous argumentez ensuite."
+    },
+    "roastAngles": {
+      "soft": ["Tes mots partent comme des flèches, mais c’est toujours la sincérité qui les lance."],
+      "cash": ["Tu réponds « oui mais » avant la fin de la phrase de l’autre.", "Tu lis la notice une fois le meuble monté, et monté de travers."],
+      "expert": ["Pensée cardinale de feu : vous concluez avant la démonstration, puis vous défendez la conclusion."]
+    },
+    "roastWeight": 2,
+    "avoid": ["Réduire ce placement à de l’agressivité", "Confondre rapidité d’esprit et manque de profondeur"]
+  },
+  "planet_sign:mercury:taurus": {
+    "keywords": ["pensée concrète", "lenteur réfléchie", "bon sens", "ténacité", "voix posée"],
+    "essence": "Mercure en Taureau pense lentement et solidement : l’esprit a besoin de concret, de temps et de preuves tangibles avant de se prononcer, puis ne change plus guère d’avis.",
+    "light": ["Bon sens pratique et jugement fiable", "Mémoire durable de ce qui a été appris", "Parole calme, qui rassure"],
+    "shadow": ["Difficulté à revenir sur une opinion formée", "Lenteur à répondre quand la décision presse", "Méfiance envers les idées trop abstraites"],
+    "behaviors": ["Demander un exemple concret avant d’accepter une idée", "Annoncer un temps de réflexion et réfléchir vraiment", "Répéter le même argument, sur le même rythme, jusqu’à l’usure de l’adversaire", "Apprendre par la répétition et la pratique"],
+    "summary": {
+      "soft": "Tu prends le temps de penser, et ce que tu dis tient debout. Ta parole a le calme des choses qui ne changent pas d’avis tous les matins.",
+      "cash": "Tu réfléchis longtemps, puis tu ne bouges plus. Te faire changer d’avis demande un dossier, des preuves et un goûter.",
+      "expert": "Mercure en Taureau, signe de terre fixe, ancre la pensée dans le concret : vous assimilez lentement, retenez durablement et cédez peu une fois l’opinion formée."
+    },
+    "roastAngles": {
+      "soft": ["Tes idées mûrissent comme des fruits : lentement, mais on peut compter dessus."],
+      "cash": ["Tu écris « je réfléchis » en réponse, et la suite arrive à la saison suivante.", "Tu as changé d’avis une fois, et tout le monde s’en souvient encore."],
+      "expert": ["Pensée fixe de terre : une opinion acquise devient chez vous un bien immobilier."]
+    },
+    "roastWeight": 2,
+    "avoid": ["Confondre lenteur et manque de vivacité", "Caricaturer la constance en fermeture d’esprit"]
+  },
+  "planet_sign:mercury:gemini": {
+    "keywords": ["curiosité", "agilité verbale", "polyvalence", "dispersion", "humour"],
+    "essence": "Mercure en Gémeaux est dans son domicile : la pensée est vive, mobile et curieuse de tout, la parole abondante, et l’intérêt saute d’un sujet à l’autre avec aisance.",
+    "light": ["Aisance à expliquer, reformuler et vulgariser", "Curiosité qui relie des sujets éloignés", "Humour et sens de la formule"],
+    "shadow": ["Dispersion entre trop de centres d’intérêt", "Difficulté à approfondir un sujet jusqu’au bout", "Avis changeant selon le dernier argument entendu"],
+    "behaviors": ["Mener plusieurs conversations écrites en même temps", "Ouvrir vingt onglets et n’en fermer aucun", "Commencer une anecdote, bifurquer, puis oublier la chute", "Poser des questions à tout le monde, y compris aux inconnus dans une file d’attente"],
+    "summary": {
+      "soft": "Ton esprit papillonne avec grâce : tout t’intéresse, tout se relie, et tu sais trouver les mots qui rendent les choses légères.",
+      "cash": "Tu as un avis sur tout, et un deuxième avis au cas où. Ta phrase commence quelque part et finit dans un autre sujet.",
+      "expert": "Mercure en Gémeaux occupe son domicile d’air mutable : l’intelligence y est agile, associative et verbale, au prix d’une attention qui se disperse volontiers."
+    },
+    "roastAngles": {
+      "soft": ["Dans ta tête, une fenêtre reste toujours ouverte, et les idées entrent en courant d’air."],
+      "cash": ["Tu racontes une histoire en ouvrant quatre parenthèses, sans jamais en refermer une.", "Tu envoies douze messages là où un seul suffisait, et le dernier dit « bref »."],
+      "expert": ["Mercure en domicile : vous comprenez vite, expliquez mieux encore, et changez de sujet avant la conclusion."]
+    },
+    "roastWeight": 3,
+    "avoid": ["Réduire ce placement à de la superficialité", "Parler de duplicité ou de double jeu"]
+  },
+  "planet_sign:mercury:cancer": {
+    "keywords": ["mémoire affective", "pensée intuitive", "écoute", "subjectivité", "pudeur verbale"],
+    "essence": "Mercure en Cancer pense avec la mémoire et le ressenti : les informations se retiennent par l’émotion qui les accompagne, et la parole cherche d’abord à protéger le lien.",
+    "light": ["Mémoire remarquable des détails personnels", "Écoute attentive, qui met en confiance", "Sens des mots qui réconfortent"],
+    "shadow": ["Tendance à prendre une remarque neutre pour un reproche", "Difficulté à dire les choses directement", "Ressassement des conversations passées"],
+    "behaviors": ["Se souvenir mot pour mot d’une phrase entendue des années plus tôt", "Relire une ancienne conversation tard le soir", "Répondre « peu importe » en espérant que l’autre devine", "Garder les lettres, les cartes et les captures d’écran qui comptent"],
+    "summary": {
+      "soft": "Tu penses avec le cœur et tu retiens tout ce qui t’a touché. Tes mots savent envelopper, parce que tu écoutes avant de parler.",
+      "cash": "Tu te souviens d’une phrase lâchée un mardi d’il y a six ans, intonation comprise. Et non, ce n’était « pas grave ».",
+      "expert": "Mercure en Cancer, signe d’eau cardinal, lie la pensée à la mémoire affective : vous retenez ce qui vous a touché et vous formulez avec prudence, par égard pour le lien."
+    },
+    "roastAngles": {
+      "soft": ["Ta mémoire est un album : chaque phrase y garde la couleur du moment où tu l’as entendue."],
+      "cash": ["Tu réponds « non mais c’est bon », et on sent bien que ce n’est pas bon du tout.", "Tu cites une remarque d’il y a huit ans avec la date, la météo et le pull de l’autre."],
+      "expert": ["Pensée d’eau cardinale : chez vous, un fait sans charge affective s’oublie, un mot blessant s’archive."]
+    },
+    "roastWeight": 2,
+    "avoid": ["Présenter la sensibilité comme un manque de logique", "Caricaturer en susceptibilité permanente"]
+  },
+  "planet_sign:mercury:leo": {
+    "keywords": ["éloquence", "conviction", "sens du récit", "fierté intellectuelle", "chaleur"],
+    "essence": "Mercure en Lion pense en grand et parle avec panache : l’idée s’expose avec conviction, le récit prime sur le détail, et l’avis exprimé engage la fierté.",
+    "light": ["Talent pour raconter et captiver un auditoire", "Parole chaleureuse, qui encourage", "Clarté et fermeté des convictions"],
+    "shadow": ["Difficulté à reconnaître une erreur en public", "Tendance à ramener la conversation à sa propre expérience", "Goût de l’effet au détriment de la précision"],
+    "behaviors": ["Raconter une anecdote banale comme une épopée", "Parler avec les mains et hausser la voix sans s’en apercevoir", "Présenter une opinion comme une évidence", "Attendre une réaction après chaque message envoyé"],
+    "summary": {
+      "soft": "Quand tu parles, on écoute : tu racontes avec chaleur et tu donnes de l’éclat aux idées. Ta parole a quelque chose de généreux.",
+      "cash": "Tu ne donnes pas ton avis, tu le proclames. Et si personne ne réagit, tu le redis plus fort, avec les gestes.",
+      "expert": "Mercure en Lion, signe de feu fixe, donne une pensée affirmative et une expression théâtrale : vous exposez avec autorité et cédez difficilement sur une conviction."
+    },
+    "roastAngles": {
+      "soft": ["Tu racontes les choses avec tant de cœur que même la liste de courses devient un récit."],
+      "cash": ["Tu as raconté cette anecdote dix fois, et à chaque version ton rôle a pris de l’ampleur.", "Tu envoies un vocal de cinq minutes pour dire oui, avec introduction et rappel."],
+      "expert": ["Pensée fixe de feu : chez vous, admettre une erreur de raisonnement relève presque de l’abdication."]
+    },
+    "roastWeight": 2,
+    "avoid": ["Réduire ce placement à de la vantardise", "Confondre assurance verbale et absence de doute"]
+  },
+  "planet_sign:mercury:virgo": {
+    "keywords": ["analyse", "précision", "sens du détail", "esprit critique", "méthode"],
+    "essence": "Mercure en Vierge est en domicile et en exaltation : la pensée trie, classe et vérifie, avec un goût marqué pour la précision, la méthode et l’utilité concrète.",
+    "light": ["Analyse fine et repérage immédiat des erreurs", "Méthode et clarté dans l’explication", "Fiabilité des informations transmises"],
+    "shadow": ["Tendance à corriger les autres sans que personne l’ait demandé", "Perfectionnisme qui retarde la conclusion", "Difficulté à voir l’ensemble derrière les détails"],
+    "behaviors": ["Repérer la faute d’orthographe avant de lire le message", "Faire des listes, puis des listes de listes", "Relire un courriel plusieurs fois avant de l’envoyer", "Vérifier l’information à la source avant de la répéter"],
+    "summary": {
+      "soft": "Ton esprit a la patience des artisans : tu observes, tu tries, tu affines. Grâce à toi, les choses deviennent claires et utilisables.",
+      "cash": "Tu as vu la faute de frappe. Tu ne dis rien. Tu ne penses plus qu’à ça depuis le début de la réunion.",
+      "expert": "Mercure en Vierge cumule domicile et exaltation en terre mutable : l’intelligence y est analytique, méthodique et critique, parfois au détriment de la synthèse."
+    },
+    "roastAngles": {
+      "soft": ["Tu ranges les idées comme d’autres rangent une armoire : avec soin, et un peu de tendresse."],
+      "cash": ["Tu relis ton message quatre fois, tu l’envoies, et là tu repères la coquille.", "Tu corriges la carte du restaurant dans ta tête pendant que les autres commandent."],
+      "expert": ["Mercure doublement dignifié : vous distinguez l’erreur dans un texte avant d’en saisir le propos."]
+    },
+    "roastWeight": 3,
+    "avoid": ["Réduire ce placement à de la maniaquerie", "Présenter l’esprit critique comme de la froideur"]
+  },
+  "planet_sign:mercury:libra": {
+    "keywords": ["diplomatie", "sens de la nuance", "comparaison", "hésitation", "élégance verbale"],
+    "essence": "Mercure en Balance pense par comparaison : chaque idée est pesée avec son contraire, la parole cherche l’équilibre et l’accord, et la forme compte autant que le fond.",
+    "light": ["Diplomatie et tact dans la formulation", "Capacité à comprendre le point de vue adverse", "Sens de l’argument équitable"],
+    "shadow": ["Indécision prolongée devant un choix simple", "Tendance à dire ce que l’autre veut entendre", "Évitement de la contradiction frontale"],
+    "behaviors": ["Demander l’avis de plusieurs personnes avant de trancher", "Commencer ses phrases par « d’un côté » et « en même temps »", "Reformuler un désaccord jusqu’à le rendre méconnaissable", "Hésiter longuement devant un menu"],
+    "summary": {
+      "soft": "Tu as l’art de dire les choses avec douceur et justesse. Tu vois toujours l’autre côté, et cela rend ta parole apaisante.",
+      "cash": "Tu pèses le pour, le contre, puis le pour du contre. À la fin, tu demandes aux autres ce qu’ils prennent.",
+      "expert": "Mercure en Balance, signe d’air cardinal, raisonne par mise en regard des contraires : vous argumentez avec équité, mais concluez tard, par souci d’équilibre."
+    },
+    "roastAngles": {
+      "soft": ["Tes mots arrivent toujours bien habillés, même pour annoncer une mauvaise nouvelle."],
+      "cash": ["Tu lances un sondage auprès de cinq personnes pour choisir entre deux pizzas.", "Tu dis « c’est intéressant comme point de vue » quand le désaccord est total."],
+      "expert": ["Pensée cardinale d’air : vous instruisez à charge et à décharge, et le verdict se fait attendre."]
+    },
+    "roastWeight": 2,
+    "avoid": ["Présenter la diplomatie comme de l’hypocrisie", "Réduire ce placement à l’indécision"]
+  },
+  "planet_sign:mercury:scorpio": {
+    "keywords": ["perspicacité", "esprit d’enquête", "sens du non-dit", "ironie mordante", "secret"],
+    "essence": "Mercure en Scorpion pense en profondeur et sonde ce qui se cache : l’esprit enquête, lit entre les lignes, garde ses conclusions pour lui et parle peu, mais avec précision.",
+    "light": ["Perspicacité psychologique", "Concentration tenace sur un sujet", "Discrétion absolue sur ce qui est confié"],
+    "shadow": ["Soupçon devant une réponse trop simple", "Ironie qui pique plus que prévu", "Rétention d’information par stratégie"],
+    "behaviors": ["Poser la question dont la réponse est déjà connue", "Remarquer l’heure de dernière connexion et en tirer des conclusions", "Retrouver une information en quelques recherches bien menées", "Se taire dans un débat, puis placer la phrase qui clôt tout"],
+    "summary": {
+      "soft": "Tu vois ce que les mots cachent et tu écoutes les silences. Ce que l’on te confie reste chez toi, à l’abri.",
+      "cash": "Tu poses des questions dont tu connais déjà la réponse, pour voir. Tes amis appellent ça discuter, toi tu appelles ça vérifier.",
+      "expert": "Mercure en Scorpion, signe d’eau fixe, donne une intelligence d’enquête, secrète et pénétrante : vous cherchez le mobile derrière le propos et livrez peu de vos conclusions."
+    },
+    "roastAngles": {
+      "soft": ["Tu lis entre les lignes avec une telle finesse que les lignes en deviennent presque inutiles."],
+      "cash": ["Tu sais déjà tout avant de demander, tu demandes quand même, et tu compares les versions.", "Tu réponds « intéressant » et la personne en face revoit toute sa journée."],
+      "expert": ["Pensée fixe d’eau : vous écoutez moins ce qui est dit que la raison pour laquelle cela est dit."]
+    },
+    "roastWeight": 3,
+    "avoid": ["Présenter ce placement comme manipulateur", "Associer la lucidité à de la noirceur"]
+  },
+  "planet_sign:mercury:sagittarius": {
+    "keywords": ["vue d’ensemble", "franchise", "enthousiasme", "goût du débat", "approximation"],
+    "essence": "Mercure en Sagittaire est en exil : la pensée vise le sens général plutôt que le détail, s’enthousiasme pour les grandes idées et s’exprime avec une franchise sans filtre.",
+    "light": ["Vision large et sens de la synthèse", "Enthousiasme communicatif pour apprendre et transmettre", "Honnêteté spontanée"],
+    "shadow": ["Approximation sur les faits et les chiffres", "Franchise qui tourne à la bourde", "Tendance à faire la leçon"],
+    "behaviors": ["Gonfler un chiffre pour rendre l’histoire meilleure", "Dire tout haut ce que la tablée pensait tout bas", "Transformer une question simple en exposé sur le sens de la vie", "Commencer trois livres et en recommander cinq"],
+    "summary": {
+      "soft": "Ton esprit voit loin et large : tu cherches le sens, tu t’enthousiasmes, tu donnes envie d’apprendre. Ta franchise a la fraîcheur du grand air.",
+      "cash": "Tu dis la vérité d’abord et tu regardes les têtes après. Les détails, tu les arrondis : c’est l’idée générale qui compte.",
+      "expert": "Mercure en Sagittaire est en exil, en feu mutable : la synthèse et la conviction l’emportent sur l’exactitude ; vous pensez par grandes lignes et affirmez volontiers."
+    },
+    "roastAngles": {
+      "soft": ["Tu parles comme on part en voyage : avec élan, et sans trop regarder la carte."],
+      "cash": ["Tu dis « sans vouloir te vexer » et toute la table retient son souffle.", "Tu cites une étude que tu n’as pas lue, avec un pourcentage inventé sur place."],
+      "expert": ["Mercure en exil : chez vous, l’idée générale est juste et la référence précise reste à vérifier."]
+    },
+    "roastWeight": 2,
+    "avoid": ["Présenter l’exil comme un défaut d’intelligence", "Réduire ce placement à du bavardage"]
+  },
+  "planet_sign:mercury:capricorn": {
+    "keywords": ["pensée structurée", "sobriété", "sens pratique", "humour pince-sans-rire", "sérieux"],
+    "essence": "Mercure en Capricorne pense avec méthode et économie : l’esprit organise, hiérarchise et vise le résultat, la parole est sobre et pèse chaque mot avant de l’engager.",
+    "light": ["Esprit de synthèse orienté vers le résultat", "Parole fiable, qui engage", "Humour sec et efficace"],
+    "shadow": ["Sécheresse dans la formulation", "Pessimisme présenté comme du réalisme", "Peu de place laissée à la fantaisie"],
+    "behaviors": ["Répondre par un seul mot, ponctuation comprise", "Rédiger un message personnel comme une note de service", "Préparer un plan en trois parties pour une discussion de couple", "Demander « concrètement, que faire ? » au milieu d’un débat d’idées"],
+    "summary": {
+      "soft": "Tu parles peu, mais chaque mot compte. Ton esprit construit patiemment, et l’on peut s’appuyer sur ce que tu dis.",
+      "cash": "Tu réponds « ok. » avec le point, et tu trouves ça chaleureux. Ton message d’anniversaire ressemble à un compte rendu.",
+      "expert": "Mercure en Capricorne, signe de terre cardinal, structure la pensée vers l’efficacité : vous hiérarchisez, synthétisez et parlez avec une économie de moyens assumée."
+    },
+    "roastAngles": {
+      "soft": ["Tes phrases sont courtes comme des marches : avec toi, on monte toujours quelque part."],
+      "cash": ["Tu envoies « bien reçu » à quelqu’un qui vient de t’ouvrir son cœur.", "Tu fais un tableau comparatif pour choisir un film du dimanche soir."],
+      "expert": ["Pensée cardinale de terre : vous jugez une idée à ce qu’elle permet de faire avant la fin du trimestre."]
+    },
+    "roastWeight": 2,
+    "avoid": ["Présenter la sobriété comme de la froideur affective", "Oublier l’humour propre à ce placement"]
+  },
+  "planet_sign:mercury:aquarius": {
+    "keywords": ["originalité", "pensée abstraite", "indépendance d’esprit", "esprit de contradiction", "idées en avance"],
+    "essence": "Mercure en Verseau pense de façon indépendante et abstraite : l’esprit observe de loin, relie les idées en système, aime le contre-pied et tient fermement à ses théories.",
+    "light": ["Originalité des idées et des solutions", "Objectivité, recul sur les situations", "Aisance avec les concepts et les systèmes"],
+    "shadow": ["Esprit de contradiction par principe", "Détachement perçu comme de la distance", "Attachement rigide à une théorie personnelle"],
+    "behaviors": ["Défendre l’avis contraire pour tester la solidité du raisonnement", "Expliquer un chagrin par un schéma", "Envoyer un article de fond à minuit sans un mot d’accompagnement", "Répondre à une question personnelle par une généralité sur l’humanité"],
+    "summary": {
+      "soft": "Ton esprit regarde les choses d’un peu plus haut. Tu penses autrement, et c’est souvent toi qui ouvres la porte que personne n’avait vue.",
+      "cash": "Dès que tout le monde est d’accord, tu changes de camp. Tu appelles ça l’esprit critique, les autres appellent ça un dîner compliqué.",
+      "expert": "Mercure en Verseau, signe d’air fixe, favorise l’abstraction et la pensée en système : vous raisonnez avec recul, innovez volontiers et tenez ferme sur vos principes."
+    },
+    "roastAngles": {
+      "soft": ["Tes idées arrivent d’ailleurs, avec un léger décalage horaire sur le reste du monde."],
+      "cash": ["Tu réponds « tout dépend de la définition » à quelqu’un qui demandait l’heure.", "Tu contredis une idée, puis tu la défends dès que l’autre a changé d’avis."],
+      "expert": ["Pensée fixe d’air : vous changez volontiers le monde en théorie, plus rarement d’opinion."]
+    },
+    "roastWeight": 2,
+    "avoid": ["Présenter le détachement comme une absence d’émotion", "Réduire l’originalité à de l’excentricité"]
+  },
+  "planet_sign:mercury:pisces": {
+    "keywords": ["imagination", "pensée par images", "intuition", "flou", "empathie verbale"],
+    "essence": "Mercure en Poissons est en exil et en chute : la pensée procède par images, impressions et associations plus que par démonstration, et capte l’ambiance avant les faits.",
+    "light": ["Imagination et sens poétique", "Intuition de ce que l’autre ressent sans avoir à l’entendre", "Aisance avec la métaphore, la musique, l’image"],
+    "shadow": ["Flou dans les explications et les consignes", "Distraction, oublis pratiques", "Difficulté à trancher entre deux versions des faits"],
+    "behaviors": ["Perdre le fil de sa phrase en la prononçant", "Répondre à un message en pensée et oublier de l’écrire", "Comprendre l’humeur d’une pièce avant d’avoir entendu un mot", "Expliquer un itinéraire avec des impressions plutôt qu’avec des noms de rue"],
+    "summary": {
+      "soft": "Tu penses en images et en musique. Tu comprends ce qui ne se dit pas, et tes mots ont la douceur de ceux qui ont d’abord ressenti.",
+      "cash": "Tu as répondu à ce message, mais seulement dans ta tête. Tu expliques un trajet par « tu sens quand c’est là ».",
+      "expert": "Mercure en Poissons, en exil et en chute, en eau mutable : la pensée y est analogique et intuitive ; vous saisissez l’ensemble par impression, au détriment de la précision."
+    },
+    "roastAngles": {
+      "soft": ["Tes pensées nagent en eau profonde : jamais en ligne droite, mais souvent avec des perles."],
+      "cash": ["Tu commences une phrase, tu regardes par la fenêtre, et la phrase repart sans toi.", "Tu dis « attends, j’avais un truc à dire » environ une fois par conversation."],
+      "expert": ["Mercure en chute : vous retenez l’atmosphère d’une réunion mieux que l’ordre du jour."]
+    },
+    "roastWeight": 3,
+    "avoid": ["Présenter la chute comme une faiblesse intellectuelle", "Réduire ce placement à de la confusion"]
+  }
+}

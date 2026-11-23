@@ -1,0 +1,230 @@
+{
+  "planet_sign:mars:aries": {
+    "keywords": ["impulsion", "courage", "initiative", "colère éclair", "goût du défi"],
+    "essence": "Mars en Bélier est en domicile : l’action est immédiate, directe et courageuse, la colère éclate vite et retombe aussitôt, et l’élan faiblit quand il faut durer.",
+    "light": ["Courage et capacité à se lancer en premier", "Franchise dans l’affrontement", "Énergie de démarrage hors du commun"],
+    "shadow": ["Impulsivité, décisions prises sous le coup du moment", "Colère vive pour un obstacle mineur", "Projets abandonnés une fois l’élan passé"],
+    "behaviors": ["Démarrer avant la fin des consignes", "S’emporter en dix secondes et avoir tout oublié en dix minutes", "Transformer une file d’attente en épreuve personnelle", "Lancer cinq projets et en finir un"],
+    "summary": {
+      "soft": "Tu as le courage des commencements : tu fonces, tu ouvres la voie, tu oses. Ta colère passe comme un orage d’été, vite et sans rancune.",
+      "cash": "Tu fonces d’abord, tu lis les consignes après. Ta colère dure moins longtemps qu’une publicité, mais tout l’étage l’a entendue.",
+      "expert": "Mars en Bélier occupe son domicile de feu cardinal : l’impulsion y est pure et immédiate ; vous agissez par initiative, avec une combativité franche et peu d’endurance."
+    },
+    "roastAngles": {
+      "soft": ["Ton énergie craque comme une allumette : elle éclaire tout, tout de suite."],
+      "cash": ["Tu claques la porte, puis tu reviens deux minutes après demander ce qu’on mange.", "Tu doubles tout le monde dans l’escalator sans aucun retard à rattraper, par principe."],
+      "expert": ["Mars en domicile : vous excellez à ouvrir les hostilités, moins à tenir le siège."]
+    },
+    "roastWeight": 3,
+    "avoid": ["Réduire ce placement à de la violence", "Présenter l’impulsivité comme de l’immaturité"]
+  },
+  "planet_sign:mars:taurus": {
+    "keywords": ["endurance", "lenteur à démarrer", "ténacité", "colère rare et massive", "force tranquille"],
+    "essence": "Mars en Taureau est en exil : l’action démarre lentement mais ne s’arrête plus, l’effort est régulier et obstiné, et la colère, longue à venir, est difficile à apaiser.",
+    "light": ["Endurance et constance dans l’effort", "Calme sous la pression", "Capacité à finir ce qui est commencé"],
+    "shadow": ["Inertie devant ce qui doit changer vite", "Obstination face à un obstacle", "Rancune tenace après une colère"],
+    "behaviors": ["Repousser le démarrage, puis travailler sans s’arrêter", "Rester de marbre pendant des mois, puis exploser une fois", "Refuser toute bousculade dans son rythme", "Finir une tâche pénible par pur entêtement"],
+    "summary": {
+      "soft": "Tu avances à ton pas, sans te laisser distraire, et tu arrives au bout. Ta force est celle des choses qui durent et que rien ne presse.",
+      "cash": "Il faut une grue pour te faire démarrer et un mur pour t’arrêter. Ta colère arrive une fois par an, et on s’en souvient jusqu’à la suivante.",
+      "expert": "Mars en Taureau est en exil, en terre fixe : l’élan y est lent, mais d’une endurance remarquable ; vous agissez par persévérance et cédez rarement une fois en marche."
+    },
+    "roastAngles": {
+      "soft": ["Ta force ressemble à celle des rivières : tranquille, et rien ne la détourne."],
+      "cash": ["Tu dis « j’arrive » depuis le canapé, et le canapé n’a rien remarqué.", "Tu restes calme pendant six mois, puis tu ressors la liste complète un mardi."],
+      "expert": ["Mars en exil : vous mettez du temps à vous fâcher, et davantage encore à décolérer."]
+    },
+    "roastWeight": 2,
+    "avoid": ["Confondre lenteur et paresse", "Présenter l’exil comme un manque de volonté"]
+  },
+  "planet_sign:mars:gemini": {
+    "keywords": ["énergie dispersée", "joute verbale", "vivacité", "agitation", "polyvalence"],
+    "essence": "Mars en Gémeaux agit par la parole et le mouvement : l’énergie est nerveuse, vive et dispersée, le combat se mène avec des mots, et l’ennui est le premier adversaire.",
+    "light": ["Réactivité et rapidité d’exécution", "Habileté dans le débat et la négociation", "Capacité à mener plusieurs tâches de front"],
+    "shadow": ["Dispersion de l’énergie entre trop de projets", "Sarcasme en guise de colère", "Difficulté à tenir un effort monotone"],
+    "behaviors": ["Se disputer par messages interminables", "Changer de tâche toutes les dix minutes", "Gagner une dispute grâce à une formule bien placée", "Tapoter du pied ou du stylo en réunion"],
+    "summary": {
+      "soft": "Ton énergie est vive comme un oiseau : tu passes d’une chose à l’autre avec adresse, et tes mots sont ton meilleur outil.",
+      "cash": "Tu fais six choses à la fois, dont quatre restent en plan. Quand tu t’énerves, ce n’est pas un cri, c’est un exposé avec arguments.",
+      "expert": "Mars en Gémeaux, signe d’air mutable, porte l’action vers le verbe et la mobilité : vous combattez par l’argument et dispersez volontiers l’effort sur plusieurs fronts."
+    },
+    "roastAngles": {
+      "soft": ["Tes mains et tes idées courent ensemble, et rarement dans la même direction."],
+      "cash": ["Tu envoies un pavé de colère, puis tu corriges une faute dans le message suivant.", "Tu commences le ménage, tu retrouves une vieille photo, et le ménage est fini."],
+      "expert": ["Élan mutable d’air : vous gagnez la querelle par la formule et perdez le fil du chantier."]
+    },
+    "roastWeight": 2,
+    "avoid": ["Réduire ce placement à de l’inconstance", "Présenter la joute verbale comme de la méchanceté"]
+  },
+  "planet_sign:mars:cancer": {
+    "keywords": ["action indirecte", "instinct protecteur", "humeur changeante", "colère rentrée", "ténacité défensive"],
+    "essence": "Mars en Cancer est en chute : l’action suit l’humeur et procède par détours, l’énergie se mobilise pour défendre les proches, et la colère se retient avant de déborder.",
+    "light": ["Courage pour protéger les proches", "Ténacité quand l’attachement est en jeu", "Intuition du bon moment pour agir"],
+    "shadow": ["Colère exprimée par la bouderie ou le silence", "Énergie dépendante de l’humeur du jour", "Tendance à ressortir d’anciens griefs"],
+    "behaviors": ["Claquer les portes de placard au lieu de dire ce qui ne va pas", "Défendre un proche avec plus d’ardeur que soi-même", "Contourner l’obstacle plutôt que l’affronter", "Cuisiner ou ranger avec fracas pour évacuer une contrariété"],
+    "summary": {
+      "soft": "Ta force se réveille pour ceux que tu aimes. Tu avances à ta manière, de côté parfois, mais tu ne lâches jamais ce qui compte pour toi.",
+      "cash": "Tu ne te fâches pas, tu fais la vaisselle très fort. Et si on touche à tes proches, là, tout le quartier est au courant.",
+      "expert": "Mars en Cancer est en chute, en eau cardinale : l’élan y dépend de l’humeur et s’exprime de biais ; vous agissez pour protéger et contenez longtemps la colère."
+    },
+    "roastAngles": {
+      "soft": ["Ton courage a une adresse : il habite là où vivent ceux que tu aimes."],
+      "cash": ["Tu dis « je ne suis pas en colère » en rangeant les casseroles avec fracas.", "Tu ressors une dispute de l’an dernier au milieu d’une dispute sur autre chose."],
+      "expert": ["Mars en chute : vous attaquez rarement de front, mais vous défendez un territoire jusqu’au bout."]
+    },
+    "roastWeight": 3,
+    "avoid": ["Présenter la chute comme de la faiblesse", "Réduire ce placement à la passivité agressive"]
+  },
+  "planet_sign:mars:leo": {
+    "keywords": ["panache", "fierté", "volonté", "goût de diriger", "colère théâtrale"],
+    "essence": "Mars en Lion agit avec panache et volonté : l’énergie est constante, fière et créative, le besoin de diriger est net, et la colère surgit dès que l’amour-propre est touché.",
+    "light": ["Volonté ferme et confiance dans l’action", "Capacité à entraîner les autres", "Générosité dans l’effort"],
+    "shadow": ["Orgueil blessé par la moindre critique", "Tendance à commander plutôt qu’à demander", "Difficulté à agir sans reconnaissance"],
+    "behaviors": ["Prendre la tête d’un groupe sans que personne l’ait proposé", "Travailler deux fois mieux devant un public", "Quitter une pièce sur une réplique de fin", "Refuser de l’aide par fierté"],
+    "summary": {
+      "soft": "Tu agis avec le cœur et tu donnes du courage aux autres. Quand tu t’engages, c’est en entier, avec une chaleur qui entraîne.",
+      "cash": "Tu ne t’énerves pas, tu fais une scène, avec sortie de pièce et dernière réplique. Tu acceptes la critique, à condition que ce soit un compliment.",
+      "expert": "Mars en Lion, signe de feu fixe, donne un élan soutenu et orgueilleux : vous agissez pour créer et diriger, et l’atteinte à l’amour-propre déclenche la colère."
+    },
+    "roastAngles": {
+      "soft": ["Ton énergie réchauffe la pièce : rien qu’à te voir démarrer, on a envie de suivre."],
+      "cash": ["Tu demandes « qui a fait ça ? » seulement quand la réponse attendue est « toi, bravo ».", "Tu quittes une dispute en te retournant sur le seuil pour la phrase finale."],
+      "expert": ["Élan fixe de feu : vous pardonnez la contradiction, rarement le manque d’égards."]
+    },
+    "roastWeight": 3,
+    "avoid": ["Réduire ce placement à de l’arrogance", "Présenter le besoin de reconnaissance comme de la vanité"]
+  },
+  "planet_sign:mars:virgo": {
+    "keywords": ["efficacité", "précision du geste", "sens du travail", "agacement", "perfectionnisme"],
+    "essence": "Mars en Vierge agit avec méthode et précision : l’énergie se dépense dans le travail bien fait, l’efficacité passe avant l’éclat, et la colère prend la forme de l’agacement et de la critique.",
+    "light": ["Efficacité et sens de l’organisation", "Habileté technique, soin du geste", "Endurance dans les tâches minutieuses"],
+    "shadow": ["Irritabilité devant le désordre et l’à-peu-près", "Critique tatillonne sous l’effet de l’énervement", "Surmenage par incapacité à déléguer"],
+    "behaviors": ["Refaire discrètement ce qu’un autre vient de faire", "Nettoyer ou trier pour calmer une contrariété", "Soupirer devant un lave-vaisselle mal rangé", "Établir un plan détaillé avant le moindre geste"],
+    "summary": {
+      "soft": "Tu agis avec soin et précision, comme on répare une montre. Ton énergie se met au service des choses bien faites, et l’on peut compter sur toi.",
+      "cash": "Tu ne cries pas, tu soupires, puis tu refais le travail des autres en silence. Ta colère a un tableau de suivi.",
+      "expert": "Mars en Vierge, signe de terre mutable, canalise l’élan vers la tâche et la méthode : vous agissez avec précision et exprimez la colère par la critique du détail."
+    },
+    "roastAngles": {
+      "soft": ["Ton énergie a des mains d’artisan : elle ne brille pas, elle fait les choses bien."],
+      "cash": ["Tu réorganises le lave-vaisselle des autres en retenant un commentaire.", "Tu dis « laisse, je m’en occupe » avec un soupir qui vaut un long discours."],
+      "expert": ["Élan mutable de terre : votre colère s’énonce en liste de points à corriger."]
+    },
+    "roastWeight": 2,
+    "avoid": ["Réduire ce placement à la maniaquerie", "Présenter le goût du travail comme de la soumission"]
+  },
+  "planet_sign:mars:libra": {
+    "keywords": ["action concertée", "sens de la justice", "hésitation", "colère polie", "stratégie"],
+    "essence": "Mars en Balance est en exil : l’action passe par l’autre et par la négociation, la décision tarde à force de peser, et la colère, contenue par politesse, s’allume surtout devant l’injustice.",
+    "light": ["Sens de l’équité dans le conflit", "Talent pour négocier et rallier", "Combativité au service d’une cause juste"],
+    "shadow": ["Hésitation au moment d’agir", "Colère détournée en remarques feutrées", "Besoin de l’accord d’autrui pour se lancer"],
+    "behaviors": ["Attendre que l’autre décide, puis contester la décision", "Se fâcher sans quitter une courtoisie parfaite", "Défendre quelqu’un d’autre plus facilement que soi", "Rédiger un message de reproche et l’adoucir cinq fois avant l’envoi"],
+    "summary": {
+      "soft": "Ta force est celle de l’accord : tu agis mieux à deux, tu cherches ce qui est juste, et tu sais te battre sans blesser.",
+      "cash": "Tu t’énerves avec des formules de politesse. Tu veux bien décider, mais seulement après avoir demandé son avis à toute la tablée.",
+      "expert": "Mars en Balance est en exil, en air cardinal : l’élan s’y soumet à la délibération et au regard d’autrui ; vous agissez par alliance et combattez surtout l’injustice."
+    },
+    "roastAngles": {
+      "soft": ["Tu te bats avec des gants de velours, et c’est souvent toi qui ramènes la paix."],
+      "cash": ["Tu écris « pas de souci » en tapant sur les touches comme sur un adversaire.", "Tu te mets en colère pour défendre un inconnu, jamais pour ta propre part de gâteau."],
+      "expert": ["Mars en exil : vous partez en guerre avec courtoisie, après consultation des parties."]
+    },
+    "roastWeight": 2,
+    "avoid": ["Présenter l’exil comme une absence de combativité", "Réduire ce placement à l’indécision"]
+  },
+  "planet_sign:mars:scorpio": {
+    "keywords": ["détermination", "stratégie", "endurance", "rancune", "maîtrise de soi"],
+    "essence": "Mars en Scorpion est en domicile : l’action est concentrée, stratégique et tenace, la volonté ne lâche pas son objectif, et la colère, froide et silencieuse, n’oublie rien.",
+    "light": ["Détermination sans faille", "Sang-froid dans les situations de crise", "Capacité à aller au fond d’un problème"],
+    "shadow": ["Rancune durable", "Goût du contrôle et du rapport de force", "Tendance à agir en secret"],
+    "behaviors": ["Se taire pendant une dispute et tout retenir", "Préparer sa réponse pendant des semaines", "Poursuivre un objectif sans en parler à personne", "Couper les ponts du jour au lendemain, sans scène"],
+    "summary": {
+      "soft": "Ta volonté est profonde et silencieuse : quand tu veux quelque chose, tu y mets tout, et tu traverses les tempêtes sans lâcher.",
+      "cash": "Tu ne te mets pas en colère, tu prends des notes. Tu pardonnes volontiers, à une date que tu n’as pas encore communiquée.",
+      "expert": "Mars en Scorpion occupe son domicile d’eau fixe : l’élan y est concentré, stratégique et endurant ; vous agissez à couvert et gardez durablement la mémoire des offenses."
+    },
+    "roastAngles": {
+      "soft": ["Ta force avance sous la surface, comme un courant : invisible, et pourtant elle porte loin."],
+      "cash": ["Tu dis « c’est oublié », puis tu rejoues la scène entière, réplique par réplique.", "Tu perds une partie de cartes en famille et tu prépares la revanche pendant un an."],
+      "expert": ["Mars en domicile : vous ne répondez pas à l’offense, vous la versez au dossier."]
+    },
+    "roastWeight": 3,
+    "avoid": ["Présenter ce placement comme vengeur ou dangereux", "Insister sur une dimension charnelle"]
+  },
+  "planet_sign:mars:sagittarius": {
+    "keywords": ["élan", "goût de l’aventure", "conviction", "excès d’enthousiasme", "besoin d’espace"],
+    "essence": "Mars en Sagittaire agit par enthousiasme et par conviction : l’énergie vise loin, aime le risque et le grand air, se bat pour ses idées et se disperse dès que la routine s’installe.",
+    "light": ["Enthousiasme qui met en mouvement", "Courage de ses opinions", "Goût de l’effort en plein air et du dépassement"],
+    "shadow": ["Engagements plus grands que le temps disponible", "Colère en forme de sermon", "Abandon des projets une fois la nouveauté passée"],
+    "behaviors": ["Dire oui à trois projets le même soir", "Partir en randonnée sans vérifier la météo", "S’emporter pour une question de principe", "Réserver un billet sur un coup de tête"],
+    "summary": {
+      "soft": "Ton énergie regarde l’horizon : tu te lances avec foi, tu entraînes les autres, et tu crois assez fort pour deux.",
+      "cash": "Tu vises très loin avec un plan qui tient sur un coin de nappe. Quand tu t’énerves, ça finit en conférence sur les grands principes.",
+      "expert": "Mars en Sagittaire, signe de feu mutable, met l’élan au service d’un idéal : vous agissez par conviction, avec ampleur et optimisme, et supportez mal la contrainte."
+    },
+    "roastAngles": {
+      "soft": ["Tu cours vers l’horizon avec une telle joie que personne ne pense à demander la destination."],
+      "cash": ["Tu t’inscris à un marathon un soir d’enthousiasme, sans posséder de baskets.", "Tu acceptes d’aider à trois déménagements le même samedi, et tu y crois."],
+      "expert": ["Élan mutable de feu : vous engagez la bataille pour le principe et laissez l’intendance à d’autres."]
+    },
+    "roastWeight": 2,
+    "avoid": ["Réduire ce placement à de l’irresponsabilité", "Présenter l’optimisme comme de la naïveté"]
+  },
+  "planet_sign:mars:capricorn": {
+    "keywords": ["ambition", "discipline", "endurance", "maîtrise", "stratégie de long terme"],
+    "essence": "Mars en Capricorne est en exaltation : l’action est disciplinée, patiente et orientée vers un but, l’effort se dose sur la durée, et la colère reste froide, contenue et utile.",
+    "light": ["Discipline et sens de l’effort durable", "Efficacité sous la contrainte", "Ambition structurée, tournée vers le résultat"],
+    "shadow": ["Dureté envers soi et envers les autres", "Difficulté à se reposer sans culpabilité", "Froideur dans le conflit"],
+    "behaviors": ["Se fixer un objectif à cinq ans et s’y tenir", "Travailler pendant les vacances « juste pour avancer »", "Exprimer la colère par un silence et un courriel très bien rédigé", "Transformer un loisir en programme d’entraînement"],
+    "summary": {
+      "soft": "Tu gravis les choses pas à pas, avec une patience de montagne. Ta force est calme et sûre : elle arrive là où elle l’avait annoncé.",
+      "cash": "Tu te détends avec un objectif et un chronomètre. Ta colère ne crie pas : elle envoie un courriel à huit heures précises, avec copie.",
+      "expert": "Mars en Capricorne est en exaltation, en terre cardinale : l’élan y est maîtrisé et stratégique ; vous agissez avec méthode, endurance et un sens aigu de l’objectif."
+    },
+    "roastAngles": {
+      "soft": ["Ton énergie ne s’éparpille pas : elle monte, marche après marche, jusqu’au sommet."],
+      "cash": ["Tu prends un jour de congé et tu en profites pour ranger toute la cave.", "Tu annonces une pause détente, avec un planning de la détente heure par heure."],
+      "expert": ["Mars exalté : vous repoussez la satisfaction avec une constance qui tient de la stratégie."]
+    },
+    "roastWeight": 3,
+    "avoid": ["Réduire ce placement à de la froideur", "Présenter l’ambition comme de l’arrivisme"]
+  },
+  "planet_sign:mars:aquarius": {
+    "keywords": ["indépendance", "action collective", "esprit rebelle", "obstination", "inventivité"],
+    "essence": "Mars en Verseau agit à sa manière et pour une idée : l’énergie est indépendante, inventive et tenace, se mobilise volontiers pour un groupe et se cabre devant tout ordre imposé.",
+    "light": ["Inventivité dans la manière de faire", "Capacité à fédérer autour d’un projet commun", "Sang-froid et recul dans le conflit"],
+    "shadow": ["Refus de principe devant l’autorité", "Obstination à faire autrement", "Colère froide, exprimée par la distance"],
+    "behaviors": ["Faire exactement l’inverse de ce qui vient d’être ordonné", "Inventer une méthode personnelle pour une tâche simple", "Se mobiliser pour une cause collective plus que pour soi", "Répondre à un conflit en cessant de répondre"],
+    "summary": {
+      "soft": "Tu agis à ta façon, hors des sentiers tracés, et souvent pour quelque chose de plus grand que toi. Ton élan ouvre des chemins nouveaux.",
+      "cash": "Il suffit de te dire « il faut » pour que tu fasses le contraire. Tu aurais fait la chose avec plaisir si personne ne l’avait demandée.",
+      "expert": "Mars en Verseau, signe d’air fixe, donne un élan indépendant et tenace : vous agissez par principe et pour le collectif, et résistez à toute injonction."
+    },
+    "roastAngles": {
+      "soft": ["Tu ne suis pas le chemin, tu en dessines un autre, et quelques curieux te suivent."],
+      "cash": ["Tu lis « ne pas ouvrir » sur une porte et ta main est déjà sur la poignée.", "Tu te mets en colère en devenant soudain très calme et très injoignable."],
+      "expert": ["Élan fixe d’air : vous obéissez volontiers à une idée, jamais à une consigne."]
+    },
+    "roastWeight": 2,
+    "avoid": ["Présenter l’indépendance comme de l’asociabilité", "Réduire ce placement à la provocation"]
+  },
+  "planet_sign:mars:pisces": {
+    "keywords": ["action intuitive", "énergie fluctuante", "dévouement", "évitement du conflit", "inspiration"],
+    "essence": "Mars en Poissons agit par inspiration et par vagues : l’énergie fluctue avec l’ambiance, se donne pour autrui ou pour un rêve, et la colère se dissout, se détourne ou s’évapore.",
+    "light": ["Dévouement dans l’action pour autrui", "Souplesse, art de contourner l’obstacle", "Élan créatif et intuitif"],
+    "shadow": ["Difficulté à affronter directement", "Énergie irrégulière, démarrages remis à plus tard", "Tendance à s’esquiver plutôt qu’à dire non"],
+    "behaviors": ["Éviter une confrontation en disparaissant de la conversation", "Travailler par élans, tard le soir, quand l’inspiration vient", "Aider tout le monde et oublier sa propre liste", "Dire oui pour avoir la paix, puis ne pas venir"],
+    "summary": {
+      "soft": "Ton énergie suit les marées : elle vient par vagues, portée par l’inspiration et par le cœur. Tu agis mieux quand tu crois à ce que tu fais.",
+      "cash": "Tu évites le conflit avec un talent de contorsionniste. Tu as dit oui pour avoir la paix, et maintenant tu cherches comment ne pas y aller.",
+      "expert": "Mars en Poissons, signe d’eau mutable, donne un élan diffus et intuitif : vous agissez par inspiration et par dévouement, et esquivez l’affrontement direct."
+    },
+    "roastAngles": {
+      "soft": ["Ta force ne cogne pas, elle contourne : comme l’eau, elle finit par passer."],
+      "cash": ["Tu répètes ta colère sous la douche, puis en vrai tu dis « non, laisse, c’est moi ».", "Tu repousses une tâche au lendemain avec une constance digne d’un athlète."],
+      "expert": ["Élan mutable d’eau : votre colère se retire comme la marée, sans avoir rien renversé."]
+    },
+    "roastWeight": 2,
+    "avoid": ["Présenter ce placement comme faible ou passif", "Réduire l’esquive à de la lâcheté"]
+  }
+}

@@ -27,7 +27,29 @@
       "empty": {
         "title": "Your sky has not been calculated yet",
         "body": "Your birth chart will appear here."
+      },
+      "error": {
+        "title": "Your sky could not be loaded",
+        "body": "Check your connection, then try again."
       }
+    },
+    "timeUnknown": {
+      "banner": "Without an exact time of birth, the wheel is shown without Ascendant or houses."
+    },
+    "wheelLabel": "Your birth chart wheel: {{summary}}.",
+    "showList": "View as list",
+    "showWheel": "View the wheel",
+    "retrograde": "retrograde",
+    "signUncertain": "sign uncertain without the time",
+    "orb": "orb {{orb}}°",
+    "applying": "applying",
+    "separating": "separating",
+    "aspect": {
+      "conjunction": "Conjunction",
+      "opposition": "Opposition",
+      "trine": "Trine",
+      "square": "Square",
+      "sextile": "Sextile"
     }
   },
   "groups": {

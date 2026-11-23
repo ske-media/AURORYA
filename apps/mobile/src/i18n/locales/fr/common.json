@@ -27,7 +27,29 @@
       "empty": {
         "title": "Ton ciel n’est pas encore calculé",
         "body": "Ton thème natal s’affichera ici."
+      },
+      "error": {
+        "title": "Ton ciel n’a pas pu être chargé",
+        "body": "Vérifie ta connexion, puis réessaie."
       }
+    },
+    "timeUnknown": {
+      "banner": "Sans heure de naissance exacte, la roue s’affiche sans Ascendant ni maisons."
+    },
+    "wheelLabel": "Roue de ton thème natal : {{summary}}.",
+    "showList": "Voir en liste",
+    "showWheel": "Voir la roue",
+    "retrograde": "rétrograde",
+    "signUncertain": "signe incertain sans l’heure",
+    "orb": "orbe {{orb}}°",
+    "applying": "appliquant",
+    "separating": "séparant",
+    "aspect": {
+      "conjunction": "Conjonction",
+      "opposition": "Opposition",
+      "trine": "Trigone",
+      "square": "Carré",
+      "sextile": "Sextile"
     }
   },
   "groups": {
