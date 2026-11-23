@@ -21,6 +21,7 @@ Protocole : SPEC §1.3. Aucune plage flottante (`.npmrc` : `save-exact=true`).
 | astronomy-engine | 2.1.19 | MIT | `package.json` et `astronomy.d.ts` du paquet ; précision mesurée contre JPL Horizons (ADR-012) | Moteur. Traite UTC et UT1 comme identiques. `GeoVector(…, true)` : temps de lumière et aberration ; `Rotation_EQJ_ECT` : écliptique vraie de la date. |
 | @js-joda/core | 6.3.2 | BSD-3-Clause | typings du paquet | Fuseaux. `ZoneRules.validOffsets()` renvoie 0, 1 ou 2 décalages (saut, normal, heure répétée). |
 | @js-joda/timezone | 3.2.1 | BSD-3-Clause | README du paquet | Base IANA 2026f embarquée (version non exposée par le code : constante vérifiée par un test). Importer le paquet complet, jamais une variante « year-range ». Concorde avec la base du système pour Paris, Zurich, Bruxelles, Luxembourg, Toronto de 1900 à 2026 (test). |
+| pg / @types/pg | 8.23.1 | MIT | registre npm | Accès serveur à Postgres (ADR-016). |
 
 ## Application mobile (vérifié le 2026-11-23)
 

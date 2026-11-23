@@ -1,6 +1,6 @@
 # État du projet
 
-Mis à jour : 2026-11-23, après le moteur, le socle IA, les rôles, les migrations et le socle de l'app.
+Mis à jour : 2026-11-23, après le moteur, le socle IA, les rôles, les migrations, le socle de l'app et les premières routes de l'API.
 
 ## Fait
 - **T-001** — Monorepo pnpm, `CLAUDE.md`, fichiers vivants, lint avec frontières entre paquets, contrôle de secrets, CI minimale, versions verrouillées.
@@ -18,8 +18,10 @@ Mis à jour : 2026-11-23, après le moteur, le socle IA, les rôles, les migrati
   Non vérifié : aucune exécution sur iPhone ni simulateur (impossible ici) ; pas de test de rendu des composants (React Native Testing Library non installé) ; VoiceOver et contrastes à l'écran non contrôlés. Composants restants du §16.5 à créer avec leurs tickets.
 - **T-014 (géométrie)** — repère de la roue, rayons, anti-collision des glyphes, opacité des aspects : fonctions pures testées. Reste : le dessin Skia, les interactions et la liste accessible.
 - **Utilitaires serveur et contrats** — codes d'erreur de l'API, liste fermée des événements analytics, gabarit des cartes (`packages/shared`) ; journalisation en liste blanche, jetons et codes d'invitation, filtre des prénoms et noms de groupe (`apps/web/src/server`), listes de mots bloqués de départ.
+- **T-009, T-012, T-033 (route)** — socle de l'API (`defineRoute`), configuration distante avec cache de 60 s, `GET /config`, `PUT /profile`, `POST /charts`, `POST /roasts` (cache, verrou, régénération Premium, repli, nouvelle tentative après dix minutes, `ai_usage`). 33 tests de contrat contre un Postgres réel avec les migrations.
+  Reste : enveloppes Next.js, adaptateur d'authentification Supabase, adaptateur du fournisseur d'IA, chargement des prompts depuis `content/prompts`, coût des appels.
 - Prompts v1 de l'Annexe A dans `content/prompts/fr/`.
-  Vérifié dans la session : `pnpm lint`, `pnpm typecheck`, `pnpm test` (238 tests), `pnpm db:test`, `pnpm assets:check`.
+  Vérifié dans la session : `pnpm lint`, `pnpm typecheck`, `pnpm test` (257 tests), `pnpm db:test`, `pnpm assets:check`.
 - `docs/SPEC.md` : copie à l'octet près du texte fourni par le fondateur.
 
 ## Écarts et limites de T-002
@@ -39,7 +41,7 @@ Mis à jour : 2026-11-23, après le moteur, le socle IA, les rôles, les migrati
 - `apps/web` est un squelette sans Next.js (T-008, T-009).
 
 ## Prochaine action
-T-013 (onboarding) et T-014 (roue) côté app ; T-009 (socle de l'API) côté serveur, contre le Postgres local.
+Côté serveur : enveloppes Next.js et site (T-008), routes des groupes (T-040), lecture complète (T-035). Côté app : onboarding (T-013), dessin de la roue (T-014). Contenu : base de règles (T-032), sans laquelle le roast n'a pas de repli.
 Ensuite, sans compte : socle de l'API (T-009) contre le Postgres local, import des lieux (T-007), base de règles (T-032, demande un fournisseur d'IA).
 
 ## Bloqué, en attente d'un fondateur
@@ -47,6 +49,8 @@ Ensuite, sans compte : socle de l'API (T-009) contre le Postgres local, import d
 - Soumission à Apple : structure juridique (O-05), domaine (O-06), disponibilité du nom (O-01), textes légaux relus.
 
 ## Pièges découverts
+- `pg_ctl start` lancé depuis Node avec une sortie en tube bloque indéfiniment : le serveur hérite du tube. Utiliser `stdio: 'ignore'`.
+- La base de règles pèse dans le choix des faits du roast : un test qui fabrique une sortie de LLM doit utiliser la même base que le serveur.
 - Le `\\b` des expressions régulières JavaScript ignore les lettres accentuées : les lexiques de validation passent par une frontière de mot maison.
 - Retirer tous les droits sur les fonctions du schéma public casse aussi celles des extensions quand elles y sont installées.
 - L'environnement distant « aurorya » n'autorise que `ssd.jpl.nasa.gov` en plus des registres de paquets. `fetch` de Node ignore le proxy : utiliser curl.
