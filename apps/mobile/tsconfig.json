@@ -1,4 +1,13 @@
 {
-  "extends": "../../tsconfig.base.json",
-  "include": ["src/**/*"]
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
+    "paths": { "@/*": ["./src/*"] }
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "app.config.ts", ".expo/types/**/*.ts", "expo-env.d.ts"]
 }

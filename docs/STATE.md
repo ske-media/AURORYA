@@ -1,6 +1,6 @@
 # État du projet
 
-Mis à jour : 2026-11-23, après le moteur, le socle IA, les rôles et les migrations.
+Mis à jour : 2026-11-23, après le moteur, le socle IA, les rôles, les migrations et le socle de l'app.
 
 ## Fait
 - **T-001** — Monorepo pnpm, `CLAUDE.md`, fichiers vivants, lint avec frontières entre paquets, contrôle de secrets, CI minimale, versions verrouillées.
@@ -13,6 +13,9 @@ Mis à jour : 2026-11-23, après le moteur, le socle IA, les rôles et les migra
   Reste : adaptateur du fournisseur (O-08), table `ai_usage` branchée, base de règles (T-032), évaluations (T-033), pipelines des autres contenus.
 - **T-042 (calcul)** — catalogue des rôles (Annexe B), attribution optimale et déterministe, choix des duos. Reste : libellés `family` et `colleagues`, phrases de repli, prompt et route.
 - **T-006 (hors projet Supabase)** — migrations, RLS, privilèges, `pnpm db:test` (52 contrôles d'isolation sur un Postgres local). Reste : projets Supabase, application des migrations, types générés, test sur l'instance Supabase.
+- **T-003 (socle)** — app Expo SDK 58 : configuration (bundle `com.aurorya.app`, iPhone, portrait, sombre), profils EAS, thème et `useTheme`, textes français et anglais avec contrôle de parité, trois onglets natifs, composants `Text`, `Button`, `Screen`, `Card`, `Chip`, `EmptyState`, `Banner`, galerie de développement, garde-fou contre les couleurs, polices et chemins en dur.
+  Vérifié : typecheck, lint, et export d'un bundle iOS réel (3,4 Mo) avec polices et registre.
+  Non vérifié : aucune exécution sur iPhone ni simulateur (impossible ici) ; pas de test de rendu des composants (React Native Testing Library non installé) ; VoiceOver et contrastes à l'écran non contrôlés. Composants restants du §16.5 à créer avec leurs tickets.
 - Prompts v1 de l'Annexe A dans `content/prompts/fr/`.
   Vérifié dans la session : `pnpm lint`, `pnpm typecheck`, `pnpm test` (207 tests), `pnpm db:test`, `pnpm assets:check`.
 - `docs/SPEC.md` : copie à l'octet près du texte fourni par le fondateur.
@@ -28,12 +31,13 @@ Mis à jour : 2026-11-23, après le moteur, le socle IA, les rôles et les migra
 - Les couleurs ajoutées (ADR-011) et la correction du thème clair (ADR-010) sont proposées, pas validées.
 
 ## Non fait depuis T-001
+- Premier build iOS : exige le compte Expo et le compte développeur Apple (action humaine).
 - La CI n'a jamais tourné : versions des actions GitHub non vérifiées.
 - `.claude/rules/` et `.claude/agents/relecteur.md` (facultatifs) ne sont pas créés.
-- `apps/mobile` et `apps/web` sont des squelettes sans Expo ni Next.js.
+- `apps/web` est un squelette sans Next.js (T-008, T-009).
 
 ## Prochaine action
-T-003 (app Expo : navigation, thème, i18n, composants de base, galerie). Peut démarrer sans compte ; un build iOS exigera le compte Expo.
+T-013 (onboarding) et T-014 (roue) côté app ; T-009 (socle de l'API) côté serveur, contre le Postgres local.
 Ensuite, sans compte : socle de l'API (T-009) contre le Postgres local, import des lieux (T-007), base de règles (T-032, demande un fournisseur d'IA).
 
 ## Bloqué, en attente d'un fondateur

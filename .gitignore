@@ -15,3 +15,9 @@ coverage/
 # Copies produites par `pnpm assets:build`
 apps/web/public/brand/
 apps/web/public/cards/
+
+# Expo
+apps/mobile/dist/
+apps/mobile/expo-env.d.ts
+apps/mobile/ios/
+apps/mobile/android/

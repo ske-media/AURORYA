@@ -1,0 +1,11 @@
+{
+  "brand": { "name": "Aurorya", "tagline": "The sky, unfiltered" },
+  "persona": { "name": "Ava" },
+  "tabs": { "today": "Aujourd’hui", "sky": "Mon ciel", "groups": "Mes groupes" },
+  "today": { "title": "Aujourd’hui", "state": { "empty": { "title": "Rien à lire pour l’instant", "body": "Ton horoscope du jour s’affichera ici." } } },
+  "sky": { "title": "Mon ciel", "state": { "empty": { "title": "Ton ciel n’est pas encore calculé", "body": "Ton thème natal s’affichera ici." } } },
+  "groups": { "title": "Mes groupes", "state": { "empty": { "title": "Aucun groupe pour l’instant", "body": "Tes groupes s’afficheront ici." } } },
+  "common": { "retry": "Réessayer", "loading": "Chargement", "close": "Fermer", "back": "Retour" },
+  "notFound": { "title": "Cette page n’existe pas", "action": "Revenir à l’accueil" },
+  "gallery": { "title": "Galerie", "colors": "Couleurs", "typography": "Typographie", "components": "Composants", "sampleText": "Le ciel, tel qu’il est.", "primary": "Bouton principal", "secondary": "Bouton secondaire", "ghost": "Bouton discret", "loading": "En cours", "disabled": "Désactivé", "chip": "Puce", "chipSelected": "Puce choisie", "card": "Une carte posée sur la surface.", "banner": "Un bandeau d’information." }
+}

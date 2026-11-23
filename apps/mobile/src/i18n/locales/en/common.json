@@ -1,0 +1,11 @@
+{
+  "brand": { "name": "Aurorya", "tagline": "The sky, unfiltered" },
+  "persona": { "name": "Ava" },
+  "tabs": { "today": "Today", "sky": "My sky", "groups": "My groups" },
+  "today": { "title": "Today", "state": { "empty": { "title": "Nothing to read yet", "body": "Your daily horoscope will appear here." } } },
+  "sky": { "title": "My sky", "state": { "empty": { "title": "Your sky has not been calculated yet", "body": "Your birth chart will appear here." } } },
+  "groups": { "title": "My groups", "state": { "empty": { "title": "No groups yet", "body": "Your groups will appear here." } } },
+  "common": { "retry": "Try again", "loading": "Loading", "close": "Close", "back": "Back" },
+  "notFound": { "title": "This page does not exist", "action": "Back to home" },
+  "gallery": { "title": "Gallery", "colors": "Colors", "typography": "Typography", "components": "Components", "sampleText": "The sky, as it is.", "primary": "Primary button", "secondary": "Secondary button", "ghost": "Ghost button", "loading": "Working", "disabled": "Disabled", "chip": "Chip", "chipSelected": "Selected chip", "card": "A card resting on the surface.", "banner": "An information banner." }
+}

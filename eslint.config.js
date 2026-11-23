@@ -20,7 +20,7 @@ const forbid = (packages, extraPatterns = []) => ({
 });
 
 export default tseslint.config(
-  { ignores: ['**/node_modules/**', '**/dist/**', '**/.next/**', '**/.expo/**', '**/coverage/**', '**/*.generated.ts'] },
+  { ignores: ['**/node_modules/**', '**/dist/**', '**/.next/**', '**/.expo/**', '**/coverage/**', '**/*.generated.ts', '**/expo-env.d.ts'] },
   js.configs.recommended,
   ...tseslint.configs.strict,
   {
@@ -32,7 +32,8 @@ export default tseslint.config(
       ],
     },
   },
-  { files: ['scripts/**', '*.config.{js,ts}'], languageOptions: { globals: globals.node } },
+  { files: ['scripts/**', '*.config.{js,ts}', 'apps/*/*.config.{js,ts}'], languageOptions: { globals: globals.node } },
+  { files: ['apps/mobile/src/**'], languageOptions: { globals: { __DEV__: 'readonly' } } },
   {
     files: ['packages/shared/**'],
     rules: forbid(['astro-engine', 'ai'], [

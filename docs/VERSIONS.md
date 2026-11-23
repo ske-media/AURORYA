@@ -22,13 +22,33 @@ Protocole : SPEC §1.3. Aucune plage flottante (`.npmrc` : `save-exact=true`).
 | @js-joda/core | 6.3.2 | BSD-3-Clause | typings du paquet | Fuseaux. `ZoneRules.validOffsets()` renvoie 0, 1 ou 2 décalages (saut, normal, heure répétée). |
 | @js-joda/timezone | 3.2.1 | BSD-3-Clause | README du paquet | Base IANA 2026f embarquée (version non exposée par le code : constante vérifiée par un test). Importer le paquet complet, jamais une variante « year-range ». Concorde avec la base du système pour Paris, Zurich, Bruxelles, Luxembourg, Toronto de 1900 à 2026 (test). |
 
+## Application mobile (vérifié le 2026-11-23)
+
+Versions lues dans le gabarit officiel `create-expo-app` (SDK 58) et dans `expo/bundledNativeModules.json` du paquet installé.
+`npx expo install` n'a pas pu être utilisé : son service de versions n'est pas joignable depuis l'environnement de développement.
+
+| Paquet | Version | Licence | Remarques |
+|---|---|---|---|
+| expo | 58.0.26 | MIT | Nouvelle architecture. Les API ont changé : lire les types installés avant tout usage. |
+| expo-router | 58.0.32 | MIT | Onglets : `NativeTabs` depuis `expo-router/native-tabs`, icônes par symboles SF (`sf`). `Tabs` de l'entrée principale est déprécié. |
+| react / react-native | 19.3.0 / 0.88.1 | MIT | |
+| react-native-reanimated / worklets | 4.7.1 / 0.13.0 | MIT | Pas de configuration Babel propre : celle d'Expo suffit. |
+| react-native-gesture-handler, safe-area-context, screens | 3.3.0, 5.11.1, 4.30.1 | MIT | |
+| expo-font, splash-screen, status-bar, system-ui, constants, linking | 58.x | MIT | |
+| expo-localization, expo-haptics, expo-dev-client | 58.0.5, 58.0.8, 58.0.21 | MIT | |
+| @shopify/react-native-skia | 2.14.0 | MIT | Installé, pas encore utilisé (roue, T-014). |
+| i18next / react-i18next | 27.2.6 / 18.0.3 | MIT | |
+
+Vérification : `expo export --platform ios` produit un bundle Hermes de 3,4 Mo avec les polices et les 100 fichiers du registre, en installation pnpm isolée, sans configuration Metro ni Babel.
+
 ## Relevé, pas encore installé
 
 | Paquet | Dernière version stable relevée | À vérifier au ticket |
 |---|---|---|
-| expo | 58.0.26 | T-003 : compatibilité de chaque module natif. |
 | next | 16.4.6 | T-008. |
-| react | 19.3.1 | T-003 : version exigée par le SDK Expo retenu. |
+| expo-secure-store, expo-notifications, expo-audio, expo-sharing, expo-image, expo-apple-authentication | 58.0.3, 58.1.9, 58.0.12, 58.0.23, 58.0.18, 58.0.3 | avec leurs tickets |
+| react-native-view-shot | 6.1.1 | T-034 |
+| react-native-mmkv | absent de la liste d'Expo | T-013 : vérifier la compatibilité |
 
 ## Non vérifié
 - Versions des actions GitHub de la CI (`actions/checkout@v4`, `pnpm/action-setup@v4`, `actions/setup-node@v4`).

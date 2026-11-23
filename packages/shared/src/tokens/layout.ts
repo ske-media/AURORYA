@@ -18,3 +18,6 @@ export const easings = {
   enter: [0, 0, 0.2, 1],
   exit: [0.4, 0, 1, 1],
 } as const;
+
+/** Opacités d'état des éléments interactifs. */
+export const opacities = { disabled: 0.4, pressed: 0.8, dimmed: 0.4 } as const;
