@@ -46,11 +46,12 @@ Mis à jour : 2026-11-23, après l'API complète des groupes, le site, l'onboard
 - **App (T-013, T-014, T-036)** : onboarding en cinq écrans, calcul, révélation du roast avec changement de mode, roue Skia interactive et liste accessible, onglet du jour. Le bundle iOS s'exporte (5,9 Mo).
 - **Contenus (T-032 partiel)** : 156 fiches et 120 questions (ADR-017), importables par `pnpm kb:seed` et `pnpm questions:seed`.
 - **Bout en bout** : avec les vraies fiches, un roast de repli valide sort dans les trois modes pour quatre thèmes différents, sans fournisseur d'IA.
-  Vérifié : `pnpm lint`, `pnpm typecheck`, `pnpm test` (320 tests), `pnpm db:test`.
+- **Compte (T-051, T-050 partiel)** : export et suppression du compte côté serveur ; écran des réglages avec création de compte par e-mail et code, et suppression en deux étapes. La conversion du compte anonyme (`updateUser` puis `verifyOtp` de type `email_change`) est écrite d'après les types de la bibliothèque, jamais exécutée contre Supabase. Connexion avec Apple non faite.
+  Vérifié : `pnpm lint`, `pnpm typecheck`, `pnpm test` (323 tests), `pnpm db:test`, export du bundle iOS, `next build`.
 
 ## Non fait ou non vérifié
 - Aucun écran n'a tourné sur un iPhone ou un simulateur. Aucun test de rendu de composant.
-- Compte (Apple, e-mail), paywall et RevenueCat, partage de carte, notifications, lecture complète, horoscopes générés, météo du groupe, membres fantômes, animation de l'aurore, feuille de placement détaillée, réglages, suppression et export du compte.
+- Connexion avec Apple, paywall et RevenueCat, partage de carte, notifications, lecture complète, horoscopes générés, météo du groupe, membres fantômes, animation de l'aurore, feuille de placement détaillée, reste des réglages (notifications, sons, données de naissance).
 - Textes des rôles et des duos (aucun fournisseur d'IA), libellés des rôles « famille » et « collègues », mini-roast par signe du site, pages légales.
 - Envoi d'e-mails (Resend), notifications distantes, tâches planifiées, Sentry, Mixpanel.
 - Les textes d'interface (onboarding, groupes, site) sont fonctionnels et rédigés par le développement : à relire par le design.
