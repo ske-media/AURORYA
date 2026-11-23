@@ -35,6 +35,9 @@ Source de vérité : `docs/SPEC.md`. En cas de doute, la lire. Ne jamais la cont
 - Textes visibles : clés i18n, `fr` et `en` toujours ensemble.
 - Fichiers visuels : uniquement via `getAsset('id')`.
 
+## Questions aux fondateurs
+Toute question se pose sous forme de questionnaire à cliquer (choix à sélectionner), jamais en texte libre dans la réponse. Demande explicite d'un fondateur, 2026-11-23.
+
 ## Fin de ticket
 Exécuter la Definition of Done (SPEC §1.6), mettre à jour `docs/STATE.md`, résumer honnêtement.
 

@@ -56,3 +56,31 @@ Décision :
 - Restent proscrits : violet saturé, néon, dégradés multicolores, illustrations plates à figures humaines, scores en pourcentage, esthétique de jeu mobile.
 Conséquences : modifie §16.1 et §16.2 (nouvelles couleurs de base et rôle de halo, validés par le test de contraste), remplace D-026, et transforme la famille `engraving-*` du registre (§17.5) en famille de photos célestes, dont les identifiants sont à valider à T-002 avant création. Chaque photo doit avoir une origine et une licence consignées (§17.6). Les références servent d'ambiance : aucun écran ni élément de marque tiers n'est reproduit.
 Validé par : fondateur, en session.
+
+## ADR-008 — Première soumission : compte et abonnements inclus (2026-11-23)
+Statut : accepté
+Contexte : ADR-002 laissait ouvert le contenu exact de la première soumission à Apple (Q-02).
+Décision : la première soumission comprend aussi la création de compte et les abonnements.
+Conséquences : périmètre de la première soumission = onboarding, thème, roast, carte, groupes « rôles + duos », compte (Apple, e-mail), suppression de compte, abonnements avec paywall et restauration. Les tickets T-050, T-051 et T-060 passent sur le chemin de la première soumission. La roue reste à préciser.
+Validé par : fondateur, en session.
+
+## ADR-009 — Registre : la famille `photo-*` remplace `engraving-*` (2026-11-23)
+Statut : accepté
+Contexte : ADR-007 remplace les gravures par des photos célestes ; les identifiants du registre sont définitifs (loi 15).
+Décision : même structure que la famille prévue au §17.5, sous le préfixe `photo-` : `photo-sign-{12 signes}` (1200 × 1200), `photo-body-{10 planètes}` (800 × 800), `photo-group-{4 types}` (1200 × 800), `photo-scene-{8 scènes}` (1200 × 1200), dans `apps/mobile/assets/photos/`. Format webp avec transparence, 400 Ko au plus, non teintable. Le genre `engraving` du registre devient `photo`.
+Conséquences : le composant `EngravingImage` du §16.5 sera nommé `PhotoImage`. Le registre gagne aussi un genre `web` pour les fichiers du site.
+Validé par : fondateur, en session (« Entendu »).
+
+## ADR-010 — Thème clair : `onAccent` passe à `midnight` (2026-11-23)
+Statut : proposé
+Contexte : la valeur proposée par le §16.2 (ivoire sur `champagneDeep`) donne un contraste de 3,47:1, sous le seuil de 4,5:1 exigé pour un libellé de bouton. Le §16.2 précise que le thème clair n'est valide que si le test de contraste passe.
+Décision : `lightColors.onAccent` vaut `midnight` (4,77:1).
+Conséquences : sans effet au lancement (thème sombre seul, D-024). À confirmer par le design avant la V1.1.
+Validé par : en attente.
+
+## ADR-011 — Couleurs ajoutées pour la direction d'ADR-007 (2026-11-23)
+Statut : proposé
+Contexte : ADR-007 demande un violet profond en second plan et des halos ciblés ; aucune valeur n'était fixée.
+Décision : palette `aubergine` `#1B1830` et `nebula` `#3B3360` ; rôles `backdrop`, `backdropTint` (fond nébuleux) et `glow` (halo, `rgba(233,214,172,0.35)` en thème sombre). Tous les textes et éléments graphiques passent le test de contraste sur ces fonds.
+Conséquences : valeurs choisies par le développement, à ajuster par le design sans toucher au code des composants.
+Validé par : en attente.

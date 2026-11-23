@@ -17,3 +17,6 @@ jobs:
       - run: pnpm lint
       - run: pnpm typecheck
       - run: pnpm test
+      - run: pnpm assets:check
+      - name: Fichiers générés à jour
+        run: pnpm assets:build && pnpm assets:report && git diff --exit-code

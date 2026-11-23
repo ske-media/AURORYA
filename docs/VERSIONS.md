@@ -15,6 +15,9 @@ Protocole : SPEC §1.3. Aucune plage flottante (`.npmrc` : `save-exact=true`).
 | globals | 17.14.0 | MIT | registre npm | Globales Node pour les scripts. |
 | vitest | 5.1.1 | MIT | registre npm | Un seul lanceur à la racine. |
 | @types/node | 22.20.5 | MIT | registre npm | Aligné sur Node 22. |
+| zod | 4.6.7 | MIT | registre npm, `package.json` du paquet | Validation du registre des fichiers (racine). Servira aux schémas partagés. |
+| sharp | 0.35.5 | Apache-2.0 | registre npm, `package.json` du paquet | Outil de développement : fichiers provisoires et mesure des images. Piège : voir STATE. |
+| lucide-static | 1.78.0 | ISC | registre npm, fichier `LICENSE` | Source des 18 icônes d'interface copiées dans le registre. Pas utilisé à l'exécution. |
 
 ## Relevé, pas encore installé
 
@@ -23,8 +26,17 @@ Protocole : SPEC §1.3. Aucune plage flottante (`.npmrc` : `save-exact=true`).
 | expo | 58.0.26 | T-003 : compatibilité de chaque module natif. |
 | next | 16.4.6 | T-008. |
 | react | 19.3.1 | T-003 : version exigée par le SDK Expo retenu. |
-| zod | 4.6.7 | T-002. |
 
 ## Non vérifié
 - Versions des actions GitHub de la CI (`actions/checkout@v4`, `pnpm/action-setup@v4`, `actions/setup-node@v4`).
 - Syntaxe `permissions.deny` de `.claude/settings.json` : écrite d'après la documentation de Claude Code, pas éprouvée dans cette session.
+
+## Polices (récupérées le 2026-11-23)
+
+| Fichier | Source | Licence | Remarques |
+|---|---|---|---|
+| CormorantGaramond-Medium, -MediumItalic | dépôt CatharsisFonts/Cormorant, `fonts/ttf` | OFL-1.1 | Aucun nom réservé déclaré. |
+| Inter-Regular, -Medium | rsms/inter, version 4.1, `extras/ttf` | OFL-1.1 | Aucun nom réservé déclaré. |
+| Manrope-SemiBold | google/fonts, `ofl/manrope/Manrope[wght].ttf` | OFL-1.1 | Instance statique (wght 600) produite avec fontTools 4.68.0. Aucun nom réservé déclaré. |
+
+Les textes de licence sont dans `apps/mobile/assets/fonts/licenses/`.
