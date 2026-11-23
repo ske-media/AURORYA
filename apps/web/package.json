@@ -3,7 +3,18 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "exports": { ".": "./src/index.ts" },
-  "scripts": { "typecheck": "tsc --noEmit -p tsconfig.json" },
-  "dependencies": { "@aurorya/shared": "workspace:*", "@aurorya/astro-engine": "workspace:*", "@aurorya/ai": "workspace:*" }
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "@aurorya/ai": "workspace:*",
+    "@aurorya/astro-engine": "workspace:*",
+    "@aurorya/shared": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.5"
+  }
 }

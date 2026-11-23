@@ -1,0 +1,21 @@
+# Words refused in first names and group names (SPEC §21.6). One per line. Starter list, to be completed by the team.
+fuck
+fucker
+shit
+bitch
+asshole
+cunt
+dick
+pussy
+slut
+whore
+nigger
+nigga
+faggot
+retard
+kike
+spic
+chink
+nazi
+hitler
+rape

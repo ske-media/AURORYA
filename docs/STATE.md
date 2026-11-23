@@ -16,8 +16,10 @@ Mis à jour : 2026-11-23, après le moteur, le socle IA, les rôles, les migrati
 - **T-003 (socle)** — app Expo SDK 58 : configuration (bundle `com.aurorya.app`, iPhone, portrait, sombre), profils EAS, thème et `useTheme`, textes français et anglais avec contrôle de parité, trois onglets natifs, composants `Text`, `Button`, `Screen`, `Card`, `Chip`, `EmptyState`, `Banner`, galerie de développement, garde-fou contre les couleurs, polices et chemins en dur.
   Vérifié : typecheck, lint, et export d'un bundle iOS réel (3,4 Mo) avec polices et registre.
   Non vérifié : aucune exécution sur iPhone ni simulateur (impossible ici) ; pas de test de rendu des composants (React Native Testing Library non installé) ; VoiceOver et contrastes à l'écran non contrôlés. Composants restants du §16.5 à créer avec leurs tickets.
+- **T-014 (géométrie)** — repère de la roue, rayons, anti-collision des glyphes, opacité des aspects : fonctions pures testées. Reste : le dessin Skia, les interactions et la liste accessible.
+- **Utilitaires serveur et contrats** — codes d'erreur de l'API, liste fermée des événements analytics, gabarit des cartes (`packages/shared`) ; journalisation en liste blanche, jetons et codes d'invitation, filtre des prénoms et noms de groupe (`apps/web/src/server`), listes de mots bloqués de départ.
 - Prompts v1 de l'Annexe A dans `content/prompts/fr/`.
-  Vérifié dans la session : `pnpm lint`, `pnpm typecheck`, `pnpm test` (207 tests), `pnpm db:test`, `pnpm assets:check`.
+  Vérifié dans la session : `pnpm lint`, `pnpm typecheck`, `pnpm test` (238 tests), `pnpm db:test`, `pnpm assets:check`.
 - `docs/SPEC.md` : copie à l'octet près du texte fourni par le fondateur.
 
 ## Écarts et limites de T-002

@@ -123,6 +123,10 @@ importers:
       '@aurorya/shared':
         specifier: workspace:*
         version: link:../../packages/shared
+    devDependencies:
+      '@types/node':
+        specifier: 22.20.5
+        version: 22.20.5
 
   packages/ai:
     dependencies:
