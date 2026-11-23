@@ -113,3 +113,15 @@ export const GroupReadingSchema = z.strictObject({
   duos: z.array(z.strictObject({ kind: z.enum(['duo_fusion', 'duo_sparks']), a: z.string().uuid(), b: z.string().uuid(), title: z.string().nullable(), line: z.string().nullable(), detail: z.string().nullable(), locked: z.boolean() })),
 });
 export type GroupReading = z.infer<typeof GroupReadingSchema>;
+
+// ——— Aujourd'hui (SPEC §7.5, §13.3) ———
+export const DailyResponseSchema = z.strictObject({
+  date: z.string(),
+  sky: z.strictObject({ moonSign: z.enum(SIGN_IDS), moonPhase: z.string() }),
+  /** Horoscope du signe solaire ; null tant qu'il n'est pas généré pour ce jour. */
+  signHoroscope: z.strictObject({ sign: z.enum(SIGN_IDS), headline: z.string(), body: z.string() }).nullable(),
+  question: z.string().nullable(),
+  personal: z.strictObject({ locked: z.boolean() }),
+});
+export type DailyResponse = z.infer<typeof DailyResponseSchema>;
+export const DailyQuestionsResponseSchema = z.strictObject({ questions: z.array(z.strictObject({ date: z.string(), text: z.string() })) });
