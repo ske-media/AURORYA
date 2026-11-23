@@ -18,6 +18,8 @@ export interface AuthPort {
   verify(token: string): Promise<AuthUser | null>;
 }
 
+export type OutgoingEmail = Readonly<{ kind: 'waitlist_confirm'; to: string; locale: 'fr' | 'en'; confirmToken: string; unsubToken: string }>;
+
 export type AppDeps = Readonly<{
   sql: Sql;
   auth: AuthPort;
@@ -29,5 +31,7 @@ export type AppDeps = Readonly<{
   engineConfig: EngineConfig;
   /** Adresse publique du site, pour les liens d'invitation. Null tant que le domaine n'existe pas (O-06). */
   publicSiteUrl: string | null;
+  /** Envoi d'e-mails (Resend). Absent tant que le service n'est pas configuré : l'inscription est enregistrée sans envoi. */
+  sendEmail?: (email: OutgoingEmail) => Promise<void>;
   nameFilter: { firstName(input: string): string | null; groupName(input: string): string | null };
 }>;

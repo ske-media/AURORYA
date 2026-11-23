@@ -21,3 +21,7 @@ apps/mobile/dist/
 apps/mobile/expo-env.d.ts
 apps/mobile/ios/
 apps/mobile/android/
+
+# Next.js
+apps/web/.next/
+apps/web/next-env.d.ts

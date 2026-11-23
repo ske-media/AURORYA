@@ -20,7 +20,7 @@ const forbid = (packages, extraPatterns = []) => ({
 });
 
 export default tseslint.config(
-  { ignores: ['**/node_modules/**', '**/dist/**', '**/.next/**', '**/.expo/**', '**/coverage/**', '**/*.generated.ts', '**/expo-env.d.ts'] },
+  { ignores: ['**/node_modules/**', '**/dist/**', '**/.next/**', '**/.expo/**', '**/coverage/**', '**/*.generated.ts', '**/expo-env.d.ts', '**/next-env.d.ts'] },
   js.configs.recommended,
   ...tseslint.configs.strict,
   {
