@@ -24,7 +24,7 @@ const prompt = (id: string): RoastPrompts => ({ system: id, judgeSystem: 'juge',
 const prompts = { fr: { soft: prompt('fr-soft'), cash: prompt('fr-cash'), expert: prompt('fr-expert') }, en: { soft: prompt('en-soft'), cash: prompt('en-cash'), expert: prompt('en-expert') } };
 const deps = (): AppDeps => ({
   sql, auth, logger: createLogger((line) => logs.push(line)), now: () => clock, llm, prompts,
-  engineConfig: DEFAULT_ENGINE_CONFIG, nameFilter: createNameFilter(['salope']),
+  engineConfig: DEFAULT_ENGINE_CONFIG, publicSiteUrl: null, nameFilter: createNameFilter(['salope']),
 });
 
 const call = (route: (r: Request, d: AppDeps) => Promise<Response>, method: string, body: unknown, token: string | null = 'lea', headers: Record<string, string> = {}) =>

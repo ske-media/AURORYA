@@ -69,3 +69,37 @@ export const RoastResponseSchema = z.strictObject({
   hooks: z.strictObject(Object.fromEntries(SECTION_KEYS.map((k) => [k, z.string()])) as Record<(typeof SECTION_KEYS)[number], z.ZodString>),
 });
 export type RoastResponse = z.infer<typeof RoastResponseSchema>;
+
+// ——— Groupes (SPEC §13.4) ———
+export const GROUP_MAX_MEMBERS = 8;
+
+export const PostGroupsInputSchema = z.strictObject({ name: z.string().min(1).max(80), type: z.enum(['friends', 'couple', 'family', 'colleagues']) });
+export const PatchGroupInputSchema = z.strictObject({ name: z.string().min(1).max(80) });
+export const GroupSchema = z.strictObject({
+  id: z.string().uuid(), name: z.string(), type: z.enum(['friends', 'couple', 'family', 'colleagues']), ownerId: z.string().uuid(), membersCount: z.number().int(),
+});
+export type Group = z.infer<typeof GroupSchema>;
+
+export const InviteCreatedSchema = z.strictObject({
+  inviteId: z.string().uuid(),
+  /** Renvoyé une seule fois : seule son empreinte est conservée. */
+  token: z.string(),
+  code: z.string(),
+  expiresAt: z.string(),
+  /** null tant que le domaine n'est pas configuré (O-06). */
+  url: z.string().nullable(),
+});
+export const InvitePreviewSchema = z.strictObject({
+  inviterFirstName: z.string(), groupName: z.string(), groupType: z.enum(['friends', 'couple', 'family', 'colleagues']), valid: z.boolean(),
+});
+export const ResolveInviteInputSchema = z.strictObject({ code: z.string().min(1).max(20) });
+export const JoinGroupInputSchema = z
+  .strictObject({
+    token: z.string().min(1).max(64).optional(),
+    code: z.string().min(1).max(20).optional(),
+    displayName: z.string().min(1).max(60),
+    /** Consentement explicite au partage du prénom et des trois signes (SPEC §7.6). */
+    consentGroupShare: z.literal(true),
+    consentVersion: z.string().min(1).max(20),
+  })
+  .refine((v) => (v.token === undefined) !== (v.code === undefined), { path: ['token'], message: 'jeton ou code, l’un des deux' });

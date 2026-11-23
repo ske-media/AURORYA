@@ -27,5 +27,7 @@ export type AppDeps = Readonly<{
   llm: LlmPort | null;
   prompts: Readonly<Record<'fr' | 'en', Readonly<Record<'soft' | 'cash' | 'expert', RoastPrompts>>>>;
   engineConfig: EngineConfig;
+  /** Adresse publique du site, pour les liens d'invitation. Null tant que le domaine n'existe pas (O-06). */
+  publicSiteUrl: string | null;
   nameFilter: { firstName(input: string): string | null; groupName(input: string): string | null };
 }>;
