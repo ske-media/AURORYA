@@ -1,0 +1,230 @@
+{
+  "mc_sign:aries": {
+    "keywords": ["esprit pionnier", "initiative", "compétition", "visibilité directe", "indépendance"],
+    "essence": "Le Milieu du Ciel en Bélier donne une image publique de pionnier : ce qui se voit d’abord, c’est l’initiative, l’énergie et le goût d’ouvrir la voie.",
+    "light": ["Réputation de courage et de franchise", "Capacité à prendre la tête sans invitation", "Ambition qui s’assume ouvertement"],
+    "shadow": ["Image d’impatience face aux lenteurs collectives", "Besoin d’arriver en premier", "Lassitude une fois le sommet atteint"],
+    "behaviors": ["Lever la main avant la fin de la question", "Lancer un projet sans attendre le feu vert", "Transformer un objectif en course", "Préférer mener une petite équipe plutôt que suivre une grande"],
+    "summary": {
+      "soft": "Aux yeux du monde, tu avances en tête, flamme à la main. Ton ambition est franche : tu veux ouvrir des chemins, et les autres suivent parce que tu y vas.",
+      "cash": "Ta réputation : la personne qui a déjà commencé pendant que les autres lisent l’ordre du jour. Ton ambition ne supporte ni la deuxième place ni la file d’attente.",
+      "expert": "Le Milieu du Ciel en Bélier oriente la vocation vers l’initiative et la conquête : image publique directe, combative, autonome. L’ambition s’exprime par le défi plus que par la durée."
+    },
+    "roastAngles": {
+      "soft": ["Ton arrivée se remarque de loin, et chacun sent que quelque chose commence."],
+      "cash": ["Tu annonces « je m’en occupe » avant de savoir de quoi il s’agit exactement.", "Tu transformes une réunion d’équipe en ligne de départ, chronomètre compris."],
+      "expert": ["Le Milieu du Ciel en Bélier associe la réussite à la première place : l’image est celle du précurseur."]
+    },
+    "roastWeight": 2,
+    "avoid": ["Donner un conseil de carrière", "Annoncer une réussite", "Citer des métiers comme une prescription"]
+  },
+  "mc_sign:taurus": {
+    "keywords": ["fiabilité", "constance", "sens du concret", "patience", "réputation solide"],
+    "essence": "Le Milieu du Ciel en Taureau donne une image publique de solidité : ce qui se perçoit, c’est la constance, le goût du concret et une ambition qui prend son temps.",
+    "light": ["Réputation de fiabilité", "Persévérance visible sur la durée", "Calme qui rassure l’entourage de travail"],
+    "shadow": ["Image d’inertie face au changement", "Attachement aux méthodes éprouvées", "Ambition qui s’installe dans le confortable"],
+    "behaviors": ["Rester longtemps fidèle au même projet", "Refuser de bâcler pour tenir un délai", "Apporter de quoi manger en réunion", "Rappeler que la méthode habituelle a toujours fonctionné"],
+    "summary": {
+      "soft": "Aux yeux du monde, tu as la tranquillité d’un arbre : chacun sait où te trouver et peut s’y appuyer. Ton ambition pousse lentement et profondément.",
+      "cash": "Ta réputation tient en trois mots : fiable, calme, inamovible. Tu vises le sommet, mais à ton rythme et avec une pause goûter.",
+      "expert": "Le Milieu du Ciel en Taureau inscrit la vocation dans la durée et le tangible : image publique stable, ambition patiente, goût de la construction. La constance peut se figer en résistance."
+    },
+    "roastAngles": {
+      "soft": ["Les choses qui comptent te sont confiées, parce qu’avec toi elles restent debout."],
+      "cash": ["Tu occupes la même place en réunion depuis si longtemps qu’elle porte ton empreinte.", "Ton plan d’ambition tient en une ligne : ne pas bouger jusqu’à ce que ça marche."],
+      "expert": ["Le Milieu du Ciel en Taureau fait de la permanence un titre : la réputation s’y bâtit lentement."]
+    },
+    "roastWeight": 2,
+    "avoid": ["Parler d’argent ou de salaire", "Donner un conseil de carrière"]
+  },
+  "mc_sign:gemini": {
+    "keywords": ["polyvalence", "parole", "curiosité", "réseau", "mobilité"],
+    "essence": "Le Milieu du Ciel en Gémeaux donne une image publique mobile et bavarde : ce qui se retient, c’est la vivacité d’esprit, la polyvalence et le goût de transmettre.",
+    "light": ["Aisance à l’oral reconnue", "Capacité à mener plusieurs rôles de front", "Curiosité qui rend les sujets accessibles"],
+    "shadow": ["Image d’éparpillement", "Ambitions changeantes", "Difficulté à tenir dans une seule étiquette"],
+    "behaviors": ["Avoir deux activités et une troisième en projet", "Connaître quelqu’un dans chaque service", "Raconter son parcours en plusieurs versions", "Répondre aux messages pendant une présentation"],
+    "summary": {
+      "soft": "Le monde te voit comme une voix vive, curieuse de tout. Ton ambition n’a pas une seule route : elle aime les carrefours, les mots et les rencontres.",
+      "cash": "Personne ne sait exactement ce que tu fais, mais tout le monde en a déjà entendu parler. Ton ambition change de sujet plus vite que toi.",
+      "expert": "Le Milieu du Ciel en Gémeaux place la vocation sous le signe de l’échange : image publique mobile, polyvalente, verbale. L’ambition se déploie en plusieurs directions simultanées."
+    },
+    "roastAngles": {
+      "soft": ["Ta voix se reconnaît entre toutes : elle relie les gens et donne envie d’en savoir plus."],
+      "cash": ["Tu résumes ton parcours en cinq versions selon la personne qui pose la question.", "Tu as trois titres dans ta signature et un quatrième en cours de rédaction."],
+      "expert": ["Le Milieu du Ciel en Gémeaux diversifie la vocation : la réputation y repose sur la parole."]
+    },
+    "roastWeight": 2,
+    "avoid": ["Parler d’instabilité comme d’un défaut de sérieux", "Donner un conseil de carrière"]
+  },
+  "mc_sign:cancer": {
+    "keywords": ["protection", "proximité", "sensibilité publique", "attachement", "bienveillance"],
+    "essence": "Le Milieu du Ciel en Cancer donne une image publique protectrice : ce qui se perçoit, c’est le soin, la proximité et une ambition liée au besoin de se rendre utile aux siens.",
+    "light": ["Réputation de bienveillance", "Capacité à créer une ambiance de famille autour d’un projet", "Mémoire des personnes et des histoires"],
+    "shadow": ["Humeur visible de l’extérieur", "Difficulté à séparer l’affectif du rôle public", "Ambition freinée par la peur de déplaire"],
+    "behaviors": ["Se souvenir des anniversaires de toute l’équipe", "Prendre les nouveaux sous son aile", "Vivre une critique de son travail comme une affaire personnelle", "Décorer son bureau comme un salon"],
+    "summary": {
+      "soft": "Le monde voit en toi un refuge. Ton ambition ressemble à une maison à agrandir : tu veux réussir pour abriter, entourer, faire tenir ensemble.",
+      "cash": "Ta réputation : la personne qui a des mouchoirs, des gâteaux et un avis sur la vie de chacun. Une remarque sur ton travail, et la semaine entière en prend un coup.",
+      "expert": "Le Milieu du Ciel en Cancer lie la vocation au soin et à l’appartenance : image publique sensible, protectrice, fluctuante. L’ambition répond à un besoin de sécurité et d’ancrage."
+    },
+    "roastAngles": {
+      "soft": ["Les gens viennent vers toi comme vers une fenêtre éclairée : parce qu’il y fait bon."],
+      "cash": ["Tu connais le prénom des enfants, du chien et de la grand-mère de chaque collègue.", "Tu relis un retour un peu sec et tu y penses jusqu’au dimanche soir."],
+      "expert": ["Le Milieu du Ciel en Cancer donne à l’image publique une tonalité protectrice et changeante."]
+    },
+    "roastWeight": 2,
+    "avoid": ["Assigner un rôle maternel", "Donner un conseil de carrière"]
+  },
+  "mc_sign:leo": {
+    "keywords": ["rayonnement", "prestige", "autorité", "créativité", "fierté"],
+    "essence": "Le Milieu du Ciel en Lion donne une image publique rayonnante : ce qui se remarque, c’est la présence, le sens du prestige et une ambition qui tient à se montrer.",
+    "light": ["Charisme reconnu", "Générosité dans la mise en valeur des autres", "Fierté du travail signé"],
+    "shadow": ["Besoin de reconnaissance visible", "Difficulté à rester au second plan", "Susceptibilité quand le mérite est attribué à d’autres"],
+    "behaviors": ["Signer son travail de façon reconnaissable", "Prendre naturellement la parole au nom du groupe", "Soigner l’entrée en matière d’une présentation", "Se souvenir de qui a oublié de dire merci"],
+    "summary": {
+      "soft": "Le monde te voit dans la lumière, et tu la portes bien. Ton ambition a du cœur : tu veux réussir avec éclat, et faire briller ceux qui t’entourent.",
+      "cash": "Tu ne cherches pas l’attention, elle te trouve, et tu lui avais gardé une chaise. Ton ambition accepte tous les rôles, à condition que ce soit le premier.",
+      "expert": "Le Milieu du Ciel en Lion associe la vocation au rayonnement : image publique affirmée, goût de l’autorité et de la création. L’ambition recherche la reconnaissance autant que l’accomplissement."
+    },
+    "roastAngles": {
+      "soft": ["Ton passage laisse une trace : la salle s’en souvient longtemps après s’être vidée."],
+      "cash": ["Tu dis « je déteste me mettre en avant » depuis le centre exact de la photo.", "Tu remercies toute l’équipe dans un discours où ton nom revient souvent."],
+      "expert": ["Le Milieu du Ciel en Lion fait du prestige un moteur : la réussite s’y conçoit sous le regard d’autrui."]
+    },
+    "roastWeight": 2,
+    "avoid": ["Parler d’apparence", "Annoncer la célébrité"]
+  },
+  "mc_sign:virgo": {
+    "keywords": ["compétence", "précision", "service", "modestie", "exigence"],
+    "essence": "Le Milieu du Ciel en Vierge donne une image publique de compétence discrète : ce qui se reconnaît, c’est la précision, l’utilité et une ambition tournée vers le travail bien fait.",
+    "light": ["Réputation de sérieux", "Souci du détail apprécié", "Modestie dans la réussite"],
+    "shadow": ["Tendance à rester dans l’ombre de son propre travail", "Exigence difficile à satisfaire", "Crainte d’une erreur visible"],
+    "behaviors": ["Relire un document que personne n’a demandé de relire", "Devenir la référence officieuse pour toute question pratique", "Minimiser sa part dans un succès", "Repérer la coquille sur la dernière diapositive"],
+    "summary": {
+      "soft": "Le monde te voit comme une main sûre. Ton ambition est modeste en apparence et haute en vérité : tu veux que ce que tu fais soit juste, utile, irréprochable.",
+      "cash": "Ta réputation : la personne qui a vu l’erreur avant tout le monde. Tu vises l’excellence sans que ça se remarque, et tu boudes un peu quand ça ne se remarque pas.",
+      "expert": "Le Milieu du Ciel en Vierge oriente la vocation vers le service et la maîtrise technique : image publique sobre, méthodique, fiable. L’ambition vise la compétence plus que le prestige."
+    },
+    "roastAngles": {
+      "soft": ["Les choses délicates finissent entre tes mains, et c’est très bien ainsi."],
+      "cash": ["Tu corriges une présentation qui n’est pas la tienne, pendant la présentation.", "Tu réponds « ce n’était rien » après avoir sauvé le projet entier en une nuit."],
+      "expert": ["Le Milieu du Ciel en Vierge fonde la réputation sur l’exactitude : le mérite s’y prouve dans le détail."]
+    },
+    "roastWeight": 2,
+    "avoid": ["Réduire à un rôle subalterne", "Donner un conseil de carrière"]
+  },
+  "mc_sign:libra": {
+    "keywords": ["diplomatie", "élégance", "médiation", "partenariat", "équité"],
+    "essence": "Le Milieu du Ciel en Balance donne une image publique harmonieuse : ce qui se retient, c’est le tact, le sens de l’équité et une ambition qui se construit avec les autres.",
+    "light": ["Réputation de courtoisie", "Art de la médiation", "Goût du travail soigné dans la forme"],
+    "shadow": ["Image trop lisse", "Dépendance à l’approbation", "Hésitation devant les choix qui fâchent"],
+    "behaviors": ["Chercher le consensus avant de trancher", "Soigner la mise en page autant que le contenu", "Servir d’intermédiaire entre deux personnes en froid", "Reporter une décision qui risque de déplaire"],
+    "summary": {
+      "soft": "Le monde te voit comme une présence qui apaise. Ton ambition aime la justesse et l’accord : tu veux réussir sans abîmer personne en chemin.",
+      "cash": "Tout le monde t’apprécie, et c’est exactement ce qui t’empêche de trancher. Ton ambition avance en demandant poliment si elle ne dérange pas.",
+      "expert": "Le Milieu du Ciel en Balance place la vocation sous le signe du lien : image publique diplomate, esthétique, conciliante. L’ambition s’accomplit par l’alliance plutôt que par la rivalité."
+    },
+    "roastAngles": {
+      "soft": ["Ton avis est recherché, parce que tu sais le donner sans blesser personne."],
+      "cash": ["Tu passes une heure sur la formule de politesse et deux minutes sur le fond.", "Tu arbitres un conflit de bureau qui ne te concernait pas, avec le sourire."],
+      "expert": ["Le Milieu du Ciel en Balance fait de l’entente une méthode : l’image publique y repose sur la mesure."]
+    },
+    "roastWeight": 2,
+    "avoid": ["Parler d’apparence", "Donner un conseil de carrière"]
+  },
+  "mc_sign:scorpio": {
+    "keywords": ["intensité", "stratégie", "pouvoir", "discrétion", "détermination"],
+    "essence": "Le Milieu du Ciel en Scorpion donne une image publique intense et réservée : ce qui se devine, c’est la détermination, le sens stratégique et une ambition qui ne se dévoile pas.",
+    "light": ["Réputation de ténacité", "Sang-froid dans les crises", "Capacité à aller au fond d’un dossier"],
+    "shadow": ["Image intimidante", "Goût du contrôle", "Méfiance envers ceux qui approchent ses objectifs"],
+    "behaviors": ["Avancer ses projets sans en parler avant leur aboutissement", "Observer une réunion entière avant de prendre la parole", "Savoir qui décide vraiment dans une organisation", "Recommencer à zéro plutôt que d’accepter un demi-résultat"],
+    "summary": {
+      "soft": "Le monde sent en toi une force calme et profonde. Ton ambition ne fait pas de bruit : elle creuse, elle transforme, et elle va jusqu’au bout.",
+      "cash": "Personne ne sait ce que tu prépares, et c’est très exactement le plan. Tu entres dans une pièce, tu ne dis rien, et trois personnes vérifient leur dossier.",
+      "expert": "Le Milieu du Ciel en Scorpion associe la vocation à la maîtrise et à la transformation : image publique magnétique, secrète, résolue. L’ambition procède par stratégie et engagement total."
+    },
+    "roastAngles": {
+      "soft": ["Personne ne sait tout de toi, et c’est ce qui donne envie de te faire confiance."],
+      "cash": ["Tu réponds « ça avance » à propos d’un projet dont personne ne connaît l’existence.", "Tu écoutes toute la réunion en silence, puis tu poses la seule question qui fâche."],
+      "expert": ["Le Milieu du Ciel en Scorpion fait du secret un levier : l’influence s’y exerce sans démonstration."]
+    },
+    "roastWeight": 2,
+    "avoid": ["Parler de manipulation", "Donner un conseil de carrière"]
+  },
+  "mc_sign:sagittarius": {
+    "keywords": ["vision", "transmission", "horizons", "conviction", "liberté"],
+    "essence": "Le Milieu du Ciel en Sagittaire donne une image publique enthousiaste et ouverte : ce qui se retient, c’est la vision large, le goût de transmettre et une ambition qui vise loin.",
+    "light": ["Réputation d’optimisme", "Capacité à donner du sens à un projet", "Curiosité pour les horizons lointains"],
+    "shadow": ["Objectifs plus grands que les moyens", "Franchise qui déborde", "Impatience devant les tâches de routine"],
+    "behaviors": ["Présenter une idée en parlant de sa portée mondiale", "Accepter une mission pour le voyage qu’elle suppose", "Donner un avis de principe dans une réunion pratique", "Changer de cap quand l’horizon se rétrécit"],
+    "summary": {
+      "soft": "Le monde te voit comme quelqu’un qui montre le large. Ton ambition a besoin d’espace et de sens : tu veux aller loin, et emmener du monde avec toi.",
+      "cash": "Tu vises très haut, tu l’annonces, et tu regardes ensuite s’il existe une échelle. Ta réputation : de grandes idées, et un tableur que personne n’a jamais vu.",
+      "expert": "Le Milieu du Ciel en Sagittaire oriente la vocation vers la transmission et l’élargissement : image publique confiante, idéaliste, indépendante. L’ambition se nourrit de sens et de lointain."
+    },
+    "roastAngles": {
+      "soft": ["Les autres te suivent volontiers : tu parles de l’avenir comme d’un pays à visiter."],
+      "cash": ["Tu présentes un projet de trois pages en commençant par l’histoire de l’humanité.", "Tu exposes « une vision à dix ans » et tu oublies la réunion de jeudi."],
+      "expert": ["Le Milieu du Ciel en Sagittaire donne à l’ambition une visée lointaine : le but compte plus que l’étape."]
+    },
+    "roastWeight": 2,
+    "avoid": ["Parler de croyances précises", "Donner un conseil de carrière"]
+  },
+  "mc_sign:capricorn": {
+    "keywords": ["autorité", "sérieux", "persévérance", "statut", "responsabilité"],
+    "essence": "Le Milieu du Ciel en Capricorne donne une image publique sérieuse et structurée : ce qui se perçoit, c’est l’autorité, la persévérance et une ambition de long terme.",
+    "light": ["Réputation de solidité", "Sens des responsabilités reconnu", "Patience devant les ascensions lentes"],
+    "shadow": ["Image de froideur", "Identité trop confondue avec la fonction", "Difficulté à déléguer"],
+    "behaviors": ["Arriver avant tout le monde et partir après", "Parler de son travail dès la deuxième phrase d’une présentation", "Garder un registre professionnel même dans un message amical", "Se fixer des objectifs sur plusieurs années"],
+    "summary": {
+      "soft": "Le monde te voit comme une montagne : stable, haute, digne de confiance. Ton ambition est patiente, et tu sais que les sommets se gagnent pas à pas.",
+      "cash": "Tu as l’air responsable même en pyjama. Tu te présentes par ton métier, y compris à un mariage, et ton ambition a un calendrier, des jalons et un comité de suivi.",
+      "expert": "Le Milieu du Ciel en Capricorne place la vocation sous le signe de la construction et du statut : image publique sobre, compétente, autoritaire. L’ambition s’inscrit dans le temps long."
+    },
+    "roastAngles": {
+      "soft": ["Les clés te sont confiées sans hésiter, et tu les rends toujours à l’heure."],
+      "cash": ["Tu signes un message d’anniversaire avec « bien cordialement ».", "Tu réponds « quels sont les objectifs ? » à une invitation à pique-niquer."],
+      "expert": ["Le Milieu du Ciel en Capricorne lie la réputation à l’endurance : l’autorité s’y acquiert par paliers."]
+    },
+    "roastWeight": 2,
+    "avoid": ["Annoncer une réussite sociale", "Donner un conseil de carrière"]
+  },
+  "mc_sign:aquarius": {
+    "keywords": ["originalité", "indépendance", "innovation", "collectif", "singularité"],
+    "essence": "Le Milieu du Ciel en Verseau donne une image publique singulière : ce qui se remarque, c’est l’indépendance d’esprit, le goût d’innover et une ambition tournée vers le collectif.",
+    "light": ["Réputation d’originalité", "Capacité à proposer ce que personne n’avait envisagé", "Esprit d’équipe sans esprit de clan"],
+    "shadow": ["Image de distance", "Refus des cadres par principe", "Parcours difficile à suivre de l’extérieur"],
+    "behaviors": ["Proposer une méthode différente de celle prévue", "Décrire son activité par ce qu’elle n’est pas", "Travailler à des horaires inhabituels", "Défendre l’intérêt du groupe face à la hiérarchie"],
+    "summary": {
+      "soft": "Le monde te voit comme une voix à part, et c’est une chance. Ton ambition regarde vers l’avenir : tu veux inventer, et que cela serve à plusieurs.",
+      "cash": "Ta réputation : la personne qui lance « et si on faisait autrement ? » à cinq minutes de la fin. Ton ambition refuse les cases, sauf celle qu’elle a dessinée.",
+      "expert": "Le Milieu du Ciel en Verseau oriente la vocation vers l’innovation et le collectif : image publique indépendante, atypique, tournée vers l’avenir. L’ambition privilégie la liberté sur le statut."
+    },
+    "roastAngles": {
+      "soft": ["Tu ne ressembles à personne, sans même essayer, et c’est ce qui retient l’attention."],
+      "cash": ["Tu expliques ton métier en commençant par « c’est un peu difficile à expliquer ».", "Tu refuses l’organigramme, puis tu en proposes un nouveau, en forme de cercle."],
+      "expert": ["Le Milieu du Ciel en Verseau fait de la singularité une signature : la réputation y naît de l’écart."]
+    },
+    "roastWeight": 2,
+    "avoid": ["Évoquer un engagement militant précis", "Donner un conseil de carrière"]
+  },
+  "mc_sign:pisces": {
+    "keywords": ["inspiration", "sensibilité", "imagination", "dévouement", "flou"],
+    "essence": "Le Milieu du Ciel en Poissons donne une image publique sensible et insaisissable : ce qui se perçoit, c’est l’imagination, l’empathie et une ambition qui suit l’inspiration plus que le plan.",
+    "light": ["Réputation de douceur", "Créativité reconnue", "Capacité à sentir ce dont un public a besoin"],
+    "shadow": ["Image floue ou changeante", "Objectifs difficiles à formuler", "Tendance à s’effacer derrière les besoins des autres"],
+    "behaviors": ["Répondre de façon vague à la question du métier rêvé", "Suivre une intuition plutôt qu’un plan établi", "Accepter une tâche de plus par gentillesse", "Rêver à voix haute en pleine réunion"],
+    "summary": {
+      "soft": "Le monde te voit comme une présence douce, un peu ailleurs. Ton ambition ne suit pas une ligne droite : elle suit ce qui t’inspire, et c’est sa vérité.",
+      "cash": "Personne ne connaît ta destination, toi non plus, et pourtant ça avance. Ton ambition n’a pas de plan, elle a une ambiance et une playlist.",
+      "expert": "Le Milieu du Ciel en Poissons associe la vocation à l’inspiration et au dévouement : image publique sensible, mouvante, difficile à cerner. L’ambition procède par intuition plus que par stratégie."
+    },
+    "roastAngles": {
+      "soft": ["Tu laisses derrière toi une impression plus qu’un titre, et elle fait du bien."],
+      "cash": ["Tu réponds « je me laisse porter » à toute question sur tes projets d’avenir.", "Tu arrives en réunion sans notes, avec une intuition, et parfois c’est la bonne."],
+      "expert": ["Le Milieu du Ciel en Poissons dissout les contours de l’image publique : la vocation s’y devine."]
+    },
+    "roastWeight": 2,
+    "avoid": ["Parler de sacrifice ou de vocation religieuse", "Donner un conseil de carrière"]
+  }
+}

@@ -49,8 +49,12 @@ export function astroTerms(locale: Locale): AstroTerm[] {
 /** V7 — prédictions : futur affirmatif d'événement, dates, promesses, formules de certitude. */
 const PREDICTION_SOURCES: Record<Locale, RegExp[]> = {
   fr: [
-    /\b(?:tu vas|vous allez|il va t|elle va t|ça va t|cela va)\b/iu,
-    /\b(?:tu|vous|il|elle|on)\s+(?:\p{L}+\s+)?\p{L}+(?:eras|iras|ras|erez|irez|rez|era|ira)\b/iu,
+    // Futur proche : « tu vas » suivi d'un infinitif. Le présent de mouvement (« où tu vas ») reste permis.
+    /\b(?:tu vas|vous allez|il va|elle va|ça va|cela va|on va)\s+(?:(?:te|t’|vous|se|s’|en|y|le|la|les|lui|bien|enfin|vite)\s*)*\p{L}+(?:er|ir|re|oir)\b/iu,
+    // Futur simple à la deuxième personne : terminaisons régulières et verbes irréguliers courants.
+    // Le présent des verbes en -rer (« vous montrez », « vous préférez ») n'est pas un futur.
+    /\b(?:tu|vous)\s+(?:(?:ne|n’|te|t’|vous|se|s’|en|y|le|la|les|lui)\s*)*(?:\p{L}+(?:eras|iras|erez|irez)|(?:ser|aur|fer|verr|pourr|devr|viendr|saur|voudr|faudr|tiendr|recevr|conna[iî]tr|prendr|mettr|dir|vivr|rencontrer|trouver)(?:as|ez))\b/iu,
+    /\b(?:il|elle|ça|cela)\s+(?:t’|te |vous )(?:arrivera|attend(?:ra)?|tombera dessus)\b/iu,
     /\b(?:bientôt|prochainement|demain|d’ici (?:peu|là|quelques)|l’an prochain|l’année prochaine|le mois prochain|la semaine prochaine|cette année|dans (?:les|quelques|\p{L}+) (?:jours|semaines|mois|années|ans))\b/iu,
     /\b(?:janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre)\s+(?:19|20)\d\d\b/iu,
     /\b(?:19|20)\d\d\b/u,

@@ -1,11 +1,189 @@
 {
-  "brand": { "name": "Aurorya", "tagline": "The sky, unfiltered" },
-  "persona": { "name": "Ava" },
-  "tabs": { "today": "Today", "sky": "My sky", "groups": "My groups" },
-  "today": { "title": "Today", "state": { "empty": { "title": "Nothing to read yet", "body": "Your daily horoscope will appear here." } } },
-  "sky": { "title": "My sky", "state": { "empty": { "title": "Your sky has not been calculated yet", "body": "Your birth chart will appear here." } } },
-  "groups": { "title": "My groups", "state": { "empty": { "title": "No groups yet", "body": "Your groups will appear here." } } },
-  "common": { "retry": "Try again", "loading": "Loading", "close": "Close", "back": "Back" },
-  "notFound": { "title": "This page does not exist", "action": "Back to home" },
-  "gallery": { "title": "Gallery", "colors": "Colors", "typography": "Typography", "components": "Components", "sampleText": "The sky, as it is.", "primary": "Primary button", "secondary": "Secondary button", "ghost": "Ghost button", "loading": "Working", "disabled": "Disabled", "chip": "Chip", "chipSelected": "Selected chip", "card": "A card resting on the surface.", "banner": "An information banner." }
+  "brand": {
+    "name": "Aurorya",
+    "tagline": "The sky, unfiltered"
+  },
+  "persona": {
+    "name": "Ava",
+    "disclosure": "{{name}}, Aurorya’s astrologer, is an artificial intelligence."
+  },
+  "tabs": {
+    "today": "Today",
+    "sky": "My sky",
+    "groups": "My groups"
+  },
+  "today": {
+    "title": "Today",
+    "state": {
+      "empty": {
+        "title": "Nothing to read yet",
+        "body": "Your daily horoscope will appear here."
+      }
+    }
+  },
+  "sky": {
+    "title": "My sky",
+    "state": {
+      "empty": {
+        "title": "Your sky has not been calculated yet",
+        "body": "Your birth chart will appear here."
+      }
+    }
+  },
+  "groups": {
+    "title": "My groups",
+    "state": {
+      "empty": {
+        "title": "No groups yet",
+        "body": "Your groups will appear here."
+      }
+    }
+  },
+  "common": {
+    "retry": "Try again",
+    "loading": "Loading",
+    "close": "Close",
+    "back": "Back"
+  },
+  "notFound": {
+    "title": "This page does not exist",
+    "action": "Back to home"
+  },
+  "gallery": {
+    "title": "Gallery",
+    "colors": "Colors",
+    "typography": "Typography",
+    "components": "Components",
+    "sampleText": "The sky, as it is.",
+    "primary": "Primary button",
+    "secondary": "Secondary button",
+    "ghost": "Ghost button",
+    "loading": "Working",
+    "disabled": "Disabled",
+    "chip": "Chip",
+    "chipSelected": "Selected chip",
+    "card": "A card resting on the surface.",
+    "banner": "An information banner."
+  },
+  "modes": {
+    "soft": {
+      "name": "Moon",
+      "description": "Gentle: reassuring and clear."
+    },
+    "cash": {
+      "name": "Mars",
+      "description": "Blunt: funny and on target."
+    },
+    "expert": {
+      "name": "Saturn",
+      "description": "Expert: rigorous explanations."
+    }
+  },
+  "onboarding": {
+    "progress": "Step {{current}} of {{total}}",
+    "continue": "Continue",
+    "welcome": {
+      "title": "Your birth chart, in the tone you choose",
+      "subtitle": "Aurorya calculates your real birth chart and tells it to you: gentle, blunt or expert.",
+      "firstName": "Your first name",
+      "firstNameError": "Use only letters, spaces, hyphens or apostrophes.",
+      "grammarLabel": "So my sentences agree",
+      "grammar": {
+        "f": "she",
+        "m": "he",
+        "n": "neutral"
+      }
+    },
+    "birthDate": {
+      "title": "{{name}}, what is your date of birth?"
+    },
+    "ageGate": {
+      "body": "Aurorya is for people aged {{age}} and over. Nothing you entered is kept."
+    },
+    "birthTime": {
+      "title": "At what time?",
+      "subtitle": "The time gives the Ascendant and the houses.",
+      "exact": "I know my time",
+      "approx": "Roughly",
+      "unknown": "I don’t know",
+      "window": {
+        "night": "At night, midnight to six",
+        "morning": "In the morning, six to noon",
+        "afternoon": "In the afternoon, noon to six",
+        "evening": "In the evening, six to midnight"
+      },
+      "help": "Your time is on your full birth certificate. You can add it later in settings."
+    },
+    "birthPlace": {
+      "title": "Where were you born?",
+      "search": "City of birth",
+      "confirm": "Place of birth: {{place}}",
+      "help": "If your town is missing, choose the nearest large city.",
+      "state": {
+        "empty": "No city found.",
+        "error": "Search is unavailable right now."
+      }
+    },
+    "quiz": {
+      "title": "Three questions, then we start",
+      "submit": "See my sky",
+      "interests": {
+        "question": "You are here for…",
+        "love": "love",
+        "work": "work",
+        "self": "understanding myself",
+        "relationships": "my relationships"
+      },
+      "level": {
+        "question": "Astrology and you",
+        "beginner": "I am new to it",
+        "intermediate": "I know my sign and my rising sign",
+        "advanced": "I can read a chart"
+      },
+      "tone": {
+        "question": "How should I talk to you?"
+      }
+    },
+    "computing": {
+      "title": "I am looking at your sky",
+      "profile": "Saving your name",
+      "chart": "Calculating your chart",
+      "roast": "Writing your reading",
+      "state": {
+        "error": {
+          "title": "The calculation did not go through",
+          "body": "Check your connection, then try again."
+        },
+        "unconfigured": {
+          "title": "The app is not connected to its server",
+          "body": "This development version has no server address configured."
+        },
+        "ageRestricted": {
+          "title": "Aurorya is not for you yet",
+          "body": "The app is for people aged sixteen and over. Nothing was kept."
+        },
+        "timeNonexistent": {
+          "title": "That time did not exist",
+          "body": "On that day, in that place, clocks skipped that hour. Check your time of birth."
+        },
+        "nameRejected": {
+          "title": "This name is not accepted",
+          "body": "Choose another first name to continue."
+        }
+      },
+      "fix": "Fix it"
+    },
+    "reveal": {
+      "title": "{{name}}’s sky",
+      "bigThree": {
+        "sun": "Sun {{sign}}",
+        "moon": "Moon {{sign}}",
+        "asc": "Rising {{sign}}"
+      },
+      "unavailable": "Your reading is not available yet. Your chart, however, is calculated.",
+      "modeLabel": "Tone of the reading",
+      "continue": "Continue",
+      "timeUnknown": "Without a time of birth, the Ascendant and the houses are not calculated."
+    }
+  }
 }

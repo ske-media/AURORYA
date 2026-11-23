@@ -1,11 +1,189 @@
 {
-  "brand": { "name": "Aurorya", "tagline": "The sky, unfiltered" },
-  "persona": { "name": "Ava" },
-  "tabs": { "today": "Aujourd’hui", "sky": "Mon ciel", "groups": "Mes groupes" },
-  "today": { "title": "Aujourd’hui", "state": { "empty": { "title": "Rien à lire pour l’instant", "body": "Ton horoscope du jour s’affichera ici." } } },
-  "sky": { "title": "Mon ciel", "state": { "empty": { "title": "Ton ciel n’est pas encore calculé", "body": "Ton thème natal s’affichera ici." } } },
-  "groups": { "title": "Mes groupes", "state": { "empty": { "title": "Aucun groupe pour l’instant", "body": "Tes groupes s’afficheront ici." } } },
-  "common": { "retry": "Réessayer", "loading": "Chargement", "close": "Fermer", "back": "Retour" },
-  "notFound": { "title": "Cette page n’existe pas", "action": "Revenir à l’accueil" },
-  "gallery": { "title": "Galerie", "colors": "Couleurs", "typography": "Typographie", "components": "Composants", "sampleText": "Le ciel, tel qu’il est.", "primary": "Bouton principal", "secondary": "Bouton secondaire", "ghost": "Bouton discret", "loading": "En cours", "disabled": "Désactivé", "chip": "Puce", "chipSelected": "Puce choisie", "card": "Une carte posée sur la surface.", "banner": "Un bandeau d’information." }
+  "brand": {
+    "name": "Aurorya",
+    "tagline": "The sky, unfiltered"
+  },
+  "persona": {
+    "name": "Ava",
+    "disclosure": "{{name}}, l’astrologue d’Aurorya, est une intelligence artificielle."
+  },
+  "tabs": {
+    "today": "Aujourd’hui",
+    "sky": "Mon ciel",
+    "groups": "Mes groupes"
+  },
+  "today": {
+    "title": "Aujourd’hui",
+    "state": {
+      "empty": {
+        "title": "Rien à lire pour l’instant",
+        "body": "Ton horoscope du jour s’affichera ici."
+      }
+    }
+  },
+  "sky": {
+    "title": "Mon ciel",
+    "state": {
+      "empty": {
+        "title": "Ton ciel n’est pas encore calculé",
+        "body": "Ton thème natal s’affichera ici."
+      }
+    }
+  },
+  "groups": {
+    "title": "Mes groupes",
+    "state": {
+      "empty": {
+        "title": "Aucun groupe pour l’instant",
+        "body": "Tes groupes s’afficheront ici."
+      }
+    }
+  },
+  "common": {
+    "retry": "Réessayer",
+    "loading": "Chargement",
+    "close": "Fermer",
+    "back": "Retour"
+  },
+  "notFound": {
+    "title": "Cette page n’existe pas",
+    "action": "Revenir à l’accueil"
+  },
+  "gallery": {
+    "title": "Galerie",
+    "colors": "Couleurs",
+    "typography": "Typographie",
+    "components": "Composants",
+    "sampleText": "Le ciel, tel qu’il est.",
+    "primary": "Bouton principal",
+    "secondary": "Bouton secondaire",
+    "ghost": "Bouton discret",
+    "loading": "En cours",
+    "disabled": "Désactivé",
+    "chip": "Puce",
+    "chipSelected": "Puce choisie",
+    "card": "Une carte posée sur la surface.",
+    "banner": "Un bandeau d’information."
+  },
+  "modes": {
+    "soft": {
+      "name": "Lune",
+      "description": "Douce : rassurer et éclairer."
+    },
+    "cash": {
+      "name": "Mars",
+      "description": "Cash : faire rire en visant juste."
+    },
+    "expert": {
+      "name": "Saturne",
+      "description": "Experte : expliquer avec rigueur."
+    }
+  },
+  "onboarding": {
+    "progress": "Étape {{current}} sur {{total}}",
+    "continue": "Continuer",
+    "welcome": {
+      "title": "Ton thème natal, dans le ton que tu choisis",
+      "subtitle": "Aurorya calcule ton vrai thème natal et te le raconte : doux, cash ou expert.",
+      "firstName": "Ton prénom",
+      "firstNameError": "Utilise seulement des lettres, des espaces, des tirets ou des apostrophes.",
+      "grammarLabel": "Pour accorder mes phrases",
+      "grammar": {
+        "f": "elle",
+        "m": "il",
+        "n": "neutre"
+      }
+    },
+    "birthDate": {
+      "title": "{{name}}, quelle est ta date de naissance ?"
+    },
+    "ageGate": {
+      "body": "Aurorya est réservée aux personnes de {{age}} ans et plus. Rien de ce que tu as saisi n’est conservé."
+    },
+    "birthTime": {
+      "title": "À quelle heure ?",
+      "subtitle": "L’heure donne l’Ascendant et les maisons.",
+      "exact": "Je connais mon heure",
+      "approx": "À peu près",
+      "unknown": "Je ne sais pas",
+      "window": {
+        "night": "La nuit, de minuit à six heures",
+        "morning": "Le matin, de six heures à midi",
+        "afternoon": "L’après-midi, de midi à dix-huit heures",
+        "evening": "Le soir, de dix-huit heures à minuit"
+      },
+      "help": "Ton heure figure sur ton acte de naissance intégral ou ton carnet de santé. Tu pourras la préciser plus tard dans les réglages."
+    },
+    "birthPlace": {
+      "title": "Où es-tu née ?",
+      "search": "Ville de naissance",
+      "confirm": "Lieu de naissance : {{place}}",
+      "help": "Si ta commune est introuvable, choisis la ville importante la plus proche.",
+      "state": {
+        "empty": "Aucune ville trouvée.",
+        "error": "La recherche est indisponible pour l’instant."
+      }
+    },
+    "quiz": {
+      "title": "Trois questions, et c’est parti",
+      "submit": "Voir mon ciel",
+      "interests": {
+        "question": "Tu viens pour…",
+        "love": "l’amour",
+        "work": "le travail",
+        "self": "mieux me comprendre",
+        "relationships": "mes relations"
+      },
+      "level": {
+        "question": "L’astrologie et toi",
+        "beginner": "je découvre",
+        "intermediate": "je connais mon signe et mon ascendant",
+        "advanced": "je sais lire un thème"
+      },
+      "tone": {
+        "question": "Comment je te parle ?"
+      }
+    },
+    "computing": {
+      "title": "Je regarde ton ciel",
+      "profile": "J’enregistre ton prénom",
+      "chart": "Je calcule ton thème",
+      "roast": "J’écris ta lecture",
+      "state": {
+        "error": {
+          "title": "Le calcul n’a pas abouti",
+          "body": "Vérifie ta connexion, puis réessaie."
+        },
+        "unconfigured": {
+          "title": "L’app n’est pas reliée à son serveur",
+          "body": "Cette version de développement n’a pas d’adresse de serveur configurée."
+        },
+        "ageRestricted": {
+          "title": "Aurorya n’est pas encore pour toi",
+          "body": "L’app est réservée aux personnes de seize ans et plus. Rien n’a été conservé."
+        },
+        "timeNonexistent": {
+          "title": "Cette heure n’a pas existé",
+          "body": "Ce jour-là, à cet endroit, les horloges ont sauté cette heure. Vérifie ton heure de naissance."
+        },
+        "nameRejected": {
+          "title": "Ce prénom n’est pas accepté",
+          "body": "Choisis un autre prénom pour continuer."
+        }
+      },
+      "fix": "Corriger"
+    },
+    "reveal": {
+      "title": "Le ciel de {{name}}",
+      "bigThree": {
+        "sun": "Soleil {{sign}}",
+        "moon": "Lune {{sign}}",
+        "asc": "Ascendant {{sign}}"
+      },
+      "unavailable": "Ta lecture n’est pas encore disponible. Ton thème, lui, est calculé.",
+      "modeLabel": "Ton de la lecture",
+      "continue": "Continuer",
+      "timeUnknown": "Sans heure de naissance, l’Ascendant et les maisons ne sont pas calculés."
+    }
+  }
 }

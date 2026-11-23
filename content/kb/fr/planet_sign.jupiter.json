@@ -1,0 +1,230 @@
+{
+  "planet_sign:jupiter:aries": {
+    "keywords": ["élan", "audace", "initiative", "impatience", "foi en soi"],
+    "essence": "Jupiter en Bélier place la confiance dans l’initiative : la croissance passe par le premier pas, l’élan et le goût du défi.",
+    "light": ["Enthousiasme qui met les autres en mouvement", "Courage de commencer sans attendre de permission", "Optimisme immédiat face à l’obstacle"],
+    "shadow": ["Engagements lancés plus vite qu’ils ne sont tenus", "Surestimation de ses forces au démarrage", "Désintérêt dès que la nouveauté retombe"],
+    "behaviors": ["Dire oui à un projet avant d’en connaître les détails", "Ouvrir plusieurs chantiers la même semaine", "Se porter volontaire en premier", "Quitter une file d’attente au bout de deux minutes"],
+    "summary": {
+      "soft": "Ta confiance s’allume au départ : tu crois aux débuts comme d’autres croient aux étoiles filantes. Ton élan donne du courage à ceux qui hésitent encore.",
+      "cash": "Tu fonces d’abord, tu lis la notice après. Ta chance, c’est que ça marche souvent ; ton problème, c’est que tu comptes dessus.",
+      "expert": "Jupiter en Bélier lie l’expansion à l’initiative personnelle : la confiance naît de l’action directe. L’excès typique est la précipitation, l’engagement pris avant toute évaluation."
+    },
+    "roastAngles": {
+      "soft": ["Tu as la foi des commencements : chaque lundi a pour toi un goût de grand départ."],
+      "cash": ["Tu as douze projets lancés et un seul terminé : celui de les annoncer à tout le monde.", "Tu lis « niveau difficile » et tu entends « fait pour moi, en mieux »."],
+      "expert": ["Jupiter en Bélier amplifie l’impulsion : la confiance précède ici l’examen, rarement l’inverse."]
+    },
+    "roastWeight": 1,
+    "avoid": ["Réduire le placement à de l’agressivité", "Présenter la chance comme acquise"]
+  },
+  "planet_sign:jupiter:taurus": {
+    "keywords": ["abondance", "patience", "plaisirs", "sécurité", "constance"],
+    "essence": "Jupiter en Taureau fait croître par accumulation lente : confiance dans le tangible, le durable et le plaisir des sens.",
+    "light": ["Générosité concrète, qui nourrit et accueille", "Patience pour laisser les choses mûrir", "Sens sûr de la qualité"],
+    "shadow": ["Excès de confort qui endort l’envie d’évoluer", "Tendance à accumuler au-delà du nécessaire", "Entêtement présenté comme de la sagesse"],
+    "behaviors": ["Reprendre du dessert par principe", "Choisir l’objet le plus solide du rayon, quitte à attendre", "Garder le même café, la même table, la même commande", "Recevoir avec trop de plats pour le nombre d’invités"],
+    "summary": {
+      "soft": "Ta confiance pousse lentement, comme un verger : tu crois à ce qui se touche, se goûte et dure. Autour de toi, il y a toujours de quoi se sentir accueilli et rassasié.",
+      "cash": "Tu appelles ça « profiter de la vie » ; ton canapé appelle ça une relation exclusive. La générosité, chez toi, se sert à la louche.",
+      "expert": "Jupiter en Taureau oriente l’expansion vers la matière et la durée : croissance progressive, goût de la stabilité. L’excès se loge dans l’accumulation et la résistance au changement."
+    },
+    "roastAngles": {
+      "soft": ["Tu fais confiance au temps long : chez toi, même la joie prend le temps de mijoter."],
+      "cash": ["Tu as cuisiné pour douze, il y a quatre invités, et tu demandes encore si ça suffit.", "Ton optimisme est simple : rien de grave ne peut arriver tant qu’il reste du fromage."],
+      "expert": ["Jupiter en Taureau consolide plutôt qu’il n’étend : la confiance se mesure à ce qui tient dans la durée."]
+    },
+    "roastWeight": 1,
+    "avoid": ["Parler d’argent comme d’un conseil ou d’une promesse d’enrichissement", "Réduire le placement à la gourmandise"]
+  },
+  "planet_sign:jupiter:gemini": {
+    "keywords": ["curiosité", "dispersion", "parole", "apprentissage", "réseaux"],
+    "essence": "Jupiter en Gémeaux élargit par la curiosité : la confiance vient des idées, des échanges et de la variété, au risque de l’éparpillement.",
+    "light": ["Facilité à apprendre un peu de tout", "Art de relier des gens et des idées éloignés", "Parole vive qui rend les sujets accessibles"],
+    "shadow": ["Savoir étendu mais peu approfondi", "Trop de pistes ouvertes en même temps", "Tendance à s’engager en parlant"],
+    "behaviors": ["Garder quarante onglets ouverts", "Commencer trois livres sans en finir aucun", "Répondre à une question par deux anecdotes", "S’inscrire à une formation de plus"],
+    "summary": {
+      "soft": "Ta confiance voyage de mot en mot : tu grandis en posant des questions, en reliant les idées, en parlant avec tout le monde. Ta curiosité est une porte toujours entrouverte.",
+      "cash": "Tu sais un peu de tout sur absolument tout, surtout sur ce que tu as lu en diagonale ce matin. Finir un livre reste un projet.",
+      "expert": "Jupiter en Gémeaux, en exil, disperse l’expansion dans le multiple : curiosité vaste, synthèse difficile. La confiance repose sur l’information et l’échange plus que sur une conviction unique."
+    },
+    "roastAngles": {
+      "soft": ["Tu collectionnes les idées comme d’autres les coquillages : pour le plaisir d’en trouver encore."],
+      "cash": ["Tu as quarante onglets ouverts et tu jures que chacun est en cours de lecture.", "Tu expliques avec aplomb un sujet découvert il y a vingt minutes dans un podcast."],
+      "expert": ["En exil en Gémeaux, Jupiter multiplie les savoirs sans toujours les hiérarchiser."]
+    },
+    "roastWeight": 2,
+    "avoid": ["Traiter la curiosité comme de la superficialité", "Confondre bavardage et manque de fond"]
+  },
+  "planet_sign:jupiter:cancer": {
+    "keywords": ["protection", "générosité", "foyer", "mémoire", "refuge"],
+    "essence": "Jupiter en Cancer fait grandir par le soin : la confiance s’enracine dans le foyer, les proches et le sentiment d’appartenance.",
+    "light": ["Générosité protectrice envers les siens", "Capacité à créer un lieu où chacun se sent accueilli", "Fidélité aux souvenirs et aux liens anciens"],
+    "shadow": ["Surprotection qui étouffe un peu", "Tendance à nourrir pour ne pas dire", "Attachement excessif au passé"],
+    "behaviors": ["Remplir de provisions le sac de quelqu’un qui part", "Garder tous les dessins, cartes et billets de train", "Demander à chaque arrivant si le repas a été pris", "Transformer n’importe quel logement en nid en une soirée"],
+    "summary": {
+      "soft": "Ta confiance a le goût d’une cuisine éclairée tard le soir. Tu grandis en prenant soin, et ceux que tu accueilles s’en souviennent longtemps.",
+      "cash": "Tu adoptes les gens comme d’autres adoptent des chats : vite, et avec des provisions. Personne ne repart de chez toi les mains vides, ni sans un conseil.",
+      "expert": "Jupiter en Cancer, signe de son exaltation, épanouit sa générosité dans le registre protecteur : croissance par l’attachement et la mémoire. L’excès prend la forme de la surprotection."
+    },
+    "roastAngles": {
+      "soft": ["Tu fais de la place à table avant même de savoir qui vient dîner."],
+      "cash": ["Tu demandes « tu as mangé ? » avant « bonjour », et tu n’écoutes pas la réponse.", "Tu gardes une boîte de souvenirs par personne, y compris pour le facteur."],
+      "expert": ["Exalté en Cancer, Jupiter protège avec largesse ; la mesure lui manque surtout dans l’attachement."]
+    },
+    "roastWeight": 1,
+    "avoid": ["Réduire le placement à la maternité", "Supposer une famille heureuse ou présente"]
+  },
+  "planet_sign:jupiter:leo": {
+    "keywords": ["panache", "générosité", "fierté", "créativité", "rayonnement"],
+    "essence": "Jupiter en Lion fait croître par l’expression de soi : confiance dans le panache, la créativité et la générosité visible.",
+    "light": ["Chaleur qui encourage les autres à oser", "Générosité spectaculaire et sincère", "Foi dans ses propres talents"],
+    "shadow": ["Besoin d’applaudissements pour se sentir à la hauteur", "Goût du grandiose là où le simple suffirait", "Fierté vite froissée"],
+    "behaviors": ["Offrir le cadeau le plus voyant de la soirée", "Raconter une anecdote en occupant toute la pièce", "Organiser une fête là où un message aurait suffi", "Vérifier discrètement qui a remarqué"],
+    "summary": {
+      "soft": "Ta confiance réchauffe comme un feu de cheminée : tu donnes sans compter, et tu crois au talent des autres autant qu’au tien. Ta joie est contagieuse.",
+      "cash": "Tu fais tout en grand, y compris les petits gestes. Tu offres le cadeau, le discours et l’entrée en scène, puis tu vérifies que tout le monde a bien vu.",
+      "expert": "Jupiter en Lion associe l’expansion à l’expression personnelle : magnanimité, sens du prestige, créativité affirmée. L’excès tient à l’orgueil et au besoin de reconnaissance."
+    },
+    "roastAngles": {
+      "soft": ["Tu donnes comme on allume les lumières : pour que tout le monde y voie plus clair."],
+      "cash": ["Tu organises un anniversaire surprise et tu fais quand même un discours sur toi.", "Tu dis « c’est trois fois rien » en tendant un cadeau qui a son propre ruban doré."],
+      "expert": ["Jupiter en Lion grandit ce qu’il montre ; la générosité y cherche volontiers un public."]
+    },
+    "roastWeight": 2,
+    "avoid": ["Assimiler le placement à de l’arrogance", "Parler d’apparence"]
+  },
+  "planet_sign:jupiter:virgo": {
+    "keywords": ["précision", "service", "méthode", "détail", "perfectionnisme"],
+    "essence": "Jupiter en Vierge cherche la croissance dans le travail bien fait : confiance dans la méthode, l’utilité et l’amélioration continue.",
+    "light": ["Générosité qui passe par l’aide pratique", "Sens du détail qui rend les grands projets réalisables", "Humilité face à ce qui reste à apprendre"],
+    "shadow": ["Vision d’ensemble noyée sous les détails", "Critique abondante, y compris envers soi", "Difficulté à juger un travail terminé"],
+    "behaviors": ["Refaire une liste pour mieux classer la précédente", "Corriger une faute dans un message déjà envoyé", "Proposer un tableau pour organiser les vacances", "Rendre service avant toute demande"],
+    "summary": {
+      "soft": "Ta confiance se construit geste après geste. Tu grandis en rendant les choses plus justes, plus utiles, et ton aide discrète change vraiment la journée des autres.",
+      "cash": "Tu vois grand, mais d’abord tu corriges la virgule. Ton optimisme existe : il est rangé par ordre alphabétique, avec une marge d’erreur.",
+      "expert": "Jupiter en Vierge, en exil, voit son ampleur contrainte par l’analyse : expansion par le perfectionnement et le service. Le risque est de multiplier les détails au détriment de la vision."
+    },
+    "roastAngles": {
+      "soft": ["Tu crois aux petites améliorations comme d’autres aux grands miracles, et tu as souvent raison."],
+      "cash": ["Tu as fait un tableau pour choisir quel tableau utiliser.", "Tu rends service si bien que les gens n’osent plus te dire que c’était déjà fait."],
+      "expert": ["En exil en Vierge, Jupiter mesure avant de croire : la confiance exige des preuves détaillées."]
+    },
+    "roastWeight": 2,
+    "avoid": ["Présenter le placement comme un manque de chance", "Aborder l’hygiène de vie ou le corps"]
+  },
+  "planet_sign:jupiter:libra": {
+    "keywords": ["équité", "diplomatie", "alliances", "élégance", "indécision"],
+    "essence": "Jupiter en Balance fait grandir par la relation : confiance dans l’accord, l’équité et les alliances choisies.",
+    "light": ["Talent pour réconcilier des gens en désaccord", "Sens naturel de la justice et de la mesure", "Générosité dans l’écoute"],
+    "shadow": ["Excès de compromis pour préserver la paix", "Décisions repoussées à force de peser", "Besoin d’approbation avant d’avancer"],
+    "behaviors": ["Demander l’avis de cinq personnes avant de choisir un restaurant", "Dire « les deux se défendent » dans un débat", "Présenter l’une à l’autre des personnes faites pour s’entendre", "Arrondir les angles d’un message avant de l’envoyer"],
+    "summary": {
+      "soft": "Ta confiance grandit à deux : tu crois aux accords, aux mains tendues, à l’idée qu’il existe toujours un terrain commun. Avec toi, les conversations s’apaisent.",
+      "cash": "Tu donnes raison à tout le monde, puis tu rentres chez toi sans savoir ce que tu penses. Ta générosité préférée : laisser l’autre choisir le restaurant.",
+      "expert": "Jupiter en Balance développe la confiance par le lien : sens de l’équité, diplomatie, goût des alliances. L’excès réside dans la conciliation à tout prix et l’ajournement des choix."
+    },
+    "roastAngles": {
+      "soft": ["Tu cherches l’accord comme d’autres cherchent la lumière : par instinct, et avec grâce."],
+      "cash": ["Tu réponds « comme tu veux » avec une préférence très nette que personne ne devine.", "Tu arbitres un débat entre amis et tu finis par t’excuser auprès des deux camps."],
+      "expert": ["Jupiter en Balance élargit par l’association ; l’excès de mesure y devient parfois indécision."]
+    },
+    "roastWeight": 1,
+    "avoid": ["Parler de mariage ou de justice comme d’un conseil", "Réduire le placement au charme"]
+  },
+  "planet_sign:jupiter:scorpio": {
+    "keywords": ["intensité", "profondeur", "flair", "transformation", "secret"],
+    "essence": "Jupiter en Scorpion fait croître par la profondeur : confiance dans l’intensité, le flair et la capacité à traverser les crises.",
+    "light": ["Flair pour ce qui se cache derrière les apparences", "Ressources décuplées dans les moments difficiles", "Engagement entier dans ce qui compte"],
+    "shadow": ["Goût du tout ou rien", "Soupçon poussé trop loin", "Tendance à vouloir tout savoir sans rien livrer"],
+    "behaviors": ["Mener l’enquête avant un premier café avec quelqu’un", "Poser la question qui fait taire la table", "Se donner sans réserve à un projet, ou pas du tout", "Garder sous clé les confidences des autres"],
+    "summary": {
+      "soft": "Ta confiance descend là où d’autres n’osent pas regarder. Tu grandis dans l’intensité, et tu sais trouver des ressources au fond des moments sombres.",
+      "cash": "Tu ne fais rien à moitié, surtout pas les recherches sur les gens. Tu sais tout de tout le monde et personne ne connaît ton plat préféré.",
+      "expert": "Jupiter en Scorpion porte l’expansion vers l’intensité et l’enquête : ressources de crise, flair psychologique. L’excès se manifeste dans le soupçon et le goût de l’emprise."
+    },
+    "roastAngles": {
+      "soft": ["Tu fais confiance à ce qui est vrai, même quand le vrai demande du courage."],
+      "cash": ["Tu connais le parcours complet de quelqu’un avant même d’avoir entendu son prénom.", "Tu dis « je demande juste par curiosité » avec le regard d’un interrogatoire."],
+      "expert": ["Jupiter en Scorpion amplifie le désir de sonder ; la confiance s’y gagne par l’épreuve."]
+    },
+    "roastWeight": 1,
+    "avoid": ["Évoquer la sexualité ou les héritages", "Dramatiser en parlant de destin sombre"]
+  },
+  "planet_sign:jupiter:sagittarius": {
+    "keywords": ["horizon", "optimisme", "quête de sens", "voyages", "franchise"],
+    "essence": "Jupiter en Sagittaire, en domicile, donne toute son ampleur : confiance dans le sens, l’horizon et la liberté d’aller voir ailleurs.",
+    "light": ["Optimisme robuste et communicatif", "Soif de comprendre le monde en grand", "Franchise qui ouvre les débats"],
+    "shadow": ["Certitude d’avoir raison", "Engagements plus vastes que l’agenda", "Leçons données sans avoir été demandées"],
+    "behaviors": ["Réserver un billet sur un coup de tête", "Transformer une discussion en conférence", "Répondre que tout finit par s’arranger, sans plan précis", "Arriver en retard avec une excellente histoire"],
+    "summary": {
+      "soft": "Ta confiance regarde loin. Tu crois qu’il y a toujours un ailleurs, un sens, une route de plus, et ton optimisme donne envie de te suivre.",
+      "cash": "Tu as un avis sur tout et un billet pour ailleurs. Ton plan, c’est « j’improvise », et le pire, c’est que ça suffit souvent.",
+      "expert": "Jupiter en Sagittaire, en domicile, exprime pleinement sa nature : foi, vision large, goût de l’enseignement et du lointain. L’excès est celui de la démesure et du dogmatisme."
+    },
+    "roastAngles": {
+      "soft": ["Tu portes l’horizon en toi : même un mardi ordinaire te semble mener quelque part."],
+      "cash": ["Tu donnes un cours magistral sur un pays où tu as passé une escale de trois heures.", "Tu arrives en retard, sans excuse, mais avec une théorie sur le sens de la vie."],
+      "expert": ["En domicile, Jupiter voit large et juge vite : la conviction devance volontiers la vérification."]
+    },
+    "roastWeight": 2,
+    "avoid": ["Parler de croyances précises", "Annoncer des voyages"]
+  },
+  "planet_sign:jupiter:capricorn": {
+    "keywords": ["ambition", "mesure", "mérite", "structure", "retenue"],
+    "essence": "Jupiter en Capricorne fait croître par l’effort : confiance prudente, fondée sur le mérite, la structure et les résultats.",
+    "light": ["Ambition patiente, construite étape par étape", "Sens des responsabilités qui inspire le respect", "Sobriété dans la réussite"],
+    "shadow": ["Optimisme tenu en laisse", "Difficulté à savourer ce qui est accompli", "Générosité conditionnée au mérite"],
+    "behaviors": ["Fêter une réussite en préparant déjà l’étape suivante", "Lire les conditions avant de se réjouir", "Dire « pas mal » pour dire « excellent »", "Prévoir un plan de secours au plan de secours"],
+    "summary": {
+      "soft": "Ta confiance se mérite, et d’abord auprès de toi. Tu grandis en bâtissant, pierre après pierre, et ce que tu construis tient debout longtemps.",
+      "cash": "Tu fêtes une victoire en ouvrant ton agenda. Ton optimisme existe, mais il a demandé trois justificatifs et un délai de réflexion.",
+      "expert": "Jupiter en Capricorne, en chute, voit son expansion disciplinée : croissance lente, ambition structurée, confiance fondée sur la preuve. La retenue peut brider la générosité spontanée."
+    },
+    "roastAngles": {
+      "soft": ["Tu crois aux sommets qui se gagnent à pied, et tu connais la valeur de chaque marche."],
+      "cash": ["Tu réponds « faisons d’abord le bilan » à quelqu’un qui voulait juste trinquer.", "Tu accueilles une bonne nouvelle en demandant où est le piège."],
+      "expert": ["En chute en Capricorne, Jupiter croit ce qu’il a vérifié : l’enthousiasme passe par le contrôle."]
+    },
+    "roastWeight": 1,
+    "avoid": ["Conclure à un manque de chance", "Donner un conseil de carrière"]
+  },
+  "planet_sign:jupiter:aquarius": {
+    "keywords": ["idéaux", "collectif", "originalité", "avenir", "indépendance"],
+    "essence": "Jupiter en Verseau fait grandir par les idées et le groupe : confiance dans le progrès, l’amitié et les chemins hors norme.",
+    "light": ["Ouverture d’esprit réelle face à la différence", "Capacité à fédérer autour d’une idée", "Générosité tournée vers le collectif"],
+    "shadow": ["Amour de l’humanité plus facile que celui du voisin", "Théories séduisantes, application floue", "Détachement pris pour de la hauteur"],
+    "behaviors": ["Lancer un groupe de discussion pour chaque projet", "Défendre l’idée la moins populaire de la pièce", "Proposer au petit-déjeuner une solution pour la société entière", "Oublier de répondre à un message personnel"],
+    "summary": {
+      "soft": "Ta confiance regarde vers ce qui n’existe pas encore. Tu grandis parmi les autres, en défendant des idées neuves, et tu laisses à chacun la liberté de rester soi.",
+      "cash": "Tu as un plan pour sauver le monde et douze messages d’amis sans réponse. Tu aimes les gens, surtout en groupe et en théorie.",
+      "expert": "Jupiter en Verseau oriente l’expansion vers l’idéal collectif : esprit de réseau, pensée prospective, indépendance. L’excès est l’abstraction, la conviction détachée de l’affect."
+    },
+    "roastAngles": {
+      "soft": ["Tu fais confiance à l’avenir comme à un vieux complice qui n’est pas encore arrivé."],
+      "cash": ["Tu crées un groupe pour organiser la soirée, puis tu coupes les notifications.", "Tu défends l’humanité entière mais tu laisses ton voisin en « vu » depuis mardi."],
+      "expert": ["Jupiter en Verseau généralise volontiers : l’idée du groupe y compte plus que le cas particulier."]
+    },
+    "roastWeight": 1,
+    "avoid": ["Évoquer des opinions ou un engagement militant précis", "Assimiler le détachement à de la froideur"]
+  },
+  "planet_sign:jupiter:pisces": {
+    "keywords": ["compassion", "imaginaire", "foi", "lâcher-prise", "débordement"],
+    "essence": "Jupiter en Poissons, en domicile, élargit sans frontières : confiance dans l’intuition, la compassion et ce qui dépasse l’explication.",
+    "light": ["Bonté spontanée, sans calcul", "Imaginaire vaste et consolant", "Capacité à faire confiance au courant"],
+    "shadow": ["Limites floues face aux demandes des autres", "Fuite dans le rêve quand le réel pèse", "Confiance accordée trop largement"],
+    "behaviors": ["Prêter sans noter à qui", "Pleurer devant une publicité", "Laisser les choses « se faire » sans fixer d’échéance", "Écouter les soucis d’un inconnu dans le train"],
+    "summary": {
+      "soft": "Ta confiance ressemble à la mer : large, mouvante, sans bord. Tu grandis en accueillant, en imaginant, et ta douceur fait du bien à ceux qui te croisent.",
+      "cash": "Tu fais confiance à l’univers pour gérer ton agenda. Tu prêtes, tu pardonnes, tu oublies à qui, et tu recommences avec le sourire.",
+      "expert": "Jupiter en Poissons, en domicile, déploie une expansion diffuse : compassion, intuition, sens du sacré. L’excès tient à l’absence de limites et à l’idéalisation."
+    },
+    "roastAngles": {
+      "soft": ["Tu crois à la bonté comme on croit à la marée : elle revient toujours."],
+      "cash": ["Tu as prêté ton chargeur, ton pull et ton après-midi à quelqu’un croisé la veille.", "Tu réponds « ça se fait tout seul » à une échéance qui ne se fait jamais toute seule."],
+      "expert": ["En domicile en Poissons, Jupiter donne sans mesure ; la confiance y précède tout discernement."]
+    },
+    "roastWeight": 2,
+    "avoid": ["Parler de spiritualité comme d’une croyance précise", "Associer le placement à des dépendances"]
+  }
+}
