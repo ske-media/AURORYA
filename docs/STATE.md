@@ -1,6 +1,6 @@
 # État du projet
 
-Mis à jour : 2026-11-23, fin de T-011 (moteur).
+Mis à jour : 2026-11-23, après le moteur, le socle IA, les rôles et les migrations.
 
 ## Fait
 - **T-001** — Monorepo pnpm, `CLAUDE.md`, fichiers vivants, lint avec frontières entre paquets, contrôle de secrets, CI minimale, versions verrouillées.
@@ -9,6 +9,12 @@ Mis à jour : 2026-11-23, fin de T-011 (moteur).
 - **T-004, T-005, T-010, T-011** — Moteur complet dans `packages/astro-engine` : port d'éphémérides et adaptateur `astronomy-engine`, maisons, résolution des fuseaux, `computeChart`, `computeTransits`, `computeSynastry`, `computeSky`, configuration versionnée, schémas Zod du thème dans `packages/shared`.
   Vérifié dans la session : 173 tests passent, dont la comparaison aux éphémérides de la NASA, le contrôle géométrique des angles sur 240 cas, la définition de Placidus, et la concordance des fuseaux avec la base du système.
   Limites : tolérance de 0,01° au lieu de 0,001° (ADR-012) ; essai sur Vercel non fait ; contrôle croisé humain non fait (Q-09) ; couverture de code non mesurée.
+- **T-030, T-031 (socle)** — `packages/ai` : faits et libellés, sélection des six faits du roast, chaîne de validation V1 à V9, une relance, repli déterministe, typographie, jetons, `LlmPort`. Testé avec un modèle simulé.
+  Reste : adaptateur du fournisseur (O-08), table `ai_usage` branchée, base de règles (T-032), évaluations (T-033), pipelines des autres contenus.
+- **T-042 (calcul)** — catalogue des rôles (Annexe B), attribution optimale et déterministe, choix des duos. Reste : libellés `family` et `colleagues`, phrases de repli, prompt et route.
+- **T-006 (hors projet Supabase)** — migrations, RLS, privilèges, `pnpm db:test` (52 contrôles d'isolation sur un Postgres local). Reste : projets Supabase, application des migrations, types générés, test sur l'instance Supabase.
+- Prompts v1 de l'Annexe A dans `content/prompts/fr/`.
+  Vérifié dans la session : `pnpm lint`, `pnpm typecheck`, `pnpm test` (207 tests), `pnpm db:test`, `pnpm assets:check`.
 - `docs/SPEC.md` : copie à l'octet près du texte fourni par le fondateur.
 
 ## Écarts et limites de T-002
@@ -28,13 +34,15 @@ Mis à jour : 2026-11-23, fin de T-011 (moteur).
 
 ## Prochaine action
 T-003 (app Expo : navigation, thème, i18n, composants de base, galerie). Peut démarrer sans compte ; un build iOS exigera le compte Expo.
-Ensuite, sans compte : `packages/ai` (T-030, T-031), contenus, catalogue des rôles (T-042 côté calcul).
+Ensuite, sans compte : socle de l'API (T-009) contre le Postgres local, import des lieux (T-007), base de règles (T-032, demande un fournisseur d'IA).
 
 ## Bloqué, en attente d'un fondateur
 - Comptes à ouvrir : Supabase (T-006), Vercel payant (T-004, T-008, T-009), Expo/EAS (build de T-003), puis RevenueCat, Sentry, Resend, fournisseur d'IA.
 - Soumission à Apple : structure juridique (O-05), domaine (O-06), disponibilité du nom (O-01), textes légaux relus.
 
 ## Pièges découverts
+- Le `\\b` des expressions régulières JavaScript ignore les lettres accentuées : les lexiques de validation passent par une frontière de mot maison.
+- Retirer tous les droits sur les fonctions du schéma public casse aussi celles des extensions quand elles y sont installées.
 - L'environnement distant « aurorya » n'autorise que `ssd.jpl.nasa.gov` en plus des registres de paquets. `fetch` de Node ignore le proxy : utiliser curl.
 - Les scripts lancés par `node` ne peuvent pas importer les sources du moteur (imports sans extension) : les mesures passent par Vitest.
 - TypeScript 7.0.2 est la dernière version, mais `typescript-eslint` 8.73.0 exige `<6.1.0` : TypeScript est verrouillé en 6.0.3.

@@ -15,7 +15,8 @@
     "assets:build": "node scripts/assets/build.ts",
     "assets:report": "node scripts/assets/report.ts",
     "engine:golden": "vitest run packages/astro-engine",
-    "engine:golden:fetch": "node scripts/engine/make-golden.ts"
+    "engine:golden:fetch": "node scripts/engine/make-golden.ts",
+    "db:test": "bash scripts/db/test-local.sh"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",

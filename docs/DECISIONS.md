@@ -111,3 +111,10 @@ Décision :
 - `computeTransits` renvoie `{ hits, moon }` au lieu d'une simple liste, pour porter le climat lunaire.
 - Ciel du jour : orbe de 2° (`skyOrb`), changement de signe détecté entre 00:00 et 24:00 UTC.
 Validé par : mode autonome.
+
+## ADR-015 — Base de données : migrations testées sur un Postgres local, privilèges explicites (2026-11-23)
+Statut : accepté (mode autonome)
+Contexte : aucun projet Supabase n'existe encore (T-006), mais les migrations et les politiques RLS peuvent être écrites et éprouvées.
+Décision : sept migrations reprennent le SQL de la SPEC §12 à l'identique, complétées par l'activation de la RLS partout, les politiques de lecture, `search_places`, `rate_limit_hit`, les vues d'exploitation et la configuration distante initiale. Les privilèges par défaut de Supabase sont retirés aux rôles clients, puis la lecture est accordée table par table ; `group_members.chart_id` et `group_invites.token_hash` sont exclus par des droits de colonne. `pnpm db:test` applique le tout sur un Postgres jetable muni d'une imitation minimale de Supabase (rôles, `auth.uid()`) et exécute 52 contrôles d'isolation.
+Conséquences : les migrations ne sont appliquées à aucun projet réel et restent modifiables jusqu'à leur première application. À vérifier sur Supabase : schéma des extensions (`extensions`), publication Realtime, comportement des sessions anonymes. `ai.routing` et `ai.daily_budget_microusd` ne sont pas semés (O-08, T-033). Le nom du champ de période d'essai dans les événements RevenueCat (vue `kpi_trials`) est à vérifier à T-060.
+Validé par : mode autonome.
