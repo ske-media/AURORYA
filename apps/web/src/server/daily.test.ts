@@ -16,7 +16,7 @@ const UID = '00000000-0000-4000-8000-0000000000d1';
 const now = new Date('2026-11-23T10:00:00Z');
 const deps: AppDeps = {
   sql, auth: { verify: async (t) => (t === 'ok' ? { uid: UID, isAnonymous: true } : null) }, logger: createLogger(() => undefined), now: () => now, llm: null,
-  prompts: {} as AppDeps['prompts'], engineConfig: DEFAULT_ENGINE_CONFIG, roleCatalog: RoleCatalogSchema.parse(rolesJson), publicSiteUrl: null, nameFilter: createNameFilter([]),
+  prompts: {} as AppDeps['prompts'], engineConfig: DEFAULT_ENGINE_CONFIG, roleCatalog: RoleCatalogSchema.parse(rolesJson), deleteAuthUser: async (uid) => void (await sql.query('delete from auth.users where id = $1', [uid])), publicSiteUrl: null, nameFilter: createNameFilter([]),
 };
 const get = (route: (r: Request, d: AppDeps) => Promise<Response>, search: string, token: string | null = 'ok') =>
   route(new Request(`https://test.invalid/api/v1/daily?${search}`, { headers: token ? { authorization: `Bearer ${token}` } : {} }), deps);

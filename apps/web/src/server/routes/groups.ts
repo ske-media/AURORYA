@@ -172,7 +172,7 @@ export const postGroupsJoin = defineRoute({
 });
 
 /** Retire une membre. Si la propriétaire part, la plus ancienne membre non anonyme lui succède ; sinon le groupe est supprimé. */
-async function removeMember(sql: Sql, groupId: string, uid: string, ownerId: string): Promise<void> {
+export async function removeMember(sql: Sql, groupId: string, uid: string, ownerId: string): Promise<void> {
   await sql.transaction(async (tx) => {
     await tx.query('delete from public.group_members where group_id = $1 and user_id = $2', [groupId, uid]);
     if (uid === ownerId) {

@@ -47,6 +47,13 @@ export function getDeps(): AppDeps {
     roleCatalog: RoleCatalogSchema.parse(JSON.parse(readContent('roles/roles.v1.json') ?? '{}')),
     publicSiteUrl: process.env.PUBLIC_SITE_URL?.replace(/\/$/, '') || null,
     nameFilter: createNameFilter(blocklist),
+    deleteAuthUser: async (uid) => {
+      // API d'administration de Supabase Auth, avec la clé de service (côté serveur uniquement).
+      const response = await fetch(`${required('SUPABASE_URL').replace(/\/$/, '')}/auth/v1/admin/users/${uid}`, {
+        method: 'DELETE', headers: { apikey: required('SUPABASE_SERVICE_ROLE_KEY'), authorization: `Bearer ${required('SUPABASE_SERVICE_ROLE_KEY')}` },
+      });
+      if (!response.ok && response.status !== 404) throw new Error(`suppression du compte refusée (${response.status})`);
+    },
   };
   return cached;
 }

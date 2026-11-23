@@ -48,6 +48,8 @@ export const endpoints = (b: Backend) => ({
   postCharts: (input: PostChartsInput) => b.api.request({ method: 'POST', path: '/charts', body: input, output: ChartSummarySchema, idempotencyKey: randomUUID() }),
   postRoasts: (input: Pick<PostRoastsInput, 'chartId' | 'mode'>) => b.api.request({ method: 'POST', path: '/roasts', body: { ...input, regenerate: false }, output: RoastResponseSchema }),
   getDaily: (date: string, mode: ToneMode) => b.api.request({ method: 'GET', path: `/daily?date=${date}&mode=${mode}`, output: DailyResponseSchema }),
+  exportAccount: () => b.api.request({ method: 'POST', path: '/account/export', output: null }),
+  deleteAccount: () => b.api.request({ method: 'DELETE', path: '/account', body: { confirm: 'DELETE' }, output: null }),
   postGroups: (name: string, type: GroupType) => b.api.request({ method: 'POST', path: '/groups', body: { name, type }, output: GroupSchema, idempotencyKey: randomUUID() }),
   postGroupInvite: (groupId: string) => b.api.request({ method: 'POST', path: `/groups/${groupId}/invites`, output: InviteCreatedSchema }),
   resolveInvite: (code: string) => b.api.request({ method: 'POST', path: '/invites/resolve', body: { code }, output: InvitePreviewSchema }),

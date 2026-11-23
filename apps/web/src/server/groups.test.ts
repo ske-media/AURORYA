@@ -9,6 +9,7 @@ import { createPgSql } from './pg-sql';
 import { invalidateConfigCache } from './remote-config';
 import { postCharts } from './routes/charts';
 import { deleteGroup, deleteGroupMember, deleteInvite, getInvite, patchGroup, postGroupInvites, postGroupLeave, postGroups, postGroupsJoin, postInvitesResolve } from './routes/groups';
+import { deleteAccount, postAccountExport } from './routes/account';
 import { postGroupReadings } from './routes/group-readings';
 import { putProfile } from './routes/profile';
 import { GroupReadingSchema } from '@aurorya/shared';
@@ -27,7 +28,7 @@ const clock = new Date('2026-11-23T10:00:00Z');
 let now = clock;
 const deps = (): AppDeps => ({
   sql, auth, logger: createLogger(() => undefined), now: () => now, llm: null, prompts: {} as AppDeps['prompts'],
-  engineConfig: DEFAULT_ENGINE_CONFIG, roleCatalog, publicSiteUrl: 'https://exemple.invalid', nameFilter: createNameFilter(['salope']),
+  engineConfig: DEFAULT_ENGINE_CONFIG, roleCatalog, deleteAuthUser: async (uid) => void (await sql.query('delete from auth.users where id = $1', [uid])), publicSiteUrl: 'https://exemple.invalid', nameFilter: createNameFilter(['salope']),
 });
 type Route = (r: Request, d: AppDeps, p?: Record<string, string>) => Promise<Response>;
 const call = (route: Route, method: string, token: string | null, body?: unknown, params: Record<string, string> = {}) =>
@@ -177,5 +178,47 @@ describe('groupes', () => {
     expect((await call(postGroupLeave, 'POST', 'amie', undefined, { id: groupId })).status).toBe(204);
     expect(await count('select count(*) as n from public.groups where id = $1', [groupId])).toBe(0);
     expect(await count('select count(*) as n from public.group_members where group_id = $1', [groupId])).toBe(0);
+  });
+});
+
+describe('export et suppression du compte', () => {
+  it('exporte toutes les données de la personne, et seulement les siennes, une fois par jour', async () => {
+    const group = await (await call(postGroups, 'POST', 'amie', { name: 'Le bureau', type: 'friends' })).json();
+    const invite = await (await call(postGroupInvites, 'POST', 'amie', undefined, { id: group.id })).json();
+    await call(postGroupsJoin, 'POST', 'anonyme', { code: invite.code, displayName: 'Camille', ...consent });
+    const response = await call(postAccountExport, 'POST', 'amie');
+    expect(response.status).toBe(200);
+    const text = await response.text();
+    const data = JSON.parse(text);
+    expect(data.profile.first_name).toBe('Inès');
+    expect(data.birthData.birth_date).toContain('1990-06-1');
+    expect(data.charts).toHaveLength(1);
+    expect(data.groups.some((g: { name: string; is_owner: boolean }) => g.name === 'Le bureau' && g.is_owner)).toBe(true);
+    expect(data.consents.length).toBeGreaterThan(0);
+    expect(text).not.toContain('Camille');
+    expect(text).not.toContain(USERS.anonyme?.uid ?? 'x');
+    expect((await call(postAccountExport, 'POST', 'amie')).status).toBe(429);
+  });
+
+  it('exige la confirmation explicite', async () => {
+    expect((await call(deleteAccount, 'DELETE', 'amie', {})).status).toBe(400);
+    expect((await call(deleteAccount, 'DELETE', 'amie', { confirm: 'oui' })).status).toBe(400);
+    expect(await count('select count(*) as n from public.profiles where id = $1', [USERS.amie?.uid])).toBe(1);
+  });
+
+  it('supprime tout : groupes quittés, données emportées, coûts anonymisés', async () => {
+    const uid = USERS.amie?.uid;
+    await sql.query(`insert into public.ai_usage (user_id, feature, tier, model, tokens_in, tokens_out, cost_microusd, outcome) values ($1, 'roast', 'strong', 'm', 1, 1, 0, 'ok')`, [uid]);
+    expect((await call(deleteAccount, 'DELETE', 'amie', { confirm: 'DELETE' })).status).toBe(204);
+    for (const table of ['profiles where id', 'birth_data where user_id', 'charts where user_id', 'readings where user_id', 'consents where user_id', 'group_members where user_id', 'entitlements where user_id']) {
+      expect(await count(`select count(*) as n from public.${table} = $1`, [uid])).toBe(0);
+    }
+    expect(await count('select count(*) as n from auth.users where id = $1', [uid])).toBe(0);
+    expect(await count('select count(*) as n from public.ai_usage where user_id = $1', [uid])).toBe(0);
+    expect(await count(`select count(*) as n from public.ai_usage where user_id is null and feature = 'roast'`)).toBeGreaterThan(0);
+    // « Le bureau » n'avait plus aucune membre avec un compte : il disparaît avec sa propriétaire.
+    expect(await count(`select count(*) as n from public.groups where name = 'Le bureau'`)).toBe(0);
+    // Rejouer la suppression ne casse rien.
+    expect((await call(deleteAccount, 'DELETE', 'amie', { confirm: 'DELETE' })).status).toBe(204);
   });
 });

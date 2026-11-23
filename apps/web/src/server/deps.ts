@@ -33,6 +33,8 @@ export type AppDeps = Readonly<{
   roleCatalog: RoleCatalog;
   /** Adresse publique du site, pour les liens d'invitation. Null tant que le domaine n'existe pas (O-06). */
   publicSiteUrl: string | null;
+  /** Supprime l'utilisateur dans Supabase Auth (API d'administration) ; les cascades emportent ses données. */
+  deleteAuthUser: (uid: string) => Promise<void>;
   /** Envoi d'e-mails (Resend). Absent tant que le service n'est pas configuré : l'inscription est enregistrée sans envoi. */
   sendEmail?: (email: OutgoingEmail) => Promise<void>;
   nameFilter: { firstName(input: string): string | null; groupName(input: string): string | null };

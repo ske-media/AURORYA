@@ -274,5 +274,36 @@
       "continue": "Continue",
       "timeUnknown": "Without a time of birth, the Ascendant and the houses are not calculated."
     }
+  },
+  "settings": {
+    "title": "Settings",
+    "open": "Settings",
+    "tone": "Default tone",
+    "account": {
+      "title": "My account",
+      "anonymous": "You do not have an account yet: your data only lives on this phone.",
+      "email": "Email address",
+      "sendCode": "Get a code",
+      "code": "Code received by email",
+      "verify": "Create my account",
+      "codeSent": "A code was just sent to this address.",
+      "created": "Your account is created.",
+      "failed": "That did not go through. Check the address or the code, then try again.",
+      "signedIn": "Account: {{email}}"
+    },
+    "about": {
+      "title": "About",
+      "version": "Version {{version}}",
+      "disclaimer": "Aurorya is a tool for entertainment and self-reflection. It is not medical, psychological, financial or legal advice."
+    },
+    "delete": {
+      "title": "Delete my account",
+      "body": "Your profile, birth data, chart, readings and groups will be permanently deleted.",
+      "subscription": "Deleting does not stop an Apple subscription: cancel it in the App Store settings.",
+      "start": "Delete my account",
+      "confirm": "Yes, delete everything",
+      "cancel": "Cancel",
+      "failed": "Deletion did not go through. Try again in a moment."
+    }
   }
 }

@@ -274,5 +274,36 @@
       "continue": "Continuer",
       "timeUnknown": "Sans heure de naissance, l’Ascendant et les maisons ne sont pas calculés."
     }
+  },
+  "settings": {
+    "title": "Réglages",
+    "open": "Réglages",
+    "tone": "Ton par défaut",
+    "account": {
+      "title": "Mon compte",
+      "anonymous": "Tu n’as pas encore de compte : tes données ne vivent que sur ce téléphone.",
+      "email": "Adresse e-mail",
+      "sendCode": "Recevoir un code",
+      "code": "Code reçu par e-mail",
+      "verify": "Créer mon compte",
+      "codeSent": "Un code vient de partir à cette adresse.",
+      "created": "Ton compte est créé.",
+      "failed": "Cela n’a pas abouti. Vérifie l’adresse ou le code, puis réessaie.",
+      "signedIn": "Compte : {{email}}"
+    },
+    "about": {
+      "title": "À propos",
+      "version": "Version {{version}}",
+      "disclaimer": "Aurorya est un outil de divertissement et d’introspection. Ce n’est ni un conseil médical, ni psychologique, ni financier, ni juridique."
+    },
+    "delete": {
+      "title": "Supprimer mon compte",
+      "body": "Ton profil, tes données de naissance, ton thème, tes lectures et tes groupes seront supprimés définitivement.",
+      "subscription": "La suppression n’arrête pas un abonnement Apple : il se résilie dans les réglages de l’App Store.",
+      "start": "Supprimer mon compte",
+      "confirm": "Oui, tout supprimer",
+      "cancel": "Annuler",
+      "failed": "La suppression n’a pas abouti. Réessaie dans un instant."
+    }
   }
 }

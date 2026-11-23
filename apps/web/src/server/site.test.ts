@@ -78,7 +78,7 @@ describe('liste d’attente', () => {
   const logs: string[] = [];
   const deps: AppDeps = {
     sql, auth: { verify: async () => null }, logger: createLogger((l) => logs.push(l)), now: () => new Date('2026-11-23T10:00:00Z'), llm: null,
-    prompts: {} as AppDeps['prompts'], engineConfig: DEFAULT_ENGINE_CONFIG, roleCatalog, publicSiteUrl: null, nameFilter: createNameFilter([]),
+    prompts: {} as AppDeps['prompts'], engineConfig: DEFAULT_ENGINE_CONFIG, roleCatalog, deleteAuthUser: async (uid) => void (await sql.query('delete from auth.users where id = $1', [uid])), publicSiteUrl: null, nameFilter: createNameFilter([]),
     sendEmail: async (email) => void sent.push(email),
   };
   const post = (body: unknown, ip = '203.0.113.7') =>

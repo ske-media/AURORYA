@@ -1,9 +1,10 @@
 // Onglet « Aujourd'hui » (SPEC §7.5) : climat lunaire calculé, horoscope du signe, question du jour.
 import { MOON_PHASES, type MoonPhase, SIGN_NAMES } from '@aurorya/shared';
 import { useQuery } from '@tanstack/react-query';
+import { useRouter } from 'expo-router';
 import { useTranslation } from 'react-i18next';
 import { ActivityIndicator } from 'react-native';
-import { Card, EmptyState, Screen, Text } from '@/components/ui';
+import { Button, Card, EmptyState, Screen, Text } from '@/components/ui';
 import { toIsoDate } from '@/features/onboarding/draft';
 import { endpoints, ensureSession, getBackend } from '@/services/backend';
 import { NotConfiguredError } from '@/services/query';
@@ -14,6 +15,7 @@ export function TodayScreen() {
   const { t, i18n } = useTranslation();
   const theme = useTheme();
   const { draft } = useOnboarding();
+  const router = useRouter();
   const locale = i18n.language === 'en' ? 'en' : 'fr';
   // Le « jour » est la date locale de l'appareil.
   const date = toIsoDate(new Date());
@@ -65,6 +67,7 @@ export function TodayScreen() {
         </Card>
       ) : null}
       {daily.personal.locked ? <Card><Text variant="bodySmall" color="textSecondary">{t('today.personalLocked')}</Text></Card> : null}
+      <Button variant="ghost" label={t('settings.open')} onPress={() => router.push('/settings')} />
     </Screen>
   );
 }
