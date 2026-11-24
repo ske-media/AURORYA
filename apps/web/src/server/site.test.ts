@@ -66,6 +66,24 @@ describe('vérification déléguée à Supabase Auth', () => {
   });
 });
 
+describe('autorité épinglée de la base', async () => {
+  const { X509Certificate, createHash } = await import('node:crypto');
+  const { SUPABASE_ROOT_CA_PEM, SUPABASE_ROOT_CA_SHA256 } = await import('./supabase-ca');
+  const { poolConfigFromUrl } = await import('./pg-sql');
+  it('correspond à l’empreinte relevée et reste une autorité racine valide', () => {
+    const cert = new X509Certificate(SUPABASE_ROOT_CA_PEM);
+    expect(createHash('sha256').update(cert.raw).digest('hex')).toBe(SUPABASE_ROOT_CA_SHA256);
+    expect(cert.ca).toBe(true);
+    expect(cert.verify(cert.publicKey)).toBe(true);
+    expect(cert.subject).toContain('Supabase Root 2021 CA');
+  });
+  it('vérifie toujours le certificat hors base locale', () => {
+    expect(poolConfigFromUrl('postgresql://u:p@aws-0-eu-central-1.pooler.supabase.com:6543/postgres', SUPABASE_ROOT_CA_PEM).ssl).toMatchObject({ rejectUnauthorized: true });
+    expect(poolConfigFromUrl('postgresql://u:p@exemple.invalid:5432/db').ssl).toEqual({ rejectUnauthorized: true });
+    expect(poolConfigFromUrl('postgresql://u@localhost:5432/db').ssl).toBeUndefined();
+  });
+});
+
 describe('prompts', () => {
   const prompts = buildRoastPrompts((path) => read(`prompts/${path}`), 'Ava');
   it('assemble identité, sécurité, méthode, style et tâche, avec le prénom de l’astrologue', () => {
