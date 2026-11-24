@@ -63,10 +63,16 @@ Mis à jour : 2026-11-23, après l'API complète des groupes, le site, l'onboard
 - **Lieux (T-007)** : `pnpm geo:build` et `pnpm geo:load` ; 162 367 villes avec noms français et anglais, recherche vérifiée sur données réelles en base locale.
 - **TestFlight** : rien n'a été envoyé. Marche à suivre complète dans `docs/runbooks/premier-build.md`.
 
+## Base de production (2026-11-24)
+- Projet Supabase `glvtyivmnrniwguenwaf` (Francfort), créé par un fondateur. Via la route interne de mise en place (ADR-019) : sept migrations appliquées, 22 tables toutes sous RLS, 156 fiches, 120 questions, 162 367 lieux, 26 clés de configuration.
+- Vercel : `DATABASE_URL` (pooler `aws-1-eu-central-1`, mode transaction), `SUPABASE_URL`, `SUPABASE_PUBLISHABLE_KEY` posées pour production et aperçus. `INTERNAL_SETUP_KEY` neutralisée après usage (les déploiements déjà construits gardent l'ancienne valeur jusqu'au prochain déploiement).
+- Non vérifié : aucun appel authentifié n'a encore traversé l'API réelle (il faut l'app, ou un jeton Supabase). Les connexions anonymes doivent être activées dans Supabase par un fondateur.
+- Manquent sur Vercel : `SUPABASE_SERVICE_ROLE_KEY` (suppression de compte) et `PUBLIC_SITE_URL` (liens d'invitation), à poser quand l'adresse de production sera connue.
+
 ## Prochaine action
-1. Fondateur : créer le projet Supabase `aurorya` (Francfort), activer les connexions anonymes.
-2. Appliquer migrations, fiches, questions et lieux ; poser les variables Vercel ; redéployer.
-3. Fondateur : build de développement iOS, puis dérouler la liste de vérification du runbook.
+1. Fondateur : activer les connexions anonymes dans Supabase ; changer le mot de passe de la base (communiqué en clair) ; fournir la clé `service_role` par un canal sûr.
+2. Fusionner la PR n°1 pour obtenir l'adresse de production, puis poser `PUBLIC_SITE_URL`.
+3. Fondateur : build de développement iOS avec les trois variables `EXPO_PUBLIC_*` du runbook.
 
 ## Bloqué, en attente d'un fondateur
 - Comptes à ouvrir : Supabase (T-006), Vercel payant (T-004, T-008, T-009), Expo/EAS (build de T-003), puis RevenueCat, Sentry, Resend, fournisseur d'IA.
