@@ -4,6 +4,9 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { safeEqual } from '@/server/invites';
 import { getDeps } from '@/server/runtime';
+import pg from 'pg';
+import { poolConfigFromUrl } from '@/server/pg-sql';
+import { SUPABASE_ROOT_CA_PEM } from '@/server/supabase-ca';
 import { readPostgresTlsChain } from '@/server/tls-chain';
 import { SETUP_STEPS, type SetupFiles, type SetupStep, runSetupStep } from '@/server/setup';
 
@@ -38,6 +41,27 @@ export async function GET(request: Request): Promise<Response> {
   const url = new URL(request.url);
   if (!expected || expected.length < 24 || !safeEqual(url.searchParams.get('key') ?? '', expected)) return new Response(null, { status: 404 });
   const step = url.searchParams.get('step') ?? '';
+  if (step === 'find-pooler') {
+    // Diagnostic : cherche la grappe du pooler qui connaît ce projet, avec les identifiants de DATABASE_URL.
+    const regions = ['eu-central-1', 'eu-central-2', 'eu-west-1', 'eu-west-2', 'eu-west-3', 'eu-north-1', 'us-east-1', 'us-east-2', 'us-west-1', 'us-west-2', 'ca-central-1', 'ap-southeast-1', 'ap-northeast-1', 'ap-south-1', 'sa-east-1'];
+    const results: Record<string, string> = {};
+    await Promise.all(regions.flatMap((region) => ['aws-0', 'aws-1'].map(async (prefix) => {
+      const host = `${prefix}-${region}.pooler.supabase.com`;
+      const target = new URL(process.env.DATABASE_URL ?? '');
+      target.hostname = host;
+      const client = new pg.Client({ ...poolConfigFromUrl(target.toString(), SUPABASE_ROOT_CA_PEM), connectionTimeoutMillis: 6000 });
+      try {
+        await client.connect();
+        await client.query('select 1');
+        results[host] = 'ok';
+      } catch (error) {
+        results[host] = error instanceof Error ? error.message.slice(0, 60) : 'erreur';
+      } finally {
+        await client.end().catch(() => undefined);
+      }
+    })));
+    return Response.json({ step, found: Object.entries(results).filter(([, v]) => v === 'ok').map(([h]) => h), others: [...new Set(Object.values(results).filter((v) => v !== 'ok'))] });
+  }
   if (step === 'tls-chain') {
     // Diagnostic : chaîne de certificats du serveur de base, pour renseigner DATABASE_CA_CERT.
     try {
