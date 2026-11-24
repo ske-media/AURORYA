@@ -130,3 +130,44 @@ describe('contenus réels', async () => {
     expect(seen.size).toBeGreaterThan(20);
   });
 });
+
+describe('mise en place d’une base', async () => {
+  const { runSetupStep } = await import('./setup');
+  const { readFileSync, readdirSync } = await import('node:fs');
+  const { gzipSync } = await import('node:zlib');
+  const root = new URL('../../../../', import.meta.url);
+  const migrationsDir = new URL('supabase/migrations/', root);
+  const files = {
+    migrations: readdirSync(migrationsDir).sort().map((f) => [f, readFileSync(new URL(f, migrationsDir), 'utf8')] as const),
+    kb: { fr: JSON.parse(readFileSync(new URL('content/kb/fr/asc_sign.json', root), 'utf8')) as Record<string, unknown> },
+    kbVersion: 'test',
+    questions: { fr: JSON.parse(readFileSync(new URL('content/questions/fr.json', root), 'utf8')) as Record<string, string[]> },
+    geoGz: gzipSync(['900001\tTestville\tTestville\tVille-Test\t\\N\tRégion\tFR\t48.1\t2.2\t1234\tEurope/Paris\tville test | testville', '900002\tAutre\tAutre\t\\N\t\\N\t\\N\tBE\t50.1\t4.2\t99\tEurope/Brussels\tautre'].join('\n')),
+  };
+  it('répond au contrôle de connexion et décrit l’état', async () => {
+    expect(await runSetupStep(sql, 'ping', files)).toMatchObject({ ok: true });
+    const status = await runSetupStep(sql, 'status', files);
+    expect(status.tables).toBe(status.tablesWithRls);
+  });
+  it('n’applique une migration qu’une fois', async () => {
+    // La base de test a déjà reçu les migrations par un autre chemin : on les déclare appliquées, puis on vérifie l'idempotence.
+    await sql.query('create table if not exists public.app_migrations (name text primary key, applied_at timestamptz not null default now())');
+    for (const [name] of files.migrations) await sql.query('insert into public.app_migrations (name) values ($1) on conflict do nothing', [name]);
+    const result = await runSetupStep(sql, 'migrations', { ...files, migrations: [...files.migrations, ['99999999999999_essai.sql', 'create table public.essai_setup (id int primary key); alter table public.essai_setup enable row level security;']] });
+    expect(result.applied).toEqual(['99999999999999_essai.sql']);
+    expect((await runSetupStep(sql, 'migrations', files)).applied).toEqual([]);
+    await sql.query('drop table public.essai_setup');
+  });
+  it('charge fiches, questions et lieux, et peut être rejouée', async () => {
+    for (let pass = 0; pass < 2; pass += 1) {
+      expect(await runSetupStep(sql, 'kb', files)).toEqual({ written: 12 });
+      expect(await runSetupStep(sql, 'questions', files)).toEqual({ written: 120 });
+      expect(await runSetupStep(sql, 'geo', files)).toEqual({ written: 2 });
+    }
+    const place = (await sql.query<{ name_fr: string; name_en: string | null; population: number }>('select name_fr, name_en, population from public.geo_places where geoname_id = 900001')).rows[0];
+    expect(place).toEqual({ name_fr: 'Ville-Test', name_en: null, population: 1234 });
+    expect(Number((await sql.query<{ n: string }>(`select count(*) as n from public.interpretation_kb where kb_version = 'test'`)).rows[0]?.n)).toBe(12);
+    await sql.query(`delete from public.interpretation_kb where kb_version = 'test'`);
+    await sql.query('delete from public.geo_places where geoname_id in (900001, 900002)');
+  });
+});

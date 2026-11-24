@@ -5,7 +5,7 @@ import rolesJson from '../../../../content/roles/roles.v1.json';
 import { SignJWT, createLocalJWKSet, exportJWK, generateKeyPair } from 'jose';
 import { afterAll, beforeEach, describe, expect, inject, it } from 'vitest';
 import mobileFr from '../../../mobile/src/i18n/locales/fr/common.json';
-import { createJwtAuth } from './auth-supabase';
+import { createJwtAuth, createSupabaseAuth } from './auth-supabase';
 import type { AppDeps, OutgoingEmail } from './deps';
 import { createLogger } from './log';
 import { createNameFilter } from './names';
@@ -41,6 +41,28 @@ describe('vérification des jetons', async () => {
     expect(await auth.verify(await sign({ sub: uid }, { audience: 'anon' }))).toBeNull();
     expect(await auth.verify(await sign({ sub: 'pas-un-uuid' }))).toBeNull();
     expect(await auth.verify('n’importe quoi')).toBeNull();
+  });
+});
+
+describe('vérification déléguée à Supabase Auth', () => {
+  const uid = '00000000-0000-4000-8000-00000000abcd';
+  const make = (status: number, body: unknown) => {
+    const calls: { url: string; headers: Record<string, string> }[] = [];
+    const auth = createSupabaseAuth('https://projet.invalid/', 'cle-publique', (async (url: string, init: { headers: Record<string, string> }) => {
+      if (url.includes('jwks')) throw new Error('clés indisponibles');
+      calls.push({ url, headers: init.headers });
+      return new Response(JSON.stringify(body), { status });
+    }) as unknown as typeof fetch);
+    return { auth, calls };
+  };
+  it('accepte un jeton que Supabase reconnaît', async () => {
+    const { auth, calls } = make(200, { id: uid, is_anonymous: true });
+    expect(await auth.verify('jeton')).toEqual({ uid, isAnonymous: true });
+    expect(calls[0]).toEqual({ url: 'https://projet.invalid/auth/v1/user', headers: { apikey: 'cle-publique', authorization: 'Bearer jeton' } });
+  });
+  it('refuse un jeton que Supabase rejette, ou une réponse sans identifiant', async () => {
+    expect(await make(401, {}).auth.verify('jeton')).toBeNull();
+    expect(await make(200, { id: 'x' }).auth.verify('jeton')).toBeNull();
   });
 });
 

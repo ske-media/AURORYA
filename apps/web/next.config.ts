@@ -13,7 +13,10 @@ const securityHeaders = [
 const config: NextConfig = {
   // Les contenus versionnés (prompts, listes) vivent à la racine du dépôt et sont lus à l'exécution par l'API.
   outputFileTracingRoot: join(import.meta.dirname, '..', '..'),
-  outputFileTracingIncludes: { '/api/**': ['../../content/**/*'] },
+  outputFileTracingIncludes: {
+    '/api/**': ['../../content/**/*'],
+    '/api/internal/setup': ['../../supabase/migrations/*.sql', '../../supabase/seed/geo_places.tsv.gz'],
+  },
   poweredByHeader: false,
   headers: async () => [{ source: '/(.*)', headers: securityHeaders }],
 };

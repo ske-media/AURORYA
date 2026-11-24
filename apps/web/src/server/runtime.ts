@@ -7,7 +7,7 @@ import { createSupabaseAuth } from './auth-supabase';
 import type { AppDeps } from './deps';
 import { createLogger } from './log';
 import { createNameFilter, parseBlocklist } from './names';
-import { createPgSql } from './pg-sql';
+import { createPgSql, poolConfigFromUrl } from './pg-sql';
 import { buildRoastPrompts } from './prompts';
 
 /**
@@ -36,8 +36,8 @@ export function getDeps(): AppDeps {
   if (!brand.personaName) throw new Error('content/brand.json : personaName manquant');
   const blocklist = ['fr', 'en'].flatMap((locale) => parseBlocklist(readContent(`blocklist/${locale}.txt`) ?? ''));
   cached = {
-    sql: createPgSql({ connectionString: required('DATABASE_URL') }).sql,
-    auth: createSupabaseAuth(required('SUPABASE_URL')),
+    sql: createPgSql(poolConfigFromUrl(required('DATABASE_URL'), process.env.DATABASE_CA_CERT)).sql,
+    auth: createSupabaseAuth(required('SUPABASE_URL'), process.env.SUPABASE_PUBLISHABLE_KEY),
     logger: createLogger(),
     now: () => new Date(),
     // Aucun fournisseur d'IA tant que O-08 n'est pas tranché : les roasts sont servis par repli.

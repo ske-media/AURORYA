@@ -26,6 +26,16 @@ const wrap = (client: Queryable, pool: pg.Pool | null): Sql => ({
   },
 });
 
+/**
+ * Options de connexion à partir d'une chaîne. La connexion est chiffrée dès que la base n'est pas locale ;
+ * le certificat est vérifié contre l'autorité fournie par DATABASE_CA_CERT quand elle est définie.
+ */
+export function poolConfigFromUrl(connectionString: string, caCert?: string): pg.PoolConfig {
+  const local = /@(localhost|127\.0\.0\.1)[:/]|host=\//.test(connectionString);
+  if (local) return { connectionString };
+  return { connectionString, ssl: caCert ? { ca: caCert, rejectUnauthorized: true } : { rejectUnauthorized: true } };
+}
+
 export function createPgSql(config: pg.PoolConfig): { sql: Sql; close: () => Promise<void> } {
   const pool = new pg.Pool({ max: 5, ...config });
   return { sql: wrap(pool, pool), close: () => pool.end() };
