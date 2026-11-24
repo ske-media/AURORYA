@@ -1,4 +1,4 @@
-// Configuration de l'app (SPEC §15.10). Les valeurs d'environnement viennent d'EAS, jamais du dépôt.
+// Configuration de l'app (SPEC §15.10). Les valeurs d'environnement viennent de la machine de build, jamais du dépôt.
 import type { ConfigContext, ExpoConfig } from 'expo/config';
 
 // Même valeur que palette.midnight (packages/shared) : ce fichier est lu par l'outillage natif,
@@ -20,6 +20,9 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     bundleIdentifier: 'com.aurorya.app',
     supportsTablet: false,
     config: { usesNonExemptEncryption: false },
+    // Fournis par le pipeline de build (ADR-024) : équipe Apple et numéro de build, croissant à chaque envoi.
+    ...(process.env.APPLE_TEAM_ID ? { appleTeamId: process.env.APPLE_TEAM_ID } : {}),
+    ...(process.env.IOS_BUILD_NUMBER ? { buildNumber: process.env.IOS_BUILD_NUMBER } : {}),
   },
   plugins: [
     'expo-router',

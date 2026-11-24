@@ -204,3 +204,19 @@ Décision :
 Limites connues : le lien du site n'accompagne pas l'image (la feuille de partage ne reçoit qu'un fichier) ; pas de grain sur le fond ; pas d'apparition une à une des punchlines, ni son ni retour haptique ; les événements `share_opened` et `share_completed` attendent l'outil de mesure. Le texte de l'autorisation photo n'existe qu'en français.
 À vérifier au premier build : que la capture contient bien le symbole et le glyphe du mode (dessinés par Skia dans la vue) ; sinon, repli sur `react-native-view-shot`.
 Validé par : mode autonome (ADR-013).
+
+## ADR-024 — Build iOS et TestFlight par GitHub Actions, sans le service de build d'Expo
+Date : 2026-11-24 · Statut : appliqué, jamais exécuté
+Contexte : un fondateur demande de se passer d'un compte Expo pour le MVP et de tout piloter depuis un iPhone. Il a un compte Apple Developer actif. Choix fait par questionnaire.
+Décision :
+- Le code de l'app ne change pas : elle reste écrite avec le framework Expo, qui est une bibliothèque libre. Seul le service de build (EAS) est écarté.
+- Workflow `.github/workflows/ios-testflight.yml`, lancé à la main : Mac de GitHub, `expo prebuild` pour produire le projet Xcode, `xcodebuild archive`, puis export signé et envoi à App Store Connect.
+- Signature gérée par Apple (« cloud signing ») avec une clé d'API App Store Connect : aucun certificat ni profil n'est stocké dans le dépôt ou dans les secrets. Quatre secrets GitHub : `APPLE_TEAM_ID`, `ASC_KEY_ID`, `ASC_ISSUER_ID`, `ASC_KEY_P8`.
+- Numéro de build = numéro d'exécution du workflow. Équipe Apple et numéro de build passent par `app.config.ts`.
+- Les adresses publiques de l'app (API, Supabase, clé publique) sont écrites dans le workflow : elles sont embarquées dans l'app et ne sont pas des secrets.
+Conséquences et risques :
+- Coût : sur un dépôt privé, une minute de Mac compte pour dix minutes du forfait GitHub Actions. Un build dure de l'ordre de 20 à 40 minutes.
+- Non vérifié : aucune exécution n'a eu lieu. La signature automatique à l'archive peut exiger qu'au moins un appareil soit enregistré sur le compte Apple ; la clé d'API doit avoir le rôle Admin pour créer le certificat de distribution géré.
+- La fiche de l'app (`com.aurorya.app`) doit exister dans App Store Connect avant le premier envoi : création par un fondateur (interdit absolu sans validation humaine).
+- `apps/mobile/eas.json` reste dans le dépôt, inutilisé.
+Validé par : fondateur (choix de la voie), mise en œuvre en mode autonome.
