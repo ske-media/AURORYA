@@ -57,8 +57,16 @@ Mis à jour : 2026-11-23, après l'API complète des groupes, le site, l'onboard
 - Les textes d'interface (onboarding, groupes, site) sont fonctionnels et rédigés par le développement : à relire par le design.
 - La CI n'a jamais tourné.
 
+## Mise en ligne (2026-11-24)
+- **Vercel** : projet `aurorya` créé dans l'équipe SKE, relié au dépôt, racine `apps/web`, Node 22, région `fra1`. Premier déploiement réussi depuis la branche `claude/hopeful-fermat-ttya03` ; la page d'accueil répond avec ses en-têtes de sécurité. Aucune variable d'environnement n'est encore posée : les routes de l'API échouent tant que la base n'existe pas.
+- **Protection des déploiements** : active sur les adresses `*.vercel.app` (connexion Vercel exigée). L'app mobile ne peut pas appeler l'API sans nom de domaine relié au projet ou sans lever cette protection.
+- **Lieux (T-007)** : `pnpm geo:build` et `pnpm geo:load` ; 162 367 villes avec noms français et anglais, recherche vérifiée sur données réelles en base locale.
+- **TestFlight** : rien n'a été envoyé. Marche à suivre complète dans `docs/runbooks/premier-build.md`.
+
 ## Prochaine action
-Dès que les comptes existent : appliquer les migrations et les imports sur Supabase, déployer sur Vercel, produire un build de développement iOS et dérouler l'onboarding sur appareil. Sans compte : compte et paywall côté serveur (webhook RevenueCat), carte partageable, lecture complète.
+1. Fondateur : créer le projet Supabase `aurorya` (Francfort), activer les connexions anonymes.
+2. Appliquer migrations, fiches, questions et lieux ; poser les variables Vercel ; redéployer.
+3. Fondateur : build de développement iOS, puis dérouler la liste de vérification du runbook.
 
 ## Bloqué, en attente d'un fondateur
 - Comptes à ouvrir : Supabase (T-006), Vercel payant (T-004, T-008, T-009), Expo/EAS (build de T-003), puis RevenueCat, Sentry, Resend, fournisseur d'IA.

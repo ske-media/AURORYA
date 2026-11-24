@@ -70,3 +70,5 @@ Les textes de licence sont dans `apps/mobile/assets/fonts/licenses/`.
 | Service | Usage | Vérifié le | Remarques |
 |---|---|---|---|
 | JPL Horizons (`ssd.jpl.nasa.gov/api/horizons.api`) | Valeurs de référence du moteur (DE441) | 2026-11-23 | Quantité 31 : longitude et latitude écliptiques apparentes de la date. Temps universel pour les tables d'observation, TDB pour les éléments. Connexions parfois coupées : le script réessaie. Depuis Node, passer par curl. |
+| GeoNames (`download.geonames.org/export/dump`) | Villes de plus de 1 000 habitants, noms français et anglais | 2026-11-24 | Licence CC BY 4.0 : attribution à porter sur la page des licences. `cities1000.zip`, `admin1CodesASCII.txt`, `alternateNamesV2.zip` (200 Mo, filtré puis supprimé). |
+| EAS CLI | 27.11.0 | 2026-11-24 | Commandes vérifiées par `--help` : `login`, `init`, `device:create`, `env:create`, `build -p ios --profile`, `--auto-submit-with-profile`. |
