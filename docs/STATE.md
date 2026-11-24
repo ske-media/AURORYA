@@ -73,6 +73,12 @@ Mis à jour : 2026-11-23, après l'API complète des groupes, le site, l'onboard
 - Vérifié ici : `expo prebuild` produit le projet Xcode avec l'équipe, le numéro de build et le texte d'autorisation photo attendus.
 - PR n°2 fusionnée : cache, lecture complète et carte partageable sont en production.
 
+## Compte Apple (2026-11-24)
+- Clé d'API App Store Connect fournie par un fondateur et vérifiée en lecture. Identifiant d'app `com.aurorya.app` **enregistré chez Apple** (définitif), avec l'accord du fondateur par questionnaire.
+- Restent à la main : créer la fiche de l'app dans App Store Connect, poser le secret GitHub `ASC_KEY_P8`.
+- Le compte n'a aucun appareil enregistré : risque pour la signature à l'archive, à voir au premier build.
+- La clé a été transmise dans la conversation : à régénérer une fois le premier build passé.
+
 ## Mise en ligne (2026-11-24)
 - **Vercel** : projet `aurorya` créé dans l'équipe SKE, relié au dépôt, racine `apps/web`, Node 22, région `fra1`. Premier déploiement réussi depuis la branche `claude/hopeful-fermat-ttya03` ; la page d'accueil répond avec ses en-têtes de sécurité. Aucune variable d'environnement n'est encore posée : les routes de l'API échouent tant que la base n'existe pas.
 - **Protection des déploiements** : active sur les adresses `*.vercel.app` (connexion Vercel exigée). L'app mobile ne peut pas appeler l'API sans nom de domaine relié au projet ou sans lever cette protection.
