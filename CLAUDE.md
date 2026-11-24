@@ -37,6 +37,7 @@ Source de vérité : `docs/SPEC.md`. En cas de doute, la lire. Ne jamais la cont
 
 ## Cap produit (demande d'un fondateur, 2026-11-24)
 - Toute architecture se pense pour un grand nombre d'utilisatrices : index sur chaque clé étrangère et chaque filtre, coût par utilisatrice gratuite borné, rien qui parcourt une table entière, cache pour tout ce qui coûte, fonctions sans état.
+- Ne jamais recalculer deux fois la même chose pour une utilisatrice, sauf si le stockage coûte plus que le calcul : tout appel d'IA passe par un cache à clé versionnée (ADR-021).
 - Le modèle est le freemium avec paywall : chaque contenu naît avec sa part gratuite et sa part Premium, et c'est le serveur qui décide du droit (ADR-020).
 
 ## Autonomie et questions aux fondateurs

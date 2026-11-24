@@ -8,7 +8,8 @@ import { createLogger } from './log';
 import { createNameFilter } from './names';
 import { createPgSql } from './pg-sql';
 import { invalidateConfigCache } from './remote-config';
-import { getDaily, getDailyQuestions, julianDayNumber } from './routes/daily';
+import { memoize } from './memo';
+import { getDaily, getDailyQuestions, julianDayNumber, skyOf } from './routes/daily';
 
 const pg = inject('pg');
 const { sql, close } = createPgSql({ host: pg.host, port: pg.port, user: 'postgres', database: 'postgres' });
@@ -32,6 +33,25 @@ afterAll(close);
 beforeEach(async () => {
   await sql.query('truncate public.rate_limits');
   invalidateConfigCache(sql);
+});
+
+describe('mémoïsation', () => {
+  it('ne calcule qu’une fois par clé, et oublie la plus ancienne au-delà de la borne', () => {
+    let calls = 0;
+    const square = memoize((k: string) => { calls += 1; return k.length; }, 2);
+    expect([square('a'), square('a'), square('bb')]).toEqual([1, 1, 2]);
+    expect(calls).toBe(2);
+    square('a');
+    square('ccc');
+    expect(square.size()).toBe(2);
+    square('a');
+    expect(calls).toBe(3);
+    square('bb');
+    expect(calls).toBe(4);
+  });
+  it('ne recalcule pas le ciel du jour', () => {
+    expect(skyOf(deps, '2026-11-24')).toBe(skyOf(deps, '2026-11-24'));
+  });
 });
 
 describe('GET /daily', () => {

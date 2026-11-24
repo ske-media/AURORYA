@@ -51,6 +51,25 @@ export const postCharts = defineRoute({
     const current = (await sql.query<{ id: string; chart_hash: string }>('select id, chart_hash from public.charts where user_id = $1 and is_current', [user.uid])).rows[0];
     if (current?.chart_hash === chart.chartHash) return { body: summary(current.id, chart) };
 
+    // Retour à des données déjà saisies : l'ancien thème redevient courant, avec toutes ses lectures déjà
+    // générées. Rien n'est recalculé ni régénéré, et ce retour ne compte pas dans le quota de modifications.
+    const previous = (await sql.query<{ id: string }>(
+      'select id from public.charts where user_id = $1 and chart_hash = $2 and not is_current order by computed_at desc limit 1', [user.uid, chart.chartHash])).rows[0];
+    if (previous) {
+      await sql.transaction(async (tx) => {
+        await tx.query('update public.charts set is_current = false where user_id = $1 and is_current', [user.uid]);
+        await tx.query('update public.charts set is_current = true where id = $1', [previous.id]);
+        await tx.query(`update public.birth_data set birth_date = $2, birth_time = $3, time_precision = $4, time_window = $5, dst_choice = $6, updated_at = $7
+                        where user_id = $1`, [user.uid, input.date, input.time, input.timePrecision, input.timeWindow, input.dstChoice, now]);
+        const sunSign = chart.bodies.find((b) => b.id === 'sun')?.sign;
+        const moon = chart.bodies.find((b) => b.id === 'moon');
+        await tx.query('update public.group_members set chart_id = $2, sun_sign = $3, moon_sign = $4, asc_sign = $5 where user_id = $1',
+          [user.uid, previous.id, sunSign, moon && !moon.signUncertain ? moon.sign : null, chart.angles?.asc.sign ?? null]);
+        await tx.query('delete from public.group_readings where group_id in (select group_id from public.group_members where user_id = $1)', [user.uid]);
+      });
+      return { body: summary(previous.id, chart) };
+    }
+
     // Quota de modifications : au-delà du tout premier thème, sur trente jours glissants.
     if (current) {
       const quota = await configValue(sql, now, 'quota.birth_edits_per_30d', z.number().int(), 3);

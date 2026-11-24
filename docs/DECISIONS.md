@@ -164,3 +164,18 @@ Décision : ces deux exigences deviennent des critères de relecture de chaque t
 - À faire pour le freemium : webhook RevenueCat et table des droits alimentée, écran de paywall, verrouillage de la lecture complète, offre fondatrice, restauration des achats.
 Conséquences : la migration 8 ajoute treize index, retire l'appel anonyme à `is_group_member` et déplace les extensions dans le schéma `extensions`. Elle a été appliquée en production par le connecteur Supabase et inscrite dans `public.app_migrations`. La fonction `public.rls_auto_enable()`, signalée par les conseils de sécurité, n'appartient pas au projet : elle n'a pas été touchée.
 Validé par : fondateur (cap), mode autonome (mise en œuvre).
+
+## ADR-021 — Ne jamais recalculer deux fois la même chose, sauf si le stockage coûte plus que le calcul (2026-11-24)
+Statut : accepté (demande d'un fondateur)
+Contexte : un fondateur demande qu'un même calcul ne soit jamais refait pour une utilisatrice, sauf si le garder coûte plus cher.
+Mesures sur le moteur réel :
+- 72 631 thèmes (une naissance toutes les 7 heures, 1950 à 2007) donnent 72 631 fiches de roast toutes différentes, même en arrondissant les orbes : un cache partagé entre utilisatrices ne servirait jamais pour le roast.
+- Horoscope personnel du 24 novembre 2026 : 78 891 thèmes donnent 71 542 fiches distinctes, soit 9 % de partage seulement.
+- Calcul d'un thème : moins d'une milliseconde ; ciel du jour : quelques millisecondes ; un appel d'IA : plusieurs secondes et un coût.
+Décision :
+- Tout ce qui passe par l'IA est mis en cache par utilisatrice, avec une clé qui inclut les versions du moteur, des prompts et de la base de règles : thème (empreinte `chart_hash`), roast par mode et par variante, sections et horoscope personnel à venir. Un verrou empêche deux générations simultanées de la même clé.
+- Ce qui est commun à toutes est calculé une fois : horoscope par signe (36 textes par jour, quel que soit le nombre d'utilisatrices) ; ciel du jour mémorisé en mémoire par instance.
+- Revenir à des données de naissance déjà saisies réactive l'ancien thème et toutes ses lectures, sans recalcul ni régénération, et sans compter dans le quota.
+- Pas de cache partagé des roasts entre utilisatrices (aucun partage mesuré) ni de stockage des transits du jour (recalcul en quelques millisecondes, moins cher qu'une écriture en base).
+Conséquences : la règle s'applique à chaque nouvelle génération (sections, horoscope personnel, textes des groupes). À revoir si une mesure future montre un partage significatif.
+Validé par : fondateur (principe), mesures et mise en œuvre en mode autonome.

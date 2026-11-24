@@ -164,6 +164,17 @@ describe('POST /charts', () => {
     expect((await sql.query('select count(*) as n from public.charts where user_id = $1 and is_current', [USERS.lea])).rows[0]?.n).toBe('1');
     expect((await sql.query('select count(*) as n from public.birth_data where user_id = $1', [USERS.lea])).rows[0]?.n).toBe('1');
   });
+  it('retrouve l’ancien thème quand on revient à des données déjà saisies, sans quota ni recalcul', async () => {
+    // Le quota est atteint par le test précédent ; un retour en arrière reste possible.
+    const before = (await sql.query<{ id: string }>('select id from public.charts where user_id = $1 order by computed_at limit 1', [USERS.lea])).rows[0];
+    const response = await call(postCharts, 'POST', birth);
+    expect(response.status).toBe(200);
+    expect((await response.json()).chartId).toBe(before?.id);
+    expect((await sql.query('select count(*) as n from public.charts where user_id = $1', [USERS.lea])).rows[0]?.n).toBe('4');
+    const current = (await sql.query<{ id: string; time: string }>('select c.id, b.birth_time::text as time from public.charts c join public.birth_data b on b.user_id = c.user_id where c.user_id = $1 and c.is_current', [USERS.lea])).rows[0];
+    expect(current).toEqual({ id: before?.id, time: '14:35:00' });
+  });
+
   it('sans heure : ni Ascendant, ni heure supposée présentée comme réelle', async () => {
     await call(putProfile, 'PUT', { firstName: 'Inès', grammaticalGender: 'n' }, 'ines');
     const summary = await (await call(postCharts, 'POST', { ...birth, time: null, timePrecision: 'unknown' }, 'ines')).json();
