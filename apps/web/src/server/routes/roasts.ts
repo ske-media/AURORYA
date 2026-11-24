@@ -10,7 +10,7 @@ import { configValue } from '../remote-config';
 const FALLBACK_RETRY_MS = 10 * 60_000;
 type ReadingRow = { id: string; content: RoastOutput; status: 'ok' | 'fallback'; variant: number; created_at: Date };
 
-async function loadKb(deps: AppDeps, locale: Locale, kbVersion: string, keys: readonly string[]): Promise<(key: string) => KbEntry | null> {
+export async function loadKb(deps: AppDeps, locale: Locale, kbVersion: string, keys: readonly string[]): Promise<(key: string) => KbEntry | null> {
   const { rows } = await deps.sql.query<{ key: string; body: unknown }>(
     'select key, body from public.interpretation_kb where locale = $1 and kb_version = $2 and key = any($3)', [locale, kbVersion, keys]);
   const entries = new Map<string, KbEntry>();
@@ -54,6 +54,8 @@ export const postRoasts = defineRoute({
 
     let variant = 0;
     const cached = await latest();
+    const aiEnabled = await configValue(sql, now, 'flags.ai_generation_enabled', z.boolean(), true);
+    const llm = aiEnabled ? deps.llm : null;
     if (input.regenerate) {
       if (!(await configValue(sql, now, 'flags.roast_regen_enabled', z.boolean(), true))) throw new ApiFailure('FORBIDDEN', 'régénération désactivée');
       if (!(await isPremium(deps, user.uid))) throw new ApiFailure('PREMIUM_REQUIRED', 'régénération réservée au Premium');
@@ -62,14 +64,14 @@ export const postRoasts = defineRoute({
         `select count(*) as n from public.readings where user_id = $1 and kind = 'roast' and variant > 0 and created_at > $2`, [user.uid, new Date(now.getTime() - 86_400_000)])).rows[0];
       if (Number(used?.n ?? 0) >= quota) throw new ApiFailure('QUOTA_EXCEEDED', 'quota de régénération atteint');
       variant = (cached?.variant ?? -1) + 1;
-    } else if (cached && (cached.status === 'ok' || now.getTime() - new Date(cached.created_at).getTime() < FALLBACK_RETRY_MS)) {
-      // Un repli récent est resservi ; passé dix minutes, la génération est retentée.
+    } else if (cached && (cached.status === 'ok' || llm === null || now.getTime() - new Date(cached.created_at).getTime() < FALLBACK_RETRY_MS)) {
+      // Un repli récent est resservi ; passé dix minutes, la génération est retentée, sauf si aucun LLM
+      // n'est disponible : le repli serait recalculé à l'identique (ADR-021).
       return { body: respond(cached, input.mode, labels) };
     } else if (cached) {
       variant = cached.variant;
     }
 
-    const aiEnabled = await configValue(sql, now, 'flags.ai_generation_enabled', z.boolean(), true);
     const keys = [...new Set(chartFacts(chart).map((f) => f.kbKey))];
     const ctx = { chart, mode: input.mode, locale, gender, kb: await loadKb(deps, locale, kbVersion, keys) };
 
@@ -80,7 +82,7 @@ export const postRoasts = defineRoute({
         const again = (await tx.query<ReadingRow>(`select id, content, status, variant, created_at from public.readings where ${cacheWhere} and variant = ${variant}`, cacheParams)).rows[0];
         if (again && again.status === 'ok') return again;
       }
-      const generated = await generateRoast(ctx, { llm: aiEnabled ? deps.llm : null, prompts, requestId });
+      const generated = await generateRoast(ctx, { llm, prompts, requestId });
       if (!generated.ok) throw new ApiFailure('GENERATION_UNAVAILABLE', 'génération indisponible');
       const result: RoastResult = generated.value;
       for (const usage of result.usage) {

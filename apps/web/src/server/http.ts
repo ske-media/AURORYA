@@ -19,6 +19,7 @@ export type RouteContext<I, A extends 'required' | 'none'> = Readonly<{
   user: A extends 'required' ? AuthUser : AuthUser | null;
   input: I;
   params: Readonly<Record<string, string>>;
+  query: URLSearchParams;
   requestId: string;
   locale: 'fr' | 'en';
 }>;
@@ -91,7 +92,7 @@ export function defineRoute<I, O, A extends 'required' | 'none'>(definition: Rou
         input = parsed.data;
       }
 
-      const result = await definition.handler({ deps, user: user as RouteContext<I, A>['user'], input, params, requestId, locale });
+      const result = await definition.handler({ deps, user: user as RouteContext<I, A>['user'], input, params, query: new URL(request.url).searchParams, requestId, locale });
       const status = result.status ?? 200;
       return finish(json(status, status === 204 ? null : result.body));
     } catch (error) {

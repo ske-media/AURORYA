@@ -305,5 +305,35 @@
       "cancel": "Annuler",
       "failed": "La suppression n’a pas abouti. Réessaie dans un instant."
     }
+  },
+  "reading": {
+    "sectionsTitle": "Ta lecture complète",
+    "open": "Lire",
+    "locked": "La suite de cette section fait partie d’Aurorya Premium.",
+    "noTimeNote": "Sans heure de naissance exacte, cette section laisse de côté les maisons.",
+    "anchorsLabel": "Ce que cette section regarde",
+    "section": {
+      "big_three": "Ton trio",
+      "love": "Aimer",
+      "mind": "Penser et dire",
+      "drive": "Agir et construire",
+      "inner_world": "Ton monde intérieur",
+      "growth": "Grandir",
+      "shadow": "Ta part d’ombre",
+      "synthesis": "En une page"
+    },
+    "state": {
+      "error": {
+        "title": "Cette section n’a pas pu être chargée",
+        "body": "Vérifie ta connexion, puis réessaie."
+      },
+      "noRoast": {
+        "title": "Ta lecture n’est pas encore prête",
+        "body": "Elle s’ouvrira dès que ta carte sera écrite dans ce ton."
+      }
+    }
+  },
+  "ui": {
+    "blurFiller": "Ce passage reste réservé. Il parle de ce que ton ciel raconte ici, de ce qui te porte et de ce qui te retient, avec les mots du ton que tu as choisi."
   }
 }

@@ -70,6 +70,19 @@ export const RoastResponseSchema = z.strictObject({
 });
 export type RoastResponse = z.infer<typeof RoastResponseSchema>;
 
+// ——— Lecture complète (SPEC §7.4, §13.3) ———
+const sectionHead = { key: z.enum(SECTION_KEYS), mode: z.enum(TONE_MODES), hook: z.string() };
+/** Sans le droit Premium, le serveur ne renvoie que l'accroche : le texte n'est ni généré ni transmis (D-014). */
+export const SectionResponseSchema = z.discriminatedUnion('locked', [
+  z.strictObject({ ...sectionHead, locked: z.literal(true) }),
+  z.strictObject({
+    ...sectionHead, locked: z.literal(false), status: z.enum(['ok', 'fallback']),
+    paragraphs: z.array(z.string()).min(2).max(4),
+    anchors: z.array(z.strictObject({ anchor: z.string(), label: z.string() })),
+  }),
+]);
+export type SectionResponse = z.infer<typeof SectionResponseSchema>;
+
 // ——— Groupes (SPEC §13.4) ———
 export const GROUP_MAX_MEMBERS = 8;
 

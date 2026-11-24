@@ -6,7 +6,7 @@ export {
   HOOK_MAX_LENGTH, JudgeSchema, type JudgeVerdict, type KbLookup, ROAST_LIMITS, type RoastContext, type RoastPrompts, type RoastResult,
   buildRoastSheet, fallbackRoast, generateRoast, shortHash, validateRoast,
 } from './roast/roast';
-export { sectionFacts } from './sections';
+export { SECTION_FALLBACK_VERSION, fallbackSection, sectionFacts } from './sections';
 export { MEMBER_TOKENS, type MemberToken, NAME_TOKEN, replaceTokens, tokensIn } from './tokens';
 export { applyTypography } from './typography';
 export { type Failure, type FailureCode, type TextContext, checkText } from './validation/checks';

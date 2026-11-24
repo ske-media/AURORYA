@@ -179,3 +179,15 @@ Décision :
 - Pas de cache partagé des roasts entre utilisatrices (aucun partage mesuré) ni de stockage des transits du jour (recalcul en quelques millisecondes, moins cher qu'une écriture en base).
 Conséquences : la règle s'applique à chaque nouvelle génération (sections, horoscope personnel, textes des groupes). À revoir si une mesure future montre un partage significatif.
 Validé par : fondateur (principe), mesures et mise en œuvre en mode autonome.
+
+## ADR-022 — Lecture complète : route, verrou serveur, texte de repli (T-035)
+Date : 2026-11-24 · Statut : appliqué
+Contexte : SPEC §7.4 et §13.3. Le fournisseur d'IA n'est pas choisi (O-08) et le prompt `section.md` n'est pas écrit ; l'écran d'abonnement n'existe pas encore.
+Décision :
+- `GET /api/v1/readings/sections/{key}?mode=` : sans le droit `premium`, le serveur renvoie l'accroche et `locked: true`, rien d'autre ; le texte n'est ni écrit ni transmis (D-014). L'accroche vient du roast du même mode ; sans roast, 404.
+- Avec le droit, la section est écrite une fois puis lue dans `readings` (`kind = full_section`). Tant qu'aucun LLM n'est branché, le texte est le repli de la base de règles : le résumé, dans le mode demandé, des faits les plus saillants de la section (deux à quatre paragraphes, statut `fallback`). Il est plus court que les 180 à 260 mots visés par la SPEC.
+- Clé de cache du repli : `prompt_version = kb-1` (version du gabarit) et version de la base de règles. Le pipeline LLM des sections aura sa propre version de prompt : les replis ne masqueront pas les textes générés.
+- Roast : un repli en cache n'est plus recalculé toutes les dix minutes quand aucun LLM n'est disponible (ADR-021).
+- App : cartes des huit sections sous la roue, écran `reading/[sectionKey]`, zone floutée Skia avec la chaîne fixe `ui.blurFiller`. Sans droit, l'écran affiche une phrase « fait partie d'Aurorya Premium » ; le bouton « Lire la suite » et l'ouverture du paywall viendront avec le ticket des abonnements, pour ne pas poser un bouton qui ne mène nulle part.
+Conséquences : `reading.noTimeNote` est affichée par l'app d'après le thème. À faire au choix du fournisseur : prompt `section.md`, validation, juge.
+Validé par : mode autonome (ADR-013).
