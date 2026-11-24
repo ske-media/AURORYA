@@ -17,7 +17,7 @@ Source de vérité : `docs/SPEC.md`. En cas de doute, la lire. Ne jamais la cont
 - Périmètre strict : le ticket, rien de plus.
 - Statuts : [DÉCIDÉ] appliquer · [ARBITRAGE] appliquer · [OUVERT] ne pas inventer · [À VÉRIFIER] vérifier d'abord.
 - S'arrêter et demander dans les cas de SPEC §1.4.
-- Ne jamais dire qu'un test passe sans l'avoir exécuté.
+- Ne jamais dire qu'un test passe sans l'avoir exécuté, ni sans avoir lu son code de retour (jamais une sortie filtrée seule).
 
 ## Commandes
 - `pnpm typecheck` · `pnpm lint` · `pnpm test`

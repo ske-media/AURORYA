@@ -4,5 +4,10 @@
     "src/**/*",
     "src/**/*.json",
     "../../content/roles/*.json"
-  ]
+  ],
+  "compilerOptions": {
+    "types": [
+      "node"
+    ]
+  }
 }

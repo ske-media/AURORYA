@@ -79,6 +79,8 @@ Mis à jour : 2026-11-23, après l'API complète des groupes, le site, l'onboard
 - Soumission à Apple : structure juridique (O-05), domaine (O-06), disponibilité du nom (O-01), textes légaux relus.
 
 ## Pièges découverts
+- **Typecheck faussement vert (2026-11-23 et 24)** : `pnpm -s typecheck | head` masque la sortie d'erreur des paquets et son code de retour. Le typecheck a échoué sans être vu entre l'ajout des tests de contenus et le correctif du 24 ; les comptes rendus qui l'annonçaient vert sur cette période étaient faux. Toujours lire le code de retour (`echo $?`) d'une commande de vérification, jamais seulement sa sortie filtrée.
+- TypeScript 6 n'inclut plus automatiquement les types de `@types` : un paquet dont les tests lisent des fichiers doit déclarer `"types": ["node"]`.
 - `pg_ctl start` lancé depuis Node avec une sortie en tube bloque indéfiniment : le serveur hérite du tube. Utiliser `stdio: 'ignore'`.
 - La base de règles pèse dans le choix des faits du roast : un test qui fabrique une sortie de LLM doit utiliser la même base que le serveur.
 - Le `\\b` des expressions régulières JavaScript ignore les lettres accentuées : les lexiques de validation passent par une frontière de mot maison.
