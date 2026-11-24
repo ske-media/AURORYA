@@ -191,3 +191,16 @@ Décision :
 - App : cartes des huit sections sous la roue, écran `reading/[sectionKey]`, zone floutée Skia avec la chaîne fixe `ui.blurFiller`. Sans droit, l'écran affiche une phrase « fait partie d'Aurorya Premium » ; le bouton « Lire la suite » et l'ouverture du paywall viendront avec le ticket des abonnements, pour ne pas poser un bouton qui ne mène nulle part.
 Conséquences : `reading.noTimeNote` est affichée par l'app d'après le thème. À faire au choix du fournisseur : prompt `section.md`, validation, juge.
 Validé par : mode autonome (ADR-013).
+
+## ADR-023 — Carte partageable : capture par Skia, partage et enregistrement (T-034)
+Date : 2026-11-24 · Statut : appliqué, non vérifié sur appareil
+Contexte : SPEC §7.3, §15.8, §16.7. La SPEC laissait le choix entre `react-native-view-shot` et une capture Skia « après essai des deux ». Aucun appareil n'est disponible pour l'essai.
+Décision :
+- Capture par `makeImageFromView` de Skia, déjà installé : aucune dépendance native de plus. L'image est ramenée à 1080 × 1920 sur une surface hors écran, quelle que soit la densité de l'écran, écrite en PNG dans le cache, supprimée après usage.
+- La carte est une vue de 360 × 640 points posée d'après le gabarit partagé (`CARD`), en couleurs du thème sombre quel que soit le thème. La réduction d'une punchline trop longue passe par `adjustsFontSizeToFit` avec le minimum du gabarit.
+- Partage par `expo-sharing` (feuille d'iOS, image seule) ; enregistrement par `expo-media-library` avec l'autorisation d'ajout seul, demandée au moment du geste. Versions prises dans la liste de compatibilité du SDK 58 installé.
+- Le domaine sous « Fais le tien » vient de `EXPO_PUBLIC_SITE_HOST` ; absent tant que le domaine n'est pas acheté (O-06), la ligne n'est pas dessinée.
+- Écran de révélation : les trois actions de la SPEC, dans l'ordre (partager, lire le thème complet, créer un groupe), plus « Continuer ».
+Limites connues : le lien du site n'accompagne pas l'image (la feuille de partage ne reçoit qu'un fichier) ; pas de grain sur le fond ; pas d'apparition une à une des punchlines, ni son ni retour haptique ; les événements `share_opened` et `share_completed` attendent l'outil de mesure. Le texte de l'autorisation photo n'existe qu'en français.
+À vérifier au premier build : que la capture contient bien le symbole et le glyphe du mode (dessinés par Skia dans la vue) ; sinon, repli sur `react-native-view-shot`.
+Validé par : mode autonome (ADR-013).

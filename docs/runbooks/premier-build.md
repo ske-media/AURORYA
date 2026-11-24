@@ -49,6 +49,8 @@ npx eas-cli@latest device:create             # enregistre l'iPhone (lien à ouvr
 npx eas-cli@latest env:create --environment development --name EXPO_PUBLIC_API_BASE_URL --value https://<adresse-du-site> --visibility plaintext
 npx eas-cli@latest env:create --environment development --name EXPO_PUBLIC_SUPABASE_URL --value https://<ref>.supabase.co --visibility plaintext
 npx eas-cli@latest env:create --environment development --name EXPO_PUBLIC_SUPABASE_ANON_KEY --value <clé publique> --visibility plaintext
+# Facultatif : le domaine écrit sous « Fais le tien » sur la carte. Sans lui, la ligne n'est pas dessinée.
+npx eas-cli@latest env:create --environment development --name EXPO_PUBLIC_SITE_HOST --value aurorya.vercel.app --visibility plaintext
 npx eas-cli@latest build -p ios --profile development
 ```
 

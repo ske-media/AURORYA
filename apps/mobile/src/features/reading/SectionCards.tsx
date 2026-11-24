@@ -16,6 +16,7 @@ export function SectionCards() {
   if (!roast) return null;
   return (
     <View style={{ gap: theme.spacing.s12 }}>
+      <Button label={t('share.share')} onPress={() => router.push('/share/roast')} />
       <Text variant="title2" accessibilityRole="header">{t('reading.sectionsTitle')}</Text>
       {SECTION_KEYS.map((key) => (
         <Card key={key}>

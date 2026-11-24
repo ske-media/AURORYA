@@ -272,7 +272,10 @@
       "unavailable": "Ta lecture n’est pas encore disponible. Ton thème, lui, est calculé.",
       "modeLabel": "Ton de la lecture",
       "continue": "Continuer",
-      "timeUnknown": "Sans heure de naissance, l’Ascendant et les maisons ne sont pas calculés."
+      "timeUnknown": "Sans heure de naissance, l’Ascendant et les maisons ne sont pas calculés.",
+      "share": "Partager ma carte",
+      "fullReading": "Lire mon thème complet",
+      "createGroup": "Créer un groupe"
     }
   },
   "settings": {
@@ -335,5 +338,26 @@
   },
   "ui": {
     "blurFiller": "Ce passage reste réservé. Il parle de ce que ton ciel raconte ici, de ce qui te porte et de ce qui te retient, avec les mots du ton que tu as choisi."
+  },
+  "share": {
+    "title": "Ma carte",
+    "hideName": "Masquer mon prénom",
+    "share": "Partager ma carte",
+    "save": "Enregistrer l’image",
+    "card": {
+      "titleAnonymous": "Mon ciel",
+      "cta": "Fais le tien"
+    },
+    "notice": {
+      "saved": "Image enregistrée dans tes photos.",
+      "denied": "Aurorya n’a pas l’autorisation d’ajouter une image à tes photos. Tu peux la donner dans les réglages d’iOS.",
+      "failed": "La carte n’a pas pu être préparée. Réessaie dans un instant."
+    },
+    "state": {
+      "empty": {
+        "title": "Pas encore de carte",
+        "body": "Ta carte apparaîtra ici dès que ta lecture sera écrite."
+      }
+    }
   }
 }

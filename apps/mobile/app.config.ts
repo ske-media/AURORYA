@@ -24,6 +24,8 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   plugins: [
     'expo-router',
     'expo-localization',
+    // Ajout seul à la photothèque, demandé au moment d'enregistrer une carte (SPEC §7.3). Aucune lecture des photos.
+    ['expo-media-library', { photosPermission: false, savePhotosPermission: 'Aurorya enregistre ta carte dans tes photos quand tu le demandes.' }],
     ['expo-splash-screen', { backgroundColor: SPLASH_BACKGROUND, image: './assets/icons/splash-symbol.png', imageWidth: 160 }],
   ],
   experiments: { typedRoutes: true },

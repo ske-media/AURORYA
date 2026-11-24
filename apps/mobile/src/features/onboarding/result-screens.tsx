@@ -90,7 +90,7 @@ export function RevealScreen() {
   const { t, i18n } = useTranslation();
   const theme = useTheme();
   const router = useRouter();
-  const { draft, chart, roast, complete } = useOnboarding();
+  const { draft, chart, roast, complete, setResult } = useOnboarding();
   const [mode, setMode] = useState<ToneMode>(draft.toneMode);
   const [shown, setShown] = useState<RoastResponse | null>(roast);
   const [loading, setLoading] = useState(false);
@@ -135,7 +135,10 @@ export function RevealScreen() {
         </Card>
       )) : null}
       {!loading && !shown ? <Card><Text color="textSecondary">{t('onboarding.reveal.unavailable')}</Text></Card> : null}
-      <Button label={t('onboarding.reveal.continue')} onPress={() => { complete(); router.replace('/today'); }} />
+      {!loading && shown ? <Button label={t('onboarding.reveal.share')} onPress={() => { setResult(chart, shown); router.push('/share/roast'); }} /> : null}
+      {!loading && shown ? <Button variant="secondary" label={t('onboarding.reveal.fullReading')} onPress={() => { setResult(chart, shown); router.push(`/reading/big_three?mode=${shown.mode}`); }} /> : null}
+      <Button variant="secondary" label={t('onboarding.reveal.createGroup')} onPress={() => { complete(); router.replace('/groups'); }} />
+      <Button variant="ghost" label={t('onboarding.reveal.continue')} onPress={() => { complete(); router.replace('/today'); }} />
     </Screen>
   );
 }
