@@ -153,3 +153,14 @@ Décision :
 - Pooler du projet : `aws-1-eu-central-1.pooler.supabase.com`, port 6543 (mode transaction).
 Conséquences : l'autorité expire le 26 avril 2031. `DATABASE_CA_CERT` permet de la remplacer sans changer le code. Le mot de passe de la base a été communiqué en clair dans la conversation de travail : à changer, puis mettre à jour `DATABASE_URL` sur Vercel.
 Validé par : mode autonome ; projet et identifiants fournis par un fondateur.
+
+## ADR-020 — Cap : grand nombre d'utilisatrices et freemium avec paywall (2026-11-24)
+Statut : accepté
+Contexte : un fondateur demande que toute l'architecture soit pensée pour un grand nombre d'utilisatrices et pour le modèle freemium avec paywall.
+Décision : ces deux exigences deviennent des critères de relecture de chaque ticket (voir `CLAUDE.md`).
+État au 2026-11-24 :
+- En place : fonctions sans état sur Vercel ; pooler en mode transaction ; lectures directes sous RLS (l'API ne porte que les écritures et les générations) ; cache permanent des lectures, avec verrou contre la double génération ; coût par utilisatrice gratuite borné à trois roasts ; horoscopes par signe à coût fixe ; limites de débit ; index sur les clés étrangères et les filtres de purge (migration 8) ; droit Premium décidé par le serveur, déjà appliqué à la régénération, à la météo du groupe et aux contenus marqués `locked`.
+- À faire avant un trafic important : budget quotidien d'IA et coupe-circuit (§14.11) ; limites de débit hors de Postgres (une écriture par requête aujourd'hui) ; purge planifiée (§12.7) ; cache HTTP des lectures publiques ; mesure de charge ; suivi des erreurs.
+- À faire pour le freemium : webhook RevenueCat et table des droits alimentée, écran de paywall, verrouillage de la lecture complète, offre fondatrice, restauration des achats.
+Conséquences : la migration 8 ajoute treize index, retire l'appel anonyme à `is_group_member` et déplace les extensions dans le schéma `extensions`. Elle a été appliquée en production par le connecteur Supabase et inscrite dans `public.app_migrations`. La fonction `public.rls_auto_enable()`, signalée par les conseils de sécurité, n'appartient pas au projet : elle n'a pas été touchée.
+Validé par : fondateur (cap), mode autonome (mise en œuvre).

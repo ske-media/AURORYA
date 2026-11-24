@@ -35,6 +35,10 @@ Source de vérité : `docs/SPEC.md`. En cas de doute, la lire. Ne jamais la cont
 - Textes visibles : clés i18n, `fr` et `en` toujours ensemble.
 - Fichiers visuels : uniquement via `getAsset('id')`.
 
+## Cap produit (demande d'un fondateur, 2026-11-24)
+- Toute architecture se pense pour un grand nombre d'utilisatrices : index sur chaque clé étrangère et chaque filtre, coût par utilisatrice gratuite borné, rien qui parcourt une table entière, cache pour tout ce qui coûte, fonctions sans état.
+- Le modèle est le freemium avec paywall : chaque contenu naît avec sa part gratuite et sa part Premium, et c'est le serveur qui décide du droit (ADR-020).
+
 ## Autonomie et questions aux fondateurs
 - Mode autonome (ADR-013) : trancher seul, enchaîner les tickets, consigner chaque décision dans `docs/DECISIONS.md`. Ne solliciter un fondateur que pour l'irréversible (loi 15), l'ouverture de comptes, une dépense ou le juridique.
 - Quand une question est inévitable : questionnaire à cliquer, jamais de question en texte libre.

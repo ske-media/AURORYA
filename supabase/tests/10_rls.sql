@@ -120,3 +120,8 @@ select pg_temp.expect((select count(*) from public.profiles) = 2 and (select cou
 select pg_temp.expect((select count(*) from pg_tables t where t.schemaname = 'public' and not exists (
   select 1 from pg_class c join pg_namespace n on n.oid = c.relnamespace where n.nspname = 'public' and c.relname = t.tablename and c.relrowsecurity)) = 0,
   'RLS activée sur toutes les tables du schéma public');
+
+-- Durcissement : la fonction d'appartenance n'est pas appelable sans session.
+set role anon;
+select pg_temp.expect(pg_temp.denied('select public.is_group_member(''20000000-0000-0000-0000-000000000001'')'), 'anon ne peut pas appeler is_group_member');
+reset role;
