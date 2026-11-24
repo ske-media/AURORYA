@@ -142,3 +142,14 @@ Contexte : la SPEC §15.4 prévoit MMKV chiffré. La version actuelle de `react-
 Décision : la session Supabase et le brouillon d'onboarding sont rangés dans le trousseau iOS (`expo-secure-store`), découpés en morceaux de 600 caractères. MMKV sera réévalué avec les membres fantômes.
 Conséquences : aucune dépendance native hors d'Expo pour le stockage. Les lectures sont plus lentes que MMKV ; acceptable pour de petites valeurs.
 Validé par : mode autonome.
+
+## ADR-019 — Mise en place de la base par une route interne, autorité Supabase épinglée (2026-11-24)
+Statut : accepté (mode autonome)
+Contexte : le projet Supabase `glvtyivmnrniwguenwaf` (Francfort) a été créé par un fondateur. Ni le connecteur Supabase de la session ni le poste de travail ne peuvent l'atteindre ; seul le déploiement Vercel le peut.
+Décision :
+- `GET /api/internal/setup?step=…&key=…` applique les migrations (octet pour octet, une seule fois, journalisées dans `public.app_migrations`) et charge fiches, questions et lieux. La route répond 404 tant que `INTERNAL_SETUP_KEY` n'est pas définie ; la variable est retirée après usage.
+- L'historique de migrations de la CLI Supabase n'est pas alimenté : `public.app_migrations` fait foi.
+- La connexion à la base vérifie le certificat du serveur contre « Supabase Root 2021 CA », épinglée dans `apps/web/src/server/supabase-ca.ts` (empreinte SHA-256 `807025ad…cafa`), relevée sur la chaîne présentée par le pooler. À comparer une fois avec le certificat téléchargeable dans le tableau de bord. La vérification n'est jamais désactivée.
+- Pooler du projet : `aws-1-eu-central-1.pooler.supabase.com`, port 6543 (mode transaction).
+Conséquences : l'autorité expire le 26 avril 2031. `DATABASE_CA_CERT` permet de la remplacer sans changer le code. Le mot de passe de la base a été communiqué en clair dans la conversation de travail : à changer, puis mettre à jour `DATABASE_URL` sur Vercel.
+Validé par : mode autonome ; projet et identifiants fournis par un fondateur.
