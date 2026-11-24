@@ -37,6 +37,7 @@ Versions lues dans le gabarit officiel `create-expo-app` (SDK 58) et dans `expo/
 | react-native-gesture-handler, safe-area-context, screens | 3.3.0, 5.11.1, 4.30.1 | MIT | |
 | expo-font, splash-screen, status-bar, system-ui, constants, linking | 58.x | MIT | |
 | expo-localization, expo-haptics, expo-dev-client | 58.0.5, 58.0.8, 58.0.21 | MIT | |
+| expo-file-system, expo-sharing, expo-media-library | 58.0.14, 58.0.23, 58.0.14 | MIT | T-034, versions de la liste de compatibilité du SDK 58 |
 | @shopify/react-native-skia | 2.14.0 | MIT | Installé, pas encore utilisé (roue, T-014). |
 | i18next / react-i18next | 27.2.6 / 18.0.3 | MIT | |
 

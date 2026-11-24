@@ -4,7 +4,7 @@ import type { LlmPort, RoastPrompts } from '@aurorya/ai';
 import { RoleCatalogSchema } from '@aurorya/ai';
 import { DEFAULT_ENGINE_CONFIG } from '@aurorya/astro-engine';
 import rolesJson from '../../../../content/roles/roles.v1.json';
-import { ChartSummarySchema, type KbEntry, type RoastOutput, RoastResponseSchema, SECTION_KEYS, err, ok } from '@aurorya/shared';
+import { ChartSummarySchema, type KbEntry, type RoastOutput, RoastResponseSchema, SECTION_KEYS, SectionResponseSchema, err, ok } from '@aurorya/shared';
 import { afterAll, beforeAll, beforeEach, describe, expect, inject, it } from 'vitest';
 import type { AppDeps, AuthPort } from './deps';
 import { createLogger } from './log';
@@ -13,6 +13,7 @@ import { createPgSql } from './pg-sql';
 import { invalidateConfigCache } from './remote-config';
 import { ageOn, postCharts } from './routes/charts';
 import { getConfig, putProfile } from './routes/profile';
+import { getSection } from './routes/readings';
 import { postRoasts, roastSheetFor } from './routes/roasts';
 
 const roleCatalog = RoleCatalogSchema.parse(rolesJson);
@@ -164,6 +165,17 @@ describe('POST /charts', () => {
     expect((await sql.query('select count(*) as n from public.charts where user_id = $1 and is_current', [USERS.lea])).rows[0]?.n).toBe('1');
     expect((await sql.query('select count(*) as n from public.birth_data where user_id = $1', [USERS.lea])).rows[0]?.n).toBe('1');
   });
+  it('retrouve l’ancien thème quand on revient à des données déjà saisies, sans quota ni recalcul', async () => {
+    // Le quota est atteint par le test précédent ; un retour en arrière reste possible.
+    const before = (await sql.query<{ id: string }>('select id from public.charts where user_id = $1 order by computed_at limit 1', [USERS.lea])).rows[0];
+    const response = await call(postCharts, 'POST', birth);
+    expect(response.status).toBe(200);
+    expect((await response.json()).chartId).toBe(before?.id);
+    expect((await sql.query('select count(*) as n from public.charts where user_id = $1', [USERS.lea])).rows[0]?.n).toBe('4');
+    const current = (await sql.query<{ id: string; time: string }>('select c.id, b.birth_time::text as time from public.charts c join public.birth_data b on b.user_id = c.user_id where c.user_id = $1 and c.is_current', [USERS.lea])).rows[0];
+    expect(current).toEqual({ id: before?.id, time: '14:35:00' });
+  });
+
   it('sans heure : ni Ascendant, ni heure supposée présentée comme réelle', async () => {
     await call(putProfile, 'PUT', { firstName: 'Inès', grammaticalGender: 'n' }, 'ines');
     const summary = await (await call(postCharts, 'POST', { ...birth, time: null, timePrecision: 'unknown' }, 'ines')).json();
@@ -254,5 +266,59 @@ describe('POST /roasts', () => {
     const retried = await (await call(postRoasts, 'POST', { chartId: lea?.id, mode: 'soft' })).json();
     expect(retried.status).toBe('ok');
     expect((await sql.query(`select count(*) as n from public.readings where chart_id = $1 and mode = 'soft'`, [lea?.id])).rows[0]?.n).toBe('1');
+  });
+});
+
+describe('GET /readings/sections/{key}', () => {
+  const section = (key: string, mode: string | null, token: string | null = 'lea') =>
+    getSection(new Request(`https://test.invalid/api/v1/readings/sections/${key}${mode ? `?mode=${mode}` : ''}`, {
+      headers: { ...(token ? { authorization: `Bearer ${token}` } : {}), 'x-app-build': '1' },
+    }), deps(), { key });
+  const sections = async () => Number((await sql.query<{ n: string }>(`select count(*) as n from public.readings where user_id = $1 and kind = 'full_section'`, [USERS.lea])).rows[0]?.n);
+
+  it('refuse sans jeton, sans mode, avec une section inconnue', async () => {
+    expect((await section('love', 'cash', null)).status).toBe(401);
+    expect((await section('love', null)).status).toBe(400);
+    expect((await section('argent', 'cash')).status).toBe(400);
+  });
+  it('sans roast dans ce mode : introuvable', async () => {
+    expect((await section('love', 'expert')).status).toBe(404);
+  });
+  it('sans droit : l’accroche seule, rien d’écrit ni de transmis', async () => {
+    clock = new Date('2027-02-01T10:00:00Z'); // le droit de Léa a expiré
+    const response = await section('love', 'cash');
+    expect(response.status).toBe(200);
+    const body = await response.json();
+    expect(SectionResponseSchema.parse(body)).toMatchObject({ key: 'love', mode: 'cash', locked: true });
+    expect(Object.keys(body).sort()).toEqual(['hook', 'key', 'locked', 'mode']);
+    expect(body.hook.length).toBeGreaterThan(0);
+    expect(await sections()).toBe(0);
+  });
+  it('avec le droit : écrit une fois, puis sert le cache', async () => {
+    const first = await section('love', 'cash');
+    expect(first.status).toBe(201);
+    const body = SectionResponseSchema.parse(await first.json());
+    if (body.locked) throw new Error('section verrouillée');
+    expect(body.paragraphs.length).toBeGreaterThanOrEqual(2);
+    expect(body.anchors.length).toBeGreaterThan(0);
+    expect(body.anchors.every((a) => a.label.length > 0)).toBe(true);
+    clock = new Date(clock.getTime() + 3_600_000);
+    const second = await section('love', 'cash');
+    expect(second.status).toBe(200);
+    expect(await second.json()).toEqual(body);
+    expect(await sections()).toBe(1);
+  });
+  it('un repli de roast n’est pas recalculé tant qu’aucun LLM n’est disponible', async () => {
+    const lea = (await sql.query<{ id: string }>('select id from public.charts where user_id = $1 and is_current', [USERS.lea])).rows[0];
+    // Le repli exige trois punchlines distinctes : une par fiche.
+    await sql.query(`update public.interpretation_kb set body = jsonb_set(body, '{roastAngles,expert}', jsonb_build_array('Une logique exigeante, fiche ' || key || '.'))`);
+    const first = await call(postRoasts, 'POST', { chartId: lea?.id, mode: 'expert' });
+    expect(first.status).toBe(201);
+    const roast = await first.json();
+    expect(roast.status).toBe('fallback');
+    clock = new Date(clock.getTime() + 11 * 60_000);
+    const later = await call(postRoasts, 'POST', { chartId: lea?.id, mode: 'expert' });
+    expect(later.status).toBe(200);
+    expect((await later.json()).readingId).toBe(roast.readingId);
   });
 });

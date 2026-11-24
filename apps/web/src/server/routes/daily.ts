@@ -4,6 +4,7 @@ import type { DailyResponse, Locale, SignId, ToneMode } from '@aurorya/shared';
 import { TONE_MODES } from '@aurorya/shared';
 import type { AppDeps } from '../deps';
 import { ApiFailure, defineRoute, isPremium } from '../http';
+import { memoize } from '../memo';
 
 const DAY_MS = 86_400_000;
 const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
@@ -16,8 +17,19 @@ export const julianDayNumber = (isoDate: string): number => Math.round(Date.pars
  * Question du jour, choisie sans IA : signe de la Lune à 12:00 UTC, puis
  * position = (numéro de jour julien) modulo (nombre de questions approuvées pour ce signe).
  */
+/** Le ciel d'un jour est le même pour toutes : calculé une fois par instance et par configuration. */
+const skyByConfig = new WeakMap<AppDeps['engineConfig'], (date: string) => ReturnType<typeof computeSky>>();
+export const skyOf = (deps: AppDeps, isoDate: string): ReturnType<typeof computeSky> => {
+  let memo = skyByConfig.get(deps.engineConfig);
+  if (!memo) {
+    memo = memoize((date: string) => computeSky(date, deps.engineConfig), 32);
+    skyByConfig.set(deps.engineConfig, memo);
+  }
+  return memo(isoDate);
+};
+
 export async function questionOfDay(deps: AppDeps, isoDate: string, locale: Locale): Promise<{ moonSign: SignId; moonPhase: string; text: string | null }> {
-  const sky = computeSky(isoDate, deps.engineConfig);
+  const sky = skyOf(deps, isoDate);
   const { rows } = await deps.sql.query<{ text: string }>(
     `select text from public.daily_questions where locale = $1 and moon_sign = $2 and status = 'approved' order by position`, [locale, sky.moon.sign]);
   const text = rows.length > 0 ? rows[julianDayNumber(isoDate) % rows.length]?.text ?? null : null;

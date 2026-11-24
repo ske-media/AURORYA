@@ -272,7 +272,10 @@
       "unavailable": "Your reading is not available yet. Your chart, however, is calculated.",
       "modeLabel": "Tone of the reading",
       "continue": "Continue",
-      "timeUnknown": "Without a time of birth, the Ascendant and the houses are not calculated."
+      "timeUnknown": "Without a time of birth, the Ascendant and the houses are not calculated.",
+      "share": "Share my card",
+      "fullReading": "Read my full chart",
+      "createGroup": "Create a group"
     }
   },
   "settings": {
@@ -304,6 +307,57 @@
       "confirm": "Yes, delete everything",
       "cancel": "Cancel",
       "failed": "Deletion did not go through. Try again in a moment."
+    }
+  },
+  "reading": {
+    "sectionsTitle": "Your full reading",
+    "open": "Read",
+    "locked": "The rest of this section is part of Aurorya Premium.",
+    "noTimeNote": "Without an exact birth time, this section leaves the houses aside.",
+    "anchorsLabel": "What this section looks at",
+    "section": {
+      "big_three": "Your trio",
+      "love": "Loving",
+      "mind": "Thinking and speaking",
+      "drive": "Acting and building",
+      "inner_world": "Your inner world",
+      "growth": "Growing",
+      "shadow": "Your shadow side",
+      "synthesis": "On one page"
+    },
+    "state": {
+      "error": {
+        "title": "This section could not be loaded",
+        "body": "Check your connection, then try again."
+      },
+      "noRoast": {
+        "title": "Your reading is not ready yet",
+        "body": "It will open as soon as your card is written in this tone."
+      }
+    }
+  },
+  "ui": {
+    "blurFiller": "This passage stays reserved. It tells what your sky says here, what carries you and what holds you back, in the words of the tone you chose."
+  },
+  "share": {
+    "title": "My card",
+    "hideName": "Hide my first name",
+    "share": "Share my card",
+    "save": "Save image",
+    "card": {
+      "titleAnonymous": "My sky",
+      "cta": "Make yours"
+    },
+    "notice": {
+      "saved": "Image saved to your photos.",
+      "denied": "Aurorya is not allowed to add an image to your photos. You can allow it in iOS settings.",
+      "failed": "The card could not be prepared. Try again in a moment."
+    },
+    "state": {
+      "empty": {
+        "title": "No card yet",
+        "body": "Your card will appear here as soon as your reading is written."
+      }
     }
   }
 }

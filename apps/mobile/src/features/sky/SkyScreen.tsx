@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { ActivityIndicator, View, useWindowDimensions } from 'react-native';
 import { type WheelBodyId, ZodiacWheel } from '@/components/astro/ZodiacWheel';
 import { Banner, Button, Card, EmptyState, Screen, Text } from '@/components/ui';
+import { SectionCards } from '@/features/reading/SectionCards';
 import { NotConfiguredError, useCurrentChart } from '@/services/query';
 import { useTheme } from '@/theme/ThemeProvider';
 import { wheelSize } from './wheel-geometry';
@@ -70,6 +71,7 @@ export function SkyScreen() {
           })}
         </Card>
       ) : null}
+      <SectionCards />
     </Screen>
   );
 }

@@ -1,10 +1,13 @@
 // État serveur (SPEC §15.2) : TanStack Query, clés centralisées.
-import { type ChartPayload, ChartPayloadSchema } from '@aurorya/shared';
+import { type ChartPayload, ChartPayloadSchema, type SectionKey, type SectionResponse, type ToneMode } from '@aurorya/shared';
 import { QueryClient, QueryClientProvider, useQuery } from '@tanstack/react-query';
 import type { ReactNode } from 'react';
-import { ensureSession, getBackend } from './backend';
+import { endpoints, ensureSession, getBackend } from './backend';
 
-export const queryKeys = { currentChart: ['chart', 'current'] as const };
+export const queryKeys = {
+  currentChart: ['chart', 'current'] as const,
+  section: (key: SectionKey, mode: ToneMode) => ['reading', 'section', key, mode] as const,
+};
 
 const client = new QueryClient({ defaultOptions: { queries: { retry: 1, staleTime: 5 * 60_000 } } });
 export const QueryProvider = ({ children }: { children: ReactNode }) => <QueryClientProvider client={client}>{children}</QueryClientProvider>;
@@ -25,5 +28,17 @@ export const useCurrentChart = () =>
       if (error) throw error;
       if (!data) return null;
       return { id: String(data.id), chart: ChartPayloadSchema.parse(data.payload) };
+    },
+  });
+
+/** Une section de la lecture complète (SPEC §7.4). Le serveur décide : texte complet, ou accroche et `locked`. */
+export const useSection = (key: SectionKey, mode: ToneMode) =>
+  useQuery({
+    queryKey: queryKeys.section(key, mode),
+    queryFn: async (): Promise<SectionResponse> => {
+      const backend = getBackend();
+      if (!backend) throw new NotConfiguredError();
+      await ensureSession(backend);
+      return endpoints(backend).getSection(key, mode);
     },
   });

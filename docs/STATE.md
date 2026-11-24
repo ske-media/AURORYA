@@ -51,11 +51,22 @@ Mis à jour : 2026-11-23, après l'API complète des groupes, le site, l'onboard
 
 ## Non fait ou non vérifié
 - Aucun écran n'a tourné sur un iPhone ou un simulateur. Aucun test de rendu de composant.
-- Connexion avec Apple, paywall et RevenueCat, partage de carte, notifications, lecture complète, horoscopes générés, météo du groupe, membres fantômes, animation de l'aurore, feuille de placement détaillée, reste des réglages (notifications, sons, données de naissance).
+- Connexion avec Apple, paywall et RevenueCat, notifications, horoscopes générés, météo du groupe, membres fantômes, animation de l'aurore, feuille de placement détaillée, reste des réglages (notifications, sons, données de naissance).
 - Textes des rôles et des duos (aucun fournisseur d'IA), libellés des rôles « famille » et « collègues », mini-roast par signe du site, pages légales.
 - Envoi d'e-mails (Resend), notifications distantes, tâches planifiées, Sentry, Mixpanel.
 - Les textes d'interface (onboarding, groupes, site) sont fonctionnels et rédigés par le développement : à relire par le design.
 - La CI n'a jamais tourné.
+
+## Lecture complète (T-035, 2026-11-24)
+- Route `GET /api/v1/readings/sections/{key}?mode=` : sans droit Premium, accroche et `locked: true` seulement ; avec le droit, section écrite une fois puis servie depuis le cache (ADR-022). Cinq tests de contrat contre Postgres.
+- Le texte est pour l'instant le repli de la base de règles (statut `fallback`), plus court que la cible de la SPEC : la génération par IA attend le choix du fournisseur (O-08) et le prompt `section.md`.
+- App : cartes des huit sections sous la roue, écran d'une section, zone floutée Skia. Sans droit, pas de bouton « Lire la suite » tant que le paywall n'existe pas. Rien de cela n'a été vu sur un appareil.
+- Pas encore en production : le travail est sur la branche `claude/hopeful-fermat-ttya03`, à fusionner par une nouvelle PR.
+
+## Carte partageable (T-034, 2026-11-24)
+- Écran `share/roast` : carte 360 × 640 d'après le gabarit, option « Masquer mon prénom », partage et enregistrement de l'image (ADR-023). Accessible depuis la révélation et depuis « Mon ciel ».
+- Vérifié : typage, lint, quatre tests du contenu de la carte, export du bundle iOS. **Non vérifié : tout ce qui est natif** (capture, feuille de partage, autorisation photo), faute d'appareil. Trois nouveaux modules natifs : il faut un nouveau build de développement.
+- Le runbook du premier build gagne une variable facultative : `EXPO_PUBLIC_SITE_HOST`.
 
 ## Mise en ligne (2026-11-24)
 - **Vercel** : projet `aurorya` créé dans l'équipe SKE, relié au dépôt, racine `apps/web`, Node 22, région `fra1`. Premier déploiement réussi depuis la branche `claude/hopeful-fermat-ttya03` ; la page d'accueil répond avec ses en-têtes de sécurité. Aucune variable d'environnement n'est encore posée : les routes de l'API échouent tant que la base n'existe pas.
@@ -71,7 +82,7 @@ Mis à jour : 2026-11-23, après l'API complète des groupes, le site, l'onboard
 
 ## Prochaine action
 1. Fondateur : activer les connexions anonymes dans Supabase ; changer le mot de passe de la base (communiqué en clair) ; fournir la clé `service_role` par un canal sûr.
-2. Fusionner la PR n°1 pour obtenir l'adresse de production, puis poser `PUBLIC_SITE_URL`.
+2. Ouvrir et fusionner une PR pour la branche de travail (cache ADR-021, lecture complète T-035) : la production (`https://aurorya.vercel.app`) tourne encore sur l'état de la PR n°1.
 3. Fondateur : build de développement iOS avec les trois variables `EXPO_PUBLIC_*` du runbook.
 
 ## Bloqué, en attente d'un fondateur

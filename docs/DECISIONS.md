@@ -164,3 +164,43 @@ Décision : ces deux exigences deviennent des critères de relecture de chaque t
 - À faire pour le freemium : webhook RevenueCat et table des droits alimentée, écran de paywall, verrouillage de la lecture complète, offre fondatrice, restauration des achats.
 Conséquences : la migration 8 ajoute treize index, retire l'appel anonyme à `is_group_member` et déplace les extensions dans le schéma `extensions`. Elle a été appliquée en production par le connecteur Supabase et inscrite dans `public.app_migrations`. La fonction `public.rls_auto_enable()`, signalée par les conseils de sécurité, n'appartient pas au projet : elle n'a pas été touchée.
 Validé par : fondateur (cap), mode autonome (mise en œuvre).
+
+## ADR-021 — Ne jamais recalculer deux fois la même chose, sauf si le stockage coûte plus que le calcul (2026-11-24)
+Statut : accepté (demande d'un fondateur)
+Contexte : un fondateur demande qu'un même calcul ne soit jamais refait pour une utilisatrice, sauf si le garder coûte plus cher.
+Mesures sur le moteur réel :
+- 72 631 thèmes (une naissance toutes les 7 heures, 1950 à 2007) donnent 72 631 fiches de roast toutes différentes, même en arrondissant les orbes : un cache partagé entre utilisatrices ne servirait jamais pour le roast.
+- Horoscope personnel du 24 novembre 2026 : 78 891 thèmes donnent 71 542 fiches distinctes, soit 9 % de partage seulement.
+- Calcul d'un thème : moins d'une milliseconde ; ciel du jour : quelques millisecondes ; un appel d'IA : plusieurs secondes et un coût.
+Décision :
+- Tout ce qui passe par l'IA est mis en cache par utilisatrice, avec une clé qui inclut les versions du moteur, des prompts et de la base de règles : thème (empreinte `chart_hash`), roast par mode et par variante, sections et horoscope personnel à venir. Un verrou empêche deux générations simultanées de la même clé.
+- Ce qui est commun à toutes est calculé une fois : horoscope par signe (36 textes par jour, quel que soit le nombre d'utilisatrices) ; ciel du jour mémorisé en mémoire par instance.
+- Revenir à des données de naissance déjà saisies réactive l'ancien thème et toutes ses lectures, sans recalcul ni régénération, et sans compter dans le quota.
+- Pas de cache partagé des roasts entre utilisatrices (aucun partage mesuré) ni de stockage des transits du jour (recalcul en quelques millisecondes, moins cher qu'une écriture en base).
+Conséquences : la règle s'applique à chaque nouvelle génération (sections, horoscope personnel, textes des groupes). À revoir si une mesure future montre un partage significatif.
+Validé par : fondateur (principe), mesures et mise en œuvre en mode autonome.
+
+## ADR-022 — Lecture complète : route, verrou serveur, texte de repli (T-035)
+Date : 2026-11-24 · Statut : appliqué
+Contexte : SPEC §7.4 et §13.3. Le fournisseur d'IA n'est pas choisi (O-08) et le prompt `section.md` n'est pas écrit ; l'écran d'abonnement n'existe pas encore.
+Décision :
+- `GET /api/v1/readings/sections/{key}?mode=` : sans le droit `premium`, le serveur renvoie l'accroche et `locked: true`, rien d'autre ; le texte n'est ni écrit ni transmis (D-014). L'accroche vient du roast du même mode ; sans roast, 404.
+- Avec le droit, la section est écrite une fois puis lue dans `readings` (`kind = full_section`). Tant qu'aucun LLM n'est branché, le texte est le repli de la base de règles : le résumé, dans le mode demandé, des faits les plus saillants de la section (deux à quatre paragraphes, statut `fallback`). Il est plus court que les 180 à 260 mots visés par la SPEC.
+- Clé de cache du repli : `prompt_version = kb-1` (version du gabarit) et version de la base de règles. Le pipeline LLM des sections aura sa propre version de prompt : les replis ne masqueront pas les textes générés.
+- Roast : un repli en cache n'est plus recalculé toutes les dix minutes quand aucun LLM n'est disponible (ADR-021).
+- App : cartes des huit sections sous la roue, écran `reading/[sectionKey]`, zone floutée Skia avec la chaîne fixe `ui.blurFiller`. Sans droit, l'écran affiche une phrase « fait partie d'Aurorya Premium » ; le bouton « Lire la suite » et l'ouverture du paywall viendront avec le ticket des abonnements, pour ne pas poser un bouton qui ne mène nulle part.
+Conséquences : `reading.noTimeNote` est affichée par l'app d'après le thème. À faire au choix du fournisseur : prompt `section.md`, validation, juge.
+Validé par : mode autonome (ADR-013).
+
+## ADR-023 — Carte partageable : capture par Skia, partage et enregistrement (T-034)
+Date : 2026-11-24 · Statut : appliqué, non vérifié sur appareil
+Contexte : SPEC §7.3, §15.8, §16.7. La SPEC laissait le choix entre `react-native-view-shot` et une capture Skia « après essai des deux ». Aucun appareil n'est disponible pour l'essai.
+Décision :
+- Capture par `makeImageFromView` de Skia, déjà installé : aucune dépendance native de plus. L'image est ramenée à 1080 × 1920 sur une surface hors écran, quelle que soit la densité de l'écran, écrite en PNG dans le cache, supprimée après usage.
+- La carte est une vue de 360 × 640 points posée d'après le gabarit partagé (`CARD`), en couleurs du thème sombre quel que soit le thème. La réduction d'une punchline trop longue passe par `adjustsFontSizeToFit` avec le minimum du gabarit.
+- Partage par `expo-sharing` (feuille d'iOS, image seule) ; enregistrement par `expo-media-library` avec l'autorisation d'ajout seul, demandée au moment du geste. Versions prises dans la liste de compatibilité du SDK 58 installé.
+- Le domaine sous « Fais le tien » vient de `EXPO_PUBLIC_SITE_HOST` ; absent tant que le domaine n'est pas acheté (O-06), la ligne n'est pas dessinée.
+- Écran de révélation : les trois actions de la SPEC, dans l'ordre (partager, lire le thème complet, créer un groupe), plus « Continuer ».
+Limites connues : le lien du site n'accompagne pas l'image (la feuille de partage ne reçoit qu'un fichier) ; pas de grain sur le fond ; pas d'apparition une à une des punchlines, ni son ni retour haptique ; les événements `share_opened` et `share_completed` attendent l'outil de mesure. Le texte de l'autorisation photo n'existe qu'en français.
+À vérifier au premier build : que la capture contient bien le symbole et le glyphe du mode (dessinés par Skia dans la vue) ; sinon, repli sur `react-native-view-shot`.
+Validé par : mode autonome (ADR-013).

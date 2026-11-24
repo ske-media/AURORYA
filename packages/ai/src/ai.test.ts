@@ -3,7 +3,7 @@ import { describe, expect, it } from 'vitest';
 import exactJson from './__fixtures__/chart-exact.json';
 import unknownJson from './__fixtures__/chart-unknown-time.json';
 import {
-  type LlmPort, type RoastContext, applyTypography, buildRoastSheet, chartFacts, checkText, factLabel, fallbackRoast,
+  type LlmPort, type RoastContext, applyTypography, buildRoastSheet, chartFacts, checkText, factLabel, fallbackRoast, fallbackSection,
   generateRoast, replaceTokens, scoreFacts, sectionFacts, selectRoastFacts, shortHash, tokensIn, validateRoast,
 } from './index';
 
@@ -249,6 +249,18 @@ describe('roast', () => {
     const bodies = new Set(f.value.punchlines.flatMap((p) => sheet.find((s) => s.fact.factId === p.anchor)?.fact.bodies ?? []));
     expect(bodies.size).toBeGreaterThanOrEqual(2);
     expect(new Set(f.value.punchlines.map((p) => p.anchor)).size).toBe(3);
+  });
+
+  it('écrit une section de repli : deux à quatre paragraphes distincts, ancrés, ou rien sans base de règles', () => {
+    for (const key of SECTION_KEYS) {
+      const section = fallbackSection(ctx, key);
+      if (!section.ok) continue;
+      expect(section.value.paragraphs.length).toBeGreaterThanOrEqual(2);
+      expect(new Set(section.value.paragraphs).size).toBe(section.value.paragraphs.length);
+      expect(section.value.anchors.length).toBeGreaterThan(0);
+    }
+    expect(fallbackSection(ctx, 'big_three').ok).toBe(true);
+    expect(fallbackSection({ ...ctx, kb: () => null }, 'love')).toEqual({ ok: false, error: { code: 'KB_MISSING', detail: 'section love' } });
   });
 
   it('signale l’indisponibilité quand la base de règles est vide', async () => {
