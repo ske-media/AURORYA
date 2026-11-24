@@ -211,7 +211,7 @@ Contexte : un fondateur demande de se passer d'un compte Expo pour le MVP et de 
 Décision :
 - Le code de l'app ne change pas : elle reste écrite avec le framework Expo, qui est une bibliothèque libre. Seul le service de build (EAS) est écarté.
 - Workflow `.github/workflows/ios-testflight.yml`, lancé à la main : Mac de GitHub, `expo prebuild` pour produire le projet Xcode, `xcodebuild archive`, puis export signé et envoi à App Store Connect.
-- Signature gérée par Apple (« cloud signing ») avec une clé d'API App Store Connect : aucun certificat ni profil n'est stocké dans le dépôt ou dans les secrets. Quatre secrets GitHub : `APPLE_TEAM_ID`, `ASC_KEY_ID`, `ASC_ISSUER_ID`, `ASC_KEY_P8`.
+- Signature gérée par Apple (« cloud signing ») avec une clé d'API App Store Connect : aucun certificat ni profil n'est stocké dans le dépôt ou dans les secrets. Un seul secret GitHub : `ASC_KEY_P8`. L'équipe, l'identifiant de clé et l'émetteur sont de simples identifiants, écrits dans le workflow.
 - Numéro de build = numéro d'exécution du workflow. Équipe Apple et numéro de build passent par `app.config.ts`.
 - Les adresses publiques de l'app (API, Supabase, clé publique) sont écrites dans le workflow : elles sont embarquées dans l'app et ne sont pas des secrets.
 Conséquences et risques :

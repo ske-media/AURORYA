@@ -43,7 +43,7 @@ Voie retenue pour le MVP. Tout se fait dans un navigateur.
 
 1. **App Store Connect → Utilisateurs et accès → Intégrations → API App Store Connect** : créer une clé d'équipe, rôle **Admin**. Noter l'identifiant de la clé et l'identifiant de l'émetteur, télécharger le fichier `.p8` (une seule fois possible).
 2. **developer.apple.com → Identifiants** : enregistrer l'identifiant d'app `com.aurorya.app`. **App Store Connect → Apps → +** : créer l'app avec cet identifiant.
-3. **GitHub → dépôt → Settings → Secrets and variables → Actions** : créer `APPLE_TEAM_ID`, `ASC_KEY_ID`, `ASC_ISSUER_ID`, `ASC_KEY_P8` (tout le contenu du fichier `.p8`).
+3. **GitHub → dépôt → Settings → Secrets and variables → Actions** : créer `ASC_KEY_P8` (tout le contenu du fichier `.p8`). L'équipe, l'identifiant de clé et l'émetteur sont écrits dans le workflow : ce ne sont pas des secrets.
 4. **GitHub → Actions → iOS TestFlight → Run workflow**. En cas d'échec, les 150 dernières lignes du journal sont affichées et les journaux complets sont joints à l'exécution.
 5. Le build apparaît dans TestFlight après le traitement par Apple.
 

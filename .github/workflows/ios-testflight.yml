@@ -17,22 +17,19 @@ jobs:
       EXPO_PUBLIC_SUPABASE_ANON_KEY: sb_publishable_xBUGPDaBCeq7CIGm7D6QaA_OVdwZX9v
       EXPO_PUBLIC_SITE_HOST: aurorya.vercel.app
       APP_ENV: production
-      APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
-      ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
-      ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+      # Identifiants, pas des secrets : sans le fichier .p8 (secret ASC_KEY_P8), ils n'ouvrent rien.
+      APPLE_TEAM_ID: C8T4LVB6QG
+      ASC_KEY_ID: P383AJ28V7
+      ASC_ISSUER_ID: 42463e88-3977-4b3d-9492-8765165d0f2f
       # Le numéro de build doit croître à chaque envoi : le numéro d'exécution du workflow convient.
       IOS_BUILD_NUMBER: ${{ github.run_number }}
     steps:
       - uses: actions/checkout@v4
-      - name: Secrets Apple présents
+      - name: Clé Apple présente
         env:
           ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
         run: |
-          missing=""
-          for name in APPLE_TEAM_ID ASC_KEY_ID ASC_ISSUER_ID ASC_KEY_P8; do
-            if [ -z "${!name}" ]; then missing="$missing $name"; fi
-          done
-          if [ -n "$missing" ]; then echo "::error::Secrets manquants dans Settings → Secrets and variables → Actions :$missing"; exit 1; fi
+          if [ -z "$ASC_KEY_P8" ]; then echo "::error::Secret manquant dans Settings → Secrets and variables → Actions : ASC_KEY_P8"; exit 1; fi
           mkdir -p "$RUNNER_TEMP/asc"
           printf '%s\n' "$ASC_KEY_P8" > "$RUNNER_TEMP/asc/AuthKey_${ASC_KEY_ID}.p8"
           grep -q "BEGIN PRIVATE KEY" "$RUNNER_TEMP/asc/AuthKey_${ASC_KEY_ID}.p8" || { echo "::error::ASC_KEY_P8 doit contenir tout le fichier .p8, lignes BEGIN et END comprises."; exit 1; }
