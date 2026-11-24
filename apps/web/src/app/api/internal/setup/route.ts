@@ -4,6 +4,7 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { safeEqual } from '@/server/invites';
 import { getDeps } from '@/server/runtime';
+import { readPostgresTlsChain } from '@/server/tls-chain';
 import { SETUP_STEPS, type SetupFiles, type SetupStep, runSetupStep } from '@/server/setup';
 
 export const maxDuration = 300;
@@ -37,6 +38,15 @@ export async function GET(request: Request): Promise<Response> {
   const url = new URL(request.url);
   if (!expected || expected.length < 24 || !safeEqual(url.searchParams.get('key') ?? '', expected)) return new Response(null, { status: 404 });
   const step = url.searchParams.get('step') ?? '';
+  if (step === 'tls-chain') {
+    // Diagnostic : chaîne de certificats du serveur de base, pour renseigner DATABASE_CA_CERT.
+    try {
+      const target = new URL(process.env.DATABASE_URL ?? '');
+      return Response.json({ step, result: await readPostgresTlsChain(target.hostname, Number(target.port || 5432)) });
+    } catch (error) {
+      return Response.json({ step, error: error instanceof Error ? error.message : 'erreur inconnue' }, { status: 500 });
+    }
+  }
   if (!(SETUP_STEPS as readonly string[]).includes(step)) return Response.json({ error: 'étape inconnue', steps: SETUP_STEPS }, { status: 400 });
   try {
     return Response.json({ step, result: await runSetupStep(getDeps().sql, step as SetupStep, loadFiles()) });
