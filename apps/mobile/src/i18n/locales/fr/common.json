@@ -1,0 +1,309 @@
+{
+  "brand": {
+    "name": "Aurorya",
+    "tagline": "The sky, unfiltered"
+  },
+  "persona": {
+    "name": "Ava",
+    "disclosure": "{{name}}, l’astrologue d’Aurorya, est une intelligence artificielle."
+  },
+  "tabs": {
+    "today": "Aujourd’hui",
+    "sky": "Mon ciel",
+    "groups": "Mes groupes"
+  },
+  "today": {
+    "title": "Aujourd’hui",
+    "greeting": "Bonjour {{name}}",
+    "moon": "Lune en {{sign}} · {{phase}}",
+    "questionLabel": "La question du jour",
+    "horoscopeLabel": "Ton signe aujourd’hui",
+    "personalLocked": "Ton horoscope personnel, calculé sur ton thème, fait partie d’Aurorya Premium.",
+    "phase": {
+      "new_moon": "nouvelle lune",
+      "waxing_crescent": "premier croissant",
+      "first_quarter": "premier quartier",
+      "waxing_gibbous": "lune gibbeuse croissante",
+      "full_moon": "pleine lune",
+      "waning_gibbous": "lune gibbeuse décroissante",
+      "last_quarter": "dernier quartier",
+      "waning_crescent": "dernier croissant"
+    },
+    "state": {
+      "empty": {
+        "title": "Rien à lire pour l’instant",
+        "body": "Ton horoscope du jour s’affichera ici."
+      },
+      "error": {
+        "title": "La page du jour n’a pas pu être chargée",
+        "body": "Vérifie ta connexion, puis réessaie."
+      },
+      "noHoroscope": "L’horoscope de ton signe n’est pas encore prêt pour aujourd’hui."
+    }
+  },
+  "sky": {
+    "title": "Mon ciel",
+    "state": {
+      "empty": {
+        "title": "Ton ciel n’est pas encore calculé",
+        "body": "Ton thème natal s’affichera ici."
+      },
+      "error": {
+        "title": "Ton ciel n’a pas pu être chargé",
+        "body": "Vérifie ta connexion, puis réessaie."
+      }
+    },
+    "timeUnknown": {
+      "banner": "Sans heure de naissance exacte, la roue s’affiche sans Ascendant ni maisons."
+    },
+    "wheelLabel": "Roue de ton thème natal : {{summary}}.",
+    "showList": "Voir en liste",
+    "showWheel": "Voir la roue",
+    "retrograde": "rétrograde",
+    "signUncertain": "signe incertain sans l’heure",
+    "orb": "orbe {{orb}}°",
+    "applying": "appliquant",
+    "separating": "séparant",
+    "aspect": {
+      "conjunction": "Conjonction",
+      "opposition": "Opposition",
+      "trine": "Trigone",
+      "square": "Carré",
+      "sextile": "Sextile"
+    }
+  },
+  "groups": {
+    "title": "Mes groupes",
+    "state": {
+      "empty": {
+        "title": "Aucun groupe pour l’instant",
+        "body": "Crée un groupe ou rejoins-en un avec un code."
+      },
+      "error": {
+        "title": "Tes groupes n’ont pas pu être chargés",
+        "body": "Vérifie ta connexion, puis réessaie."
+      }
+    },
+    "create": {
+      "title": "Créer un groupe",
+      "name": "Nom du groupe",
+      "submit": "Créer",
+      "type": {
+        "friends": "Copines",
+        "couple": "Couple",
+        "family": "Famille",
+        "colleagues": "Collègues"
+      }
+    },
+    "join": {
+      "title": "Rejoindre avec un code",
+      "code": "Code d’invitation",
+      "check": "Vérifier le code",
+      "preview": "{{inviter}} t’invite à rejoindre « {{group}} ».",
+      "consent": "En rejoignant ce groupe, les autres membres verront ton prénom, tes signes (Soleil, Lune, Ascendant) et ta place dans la lecture du groupe. Ils ne verront jamais ta date, ton heure ni ton lieu de naissance.",
+      "displayName": "Prénom affiché dans ce groupe",
+      "accept": "J’accepte et je rejoins",
+      "invalid": "Ce code n’est pas valide ou a expiré."
+    },
+    "error": {
+      "ACCOUNT_REQUIRED": "Crée ton compte pour pouvoir créer un groupe : sans compte, tu le perdrais en changeant de téléphone.",
+      "NAME_REJECTED": "Ce nom n’est pas accepté.",
+      "QUOTA_EXCEEDED": "Tu as atteint le nombre maximal de groupes.",
+      "CONFLICT": "Tu fais déjà partie de ce groupe, ou il est complet.",
+      "generic": "L’action n’a pas abouti. Réessaie dans un instant."
+    },
+    "detail": {
+      "members": "{{count}} membres",
+      "invite": "Inviter",
+      "inviteMessage": "Rejoins mon groupe « {{group}} » sur Aurorya avec le code {{code}}.",
+      "inviteMessageWithLink": "Rejoins mon groupe « {{group}} » sur Aurorya : {{url}} (code {{code}}).",
+      "roles": "Les rôles du groupe",
+      "duos": "Les duos",
+      "duo_fusion": "Le duo le plus accordé",
+      "duo_sparks": "Le duo le plus électrique",
+      "and": "{{a}} et {{b}}",
+      "needTwo": "Invite au moins une personne pour lire les rôles du groupe.",
+      "unavailable": "La lecture de ce groupe n’est pas encore disponible.",
+      "leave": "Quitter le groupe",
+      "open": "Ouvrir"
+    }
+  },
+  "common": {
+    "retry": "Réessayer",
+    "loading": "Chargement",
+    "close": "Fermer",
+    "back": "Retour"
+  },
+  "notFound": {
+    "title": "Cette page n’existe pas",
+    "action": "Revenir à l’accueil"
+  },
+  "gallery": {
+    "title": "Galerie",
+    "colors": "Couleurs",
+    "typography": "Typographie",
+    "components": "Composants",
+    "sampleText": "Le ciel, tel qu’il est.",
+    "primary": "Bouton principal",
+    "secondary": "Bouton secondaire",
+    "ghost": "Bouton discret",
+    "loading": "En cours",
+    "disabled": "Désactivé",
+    "chip": "Puce",
+    "chipSelected": "Puce choisie",
+    "card": "Une carte posée sur la surface.",
+    "banner": "Un bandeau d’information."
+  },
+  "modes": {
+    "soft": {
+      "name": "Lune",
+      "description": "Douce : rassurer et éclairer."
+    },
+    "cash": {
+      "name": "Mars",
+      "description": "Cash : faire rire en visant juste."
+    },
+    "expert": {
+      "name": "Saturne",
+      "description": "Experte : expliquer avec rigueur."
+    }
+  },
+  "onboarding": {
+    "progress": "Étape {{current}} sur {{total}}",
+    "continue": "Continuer",
+    "welcome": {
+      "title": "Ton thème natal, dans le ton que tu choisis",
+      "subtitle": "Aurorya calcule ton vrai thème natal et te le raconte : doux, cash ou expert.",
+      "firstName": "Ton prénom",
+      "firstNameError": "Utilise seulement des lettres, des espaces, des tirets ou des apostrophes.",
+      "grammarLabel": "Pour accorder mes phrases",
+      "grammar": {
+        "f": "elle",
+        "m": "il",
+        "n": "neutre"
+      }
+    },
+    "birthDate": {
+      "title": "{{name}}, quelle est ta date de naissance ?"
+    },
+    "ageGate": {
+      "body": "Aurorya est réservée aux personnes de {{age}} ans et plus. Rien de ce que tu as saisi n’est conservé."
+    },
+    "birthTime": {
+      "title": "À quelle heure ?",
+      "subtitle": "L’heure donne l’Ascendant et les maisons.",
+      "exact": "Je connais mon heure",
+      "approx": "À peu près",
+      "unknown": "Je ne sais pas",
+      "window": {
+        "night": "La nuit, de minuit à six heures",
+        "morning": "Le matin, de six heures à midi",
+        "afternoon": "L’après-midi, de midi à dix-huit heures",
+        "evening": "Le soir, de dix-huit heures à minuit"
+      },
+      "help": "Ton heure figure sur ton acte de naissance intégral ou ton carnet de santé. Tu pourras la préciser plus tard dans les réglages."
+    },
+    "birthPlace": {
+      "title": "Où es-tu née ?",
+      "search": "Ville de naissance",
+      "confirm": "Lieu de naissance : {{place}}",
+      "help": "Si ta commune est introuvable, choisis la ville importante la plus proche.",
+      "state": {
+        "empty": "Aucune ville trouvée.",
+        "error": "La recherche est indisponible pour l’instant."
+      }
+    },
+    "quiz": {
+      "title": "Trois questions, et c’est parti",
+      "submit": "Voir mon ciel",
+      "interests": {
+        "question": "Tu viens pour…",
+        "love": "l’amour",
+        "work": "le travail",
+        "self": "mieux me comprendre",
+        "relationships": "mes relations"
+      },
+      "level": {
+        "question": "L’astrologie et toi",
+        "beginner": "je découvre",
+        "intermediate": "je connais mon signe et mon ascendant",
+        "advanced": "je sais lire un thème"
+      },
+      "tone": {
+        "question": "Comment je te parle ?"
+      }
+    },
+    "computing": {
+      "title": "Je regarde ton ciel",
+      "profile": "J’enregistre ton prénom",
+      "chart": "Je calcule ton thème",
+      "roast": "J’écris ta lecture",
+      "state": {
+        "error": {
+          "title": "Le calcul n’a pas abouti",
+          "body": "Vérifie ta connexion, puis réessaie."
+        },
+        "unconfigured": {
+          "title": "L’app n’est pas reliée à son serveur",
+          "body": "Cette version de développement n’a pas d’adresse de serveur configurée."
+        },
+        "ageRestricted": {
+          "title": "Aurorya n’est pas encore pour toi",
+          "body": "L’app est réservée aux personnes de seize ans et plus. Rien n’a été conservé."
+        },
+        "timeNonexistent": {
+          "title": "Cette heure n’a pas existé",
+          "body": "Ce jour-là, à cet endroit, les horloges ont sauté cette heure. Vérifie ton heure de naissance."
+        },
+        "nameRejected": {
+          "title": "Ce prénom n’est pas accepté",
+          "body": "Choisis un autre prénom pour continuer."
+        }
+      },
+      "fix": "Corriger"
+    },
+    "reveal": {
+      "title": "Le ciel de {{name}}",
+      "bigThree": {
+        "sun": "Soleil {{sign}}",
+        "moon": "Lune {{sign}}",
+        "asc": "Ascendant {{sign}}"
+      },
+      "unavailable": "Ta lecture n’est pas encore disponible. Ton thème, lui, est calculé.",
+      "modeLabel": "Ton de la lecture",
+      "continue": "Continuer",
+      "timeUnknown": "Sans heure de naissance, l’Ascendant et les maisons ne sont pas calculés."
+    }
+  },
+  "settings": {
+    "title": "Réglages",
+    "open": "Réglages",
+    "tone": "Ton par défaut",
+    "account": {
+      "title": "Mon compte",
+      "anonymous": "Tu n’as pas encore de compte : tes données ne vivent que sur ce téléphone.",
+      "email": "Adresse e-mail",
+      "sendCode": "Recevoir un code",
+      "code": "Code reçu par e-mail",
+      "verify": "Créer mon compte",
+      "codeSent": "Un code vient de partir à cette adresse.",
+      "created": "Ton compte est créé.",
+      "failed": "Cela n’a pas abouti. Vérifie l’adresse ou le code, puis réessaie.",
+      "signedIn": "Compte : {{email}}"
+    },
+    "about": {
+      "title": "À propos",
+      "version": "Version {{version}}",
+      "disclaimer": "Aurorya est un outil de divertissement et d’introspection. Ce n’est ni un conseil médical, ni psychologique, ni financier, ni juridique."
+    },
+    "delete": {
+      "title": "Supprimer mon compte",
+      "body": "Ton profil, tes données de naissance, ton thème, tes lectures et tes groupes seront supprimés définitivement.",
+      "subscription": "La suppression n’arrête pas un abonnement Apple : il se résilie dans les réglages de l’App Store.",
+      "start": "Supprimer mon compte",
+      "confirm": "Oui, tout supprimer",
+      "cancel": "Annuler",
+      "failed": "La suppression n’a pas abouti. Réessaie dans un instant."
+    }
+  }
+}

@@ -1,0 +1,230 @@
+{
+  "planet_sign:uranus:aries": {
+    "keywords": ["impulsion", "rupture franche", "audace", "indépendance"],
+    "essence": "Uranus en Bélier associe le besoin de liberté à l’élan du premier pas : une génération qui préfère ouvrir la voie plutôt que demander la permission. À l’échelle d’une personne, la rupture se décide vite et s’assume seule.",
+    "light": ["Courage de commencer sans modèle ni filet", "Capacité à trancher quand tout le monde hésite", "Énergie neuve face aux situations bloquées"],
+    "shadow": ["Impatience devant tout ce qui demande de la durée", "Ruptures décidées sur un coup de sang", "Difficulté à supporter une consigne"],
+    "behaviors": ["Quitter une réunion qui tourne en rond", "Lancer un projet avant d’avoir fini de l’expliquer", "Refuser un conseil pour le principe, puis l’appliquer en douce"],
+    "summary": {
+      "soft": "Tu portes l’élan de celles et ceux qui osent en premier. Quand quelque chose t’enferme, tu sens très vite qu’il faut bouger, et ce réflexe ouvre souvent la route aux autres.",
+      "cash": "Ta liberté n’attend pas le feu vert. Tu claques la porte d’abord, tu cherches où dormir ensuite.",
+      "expert": "Uranus en Bélier, placement générationnel, lie l’émancipation à l’initiative individuelle. Chez vous, le besoin de rupture s’exprime par l’acte immédiat plutôt que par la négociation."
+    },
+    "roastAngles": {
+      "soft": ["Tu as ce courage rare de commencer avant que quelqu’un ait dit que c’était possible."],
+      "cash": ["Tu quittes un groupe de discussion comme d’autres claquent une portière.", "Le mode d’emploi, tu le lis après, pour vérifier que tu avais raison de t’en passer."],
+      "expert": ["Uranus en Bélier : l’indépendance s’y conquiert par l’action, quitte à brûler l’étape de la concertation."]
+    },
+    "roastWeight": 1,
+    "avoid": ["Réduire le placement à de la colère", "Présenter un trait de génération comme un destin personnel"]
+  },
+  "planet_sign:uranus:taurus": {
+    "keywords": ["valeurs bousculées", "matière", "lenteur rebelle", "autonomie concrète"],
+    "essence": "Uranus en Taureau fait passer le changement par le concret : rapport aux ressources, au confort, au vivant. Une génération qui remet en cause ce qui paraissait solide ; chez une personne, la liberté se construit lentement, puis ne se négocie plus.",
+    "light": ["Réformes patientes qui tiennent dans la durée", "Inventivité pratique, appliquée au quotidien", "Fidélité à ses propres valeurs plutôt qu’aux usages"],
+    "shadow": ["Résistance obstinée au changement venu des autres", "Revirements soudains après une longue immobilité", "Attachement au confort présenté comme un principe"],
+    "behaviors": ["Garder la même tasse depuis toujours et changer de métier en une semaine", "Bricoler une solution maison plutôt qu’acheter celle de tout le monde", "Refuser de se presser quand quelqu’un réclame une adaptation rapide"],
+    "summary": {
+      "soft": "Chez toi, la liberté a les pieds sur terre. Tu changes peu, mais quand tu changes, c’est du solide : tu réinventes tranquillement ta façon de vivre, de posséder, de savourer.",
+      "cash": "Tu refuses de bouger pendant des lustres, puis tu retournes toute ta vie un mardi matin. Sans prévenir, évidemment.",
+      "expert": "Uranus en Taureau, signe fixe de terre, inscrit la rupture dans la matière et les valeurs. Chez vous, l’émancipation avance par longues résistances suivies de bascules nettes."
+    },
+    "roastAngles": {
+      "soft": ["Tu fais ta révolution à feu doux, et c’est pour ça qu’elle tient."],
+      "cash": ["Tu mets une éternité à changer de canapé et une soirée à changer de vie.", "Ton idée de la rébellion : faire exactement pareil, mais à ta façon et à ton rythme."],
+      "expert": ["Uranus en Taureau : l’inertie puis la secousse, rarement l’entre-deux. Le changement s’y vit par paliers."]
+    },
+    "roastWeight": 1,
+    "avoid": ["Parler d’instabilité financière ou donner un conseil d’argent", "Réduire le signe à l’entêtement"]
+  },
+  "planet_sign:uranus:gemini": {
+    "keywords": ["idées neuves", "curiosité électrique", "parole libre", "zapping"],
+    "essence": "Uranus en Gémeaux électrise la pensée et la parole : une génération qui bouscule les manières d’apprendre, de dire et de relier les idées. Chez une personne, la liberté passe par le droit de changer d’avis et de sujet.",
+    "light": ["Esprit vif qui relie des idées éloignées", "Goût d’apprendre hors des cadres prévus", "Parole qui débloque une conversation figée"],
+    "shadow": ["Attention qui saute avant d’avoir fini", "Opinions changées trop vite pour être suivies", "Agitation mentale difficile à couper"],
+    "behaviors": ["Ouvrir dix onglets pour répondre à une seule question", "Finir les phrases des autres, pas toujours dans le bon sens", "Abandonner un livre au milieu pour en commencer un autre"],
+    "summary": {
+      "soft": "Ton esprit a besoin d’air. Tu captes les idées au vol, tu les relies autrement, et ta curiosité ouvre des fenêtres là où les autres voyaient des murs.",
+      "cash": "Tu changes d’avis plus vite que de sujet, et tu changes de sujet au milieu de ta propre phrase.",
+      "expert": "Uranus en Gémeaux, signe mutable d’air, porte la rupture sur le terrain mental : langage, apprentissages, circulation des idées. Chez vous, l’indépendance est d’abord intellectuelle."
+    },
+    "roastAngles": {
+      "soft": ["Tu penses en éclairs, et certains de ces éclairs illuminent vraiment toute la pièce."],
+      "cash": ["Tu envoies sept messages d’affilée là où un seul aurait suffi, et le dernier contredit le premier.", "Tu défends une idée avec passion le lundi et son contraire, avec la même passion, le jeudi."],
+      "expert": ["Uranus en Gémeaux : pensée par associations rapides, brillante dans l’intuition, moins dans la continuité."]
+    },
+    "roastWeight": 1,
+    "avoid": ["Confondre vivacité d’esprit et superficialité", "Évoquer un manque de concentration comme un diagnostic"]
+  },
+  "planet_sign:uranus:cancer": {
+    "keywords": ["foyer réinventé", "racines mobiles", "famille choisie", "besoin d’espace"],
+    "essence": "Uranus en Cancer déplace la rupture vers l’intime : foyer, famille, appartenance. Une génération qui redessine les manières d’habiter et de faire tribu ; chez une personne, le besoin de cocon cohabite avec celui de pouvoir en sortir.",
+    "light": ["Capacité à créer un chez-soi hors des modèles reçus", "Liens choisis, entretenus avec inventivité", "Sensibilité qui devine ce qui étouffe dans un cadre familial"],
+    "shadow": ["Humeur imprévisible dès que l’intimité se resserre", "Va-et-vient entre besoin d’attaches et envie de fuir", "Susceptibilité face aux traditions imposées"],
+    "behaviors": ["Réaménager son salon à chaque changement de saison", "Adorer les repas de famille et partir avant le dessert", "Appeler « maison » un endroit que personne d’autre n’aurait choisi"],
+    "summary": {
+      "soft": "Tu as besoin d’un nid, mais d’un nid à ta façon. Tu inventes ta propre manière d’appartenir, et tu sais offrir aux tiens un refuge où chacun garde sa liberté.",
+      "cash": "Tu réclames un cocon, puis tu étouffes dedans. Résultat : tu déménages souvent, surtout dans ta tête.",
+      "expert": "Uranus en Cancer applique sa logique de rupture au registre du foyer et de la filiation. Chez vous, l’émancipation passe par une redéfinition de l’appartenance plus que par un départ."
+    },
+    "roastAngles": {
+      "soft": ["Tu construis des foyers qui ressemblent à des ports : on y revient parce qu’on peut en partir."],
+      "cash": ["Tu veux qu’on te laisse tranquille, mais tu vérifies quand même que tout le monde est bien rentré.", "Les traditions familiales, tu les contestes à table, la bouche pleine du plat traditionnel."],
+      "expert": ["Uranus en Cancer : besoin de sécurité affective et besoin d’espace s’y disputent la priorité, par alternance."]
+    },
+    "roastWeight": 1,
+    "avoid": ["Supposer une histoire familiale difficile", "Parler de rupture avec les parents comme d’un fait"]
+  },
+  "planet_sign:uranus:leo": {
+    "keywords": ["singularité affichée", "création", "fierté rebelle", "panache"],
+    "essence": "Uranus en Lion relie la liberté au droit d’être unique et de le montrer. Une génération qui revendique l’expression de soi et la création sans tutelle ; chez une personne, l’originalité devient une affaire de fierté.",
+    "light": ["Créativité qui ose le geste personnel", "Chaleur communicative au service d’idées neuves", "Courage d’assumer sa différence en public"],
+    "shadow": ["Besoin d’attirer les regards jusque dans la dissidence", "Orgueil piqué quand l’originalité passe inaperçue", "Tendance à confondre liberté et caprice"],
+    "behaviors": ["Refuser de s’habiller comme le reste de la soirée, puis guetter les réactions", "Signer chaque création, même une liste de courses", "Quitter un projet où sa patte ne se voit plus"],
+    "summary": {
+      "soft": "Tu as une façon bien à toi de briller : pas pour écraser, mais pour montrer qu’on a le droit d’être soi. Ta singularité donne de l’élan aux autres.",
+      "cash": "Tu veux te distinguer de tout le monde, à condition que tout le monde le remarque.",
+      "expert": "Uranus en Lion, signe fixe de feu, attache l’indépendance à l’expression personnelle et à l’acte créateur. Chez vous, la rupture prend volontiers une forme démonstrative."
+    },
+    "roastAngles": {
+      "soft": ["Tu oses être toi à voix haute, et ça donne aux autres la permission d’essayer."],
+      "cash": ["Tu joues la carte de l’électron libre, mais avec un éclairage de scène soigneusement réglé.", "Tu ne suis aucune mode : tu attends juste qu’on te demande d’où vient la tienne."],
+      "expert": ["Uranus en Lion : l’originalité s’y vit comme une question d’honneur, et supporte mal l’anonymat."]
+    },
+    "roastWeight": 1,
+    "avoid": ["Réduire le placement à de l’égocentrisme", "Commenter l’apparence ou le style vestimentaire de la personne"]
+  },
+  "planet_sign:uranus:virgo": {
+    "keywords": ["méthode réinventée", "précision", "travail autrement", "esprit critique"],
+    "essence": "Uranus en Vierge porte la rupture dans le quotidien : façons de travailler, d’organiser, de soigner les détails. Une génération qui réforme par la technique et l’analyse ; chez une personne, la liberté passe par une méthode à soi.",
+    "light": ["Ingéniosité pour améliorer ce qui fonctionne mal", "Regard critique qui repère la faille utile", "Autonomie dans l’organisation du travail"],
+    "shadow": ["Nervosité devant l’imprévu mal rangé", "Critique permanente des procédures des autres", "Perfectionnisme qui retarde le changement voulu"],
+    "behaviors": ["Refaire le tableau de suivi de toute l’équipe sans que personne l’ait demandé", "Tester plusieurs applications d’organisation en parallèle", "Corriger une notice avant de s’en servir"],
+    "summary": {
+      "soft": "Tu changes le monde par petites touches précises. Là où d’autres rêvent de grand soir, tu améliores un geste, une habitude, un outil, et tout fonctionne mieux.",
+      "cash": "Ta révolution tient dans un tableur. Tu ne renverses pas la table : tu la remets d’équerre et tu notes qui l’avait déplacée.",
+      "expert": "Uranus en Vierge, signe mutable de terre, oriente l’innovation vers les méthodes, les outils et le travail quotidien. Chez vous, l’indépendance se joue dans l’organisation concrète."
+    },
+    "roastAngles": {
+      "soft": ["Tu réinventes le quotidien un détail après l’autre, et le quotidien te dit merci."],
+      "cash": ["Tu contestes le règlement, mais avec des notes de bas de page et une proposition de version corrigée.", "Tu as une routine très stricte que tu changes entièrement toutes les trois semaines."],
+      "expert": ["Uranus en Vierge : l’esprit de réforme s’y exerce par l’analyse, au risque de l’agitation perfectionniste."]
+    },
+    "roastWeight": 1,
+    "avoid": ["Glisser vers des remarques sur l’hygiène de vie ou le bien-être médical", "Réduire le signe à la maniaquerie"]
+  },
+  "planet_sign:uranus:libra": {
+    "keywords": ["liens réinventés", "couple hors modèle", "équité", "indépendance à deux"],
+    "essence": "Uranus en Balance bouscule les codes de la relation : couple, association, contrat. Une génération qui expérimente d’autres façons de s’engager ; chez une personne, le lien n’a de valeur que s’il laisse de l’air.",
+    "light": ["Sens de l’équité appliqué aux relations", "Capacité à inventer des accords sur mesure", "Diplomatie au service d’idées nouvelles"],
+    "shadow": ["Engagement accepté puis remis en cause d’un coup", "Besoin d’espace exprimé trop tard", "Indécision entre fusion et distance"],
+    "behaviors": ["Renégocier les règles d’une colocation au bout d’une semaine", "Vouloir vivre ensemble, mais chacun avec ses clés", "Rompre poliment, avec un message très bien tourné"],
+    "summary": {
+      "soft": "Tu crois aux liens qui respirent. Tu cherches une façon d’être à deux où personne ne s’efface, et tu as le talent d’inventer des accords qui n’existaient pas avant toi.",
+      "cash": "Tu veux une relation stable, libre, équilibrée et surprenante. Tu attends surtout que l’autre devine dans quel ordre.",
+      "expert": "Uranus en Balance, signe cardinal d’air, situe la rupture dans le champ relationnel et contractuel. Chez vous, l’indépendance se négocie au sein du lien plutôt que contre lui."
+    },
+    "roastAngles": {
+      "soft": ["Tu inventes des façons d’aimer où chacun garde sa fenêtre ouverte."],
+      "cash": ["Tu dis « on fait comme tu veux », puis tu proposes un amendement à chaque point de l’accord.", "Tu réclames de l’air dans le couple pile le jour où l’autre commence à s’y sentir bien."],
+      "expert": ["Uranus en Balance : l’engagement y reste révocable, et l’équité prime sur la permanence."]
+    },
+    "roastWeight": 1,
+    "avoid": ["Annoncer une séparation ou juger un choix de vie amoureuse", "Présumer de l’orientation ou du modèle de couple"]
+  },
+  "planet_sign:uranus:scorpio": {
+    "keywords": ["tabous bousculés", "vérité crue", "intensité", "tout ou rien"],
+    "essence": "Uranus en Scorpion porte la rupture vers ce qui se tait : secrets, rapports de force, attachements profonds. Une génération qui brise les non-dits ; chez une personne, la liberté passe par des remises à plat radicales.",
+    "light": ["Lucidité devant ce que les autres évitent de regarder", "Capacité à se réinventer après une crise", "Refus des faux-semblants"],
+    "shadow": ["Radicalité qui ne laisse aucune porte de sortie", "Goût de la provocation sur les sujets sensibles", "Méfiance soudaine envers les proches"],
+    "behaviors": ["Poser la question que toute la tablée évitait", "Supprimer d’un coup des années de photos et de contacts", "Disparaître le temps de se transformer, puis revenir sans explication"],
+    "summary": {
+      "soft": "Tu ne fais pas semblant. Quand quelque chose sonne faux, tu préfères tout remettre à plat, et cette exigence de vérité finit souvent par libérer les autres aussi.",
+      "cash": "Chez toi, pas de demi-mesure : soit tu gardes un secret pendant dix ans, soit tu le lâches en plein dîner.",
+      "expert": "Uranus en Scorpion, signe fixe d’eau où plusieurs auteurs le disent exalté, porte l’émancipation sur les zones de pouvoir et de non-dit. Chez vous, la rupture est totale ou n’est pas."
+    },
+    "roastAngles": {
+      "soft": ["Tu oses regarder là où ça dérange, et c’est souvent là que les choses se dénouent."],
+      "cash": ["Tu fais le ménage dans tes contacts comme on vide un appartement : rien ne reste, même pas les cadres.", "Une conversation légère te met mal à l’aise : tu cherches aussitôt ce qu’elle cache."],
+      "expert": ["Uranus en Scorpion : l’exaltation que lui prêtent certains auteurs y donne des ruptures profondes, peu réversibles."]
+    },
+    "roastWeight": 1,
+    "avoid": ["Tout vocabulaire de sexualité ou de disparition", "Dramatiser : intensité ne veut pas dire danger"]
+  },
+  "planet_sign:uranus:sagittarius": {
+    "keywords": ["croyances bousculées", "horizon ouvert", "liberté de pensée", "ailleurs"],
+    "essence": "Uranus en Sagittaire ouvre grand l’horizon : convictions, savoirs, voyages. Une génération qui conteste les vérités reçues et cherche son propre sens ; chez une personne, la liberté se mesure à la distance qu’il reste à parcourir.",
+    "light": ["Ouverture d’esprit curieuse des autres cultures", "Enthousiasme pour les idées qui élargissent le cadre", "Franchise dans le débat"],
+    "shadow": ["Certitudes neuves défendues avec autant de raideur que les anciennes", "Fuite en avant dès que l’engagement se précise", "Promesses plus larges que le calendrier"],
+    "behaviors": ["Réserver un aller simple sur un coup de tête", "Changer de philosophie de vie après un seul documentaire", "Contredire le professeur dès la première séance"],
+    "summary": {
+      "soft": "Tu as besoin d’horizon pour respirer. Tu remets en question ce qu’on t’a appris, non par esprit de contradiction, mais parce que tu cherches un sens qui soit vraiment le tien.",
+      "cash": "Tu refuses qu’on te dise quoi penser, puis tu expliques à toute la tablée quoi penser. Avec des anecdotes de voyage.",
+      "expert": "Uranus en Sagittaire, signe mutable de feu, déplace la rupture vers les croyances et les systèmes de pensée. Chez vous, l’indépendance est d’abord une liberté de conviction et de mouvement."
+    },
+    "roastAngles": {
+      "soft": ["Tu cherches ta vérité comme on cherche un pays : en marchant, le nez au vent."],
+      "cash": ["Tu as une nouvelle vision du monde à chaque retour de week-end, et un exposé prêt pour le lundi.", "Dès qu’on te parle d’engagement, tu regardes les horaires de train. Juste pour voir."],
+      "expert": ["Uranus en Sagittaire : contestation des dogmes, parfois remplacés par un dogme de la liberté."]
+    },
+    "roastWeight": 1,
+    "avoid": ["Viser une croyance ou une confession précise", "Annoncer un départ à l’étranger"]
+  },
+  "planet_sign:uranus:capricorn": {
+    "keywords": ["structures réformées", "autorité contestée", "ambition autonome", "règles réécrites"],
+    "essence": "Uranus en Capricorne s’attaque aux cadres : hiérarchies, institutions, carrières toutes tracées. Une génération qui réforme de l’intérieur ; chez une personne, la liberté se gagne en bâtissant ses propres règles plutôt qu’en fuyant toute règle.",
+    "light": ["Sens stratégique mis au service du changement", "Capacité à moderniser une structure sans la détruire", "Discipline personnelle, hors de toute hiérarchie imposée"],
+    "shadow": ["Défiance réflexe envers toute autorité", "Froideur quand un plan est remis en cause", "Tendance à remplacer un cadre rigide par un autre"],
+    "behaviors": ["Contester l’organigramme tout en visant le sommet", "Monter sa propre structure pour ne plus avoir de supérieur", "Rédiger un règlement intérieur pour une colocation de deux personnes"],
+    "summary": {
+      "soft": "Tu sais que la liberté se construit. Plutôt que de tout envoyer promener, tu bâtis patiemment des cadres plus justes, et cette rigueur rend tes changements durables.",
+      "cash": "Tu détestes qu’on te donne des ordres, alors tu vises le poste de la personne qui les donne.",
+      "expert": "Uranus en Capricorne, signe cardinal de terre, applique la rupture aux structures d’autorité et aux trajectoires sociales. Chez vous, l’émancipation prend la forme d’une réforme méthodique."
+    },
+    "roastAngles": {
+      "soft": ["Tu changes les règles en les comprenant mieux que ceux qui les ont écrites."],
+      "cash": ["Tu fais la révolution en costume, avec un plan sur cinq ans et un budget prévisionnel.", "Tu contestes la hiérarchie, sauf quand elle a le bon goût de te placer tout en haut."],
+      "expert": ["Uranus en Capricorne : la liberté y passe par la maîtrise des cadres, non par leur abandon."]
+    },
+    "roastWeight": 1,
+    "avoid": ["Glisser vers un commentaire sur les institutions ou les opinions", "Donner un conseil de carrière"]
+  },
+  "planet_sign:uranus:aquarius": {
+    "keywords": ["collectif", "réseaux", "avant-garde", "indépendance d’esprit"],
+    "essence": "Uranus en Verseau se trouve dans le signe qu’il gouverne : le besoin de liberté y prend une dimension collective. Une génération tournée vers les réseaux, les idées neuves et l’égalité ; chez une personne, l’originalité cherche son groupe.",
+    "light": ["Vision d’ensemble tournée vers ce qui s’invente", "Sens de l’amitié et du projet commun", "Tolérance réelle pour les parcours atypiques"],
+    "shadow": ["Distance affective derrière les grandes idées", "Refus par principe de ce qui plaît au plus grand nombre", "Entêtement sur une théorie devenue identité"],
+    "behaviors": ["Adopter un outil avant tout le monde et s’en lasser dès qu’il devient courant", "Avoir beaucoup de connaissances et très peu de confidents", "Défendre l’humanité entière en oubliant de répondre à un message"],
+    "summary": {
+      "soft": "Tu penses en « nous ». Tu sens ce qui pourrait changer pour tout le monde, et ta façon de vivre libre laisse de la place aux autres, à leurs bizarreries comme aux tiennes.",
+      "cash": "Tu aimes l’humanité en général. Ce sont les gens en particulier, avec leurs appels imprévus, qui te fatiguent.",
+      "expert": "Uranus en Verseau est en domicile : ses significations de rupture, de réseau et d’innovation s’y expriment sans filtre. Chez vous, l’indépendance se pense à l’échelle du groupe."
+    },
+    "roastAngles": {
+      "soft": ["Tu rêves d’un monde où chacun aurait sa place, même celles et ceux qui ne rentrent dans aucune case."],
+      "cash": ["Tu veux appartenir à un groupe, mais seulement à un groupe de gens qui refusent d’appartenir à un groupe.", "Dès qu’une chose que tu aimes devient populaire, tu la quittes avec l’air de l’avoir toujours su."],
+      "expert": ["Uranus en Verseau, en domicile : idéal collectif affirmé, attachement individuel nettement plus distant."]
+    },
+    "roastWeight": 1,
+    "avoid": ["Présenter la distance affective comme de la froideur de cœur", "Associer le placement à une opinion ou à un camp"]
+  },
+  "planet_sign:uranus:pisces": {
+    "keywords": ["imaginaire libéré", "intuition", "frontières dissoutes", "rêve en mouvement"],
+    "essence": "Uranus en Poissons fait passer la rupture par l’imaginaire et la sensibilité. Une génération qui dissout les frontières entre les mondes, les arts, les croyances ; chez une personne, la liberté ressemble à une échappée plus qu’à un combat.",
+    "light": ["Intuitions soudaines, souvent justes", "Imagination qui renouvelle les formes", "Compassion sans condition d’appartenance"],
+    "shadow": ["Évasion quand la réalité demande une décision", "Changements flous, annoncés sans être accomplis", "Difficulté à tenir une limite claire"],
+    "behaviors": ["Disparaître d’une soirée sans dire au revoir", "Changer de projet de vie après un rêve marquant", "Répondre « on verra » à toute question comportant une date"],
+    "summary": {
+      "soft": "Ta liberté passe par le rêve. Tu captes des choses que personne n’a encore formulées, et ton imagination trouve des passages là où la logique ne voyait qu’un mur.",
+      "cash": "Tu ne claques pas la porte : tu t’évapores. On te cherche encore que tu as déjà changé de vie intérieure.",
+      "expert": "Uranus en Poissons, signe mutable d’eau, porte la rupture sur le plan de l’imaginaire et de la sensibilité collective. Chez vous, l’émancipation procède par dissolution plus que par affrontement."
+    },
+    "roastAngles": {
+      "soft": ["Tu as des éclairs d’intuition qui arrivent de loin, comme des cartes postales sans timbre."],
+      "cash": ["Ta façon de rompre avec une situation : ne plus y penser très fort jusqu’à ce qu’elle disparaisse.", "Tu as une idée géniale sous la douche et tu l’as oubliée avant d’avoir trouvé la serviette."],
+      "expert": ["Uranus en Poissons : l’intuition y devance le raisonnement, et la limite claire s’y perd volontiers."]
+    },
+    "roastWeight": 1,
+    "avoid": ["Parler de fuite dans des substances ou de fragilité psychique", "Viser une croyance ou une spiritualité précise"]
+  }
+}

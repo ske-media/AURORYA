@@ -1,0 +1,393 @@
+{
+ "schemaVersion": 1,
+ "engineVersion": "1.0.0",
+ "configVersion": "1",
+ "ephemeris": "astronomy-engine",
+ "libraryVersion": "2.1.19",
+ "tzdataVersion": "2026f",
+ "chartHash": "sha256:be6c6bc84ef3681d656ac42a1c9e06fbd4fb1ea9f7ef90e3e0ceb4743c10447f",
+ "input": {
+  "timePrecision": "exact",
+  "tzIana": "Europe/Paris",
+  "utc": "1993-04-17T12:35:00Z",
+  "utcOffsetMinutes": 120,
+  "julianDayUt": 2449095.02430556
+ },
+ "flags": {
+  "timeAssumed": false,
+  "dstAmbiguous": false,
+  "houseSystemFallback": false
+ },
+ "houseSystem": "placidus",
+ "bodies": [
+  {
+   "id": "sun",
+   "longitude": 27.506488,
+   "latitude": -0.000003,
+   "speed": 0.977913,
+   "sign": "aries",
+   "degree": 27,
+   "minute": 30,
+   "house": 9,
+   "retrograde": false,
+   "signUncertain": false,
+   "signCandidates": null
+  },
+  {
+   "id": "moon",
+   "longitude": 338.419614,
+   "latitude": 5.109717,
+   "speed": 11.847872,
+   "sign": "pisces",
+   "degree": 8,
+   "minute": 25,
+   "house": 7,
+   "retrograde": false,
+   "signUncertain": false,
+   "signCandidates": null
+  },
+  {
+   "id": "mercury",
+   "longitude": 2.637405,
+   "latitude": -2.645098,
+   "speed": 1.427466,
+   "sign": "aries",
+   "degree": 2,
+   "minute": 38,
+   "house": 8,
+   "retrograde": false,
+   "signUncertain": false,
+   "signCandidates": null
+  },
+  {
+   "id": "venus",
+   "longitude": 4.25727,
+   "latitude": 4.851588,
+   "speed": -0.20485,
+   "sign": "aries",
+   "degree": 4,
+   "minute": 15,
+   "house": 8,
+   "retrograde": true,
+   "signUncertain": false,
+   "signCandidates": null
+  },
+  {
+   "id": "mars",
+   "longitude": 115.186791,
+   "latitude": 2.193344,
+   "speed": 0.443185,
+   "sign": "cancer",
+   "degree": 25,
+   "minute": 11,
+   "house": 12,
+   "retrograde": false,
+   "signUncertain": false,
+   "signCandidates": null
+  },
+  {
+   "id": "jupiter",
+   "longitude": 187.557426,
+   "latitude": 1.581575,
+   "speed": -0.115016,
+   "sign": "libra",
+   "degree": 7,
+   "minute": 33,
+   "house": 3,
+   "retrograde": true,
+   "signUncertain": false,
+   "signCandidates": null
+  },
+  {
+   "id": "saturn",
+   "longitude": 328.070139,
+   "latitude": -1.167073,
+   "speed": 0.079778,
+   "sign": "aquarius",
+   "degree": 28,
+   "minute": 4,
+   "house": 7,
+   "retrograde": false,
+   "signUncertain": false,
+   "signCandidates": null
+  },
+  {
+   "id": "uranus",
+   "longitude": 292.156288,
+   "latitude": -0.451029,
+   "speed": 0.007504,
+   "sign": "capricorn",
+   "degree": 22,
+   "minute": 9,
+   "house": 5,
+   "retrograde": false,
+   "signUncertain": false,
+   "signCandidates": null
+  },
+  {
+   "id": "neptune",
+   "longitude": 291.145014,
+   "latitude": 0.680572,
+   "speed": 0.002978,
+   "sign": "capricorn",
+   "degree": 21,
+   "minute": 8,
+   "house": 5,
+   "retrograde": false,
+   "signUncertain": false,
+   "signCandidates": null
+  },
+  {
+   "id": "pluto",
+   "longitude": 234.867639,
+   "latitude": 14.825326,
+   "speed": -0.023789,
+   "sign": "scorpio",
+   "degree": 24,
+   "minute": 52,
+   "house": 4,
+   "retrograde": true,
+   "signUncertain": false,
+   "signCandidates": null
+  },
+  {
+   "id": "north_node",
+   "longitude": 253.284875,
+   "latitude": 0,
+   "speed": -0.113676,
+   "sign": "sagittarius",
+   "degree": 13,
+   "minute": 17,
+   "house": 4,
+   "retrograde": false,
+   "signUncertain": false,
+   "signCandidates": null
+  }
+ ],
+ "angles": {
+  "asc": {
+   "longitude": 141.418142,
+   "sign": "leo",
+   "degree": 21,
+   "minute": 25
+  },
+  "mc": {
+   "longitude": 39.147006,
+   "sign": "taurus",
+   "degree": 9,
+   "minute": 8
+  }
+ },
+ "houses": [
+  {
+   "house": 1,
+   "cusp": 141.418142,
+   "sign": "leo"
+  },
+  {
+   "house": 2,
+   "cusp": 161.014873,
+   "sign": "virgo"
+  },
+  {
+   "house": 3,
+   "cusp": 186.314492,
+   "sign": "libra"
+  },
+  {
+   "house": 4,
+   "cusp": 219.147006,
+   "sign": "scorpio"
+  },
+  {
+   "house": 5,
+   "cusp": 257.453723,
+   "sign": "sagittarius"
+  },
+  {
+   "house": 6,
+   "cusp": 292.813885,
+   "sign": "capricorn"
+  },
+  {
+   "house": 7,
+   "cusp": 321.418142,
+   "sign": "aquarius"
+  },
+  {
+   "house": 8,
+   "cusp": 341.014873,
+   "sign": "pisces"
+  },
+  {
+   "house": 9,
+   "cusp": 6.314492,
+   "sign": "aries"
+  },
+  {
+   "house": 10,
+   "cusp": 39.147006,
+   "sign": "taurus"
+  },
+  {
+   "house": 11,
+   "cusp": 77.453723,
+   "sign": "gemini"
+  },
+  {
+   "house": 12,
+   "cusp": 112.813885,
+   "sign": "cancer"
+  }
+ ],
+ "aspects": [
+  {
+   "a": "sun",
+   "b": "mars",
+   "type": "square",
+   "orb": 2.3197,
+   "applying": false
+  },
+  {
+   "a": "sun",
+   "b": "saturn",
+   "type": "sextile",
+   "orb": 0.5637,
+   "applying": true
+  },
+  {
+   "a": "sun",
+   "b": "uranus",
+   "type": "square",
+   "orb": 5.3502,
+   "applying": false
+  },
+  {
+   "a": "sun",
+   "b": "neptune",
+   "type": "square",
+   "orb": 6.3615,
+   "applying": false
+  },
+  {
+   "a": "moon",
+   "b": "mc",
+   "type": "sextile",
+   "orb": 0.7274,
+   "applying": null
+  },
+  {
+   "a": "mercury",
+   "b": "venus",
+   "type": "conjunction",
+   "orb": 1.6199,
+   "applying": true
+  },
+  {
+   "a": "mercury",
+   "b": "jupiter",
+   "type": "opposition",
+   "orb": 4.92,
+   "applying": true
+  },
+  {
+   "a": "venus",
+   "b": "jupiter",
+   "type": "opposition",
+   "orb": 3.3002,
+   "applying": false
+  },
+  {
+   "a": "mars",
+   "b": "uranus",
+   "type": "opposition",
+   "orb": 3.0305,
+   "applying": false
+  },
+  {
+   "a": "mars",
+   "b": "neptune",
+   "type": "opposition",
+   "orb": 4.0418,
+   "applying": false
+  },
+  {
+   "a": "mars",
+   "b": "pluto",
+   "type": "trine",
+   "orb": 0.3192,
+   "applying": false
+  },
+  {
+   "a": "saturn",
+   "b": "pluto",
+   "type": "square",
+   "orb": 3.2025,
+   "applying": false
+  },
+  {
+   "a": "uranus",
+   "b": "neptune",
+   "type": "conjunction",
+   "orb": 1.0113,
+   "applying": false
+  },
+  {
+   "a": "uranus",
+   "b": "pluto",
+   "type": "sextile",
+   "orb": 2.7114,
+   "applying": true
+  },
+  {
+   "a": "neptune",
+   "b": "pluto",
+   "type": "sextile",
+   "orb": 3.7226,
+   "applying": true
+  },
+  {
+   "a": "pluto",
+   "b": "asc",
+   "type": "square",
+   "orb": 3.4495,
+   "applying": null
+  }
+ ],
+ "dominants": {
+  "elements": {
+   "fire": 6,
+   "earth": 2,
+   "air": 2,
+   "water": 4
+  },
+  "modalities": {
+   "cardinal": 8,
+   "fixed": 4,
+   "mutable": 2
+  },
+  "chartRuler": {
+   "modern": "sun",
+   "traditional": "sun"
+  },
+  "stelliums": [
+   {
+    "kind": "sign",
+    "key": "aries",
+    "bodies": [
+     "sun",
+     "mercury",
+     "venus"
+    ]
+   }
+  ],
+  "angular": [
+   "saturn"
+  ],
+  "retrogrades": [
+   "venus",
+   "jupiter",
+   "pluto"
+  ]
+ }
+}

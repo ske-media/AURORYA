@@ -1,0 +1,590 @@
+{
+  "planet_sign:moon:aries": {
+    "keywords": [
+      "réactivité",
+      "spontanéité",
+      "impatience",
+      "franchise affective",
+      "élan"
+    ],
+    "essence": "La Lune en Bélier, signe cardinal de feu, donne une vie émotionnelle vive, immédiate et sans détour. Les besoins s’expriment sur-le-champ et la sécurité intérieure passe par l’action.",
+    "light": [
+      "Émotions franches, exprimées sans calcul",
+      "Capacité à rebondir vite après un coup dur",
+      "Enthousiasme spontané, communicatif"
+    ],
+    "shadow": [
+      "Réactions à chaud, parfois regrettées dans l’heure",
+      "Impatience devant les besoins des autres",
+      "Difficulté à rester avec une émotion sans agir"
+    ],
+    "behaviors": [
+      "Envoyer le message sous le coup de la colère",
+      "Claquer une porte puis proposer un café dix minutes après",
+      "Vouloir régler le problème tout de suite, même à minuit",
+      "S’ennuyer dès que tout est calme",
+      "Répondre avant la fin de la phrase"
+    ],
+    "summary": {
+      "soft": "Tes émotions arrivent comme une étincelle : vives, sincères, vite passées. Avec toi, rien ne couve, tout se dit, et l’air redevient léger.",
+      "cash": "Tu t’énerves en quatre secondes et tu oublies en cinq. Le problème, c’est que les autres ont meilleure mémoire.",
+      "expert": "La Lune en Bélier, signe cardinal de feu, rend la réponse émotionnelle immédiate et combative. Vous déchargez la tension par l’action ; l’attente et l’ambiguïté affective vous coûtent."
+    },
+    "roastAngles": {
+      "soft": [
+        "Ton cœur démarre au quart de tour, et il ne sait pas garder rancune plus d’une heure."
+      ],
+      "cash": [
+        "Tu as envoyé le message à chaud. Tu as relu après. Tu assumes, mais tu as éteint le téléphone.",
+        "Ta façon de te calmer, c’est de régler le problème tout de suite, à minuit, par message vocal."
+      ],
+      "expert": [
+        "Lune en Bélier : émotion cardinale, de feu. Vous réagissez d’abord ; l’analyse suit, quand elle suit."
+      ]
+    },
+    "roastWeight": 3,
+    "avoid": [
+      "Présenter la colère comme de la violence",
+      "Confondre vivacité émotionnelle et immaturité"
+    ]
+  },
+  "planet_sign:moon:taurus": {
+    "keywords": [
+      "sécurité",
+      "confort",
+      "constance",
+      "sensorialité",
+      "attachement"
+    ],
+    "essence": "La Lune en Taureau, où elle est en exaltation, donne une vie émotionnelle stable, sensible au confort et attachée à ce qui dure. La sécurité intérieure repose sur le tangible et le régulier.",
+    "light": [
+      "Calme qui apaise l’entourage",
+      "Fidélité affective sur la durée",
+      "Art de prendre soin par le concret : un repas, une couverture, du temps"
+    ],
+    "shadow": [
+      "Résistance émotionnelle à tout imprévu",
+      "Possessivité envers les personnes et les objets aimés",
+      "Consolation cherchée dans l’assiette ou les achats"
+    ],
+    "behaviors": [
+      "Avoir un plaid attitré et une place attitrée sur le canapé",
+      "Mal vivre un changement de programme de dernière minute",
+      "Manger quelque chose de bon pour se remettre d’une contrariété",
+      "Garder le même parfum de glace depuis l’enfance",
+      "Mettre des semaines à digérer une dispute"
+    ],
+    "summary": {
+      "soft": "Ton cœur aime ce qui dure : les rituels, les bras familiers, le pain chaud. Près de toi, on se pose, et tout retrouve sa juste mesure.",
+      "cash": "Ton langage affectif, c’est le fromage. On t’a déplacé un dîner, et tu as eu besoin de trois jours pour t’en remettre.",
+      "expert": "La Lune en Taureau est en exaltation : en signe fixe de terre, elle stabilise l’humeur et ancre les besoins dans le sensible. Vous cherchez la permanence ; tout changement affectif s’assimile lentement."
+    },
+    "roastAngles": {
+      "soft": [
+        "Tu consoles avec un plat chaud et une présence tranquille : on ne fait pas plus sûr."
+      ],
+      "cash": [
+        "Tu as une place sur le canapé. Personne ne l’a décidé, tout le monde le sait, et gare à qui s’y assoit.",
+        "On a changé le programme à la dernière minute, et ton silence a duré plus longtemps que la soirée."
+      ],
+      "expert": [
+        "Lune en Taureau, en exaltation : besoin de constance. Vous tenez à vos habitudes comme à des personnes."
+      ]
+    },
+    "roastWeight": 3,
+    "avoid": [
+      "Réduire le placement à la gourmandise",
+      "Faire de la stabilité une forme de paresse affective"
+    ]
+  },
+  "planet_sign:moon:gemini": {
+    "keywords": [
+      "verbalisation",
+      "curiosité",
+      "humeur mobile",
+      "légèreté",
+      "agitation mentale"
+    ],
+    "essence": "La Lune en Gémeaux, signe mutable d’air, donne une vie émotionnelle mobile, curieuse et bavarde. Les émotions passent par les mots, et la sécurité intérieure dépend de l’échange et de la nouveauté.",
+    "light": [
+      "Humour qui désamorce les tensions",
+      "Capacité à mettre des mots sur ce qui se passe",
+      "Légèreté qui aide à prendre du recul"
+    ],
+    "shadow": [
+      "Humeur changeante d’une heure à l’autre",
+      "Tendance à expliquer une émotion plutôt qu’à la ressentir",
+      "Agitation mentale au moment de s’endormir"
+    ],
+    "behaviors": [
+      "Raconter le même souci à cinq personnes pour savoir quoi en penser",
+      "Envoyer douze messages courts au lieu d’un seul",
+      "Faire une blague au moment le plus sérieux",
+      "Changer d’avis sur ses sentiments entre midi et le soir",
+      "Écouter un podcast pour ne pas entendre ses pensées"
+    ],
+    "summary": {
+      "soft": "Chez toi, le cœur parle : il raconte, il questionne, il rit pour respirer. Mettre des mots sur ce que tu ressens, c’est ta façon de t’apaiser.",
+      "cash": "Tu traites tes émotions par messages vocaux de sept minutes. Tu ne sais pas ce que tu ressens, mais tu as trois hypothèses.",
+      "expert": "La Lune en Gémeaux, signe mutable d’air, intellectualise la vie émotionnelle. Vous avez besoin de verbaliser pour assimiler ; l’humeur varie vite, au gré des échanges et des stimulations."
+    },
+    "roastAngles": {
+      "soft": [
+        "Ton cœur a besoin de parler pour savoir ce qu’il pense : laisse-le bavarder, il s’y retrouve."
+      ],
+      "cash": [
+        "Tu as demandé l’avis de cinq personnes sur ta dispute, et tu as suivi celui qui t’arrangeait.",
+        "Tu envoies douze messages à la suite, puis “laisse tomber”, puis un treizième pour expliquer."
+      ],
+      "expert": [
+        "Lune en Gémeaux : émotion mutable, d’air. Vous commentez ce que vous éprouvez, plus que vous ne l’éprouvez."
+      ]
+    },
+    "roastWeight": 3,
+    "avoid": [
+      "Parler d’instabilité ou de duplicité",
+      "Confondre besoin de parler et superficialité des sentiments"
+    ]
+  },
+  "planet_sign:moon:cancer": {
+    "keywords": [
+      "sensibilité",
+      "foyer",
+      "mémoire affective",
+      "protection",
+      "humeur cyclique"
+    ],
+    "essence": "La Lune en Cancer, où elle est en domicile, donne une vie émotionnelle profonde, protectrice et tournée vers le foyer. La sensibilité y est à son maximum et la sécurité intérieure passe par l’appartenance.",
+    "light": [
+      "Tendresse instinctive et sens du réconfort",
+      "Intuition très sûre de l’humeur des proches",
+      "Fidélité aux souvenirs et aux liens anciens"
+    ],
+    "shadow": [
+      "Humeur qui monte et descend comme une marée",
+      "Blessure facile, gardée longtemps en mémoire",
+      "Besoin de réassurance qui ne se dit pas"
+    ],
+    "behaviors": [
+      "Relire de vieilles conversations un dimanche soir",
+      "Préparer un plat d’enfance pour aller mieux",
+      "Deviner l’état d’un proche à sa façon de dire bonjour",
+      "Se refermer d’un coup après une remarque anodine",
+      "Garder le pull d’une personne aimée"
+    ],
+    "summary": {
+      "soft": "Tu as un cœur de maison, avec de la lumière aux fenêtres. Tu sens tout avant qu’on te le dise, et tu protèges les tiens sans faire de bruit.",
+      "cash": "Tu as changé d’humeur trois fois depuis ce matin, et tu en veux à quelqu’un pour un rêve que tu as fait.",
+      "expert": "La Lune en Cancer est en domicile : en signe cardinal d’eau, elle exprime pleinement sensibilité, mémoire et instinct protecteur. Vous avez besoin d’un refuge ; l’humeur suit chez vous des cycles marqués."
+    },
+    "roastAngles": {
+      "soft": [
+        "Tu te souviens de tout ce qui a compté, et tu en fais un abri pour les jours de pluie."
+      ],
+      "cash": [
+        "Tu relis de vieux messages le dimanche soir, pour vérifier que ça pique toujours autant.",
+        "Quelqu’un a dit “tu le prends mal, non ?”. Tu n’as rien répondu. Depuis mardi."
+      ],
+      "expert": [
+        "Lune en Cancer, en domicile : mémoire affective intacte. Vous n’oubliez rien de ce qui vous a touché."
+      ]
+    },
+    "roastWeight": 3,
+    "avoid": [
+      "Réduire le placement aux larmes ou à l’instinct maternel",
+      "Présenter la sensibilité comme une faiblesse"
+    ]
+  },
+  "planet_sign:moon:leo": {
+    "keywords": [
+      "chaleur",
+      "fierté",
+      "démonstration",
+      "loyauté de cœur",
+      "besoin de reconnaissance"
+    ],
+    "essence": "La Lune en Lion, signe fixe de feu, donne une vie émotionnelle chaleureuse, fière et démonstrative. La sécurité intérieure dépend du sentiment de compter et de recevoir une affection visible.",
+    "light": [
+      "Affection généreuse, qui se montre",
+      "Loyauté de cœur, durable",
+      "Don pour mettre de la joie et du jeu dans le quotidien"
+    ],
+    "shadow": [
+      "Amour-propre vite froissé",
+      "Besoin de preuves d’affection répétées",
+      "Tendance à dramatiser pour se faire entendre"
+    ],
+    "behaviors": [
+      "Bouder avec panache quand un message reste sans réponse",
+      "Faire d’un anniversaire un événement d’une semaine",
+      "Raconter sa peine avec des gestes de théâtre",
+      "Couvrir les proches de cadeaux et de compliments",
+      "Retenir qui n’a pas réagi à la bonne nouvelle"
+    ],
+    "summary": {
+      "soft": "Ton cœur est un feu de cheminée : il réchauffe large et il aime qu’on vienne s’y asseoir. Tu aimes en grand, et tu mérites qu’on te le rende.",
+      "cash": "Tu ne fais pas la tête, tu fais une représentation. Avec un entracte, au cas où quelqu’un voudrait présenter ses excuses.",
+      "expert": "La Lune en Lion, signe fixe de feu, lie la sécurité affective à la reconnaissance. Vous exprimez vos sentiments avec ampleur et constance ; l’indifférence vous atteint davantage que le conflit."
+    },
+    "roastAngles": {
+      "soft": [
+        "Tu aimes comme on fait une fête : avec des lumières partout et une place d’honneur pour chacun."
+      ],
+      "cash": [
+        "Ton anniversaire dure une semaine. Tu n’as rien décidé, c’est le calendrier qui s’adapte.",
+        "Tu as annoncé une bonne nouvelle, et tu as noté mentalement qui a mis plus d’une heure à réagir."
+      ],
+      "expert": [
+        "Lune en Lion : besoin fixe de reconnaissance. Vous pardonnez l’offense, plus difficilement l’inattention."
+      ]
+    },
+    "roastWeight": 3,
+    "avoid": [
+      "Réduire le placement au caprice ou à la vanité",
+      "Employer des images de roi ou de reine"
+    ]
+  },
+  "planet_sign:moon:virgo": {
+    "keywords": [
+      "pudeur",
+      "utilité",
+      "routine",
+      "inquiétude",
+      "attention aux détails"
+    ],
+    "essence": "La Lune en Vierge, signe mutable de terre, donne une vie émotionnelle pudique, attentive et tournée vers l’utile. La sécurité intérieure passe par l’ordre, la routine et le sentiment de bien faire.",
+    "light": [
+      "Attention concrète aux besoins des autres",
+      "Fiabilité dans les petits gestes du quotidien",
+      "Lucidité sur ses propres réactions"
+    ],
+    "shadow": [
+      "Inquiétude qui s’accroche aux détails",
+      "Autocritique dès que l’émotion déborde",
+      "Difficulté à recevoir de l’aide sans la mériter"
+    ],
+    "behaviors": [
+      "Ranger un placard pour se calmer",
+      "Rejouer une conversation en corrigeant ses répliques",
+      "Montrer son affection en rappelant une échéance oubliée",
+      "Demander pardon d’avoir pleuré",
+      "Préparer un sac la veille, puis le vérifier le matin"
+    ],
+    "summary": {
+      "soft": "Ton cœur prend soin par petites touches : un rappel, un geste, une chose réparée. Sous ta pudeur, il y a une attention de chaque instant.",
+      "cash": "Quand ça ne va pas, tu ranges. Ton placard à épices est donc classé par ordre alphabétique, et par date.",
+      "expert": "La Lune en Vierge, signe mutable de terre, soumet l’émotion à l’analyse. Vous vous apaisez par l’ordre et l’utilité ; le besoin de bien faire entretient une vigilance constante."
+    },
+    "roastAngles": {
+      "soft": [
+        "Tu dis “je t’aime” en vérifiant que l’autre a pris son écharpe : c’est discret, et c’est immense."
+      ],
+      "cash": [
+        "Tu rejoues la conversation de midi sous la douche, avec de meilleures répliques et des notes de bas de page.",
+        "Tu as pleuré deux minutes, tu as demandé pardon pour le dérangement, puis tu as nettoyé la table."
+      ],
+      "expert": [
+        "Lune en Vierge : émotion triée, classée, annotée. Vous ressentez beaucoup, mais avec méthode."
+      ]
+    },
+    "roastWeight": 3,
+    "avoid": [
+      "Réduire le placement à la froideur ou à la maniaquerie",
+      "Employer un vocabulaire médical pour décrire l’inquiétude"
+    ]
+  },
+  "planet_sign:moon:libra": {
+    "keywords": [
+      "harmonie",
+      "lien",
+      "tact",
+      "évitement du conflit",
+      "partage"
+    ],
+    "essence": "La Lune en Balance, signe cardinal d’air, donne une vie émotionnelle tournée vers la relation, la douceur et l’accord. La sécurité intérieure dépend de l’harmonie du lien et de la paix autour de soi.",
+    "light": [
+      "Tact naturel et sens de l’écoute",
+      "Capacité à apaiser une tension dans un groupe",
+      "Goût de partager plutôt que de vivre les choses à part"
+    ],
+    "shadow": [
+      "Malaise profond devant le conflit ouvert",
+      "Besoins personnels effacés pour préserver l’entente",
+      "Humeur suspendue à celle de l’autre"
+    ],
+    "behaviors": [
+      "Dire « ce n’est pas grave » en pensant le contraire",
+      "Rédiger un message délicat en six brouillons",
+      "Changer de restaurant pour que personne ne soit déçu",
+      "Sourire pendant une dispute pour calmer le jeu",
+      "Vérifier trois fois que tout le monde est d’accord"
+    ],
+    "summary": {
+      "soft": "Ton cœur cherche l’accord comme une oreille cherche la note juste. Tu apaises, tu relies, tu arrondis : la paix autour de toi est ton vrai repos.",
+      "cash": "Tu dis “non mais c’est pas grave” avec le sourire, et tu y repenses pendant onze jours ouvrés.",
+      "expert": "La Lune en Balance, signe cardinal d’air, subordonne le bien-être émotionnel à la qualité du lien. Vous recherchez l’accord et l’équité ; le conflit ouvert vous déstabilise plus que le compromis."
+    },
+    "roastAngles": {
+      "soft": [
+        "Tu fais de la place à tout le monde : n’oublie pas de garder une chaise pour toi."
+      ],
+      "cash": [
+        "Tu as écrit six brouillons pour dire “ça m’a un peu dérangé”, et tu as envoyé “pas de souci”.",
+        "Pendant une dispute, tu défends l’avis de l’autre mieux que l’autre, puis tu demandes pardon."
+      ],
+      "expert": [
+        "Lune en Balance : besoin cardinal d’entente. Vous cédez volontiers, puis vous tenez les comptes en silence."
+      ]
+    },
+    "roastWeight": 3,
+    "avoid": [
+      "Réduire le placement à la dépendance affective",
+      "Confondre recherche de paix et hypocrisie"
+    ]
+  },
+  "planet_sign:moon:scorpio": {
+    "keywords": [
+      "intensité",
+      "secret",
+      "confiance",
+      "profondeur",
+      "mémoire des blessures"
+    ],
+    "essence": "La Lune en Scorpion, où elle est en chute, donne une vie émotionnelle intense, secrète et entière. La sécurité intérieure exige une confiance totale, et les sentiments se vivent en profondeur plus qu’ils ne se montrent.",
+    "light": [
+      "Profondeur de l’attachement, sans demi-mesure",
+      "Flair pour ce que les autres cachent",
+      "Force intérieure dans les moments difficiles"
+    ],
+    "shadow": [
+      "Méfiance qui précède la confiance",
+      "Mémoire longue des blessures",
+      "Émotions retenues jusqu’à la saturation"
+    ],
+    "behaviors": [
+      "Répondre « rien » avec un regard qui dit tout",
+      "Tester la loyauté des proches sans prévenir",
+      "Deviner un mensonge à une virgule près",
+      "Ne jamais reparler d’une blessure et ne jamais l’oublier",
+      "Vérifier une histoire qui semblait trop lisse"
+    ],
+    "summary": {
+      "soft": "Tu ressens en profondeur, là où peu de gens osent descendre. Ta réserve protège un cœur entier, qui ne se donne qu’une fois la confiance gagnée.",
+      "cash": "Tu réponds “rien” avec un regard qui contient trois chapitres. Tu n’oublies jamais, tu classes.",
+      "expert": "La Lune en Scorpion est en chute : en signe fixe d’eau, l’émotion se concentre et se retient. Vous éprouvez intensément sans le montrer ; la confiance s’accorde lentement et ne se partage pas."
+    },
+    "roastAngles": {
+      "soft": [
+        "Tu aimes sans bruit et sans retour en arrière : qui entre dans ton cœur y a sa place pour longtemps."
+      ],
+      "cash": [
+        "Tu as senti le mensonge à la ponctuation. Tu n’as rien dit. Tu attends juste de voir jusqu’où ça va.",
+        "Ta confiance se mérite en plusieurs épreuves, dont personne n’a reçu ni le règlement ni les dates."
+      ],
+      "expert": [
+        "Lune en Scorpion, en chute : émotion fixe, d’eau. Vous ne confiez rien, mais vous observez tout."
+      ]
+    },
+    "roastWeight": 3,
+    "avoid": [
+      "Réduire le placement à la jalousie ou à la vengeance",
+      "Dramatiser la notion de chute"
+    ]
+  },
+  "planet_sign:moon:sagittarius": {
+    "keywords": [
+      "optimisme",
+      "liberté",
+      "mouvement",
+      "sens",
+      "franchise affective"
+    ],
+    "essence": "La Lune en Sagittaire, signe mutable de feu, donne une vie émotionnelle optimiste, mobile et éprise de liberté. La sécurité intérieure passe par l’espace, le mouvement et le sentiment que tout garde un sens.",
+    "light": [
+      "Moral qui remonte vite",
+      "Franchise affective, sans arrière-pensée",
+      "Don pour dédramatiser et élargir la perspective"
+    ],
+    "shadow": [
+      "Fuite quand l’émotion devient pesante",
+      "Paroles de réconfort parfois trop expéditives",
+      "Engagements affectifs pris dans l’enthousiasme"
+    ],
+    "behaviors": [
+      "Proposer une randonnée à quelqu’un qui voulait juste parler",
+      "Regarder des billets de train après une contrariété",
+      "Rire au milieu d’une conversation grave",
+      "Étouffer dès qu’un week-end est planifié heure par heure",
+      "Philosopher sur une rupture au lieu de la pleurer"
+    ],
+    "summary": {
+      "soft": "Ton cœur a besoin de ciel : d’air, de route, de rires. Tu remontes vite, et tu emmènes les autres avec toi vers quelque chose de plus grand.",
+      "cash": "Quand ça ne va pas, tu regardes des billets de train. Ton conseil pour toutes les peines : “allez, on sort”.",
+      "expert": "La Lune en Sagittaire, signe mutable de feu, associe le bien-être à la liberté et au sens. Vous surmontez l’émotion par le mouvement et la mise en perspective ; la contrainte affective vous pèse vite."
+    },
+    "roastAngles": {
+      "soft": [
+        "Tu soignes les chagrins avec de l’horizon : une route, un rire, et le cœur repart."
+      ],
+      "cash": [
+        "On t’a confié un gros chagrin. Tu as répondu par une citation, puis par une idée de randonnée.",
+        "Tu as besoin d’espace dans une relation : environ un continent, avec possibilité de revenir dîner."
+      ],
+      "expert": [
+        "Lune en Sagittaire : émotion mutable, de feu. Vous relativisez plus vite que vous ne ressentez."
+      ]
+    },
+    "roastWeight": 2,
+    "avoid": [
+      "Réduire le placement à la peur de l’engagement",
+      "Présenter l’optimisme comme de l’insouciance"
+    ]
+  },
+  "planet_sign:moon:capricorn": {
+    "keywords": [
+      "retenue",
+      "maîtrise",
+      "responsabilité",
+      "pudeur",
+      "endurance"
+    ],
+    "essence": "La Lune en Capricorne, où elle est en exil, donne une vie émotionnelle contenue, pudique et responsable. La sécurité intérieure repose sur la maîtrise, l’utilité et le fait de ne dépendre de personne.",
+    "light": [
+      "Sang-froid dans les moments critiques",
+      "Fiabilité affective qui se prouve par les actes",
+      "Endurance face aux périodes difficiles"
+    ],
+    "shadow": [
+      "Émotions remises à plus tard, indéfiniment",
+      "Difficulté à demander de l’aide",
+      "Sérieux précoce qui laisse peu de place au jeu"
+    ],
+    "behaviors": [
+      "Répondre « ça va, j’ai du travail » à une question sur ses sentiments",
+      "Régler les problèmes des autres avant d’écouter les siens",
+      "Pleurer en cachette, brièvement, puis reprendre sa liste de tâches",
+      "Montrer son affection en réparant quelque chose",
+      "Culpabiliser d’un dimanche sans rien produire"
+    ],
+    "summary": {
+      "soft": "Ton cœur est pudique : il parle peu, mais il est là, solide, quand tout vacille. Ta tendresse se lit dans ce que tu fais, pas dans ce que tu dis.",
+      "cash": "Tu as rangé tes émotions dans un dossier “à voir plus tard”. Le dossier date de l’école primaire et il est très bien tenu.",
+      "expert": "La Lune en Capricorne est en exil : en signe cardinal de terre, l’émotion se contient et se structure. Vous privilégiez la maîtrise et l’utile ; exprimer un besoin affectif vous demande du temps."
+    },
+    "roastAngles": {
+      "soft": [
+        "Tu portes les autres sans rien demander : tu as le droit, toi aussi, de poser la tête sur une épaule."
+      ],
+      "cash": [
+        "On t’a demandé comment tu te sentais. Tu as répondu par ton planning de la semaine.",
+        "Tu as pleuré quatre minutes, montre en main, puis tu as repris ta liste là où tu l’avais laissée."
+      ],
+      "expert": [
+        "Lune en Capricorne, en exil : émotion sous contrôle. Vous consolez par des solutions, rarement par des mots."
+      ]
+    },
+    "roastWeight": 3,
+    "avoid": [
+      "Parler de froideur ou d’absence de sentiments",
+      "Dramatiser la notion d’exil"
+    ]
+  },
+  "planet_sign:moon:aquarius": {
+    "keywords": [
+      "détachement",
+      "indépendance",
+      "amitié",
+      "recul",
+      "besoin d’espace"
+    ],
+    "essence": "La Lune en Verseau, signe fixe d’air, donne une vie émotionnelle détachée, indépendante et amicale. La sécurité intérieure passe par la liberté, l’espace personnel et le droit de rester différent.",
+    "light": [
+      "Écoute sans jugement",
+      "Amitié fidèle, sans possessivité",
+      "Recul qui aide à garder la tête froide"
+    ],
+    "shadow": [
+      "Distance prise dès que l’émotion se fait pressante",
+      "Tendance à analyser un sentiment pour ne pas le vivre",
+      "Besoin d’air qui déroute les proches"
+    ],
+    "behaviors": [
+      "Répondre à une déclaration par « c’est noté »",
+      "Avoir besoin de trois jours en solitaire après une fête",
+      "Consoler avec un article scientifique",
+      "Observer sa propre tristesse comme un phénomène curieux",
+      "Donner des nouvelles toutes les trois semaines, avec affection"
+    ],
+    "summary": {
+      "soft": "Ton cœur aime à sa façon : avec de l’espace, de la curiosité et une amitié qui ne retient personne. On peut tout te dire, tu ne juges pas.",
+      "cash": "On te dit “je t’aime”, tu réponds “c’est noté”. Tu observes tes émotions de loin, comme un documentaire animalier.",
+      "expert": "La Lune en Verseau, signe fixe d’air, met l’émotion à distance pour la penser. Vous avez besoin d’indépendance et d’affinités d’esprit ; la fusion affective vous met mal à l’aise."
+    },
+    "roastAngles": {
+      "soft": [
+        "Tu laisses à chacun la liberté d’être soi : c’est rare, et c’est une vraie forme d’amour."
+      ],
+      "cash": [
+        "Quelqu’un pleure devant toi. Tu compatis sincèrement, et tu cherches déjà une étude sur le sujet.",
+        "Après une soirée entre amis, tu as besoin de trois jours sans voir personne, toi y compris."
+      ],
+      "expert": [
+        "Lune en Verseau : émotion fixe, d’air. Vous éprouvez les choses, mais de préférence à bonne distance."
+      ]
+    },
+    "roastWeight": 2,
+    "avoid": [
+      "Présenter le détachement comme une absence de cœur",
+      "Réduire le placement à la bizarrerie"
+    ]
+  },
+  "planet_sign:moon:pisces": {
+    "keywords": [
+      "empathie",
+      "perméabilité",
+      "rêverie",
+      "compassion",
+      "retrait"
+    ],
+    "essence": "La Lune en Poissons, signe mutable d’eau, donne une vie émotionnelle perméable, rêveuse et compatissante. La sécurité intérieure passe par la douceur, l’imaginaire et des moments de retrait.",
+    "light": [
+      "Empathie immédiate, sans effort",
+      "Imagination consolatrice",
+      "Douceur qui accueille sans poser de conditions"
+    ],
+    "shadow": [
+      "Absorption des émotions des autres comme si c’étaient les siennes",
+      "Évasion dès que la réalité se fait rude",
+      "Difficulté à savoir ce qui relève de soi"
+    ],
+    "behaviors": [
+      "Pleurer pour un personnage de dessin animé",
+      "Revenir d’un dîner avec la fatigue de toute la table",
+      "Dormir pour laisser passer l’orage",
+      "Pardonner avant d’avoir reçu des excuses",
+      "Écouter la même chanson triste en boucle"
+    ],
+    "summary": {
+      "soft": "Ton cœur n’a pas de porte : tout y entre, la joie des autres comme leur peine. Ta douceur console sans un mot, comme une mer calme.",
+      "cash": "Tu absorbes l’humeur de toute la pièce, y compris celle du chien. Ta solution à tout : une sieste et une chanson triste.",
+      "expert": "La Lune en Poissons, signe mutable d’eau, rend la sensibilité poreuse et diffuse. Vous captez les climats affectifs sans filtre ; des temps de retrait sont nécessaires pour distinguer ce qui vous appartient."
+    },
+    "roastAngles": {
+      "soft": [
+        "Tu ressens pour deux, parfois pour dix : pense à garder un peu de cette tendresse pour toi."
+      ],
+      "cash": [
+        "Tu as pleuré pour un personnage secondaire, dans un film que tu avais déjà vu quatre fois.",
+        "Quelqu’un t’a fait du tort, et c’est toi qui lui as trouvé des excuses avant qu’il ouvre la bouche."
+      ],
+      "expert": [
+        "Lune en Poissons : émotion mutable, d’eau. Vous compatissez d’abord, et vous vérifiez les faits ensuite."
+      ]
+    },
+    "roastWeight": 3,
+    "avoid": [
+      "Réduire le placement à la naïveté ou au rôle de victime",
+      "Évoquer des dons de voyance"
+    ]
+  }
+}

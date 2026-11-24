@@ -1,0 +1,309 @@
+{
+  "brand": {
+    "name": "Aurorya",
+    "tagline": "The sky, unfiltered"
+  },
+  "persona": {
+    "name": "Ava",
+    "disclosure": "{{name}}, Aurorya’s astrologer, is an artificial intelligence."
+  },
+  "tabs": {
+    "today": "Today",
+    "sky": "My sky",
+    "groups": "My groups"
+  },
+  "today": {
+    "title": "Today",
+    "greeting": "Hello {{name}}",
+    "moon": "Moon in {{sign}} · {{phase}}",
+    "questionLabel": "Question of the day",
+    "horoscopeLabel": "Your sign today",
+    "personalLocked": "Your personal horoscope, based on your chart, is part of Aurorya Premium.",
+    "phase": {
+      "new_moon": "new moon",
+      "waxing_crescent": "waxing crescent",
+      "first_quarter": "first quarter",
+      "waxing_gibbous": "waxing gibbous",
+      "full_moon": "full moon",
+      "waning_gibbous": "waning gibbous",
+      "last_quarter": "last quarter",
+      "waning_crescent": "waning crescent"
+    },
+    "state": {
+      "empty": {
+        "title": "Nothing to read yet",
+        "body": "Your daily horoscope will appear here."
+      },
+      "error": {
+        "title": "Today’s page could not be loaded",
+        "body": "Check your connection, then try again."
+      },
+      "noHoroscope": "Your sign’s horoscope is not ready for today yet."
+    }
+  },
+  "sky": {
+    "title": "My sky",
+    "state": {
+      "empty": {
+        "title": "Your sky has not been calculated yet",
+        "body": "Your birth chart will appear here."
+      },
+      "error": {
+        "title": "Your sky could not be loaded",
+        "body": "Check your connection, then try again."
+      }
+    },
+    "timeUnknown": {
+      "banner": "Without an exact time of birth, the wheel is shown without Ascendant or houses."
+    },
+    "wheelLabel": "Your birth chart wheel: {{summary}}.",
+    "showList": "View as list",
+    "showWheel": "View the wheel",
+    "retrograde": "retrograde",
+    "signUncertain": "sign uncertain without the time",
+    "orb": "orb {{orb}}°",
+    "applying": "applying",
+    "separating": "separating",
+    "aspect": {
+      "conjunction": "Conjunction",
+      "opposition": "Opposition",
+      "trine": "Trine",
+      "square": "Square",
+      "sextile": "Sextile"
+    }
+  },
+  "groups": {
+    "title": "My groups",
+    "state": {
+      "empty": {
+        "title": "No groups yet",
+        "body": "Create a group or join one with a code."
+      },
+      "error": {
+        "title": "Your groups could not be loaded",
+        "body": "Check your connection, then try again."
+      }
+    },
+    "create": {
+      "title": "Create a group",
+      "name": "Group name",
+      "submit": "Create",
+      "type": {
+        "friends": "Friends",
+        "couple": "Couple",
+        "family": "Family",
+        "colleagues": "Colleagues"
+      }
+    },
+    "join": {
+      "title": "Join with a code",
+      "code": "Invitation code",
+      "check": "Check the code",
+      "preview": "{{inviter}} invites you to join “{{group}}”.",
+      "consent": "By joining this group, other members will see your first name, your signs (Sun, Moon, Rising) and your place in the group reading. They will never see your date, time or place of birth.",
+      "displayName": "First name shown in this group",
+      "accept": "I agree and join",
+      "invalid": "This code is not valid or has expired."
+    },
+    "error": {
+      "ACCOUNT_REQUIRED": "Create your account to create a group: without one, you would lose it when changing phones.",
+      "NAME_REJECTED": "This name is not accepted.",
+      "QUOTA_EXCEEDED": "You have reached the maximum number of groups.",
+      "CONFLICT": "You are already in this group, or it is full.",
+      "generic": "That did not go through. Try again in a moment."
+    },
+    "detail": {
+      "members": "{{count}} members",
+      "invite": "Invite",
+      "inviteMessage": "Join my group “{{group}}” on Aurorya with the code {{code}}.",
+      "inviteMessageWithLink": "Join my group “{{group}}” on Aurorya: {{url}} (code {{code}}).",
+      "roles": "Group roles",
+      "duos": "Duos",
+      "duo_fusion": "The most attuned duo",
+      "duo_sparks": "The most electric duo",
+      "and": "{{a}} and {{b}}",
+      "needTwo": "Invite at least one person to read the group roles.",
+      "unavailable": "This group’s reading is not available yet.",
+      "leave": "Leave the group",
+      "open": "Open"
+    }
+  },
+  "common": {
+    "retry": "Try again",
+    "loading": "Loading",
+    "close": "Close",
+    "back": "Back"
+  },
+  "notFound": {
+    "title": "This page does not exist",
+    "action": "Back to home"
+  },
+  "gallery": {
+    "title": "Gallery",
+    "colors": "Colors",
+    "typography": "Typography",
+    "components": "Components",
+    "sampleText": "The sky, as it is.",
+    "primary": "Primary button",
+    "secondary": "Secondary button",
+    "ghost": "Ghost button",
+    "loading": "Working",
+    "disabled": "Disabled",
+    "chip": "Chip",
+    "chipSelected": "Selected chip",
+    "card": "A card resting on the surface.",
+    "banner": "An information banner."
+  },
+  "modes": {
+    "soft": {
+      "name": "Moon",
+      "description": "Gentle: reassuring and clear."
+    },
+    "cash": {
+      "name": "Mars",
+      "description": "Blunt: funny and on target."
+    },
+    "expert": {
+      "name": "Saturn",
+      "description": "Expert: rigorous explanations."
+    }
+  },
+  "onboarding": {
+    "progress": "Step {{current}} of {{total}}",
+    "continue": "Continue",
+    "welcome": {
+      "title": "Your birth chart, in the tone you choose",
+      "subtitle": "Aurorya calculates your real birth chart and tells it to you: gentle, blunt or expert.",
+      "firstName": "Your first name",
+      "firstNameError": "Use only letters, spaces, hyphens or apostrophes.",
+      "grammarLabel": "So my sentences agree",
+      "grammar": {
+        "f": "she",
+        "m": "he",
+        "n": "neutral"
+      }
+    },
+    "birthDate": {
+      "title": "{{name}}, what is your date of birth?"
+    },
+    "ageGate": {
+      "body": "Aurorya is for people aged {{age}} and over. Nothing you entered is kept."
+    },
+    "birthTime": {
+      "title": "At what time?",
+      "subtitle": "The time gives the Ascendant and the houses.",
+      "exact": "I know my time",
+      "approx": "Roughly",
+      "unknown": "I don’t know",
+      "window": {
+        "night": "At night, midnight to six",
+        "morning": "In the morning, six to noon",
+        "afternoon": "In the afternoon, noon to six",
+        "evening": "In the evening, six to midnight"
+      },
+      "help": "Your time is on your full birth certificate. You can add it later in settings."
+    },
+    "birthPlace": {
+      "title": "Where were you born?",
+      "search": "City of birth",
+      "confirm": "Place of birth: {{place}}",
+      "help": "If your town is missing, choose the nearest large city.",
+      "state": {
+        "empty": "No city found.",
+        "error": "Search is unavailable right now."
+      }
+    },
+    "quiz": {
+      "title": "Three questions, then we start",
+      "submit": "See my sky",
+      "interests": {
+        "question": "You are here for…",
+        "love": "love",
+        "work": "work",
+        "self": "understanding myself",
+        "relationships": "my relationships"
+      },
+      "level": {
+        "question": "Astrology and you",
+        "beginner": "I am new to it",
+        "intermediate": "I know my sign and my rising sign",
+        "advanced": "I can read a chart"
+      },
+      "tone": {
+        "question": "How should I talk to you?"
+      }
+    },
+    "computing": {
+      "title": "I am looking at your sky",
+      "profile": "Saving your name",
+      "chart": "Calculating your chart",
+      "roast": "Writing your reading",
+      "state": {
+        "error": {
+          "title": "The calculation did not go through",
+          "body": "Check your connection, then try again."
+        },
+        "unconfigured": {
+          "title": "The app is not connected to its server",
+          "body": "This development version has no server address configured."
+        },
+        "ageRestricted": {
+          "title": "Aurorya is not for you yet",
+          "body": "The app is for people aged sixteen and over. Nothing was kept."
+        },
+        "timeNonexistent": {
+          "title": "That time did not exist",
+          "body": "On that day, in that place, clocks skipped that hour. Check your time of birth."
+        },
+        "nameRejected": {
+          "title": "This name is not accepted",
+          "body": "Choose another first name to continue."
+        }
+      },
+      "fix": "Fix it"
+    },
+    "reveal": {
+      "title": "{{name}}’s sky",
+      "bigThree": {
+        "sun": "Sun {{sign}}",
+        "moon": "Moon {{sign}}",
+        "asc": "Rising {{sign}}"
+      },
+      "unavailable": "Your reading is not available yet. Your chart, however, is calculated.",
+      "modeLabel": "Tone of the reading",
+      "continue": "Continue",
+      "timeUnknown": "Without a time of birth, the Ascendant and the houses are not calculated."
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "open": "Settings",
+    "tone": "Default tone",
+    "account": {
+      "title": "My account",
+      "anonymous": "You do not have an account yet: your data only lives on this phone.",
+      "email": "Email address",
+      "sendCode": "Get a code",
+      "code": "Code received by email",
+      "verify": "Create my account",
+      "codeSent": "A code was just sent to this address.",
+      "created": "Your account is created.",
+      "failed": "That did not go through. Check the address or the code, then try again.",
+      "signedIn": "Account: {{email}}"
+    },
+    "about": {
+      "title": "About",
+      "version": "Version {{version}}",
+      "disclaimer": "Aurorya is a tool for entertainment and self-reflection. It is not medical, psychological, financial or legal advice."
+    },
+    "delete": {
+      "title": "Delete my account",
+      "body": "Your profile, birth data, chart, readings and groups will be permanently deleted.",
+      "subscription": "Deleting does not stop an Apple subscription: cancel it in the App Store settings.",
+      "start": "Delete my account",
+      "confirm": "Yes, delete everything",
+      "cancel": "Cancel",
+      "failed": "Deletion did not go through. Try again in a moment."
+    }
+  }
+}

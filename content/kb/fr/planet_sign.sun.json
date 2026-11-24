@@ -1,0 +1,590 @@
+{
+  "planet_sign:sun:aries": {
+    "keywords": [
+      "élan",
+      "initiative",
+      "courage",
+      "impatience",
+      "franchise"
+    ],
+    "essence": "Le Soleil en Bélier, signe cardinal de feu où il est en exaltation, fonde l’identité sur l’élan et l’initiative. La personne se définit par ce qu’elle lance, moins par ce qu’elle termine.",
+    "light": [
+      "Courage de commencer là où les autres hésitent",
+      "Franchise directe, sans calcul ni arrière-pensée",
+      "Énergie qui remet un groupe en mouvement"
+    ],
+    "shadow": [
+      "Impatience face à tout ce qui demande de la durée",
+      "Colère vive, vite montée, vite oubliée, mais pas toujours par l’entourage",
+      "Difficulté à finir ce qui a perdu l’attrait de la nouveauté"
+    ],
+    "behaviors": [
+      "Se porter volontaire avant d’avoir entendu la fin de la consigne",
+      "Finir les phrases des autres pour gagner du temps",
+      "Marcher deux mètres devant le groupe",
+      "Transformer un jeu de société en finale de championnat",
+      "Lancer un projet le lundi et s’en lasser le jeudi"
+    ],
+    "summary": {
+      "soft": "Tu avances comme on ouvre une porte : d’un seul geste, sans attendre la permission. Ta force, c’est d’oser le premier pas quand tout le monde regarde ses chaussures.",
+      "cash": "Tu as dit oui avant la fin de la question. Tu réfléchis après, en route, et de préférence en doublant tout le monde.",
+      "expert": "Le Soleil en Bélier, en exaltation dans ce signe cardinal de feu, place l’identité dans l’initiative. Vous vous affirmez par l’action directe ; la constance demande un effort conscient."
+    },
+    "roastAngles": {
+      "soft": [
+        "Tu fonces d’abord, tu comprends ensuite : c’est ta façon à toi de faire confiance à la vie."
+      ],
+      "cash": [
+        "Tu appelles ça “décider vite”. Les autres appellent ça “ne pas avoir lu le message jusqu’au bout”.",
+        "Ta patience a une durée de vie précise : celle d’un feu rouge, et encore, tu avances déjà."
+      ],
+      "expert": [
+        "Soleil en Bélier : volonté cardinale, élan immédiat. Vous commencez mieux que vous ne poursuivez."
+      ]
+    },
+    "roastWeight": 3,
+    "avoid": [
+      "Réduire le placement à l’agressivité",
+      "Confondre impulsivité et manque de réflexion"
+    ]
+  },
+  "planet_sign:sun:taurus": {
+    "keywords": [
+      "stabilité",
+      "constance",
+      "sens du concret",
+      "plaisir",
+      "obstination"
+    ],
+    "essence": "Le Soleil en Taureau, signe fixe de terre, ancre l’identité dans la stabilité, les sens et ce qui dure. La personne se construit lentement et tient à ce qu’elle a bâti.",
+    "light": [
+      "Constance qui mène les choses à terme",
+      "Sens du concret et du travail bien fait",
+      "Présence calme qui rassure l’entourage"
+    ],
+    "shadow": [
+      "Résistance au changement, même quand il s’impose",
+      "Attachement aux habitudes et aux possessions",
+      "Obstination silencieuse, plus longue que n’importe quel argument"
+    ],
+    "behaviors": [
+      "Commander le même plat dans le même restaurant depuis des années",
+      "Refuser de se presser, y compris en retard",
+      "Garder un objet parce qu’il peut encore servir",
+      "Répondre « on verra » pour dire non",
+      "Tester le confort du canapé avant de saluer les invités"
+    ],
+    "summary": {
+      "soft": "Tu construis lentement, et ce que tu construis tient debout. Autour de toi, on respire mieux : ta présence a quelque chose d’un jardin où rien ne presse.",
+      "cash": "Tu ne changes pas d’avis, tu attends que les autres se fatiguent. Et tu as tout ton temps, surtout s’il y a à manger.",
+      "expert": "Le Soleil en Taureau, signe fixe de terre, fonde l’identité sur la durée et la valeur concrète des choses. Vous consolidez plus que vous n’initiez ; votre rythme lent est une méthode, non une inertie."
+    },
+    "roastAngles": {
+      "soft": [
+        "Tu prends ton temps comme on laisse mûrir un fruit : rien ne t’oblige à cueillir trop tôt."
+      ],
+      "cash": [
+        "Tu n’as aucun retard, tu finis ton café. Le monde peut attendre, lui aussi devrait s’asseoir.",
+        "On t’a proposé un nouveau restaurant. Tu as souri, puis tu as réservé au même endroit que d’habitude."
+      ],
+      "expert": [
+        "Soleil en Taureau : fixité et terre. Vous cédez rarement, non par orgueil, mais par besoin de continuité."
+      ]
+    },
+    "roastWeight": 2,
+    "avoid": [
+      "Réduire le placement à la gourmandise ou à la paresse",
+      "Présenter la lenteur comme un défaut d’intelligence"
+    ]
+  },
+  "planet_sign:sun:gemini": {
+    "keywords": [
+      "curiosité",
+      "parole",
+      "vivacité",
+      "adaptation",
+      "dispersion"
+    ],
+    "essence": "Le Soleil en Gémeaux, signe mutable d’air, fonde l’identité sur la curiosité, la parole et la circulation des idées. La personne se définit par ce qu’elle apprend, relie et raconte.",
+    "light": [
+      "Vivacité d’esprit et sens de la repartie",
+      "Capacité à s’adapter à tous les milieux",
+      "Talent pour relier des gens et des idées qui s’ignoraient"
+    ],
+    "shadow": [
+      "Dispersion entre trop de pistes ouvertes à la fois",
+      "Avis qui change selon la dernière conversation",
+      "Tendance à survoler ce qui demanderait d’approfondir"
+    ],
+    "behaviors": [
+      "Garder quarante onglets ouverts et en chercher un de plus",
+      "Commencer trois livres en parallèle",
+      "Répondre à un message pendant une autre conversation",
+      "Changer de sujet au milieu de sa propre phrase",
+      "Avoir une anecdote sur absolument tout"
+    ],
+    "summary": {
+      "soft": "Ton esprit est une fenêtre ouverte : tout y entre, tout y circule. Tu relies les gens et les idées avec une légèreté qui fait du bien.",
+      "cash": "Tu as un avis sur tout, et un deuxième avis au cas où. Ta phrase commence quelque part et atterrit dans une autre conversation.",
+      "expert": "Le Soleil en Gémeaux, signe mutable d’air, situe l’identité dans l’échange et l’apprentissage. Vous pensez en réseau, par associations rapides ; la profondeur vient par accumulation plutôt que par fixation."
+    },
+    "roastAngles": {
+      "soft": [
+        "Tu papillonnes d’une idée à l’autre, et c’est ainsi que tu fais fleurir des jardins entiers."
+      ],
+      "cash": [
+        "Tu as quarante onglets ouverts, dont un qui fait de la musique, et tu refuses de savoir lequel.",
+        "Tu as lu la moitié de l’article, et tu l’expliques déjà à quelqu’un qui l’a écrit."
+      ],
+      "expert": [
+        "Soleil en Gémeaux : mutabilité d’air. Vous comprenez vite, et vous passez à autre chose plus vite encore."
+      ]
+    },
+    "roastWeight": 3,
+    "avoid": [
+      "Parler de double personnalité ou d’hypocrisie",
+      "Confondre curiosité et superficialité"
+    ]
+  },
+  "planet_sign:sun:cancer": {
+    "keywords": [
+      "attachement",
+      "mémoire",
+      "protection",
+      "foyer",
+      "sensibilité"
+    ],
+    "essence": "Le Soleil en Cancer, signe cardinal d’eau, fonde l’identité sur l’attachement, la mémoire et le besoin de protéger. La personne se définit par les siens et par les lieux où elle se sent chez elle.",
+    "light": [
+      "Sens de l’accueil et attention sincère aux besoins des autres",
+      "Mémoire affective fidèle, qui retient les dates et les gestes",
+      "Ténacité discrète quand il s’agit de défendre les proches"
+    ],
+    "shadow": [
+      "Repli dans la coquille à la moindre contrariété",
+      "Susceptibilité qui s’exprime par le silence plutôt que par les mots",
+      "Difficulté à laisser le passé à sa place"
+    ],
+    "behaviors": [
+      "Nourrir les invités avant même de leur demander des nouvelles",
+      "Conserver des tickets de cinéma et de vieilles cartes d’anniversaire",
+      "Bouder en silence en espérant que quelqu’un devine",
+      "Quitter une soirée plus tôt pour retrouver son canapé",
+      "Citer mot pour mot une phrase blessante vieille de dix ans"
+    ],
+    "summary": {
+      "soft": "Tu as le cœur comme une maison : on y entre, on s’y réchauffe, on n’a plus envie de partir. Ta sensibilité est une façon de veiller sur ce qui compte.",
+      "cash": "Tu dis “ça va” en rangeant les placards très fort. Tout le monde a compris, sauf la personne concernée.",
+      "expert": "Le Soleil en Cancer, signe cardinal d’eau, fonde l’identité sur l’appartenance et la protection. Vous agissez par détours plutôt que de front ; la sécurité affective conditionne chez vous toute initiative."
+    },
+    "roastAngles": {
+      "soft": [
+        "Tu gardes tout : les lettres, les souvenirs, les gens. C’est ta manière de dire que rien n’est perdu."
+      ],
+      "cash": [
+        "Tu te souviens mot pour mot d’une remarque de l’école primaire. Tes clés, en revanche, mystère.",
+        "Tu as cuisiné pour douze, on était quatre, et tout le monde est reparti avec une boîte."
+      ],
+      "expert": [
+        "Soleil en Cancer : cardinalité d’eau. Vous avancez de biais, mais vous ne lâchez jamais ce qui vous est cher."
+      ]
+    },
+    "roastWeight": 2,
+    "avoid": [
+      "Réduire le placement à la fragilité ou aux larmes",
+      "Assimiler attachement à la famille et dépendance"
+    ]
+  },
+  "planet_sign:sun:leo": {
+    "keywords": [
+      "rayonnement",
+      "fierté",
+      "générosité",
+      "créativité",
+      "loyauté"
+    ],
+    "essence": "Le Soleil en Lion, signe fixe de feu où il est en domicile, fonde l’identité sur le rayonnement, la fierté et le don de soi. La personne a besoin de créer, de se montrer et de compter pour quelqu’un.",
+    "light": [
+      "Générosité large, qui donne sans compter",
+      "Loyauté solide envers les personnes choisies",
+      "Chaleur qui met de la fête et du courage dans un groupe"
+    ],
+    "shadow": [
+      "Fierté qui supporte mal la critique",
+      "Besoin d’attention difficile à rassasier",
+      "Tendance à tout ramener à sa propre histoire"
+    ],
+    "behaviors": [
+      "Raconter une anecdote en mimant tous les personnages",
+      "Offrir un cadeau trop grand pour l’occasion",
+      "Vérifier discrètement qui a applaudi",
+      "Se vexer d’un compliment jugé trop court",
+      "Organiser l’anniversaire des autres et y briller quand même"
+    ],
+    "summary": {
+      "soft": "Tu réchauffes une pièce rien qu’en y entrant. Ta générosité est vraie, et ton besoin d’attention aussi : les deux vont ensemble, comme la flamme et sa lumière.",
+      "cash": "Tu donnes tout sans compter, mais tu comptes très bien les applaudissements. Un merci oublié, et c’est rideau.",
+      "expert": "Le Soleil en Lion est en domicile : signe fixe de feu, il y exprime pleinement volonté, fierté et créativité. Vous cherchez à rayonner et à donner ; la reconnaissance reste chez vous un besoin structurant."
+    },
+    "roastAngles": {
+      "soft": [
+        "Tu brilles sans le faire exprès, et tu offres ta lumière à qui veut bien s’y asseoir."
+      ],
+      "cash": [
+        "Tu racontes ta journée comme une bande-annonce : avec les voix, les gestes et une pause pour les réactions.",
+        "On t’a fait un compliment. Tu as dit “oh, arrête”, puis tu as attendu la suite avec beaucoup de patience."
+      ],
+      "expert": [
+        "Soleil en Lion, en domicile : fixité de feu. Vous donnez largement, à condition que cela se remarque."
+      ]
+    },
+    "roastWeight": 3,
+    "avoid": [
+      "Réduire le placement à l’égocentrisme",
+      "Employer des images de roi ou de reine"
+    ]
+  },
+  "planet_sign:sun:virgo": {
+    "keywords": [
+      "précision",
+      "analyse",
+      "service",
+      "exigence",
+      "discrétion"
+    ],
+    "essence": "Le Soleil en Vierge, signe mutable de terre, fonde l’identité sur l’utilité, la précision et le souci du détail. La personne se définit par ce qu’elle améliore et par les services qu’elle rend.",
+    "light": [
+      "Sens de l’analyse et œil pour ce qui cloche",
+      "Fiabilité discrète, sans besoin de se faire remarquer",
+      "Goût du travail soigné et des solutions pratiques"
+    ],
+    "shadow": [
+      "Autocritique sévère, rarement satisfaite",
+      "Inquiétude pour des détails que personne d’autre ne voit",
+      "Tendance à corriger avant de féliciter"
+    ],
+    "behaviors": [
+      "Relire un message quatre fois avant de l’envoyer",
+      "Faire des listes, puis une liste des listes",
+      "Redresser un cadre chez les autres",
+      "Repérer la faute d’orthographe sur le menu",
+      "Refaire discrètement ce qui vient d’être fait"
+    ],
+    "summary": {
+      "soft": "Tu prends soin du monde par les détails : un geste juste, un mot précis, une chose remise à sa place. Ta rigueur est une forme de tendresse.",
+      "cash": "Tu as repéré la faute sur le menu avant de choisir ton plat. Tu aides tout le monde, avec une légère envie de tout refaire derrière.",
+      "expert": "Le Soleil en Vierge, signe mutable de terre, fonde l’identité sur le discernement et le service. Vous analysez avant d’agir ; l’exigence envers vous-même dépasse souvent celle que vous appliquez aux autres."
+    },
+    "roastAngles": {
+      "soft": [
+        "Tu ranges, tu tries, tu répares : c’est ta façon de dire aux gens que tu tiens à eux."
+      ],
+      "cash": [
+        "Tu as fait une liste pour te détendre. Puis tu l’as recopiée au propre, parce qu’elle penchait.",
+        "Tu dis “c’est très bien” en remettant la chose exactement comme tu l’aurais faite."
+      ],
+      "expert": [
+        "Soleil en Vierge : mutabilité de terre. Vous perfectionnez ce qui existe, parfois au détriment de l’élan."
+      ]
+    },
+    "roastWeight": 3,
+    "avoid": [
+      "Réduire le placement à la maniaquerie du ménage",
+      "Associer le signe à la froideur ou à la pruderie"
+    ]
+  },
+  "planet_sign:sun:libra": {
+    "keywords": [
+      "relation",
+      "équilibre",
+      "diplomatie",
+      "harmonie",
+      "indécision"
+    ],
+    "essence": "Le Soleil en Balance, signe cardinal d’air où il est en chute, fonde l’identité sur la relation, l’équilibre et le sens de l’harmonie. La personne se définit volontiers à travers la présence de l’autre.",
+    "light": [
+      "Diplomatie et art de trouver un terrain d’entente",
+      "Sens de la justice et de l’équité",
+      "Élégance des manières et goût de l’harmonie"
+    ],
+    "shadow": [
+      "Indécision prolongée devant un choix simple",
+      "Évitement du conflit, au prix de non-dits",
+      "Tendance à dire à chacun ce qu’il souhaite entendre"
+    ],
+    "behaviors": [
+      "Hésiter dix minutes entre deux plats, puis prendre comme le voisin",
+      "Répondre « peu importe » en ayant une préférence nette",
+      "Donner raison aux deux camps dans la même soirée",
+      "Demander pardon quand quelqu’un d’autre bouscule",
+      "Solliciter trois avis avant d’acheter un pull"
+    ],
+    "summary": {
+      "soft": "Tu cherches l’accord comme d’autres cherchent la lumière. Avec toi, les angles s’arrondissent et chacun se sent écouté.",
+      "cash": "Tu dis “comme tu veux” en ayant une préférence très claire. Puis tu attends, avec élégance, que quelqu’un devine.",
+      "expert": "Le Soleil en Balance est en chute : dans ce signe cardinal d’air, l’affirmation de soi passe par l’autre. Vous cherchez l’équilibre avant la décision ; trancher vous coûte plus que négocier."
+    },
+    "roastAngles": {
+      "soft": [
+        "Tu pèses chaque mot pour ne blesser personne : ta douceur est un vrai travail d’orfèvre."
+      ],
+      "cash": [
+        "Tu as mis vingt minutes à choisir un plat, et tu as fini par prendre celui de ton voisin de table.",
+        "Tu donnes raison à tout le monde, puis tu rentres chez toi avec trois engagements contradictoires."
+      ],
+      "expert": [
+        "Soleil en Balance, en chute : cardinalité d’air. Vous décidez mieux pour autrui que pour vous-même."
+      ]
+    },
+    "roastWeight": 2,
+    "avoid": [
+      "Réduire le placement à la superficialité ou à la coquetterie",
+      "Confondre recherche d’équilibre et absence d’opinion"
+    ]
+  },
+  "planet_sign:sun:scorpio": {
+    "keywords": [
+      "intensité",
+      "profondeur",
+      "maîtrise",
+      "lucidité",
+      "secret"
+    ],
+    "essence": "Le Soleil en Scorpion, signe fixe d’eau, fonde l’identité sur l’intensité, la profondeur et la maîtrise de soi. La personne veut connaître le dessous des choses et ne s’engage jamais à moitié.",
+    "light": [
+      "Lucidité qui perçoit ce qui n’est pas dit",
+      "Loyauté totale une fois la confiance accordée",
+      "Capacité à traverser les crises et à s’y transformer"
+    ],
+    "shadow": [
+      "Méfiance qui met les autres à l’épreuve",
+      "Rancune tenace, soigneusement entretenue",
+      "Goût du contrôle et du secret"
+    ],
+    "behaviors": [
+      "Poser une question dont la réponse est déjà connue",
+      "Observer en silence avant de dire un mot",
+      "Retrouver n’importe quelle information en trois recherches",
+      "Ne rien raconter de soi pendant des mois",
+      "Couper les ponts sans préavis ni explication"
+    ],
+    "summary": {
+      "soft": "Tu ne fais rien à moitié : ni aimer, ni chercher, ni te taire. Derrière ta réserve, il y a une fidélité rare, offerte à très peu de gens.",
+      "cash": "Tu poses la question en connaissant déjà la réponse. C’est un test, et tout le monde le passe sans le savoir.",
+      "expert": "Le Soleil en Scorpion, signe fixe d’eau, concentre l’identité sur l’intensité et la maîtrise. Vous sondez avant de vous engager ; votre volonté s’exerce en profondeur, par la persévérance plus que par l’éclat."
+    },
+    "roastAngles": {
+      "soft": [
+        "Tu regardes les gens jusqu’au fond, et tu ne pars pas : c’est ta plus grande preuve d’affection."
+      ],
+      "cash": [
+        "Tu pardonnes, bien sûr. Tu gardes juste la date, l’heure et la phrase exacte, au cas où.",
+        "Tu sais tout sur tout le monde, et personne ne connaît ne serait-ce que ton plat préféré."
+      ],
+      "expert": [
+        "Soleil en Scorpion : fixité d’eau. Vous accordez peu votre confiance, et vous ne la rendez jamais deux fois."
+      ]
+    },
+    "roastWeight": 3,
+    "avoid": [
+      "Réduire le placement à la jalousie ou à la manipulation",
+      "Faire du signe une caricature sombre ou dangereuse"
+    ]
+  },
+  "planet_sign:sun:sagittarius": {
+    "keywords": [
+      "quête de sens",
+      "horizon",
+      "liberté",
+      "optimisme",
+      "franchise"
+    ],
+    "essence": "Le Soleil en Sagittaire, signe mutable de feu, fonde l’identité sur la quête de sens, l’horizon et la liberté de mouvement. La personne se définit par ce qu’elle explore, croit et transmet.",
+    "light": [
+      "Optimisme qui redonne de l’élan aux autres",
+      "Goût de la vérité et des grandes questions",
+      "Ouverture aux cultures, aux idées et aux grands espaces"
+    ],
+    "shadow": [
+      "Franchise sans filtre, qui touche plus fort que prévu",
+      "Engagements plus larges que l’agenda",
+      "Fuite devant la routine et les cadres serrés"
+    ],
+    "behaviors": [
+      "Réserver un billet avant de vérifier son agenda",
+      "Donner un avis définitif sur un pays visité quatre jours",
+      "Arriver en retard avec une excellente histoire",
+      "Dire une vérité à voix haute au pire moment",
+      "Transformer une question simple en exposé de philosophie"
+    ],
+    "summary": {
+      "soft": "Tu portes l’horizon avec toi : où que tu sois, tu vois plus loin et tu donnes envie de partir. Ta confiance en la vie est contagieuse.",
+      "cash": "Tu dis ce que tu penses, puis tu te demandes pourquoi ce silence. Tu as un billet d’avion et aucun plan, et ça te va très bien.",
+      "expert": "Le Soleil en Sagittaire, signe mutable de feu, oriente l’identité vers le sens et l’expansion. Vous avez besoin d’un but lointain ; votre franchise procède d’une conviction, rarement d’un calcul."
+    },
+    "roastAngles": {
+      "soft": [
+        "Tu crois que tout finit par s’arranger, et à force d’y croire, tu embarques tout le monde."
+      ],
+      "cash": [
+        "Tu as dit “je dis ça, je dis rien”, puis tu as tout dit, avec des exemples et une conclusion.",
+        "Tu donnes des leçons de vie tirées d’un voyage de quatre jours, dont deux passés à l’aéroport."
+      ],
+      "expert": [
+        "Soleil en Sagittaire : mutabilité de feu. Vous visez loin, quitte à négliger ce qui se trouve à vos pieds."
+      ]
+    },
+    "roastWeight": 2,
+    "avoid": [
+      "Réduire le placement à l’irresponsabilité",
+      "Associer le signe à une croyance particulière"
+    ]
+  },
+  "planet_sign:sun:capricorn": {
+    "keywords": [
+      "ambition",
+      "responsabilité",
+      "persévérance",
+      "temps long",
+      "pudeur"
+    ],
+    "essence": "Le Soleil en Capricorne, signe cardinal de terre, fonde l’identité sur l’ambition, la responsabilité et le temps long. La personne se définit par ce qu’elle accomplit et par les engagements qu’elle tient.",
+    "light": [
+      "Persévérance face aux objectifs lointains",
+      "Sens du devoir et parole tenue",
+      "Humour sec, souvent inattendu"
+    ],
+    "shadow": [
+      "Dureté envers soi, puis envers les autres",
+      "Difficulté à se reposer sans culpabilité",
+      "Pudeur qui passe pour de la froideur"
+    ],
+    "behaviors": [
+      "Répondre à un courriel de travail pendant les vacances",
+      "Avoir un plan à cinq ans et un plan de secours",
+      "Arriver en avance et le faire remarquer",
+      "Féliciter par un simple « c’est correct »",
+      "Calculer le temps perdu pendant une sieste"
+    ],
+    "summary": {
+      "soft": "Tu gravis ta montagne pas à pas, sans bruit, et tu tiens toujours parole. Sous ton sérieux, il y a une tendresse qui se prouve par les actes.",
+      "cash": "Tu te reposes avec un objectif et un chronomètre. À huit ans, tu avais déjà un plan de carrière et un avis sur les retardataires.",
+      "expert": "Le Soleil en Capricorne, signe cardinal de terre, fonde l’identité sur l’accomplissement et la maîtrise du temps. Vous construisez par étapes ; l’autorité que vous recherchez se gagne chez vous par l’effort."
+    },
+    "roastAngles": {
+      "soft": [
+        "Tu portes beaucoup sans te plaindre : pose le sac de temps en temps, le sommet ne bouge pas."
+      ],
+      "cash": [
+        "Tu as pris un jour de repos, et tu l’as rentabilisé en rangeant le garage et en triant tes factures.",
+        "Ton plus grand compliment, c’est “pas mal”. Les gens qui te connaissent en pleurent de joie."
+      ],
+      "expert": [
+        "Soleil en Capricorne : cardinalité de terre. Vous remettez le plaisir à plus tard avec une constance suspecte."
+      ]
+    },
+    "roastWeight": 3,
+    "avoid": [
+      "Réduire le placement à la froideur ou à l’obsession de l’argent",
+      "Présenter l’ambition comme un défaut"
+    ]
+  },
+  "planet_sign:sun:aquarius": {
+    "keywords": [
+      "indépendance",
+      "idéal collectif",
+      "originalité",
+      "amitié",
+      "détachement"
+    ],
+    "essence": "Le Soleil en Verseau, signe fixe d’air où il est en exil, fonde l’identité sur l’indépendance d’esprit, l’idéal collectif et le refus des conventions. La personne se définit par ses idées et par sa différence.",
+    "light": [
+      "Pensée originale, en avance sur son entourage",
+      "Sens de l’amitié et du collectif",
+      "Tolérance sincère envers toutes les singularités"
+    ],
+    "shadow": [
+      "Distance affective quand l’émotion devient trop proche",
+      "Esprit de contradiction par principe",
+      "Certitude têtue d’avoir raison avant tout le monde"
+    ],
+    "behaviors": [
+      "Contredire une idée dès qu’elle devient majoritaire",
+      "Disparaître plusieurs semaines puis revenir comme si de rien n’était",
+      "Défendre l’humanité entière et oublier un anniversaire",
+      "Analyser une émotion au lieu de la ressentir",
+      "Adopter une passion étrange avant qu’elle soit à la mode"
+    ],
+    "summary": {
+      "soft": "Tu regardes le monde d’un peu plus haut, là où l’air est libre. Ta différence n’est pas une pose : c’est ta façon d’aimer les gens, tous ensemble.",
+      "cash": "Tu aimes l’humanité, c’est avec les gens un par un que ça se complique. Dès que tout le monde aime un truc, tu passes à autre chose.",
+      "expert": "Le Soleil en Verseau est en exil : dans ce signe fixe d’air, l’identité se pense à travers le groupe et l’idée. Vous tenez à votre indépendance ; l’affirmation personnelle passe chez vous par la singularité."
+    },
+    "roastAngles": {
+      "soft": [
+        "Tu ne rentres dans aucune case, et c’est exactement pour ça qu’on te garde une place à part."
+      ],
+      "cash": [
+        "Tu réponds “c’est intéressant” à quelqu’un qui pleure, puis tu proposes une théorie.",
+        "Tu as disparu trois semaines sans prévenir, et tu reviens avec un lien vers un documentaire."
+      ],
+      "expert": [
+        "Soleil en Verseau, en exil : fixité d’air. Vous défendez la liberté de tous avec une rigidité remarquable."
+      ]
+    },
+    "roastWeight": 2,
+    "avoid": [
+      "Réduire le placement à la froideur ou à l’excentricité gratuite",
+      "Confondre détachement et absence de sentiments"
+    ]
+  },
+  "planet_sign:sun:pisces": {
+    "keywords": [
+      "empathie",
+      "imaginaire",
+      "porosité",
+      "compassion",
+      "rêverie"
+    ],
+    "essence": "Le Soleil en Poissons, signe mutable d’eau, fonde l’identité sur l’empathie, l’imaginaire et la porosité au monde. La personne se définit moins par des contours que par ce qu’elle ressent et rêve.",
+    "light": [
+      "Compassion spontanée pour tout ce qui souffre",
+      "Imagination riche et sens artistique",
+      "Intuition fine des ambiances et des non-dits"
+    ],
+    "shadow": [
+      "Limites floues entre ses émotions et celles des autres",
+      "Fuite dans le rêve quand le réel se durcit",
+      "Difficulté à dire non, puis à tenir le oui"
+    ],
+    "behaviors": [
+      "Pleurer devant une publicité pour de la lessive",
+      "Manquer son arrêt de bus en regardant par la fenêtre",
+      "Répondre oui à tout puis disparaître",
+      "Égarer ses clés dans sa propre main",
+      "Absorber l’humeur de la pièce en y entrant"
+    ],
+    "summary": {
+      "soft": "Tu ressens le monde comme une marée : tout te traverse, tout te touche. Ta douceur et ton imagination sont un refuge pour ceux qui t’approchent.",
+      "cash": "Tu as dit oui à trois personnes pour samedi, et samedi tu dors. Tu pleures devant une pub, mais c’était une très bonne pub.",
+      "expert": "Le Soleil en Poissons, signe mutable d’eau, dilue les contours de l’identité au profit de l’empathie et de l’imaginaire. Vous percevez par imprégnation ; poser des limites demande chez vous un effort délibéré."
+    },
+    "roastAngles": {
+      "soft": [
+        "Tu rêves les yeux ouverts, et le monde paraît plus doux à ceux qui marchent près de toi."
+      ],
+      "cash": [
+        "Tu as manqué ton arrêt parce que tu inventais la vie entière de la personne assise en face.",
+        "Tu cherches ton téléphone depuis dix minutes en éclairant la pièce avec ton téléphone."
+      ],
+      "expert": [
+        "Soleil en Poissons : mutabilité d’eau. Vous comprenez tout le monde, sauf l’idée même d’un horaire."
+      ]
+    },
+    "roastWeight": 2,
+    "avoid": [
+      "Réduire le placement à la naïveté ou à la victimisation",
+      "Évoquer une fuite dans des substances"
+    ]
+  }
+}

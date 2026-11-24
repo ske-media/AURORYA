@@ -1,0 +1,30 @@
+node_modules/
+dist/
+.next/
+.expo/
+.turbo/
+coverage/
+*.tsbuildinfo
+.DS_Store
+
+# Secrets : jamais dans le dépôt (SPEC §21.1)
+.env
+.env.*
+!.env.example
+
+# Copies produites par `pnpm assets:build`
+apps/web/public/brand/
+apps/web/public/cards/
+
+# Expo
+apps/mobile/dist/
+apps/mobile/expo-env.d.ts
+apps/mobile/ios/
+apps/mobile/android/
+
+# Next.js
+apps/web/.next/
+apps/web/next-env.d.ts
+
+# Données téléchargées (GeoNames)
+.cache/

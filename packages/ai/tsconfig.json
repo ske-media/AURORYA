@@ -1,0 +1,13 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "include": [
+    "src/**/*",
+    "src/**/*.json",
+    "../../content/roles/*.json"
+  ],
+  "compilerOptions": {
+    "types": [
+      "node"
+    ]
+  }
+}

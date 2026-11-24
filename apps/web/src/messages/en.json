@@ -1,0 +1,24 @@
+{
+  "brand": { "name": "Aurorya", "tagline": "The sky, unfiltered" },
+  "home": { "aiNotice": "Aurorya’s astrologer is an artificial intelligence. Aurorya is a tool for entertainment and self-reflection." },
+  "waitlist": {
+    "title": "Hear about the launch",
+    "email": "Email address",
+    "consent": "I agree to receive one email from Aurorya at launch.",
+    "submit": "Sign me up",
+    "sending": "Sending",
+    "done": "Noted. A confirmation email is on its way.",
+    "error": "Sign-up did not go through. Try again in a moment.",
+    "confirmed": "Your sign-up is confirmed.",
+    "confirmInvalid": "This confirmation link is no longer valid.",
+    "unsubscribed": "You are unsubscribed from the list.",
+    "unsubscribeInvalid": "This unsubscribe link is not valid."
+  },
+  "invite": {
+    "title": "{{inviter}} invites you to join “{{group}}”",
+    "codeLabel": "Invitation code",
+    "open": "Open in the app",
+    "howTo": "In the Aurorya app, open “My groups”, then enter this code.",
+    "invalid": "This invitation is no longer valid."
+  }
+}

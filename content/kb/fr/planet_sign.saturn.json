@@ -1,0 +1,230 @@
+{
+  "planet_sign:saturn:aries": {
+    "keywords": ["autonomie", "élan retenu", "courage", "peur d’échouer", "effort"],
+    "essence": "Saturne en Bélier met l’exigence sur l’initiative : l’élan se heurte au doute, et l’autonomie s’apprend par l’effort.",
+    "light": ["Courage construit, qui ne dépend pas de l’humeur", "Capacité à agir sans appui", "Endurance dans les débuts difficiles"],
+    "shadow": ["Peur de se lancer déguisée en prudence", "Alternance de frein et d’accélérateur", "Dureté envers ses propres hésitations"],
+    "behaviors": ["Préparer longuement un premier pas", "Refuser de l’aide pour prouver une capacité à faire sans personne", "Démarrer d’un coup après des semaines de retenue", "S’agacer d’attendre tout en hésitant à commencer"],
+    "summary": {
+      "soft": "Ton courage ne s’est pas donné d’emblée : tu l’as appris, un premier pas après l’autre. Cette lenteur à oser fait de toi quelqu’un de fiable quand les débuts sont rudes.",
+      "cash": "Tu veux y aller tout de suite, mais d’abord tu vérifies que tu as le droit. Tu conduis ta vie pied sur le frein et main sur le klaxon.",
+      "expert": "Saturne en Bélier, en chute, contraint l’impulsion : l’initiative devient un terrain d’exigence. L’autonomie s’affirme par la discipline plutôt que par l’élan."
+    },
+    "roastAngles": {
+      "soft": ["Tu as appris le courage à la main, et il tient mieux que celui qui vient tout seul."],
+      "cash": ["Tu répètes « j’y vais » depuis un moment, debout, manteau sur le dos, dans l’entrée.", "Tu refuses toute aide pour porter les cartons, puis tu en veux à l’escalier."],
+      "expert": ["En chute, Saturne freine le premier mouvement : la décision y gagne en gravité, non en vitesse."]
+    },
+    "roastWeight": 1,
+    "avoid": ["Parler de lâcheté", "Annoncer des échecs"]
+  },
+  "planet_sign:saturn:taurus": {
+    "keywords": ["sécurité", "endurance", "sobriété", "peur du manque", "attachement"],
+    "essence": "Saturne en Taureau place l’exigence sur la sécurité matérielle : besoin de solide, peur du manque, construction lente et tenace.",
+    "light": ["Endurance remarquable dans l’effort", "Sens de la valeur des choses", "Fidélité à ce qui a fait ses preuves"],
+    "shadow": ["Crainte de manquer même quand tout va bien", "Difficulté à s’accorder un plaisir sans raison", "Rigidité face au changement d’habitudes"],
+    "behaviors": ["Garder un objet « au cas où » pendant dix ans", "Comparer longuement avant le moindre achat", "Finir le tube jusqu’à la dernière goutte", "Refuser de changer de place à table"],
+    "summary": {
+      "soft": "Tu construis ta sécurité avec patience, comme on monte un mur de pierres sèches. Ce besoin de solide n’est pas de l’avarice : c’est une façon de tenir parole au temps.",
+      "cash": "Tu gardes tout « au cas où », et le cas où n’arrive jamais. Tu t’offres un plaisir après avoir vérifié trois fois que tu le mérites.",
+      "expert": "Saturne en Taureau fixe l’exigence sur les ressources et la stabilité : persévérance, économie, sens du concret. La peur du manque peut rigidifier le rapport au plaisir et à la possession."
+    },
+    "roastAngles": {
+      "soft": ["Tu bâtis lentement, mais ce que tu poses reste posé, et chacun s’y appuie volontiers."],
+      "cash": ["Tu coupes le tube de dentifrice en deux pour récupérer ce qu’il reste dedans.", "Tu hésites deux semaines pour un achat, puis tu gardes le ticket de caisse à vie."],
+      "expert": ["Saturne en Taureau thésaurise par précaution : la sécurité s’y mesure à ce qui dure."]
+    },
+    "roastWeight": 1,
+    "avoid": ["Donner un conseil financier", "Parler d’avarice"]
+  },
+  "planet_sign:saturn:gemini": {
+    "keywords": ["rigueur intellectuelle", "doute", "parole mesurée", "concentration", "méthode"],
+    "essence": "Saturne en Gémeaux discipline la pensée : exigence de précision dans les mots, sérieux dans l’apprentissage, crainte de mal s’exprimer.",
+    "light": ["Esprit méthodique et fiable", "Parole pesée, qui engage", "Capacité à approfondir un sujet jusqu’au bout"],
+    "shadow": ["Peur de dire une bêtise", "Autocensure avant de prendre la parole", "Sérieux excessif là où la légèreté suffirait"],
+    "behaviors": ["Relire un message plusieurs fois avant de l’envoyer", "Vérifier un mot dans le dictionnaire en pleine conversation", "Préparer des notes pour un simple appel", "Se taire en réunion puis tout formuler après coup"],
+    "summary": {
+      "soft": "Tu pèses tes mots parce que tu sais ce qu’ils valent. Ta pensée avance lentement, sûrement, et quand tu parles enfin, les autres écoutent.",
+      "cash": "Tu rédiges un message, tu le relis, tu le corriges, tu doutes, puis tu envoies « ok ». Ta meilleure réplique arrive toujours dans l’escalier.",
+      "expert": "Saturne en Gémeaux structure le mental : pensée rigoureuse, expression contrôlée, apprentissage méthodique. La crainte de l’erreur peut inhiber la spontanéité de la parole."
+    },
+    "roastAngles": {
+      "soft": ["Tu choisis tes mots comme on choisit des clés : pour qu’ils ouvrent vraiment quelque chose."],
+      "cash": ["Tu prépares une fiche avec des tirets avant d’appeler pour commander une pizza.", "Tu trouves la réponse parfaite trois jours après la fin de la discussion."],
+      "expert": ["Saturne en Gémeaux exige l’exactitude du propos : la parole y devient un engagement."]
+    },
+    "roastWeight": 1,
+    "avoid": ["Parler de difficultés scolaires", "Supposer un manque d’intelligence"]
+  },
+  "planet_sign:saturn:cancer": {
+    "keywords": ["pudeur", "protection", "réserve affective", "devoir familial", "carapace"],
+    "essence": "Saturne en Cancer place l’exigence sur la sécurité affective : pudeur des émotions, sens du devoir envers les proches, peur de dépendre.",
+    "light": ["Fiabilité sans faille envers les siens", "Capacité à tenir bon quand les autres flanchent", "Tendresse qui se prouve par des actes"],
+    "shadow": ["Émotions gardées sous clé", "Difficulté à demander du réconfort", "Devoir familial porté sans partage"],
+    "behaviors": ["Répondre « ça va » en changeant de sujet", "Prendre en charge l’organisation des fêtes de famille", "S’occuper des autres pour détourner l’attention de soi", "Ranger la maison quand quelque chose ne va pas"],
+    "summary": {
+      "soft": "Ta tendresse est pudique : elle passe par ce que tu fais plutôt que par ce que tu dis. Tu protèges les tiens avec constance, et toi aussi, tu mérites un abri.",
+      "cash": "Tu prends soin de tout le monde pour que personne ne te demande comment ça va. Ta carapace a une carapace, et elle est très bien rangée.",
+      "expert": "Saturne en Cancer, en exil, contraint l’expression affective : pudeur, sens du devoir familial, besoin de sécurité intérieure. La protection peut se muer en retrait défensif."
+    },
+    "roastAngles": {
+      "soft": ["Tu dis « je t’aime » en vérifiant que l’autre a bien pris une écharpe."],
+      "cash": ["Tu réponds « ça va » d’un air qui déconseille clairement la question suivante.", "Tu consoles tout le monde, puis tu ranges la cuisine à minuit sans rien dire."],
+      "expert": ["En exil, Saturne tient l’émotion à distance : le soin s’y exprime par le devoir."]
+    },
+    "roastWeight": 2,
+    "avoid": ["Supposer une enfance malheureuse", "Parler de la mère ou du père"]
+  },
+  "planet_sign:saturn:leo": {
+    "keywords": ["fierté", "pudeur", "exigence créative", "peur du ridicule", "dignité"],
+    "essence": "Saturne en Lion met l’exigence sur l’expression de soi : besoin de reconnaissance méritée, peur du ridicule, créativité travaillée.",
+    "light": ["Dignité constante, même sous pression", "Talent poli par le travail", "Autorité naturelle quand la confiance est là"],
+    "shadow": ["Crainte de se montrer avant d’avoir tout préparé", "Difficulté à recevoir un compliment", "Orgueil qui empêche de demander"],
+    "behaviors": ["Répéter longtemps avant de monter sur scène", "Minimiser un compliment aussitôt reçu", "Refuser de jouer à un jeu sans en maîtriser les règles", "Travailler une création en secret pendant des mois"],
+    "summary": {
+      "soft": "Tu veux briller, mais pas à n’importe quel prix : seulement si c’est mérité. Cette pudeur donne à ta lumière quelque chose de rare et de digne.",
+      "cash": "Tu rêves d’applaudissements mais tu refuses de monter sur scène sans dix répétitions. Un compliment te gêne, son absence te vexe.",
+      "expert": "Saturne en Lion, en exil, soumet l’expression personnelle à l’exigence : fierté contenue, créativité disciplinée. La reconnaissance est désirée autant que redoutée."
+    },
+    "roastAngles": {
+      "soft": ["Tu ne te montres qu’une fois le travail fait, et c’est pour cela que les regards s’arrêtent."],
+      "cash": ["Tu réponds à un compliment par la liste détaillée de ce qui n’allait pas.", "Tu refuses le karaoké toute la soirée, puis tu notes chaque chanson comme un jury."],
+      "expert": ["En exil en Lion, Saturne retient l’éclat : l’autorité s’y acquiert par le travail, non par la démonstration."]
+    },
+    "roastWeight": 1,
+    "avoid": ["Parler d’un manque d’amour", "Réduire le placement à la timidité"]
+  },
+  "planet_sign:saturn:virgo": {
+    "keywords": ["rigueur", "devoir", "perfectionnisme", "méthode", "autocritique"],
+    "essence": "Saturne en Vierge place l’exigence sur le travail bien fait : goût de la méthode, sens du devoir, peur de l’erreur.",
+    "light": ["Fiabilité exemplaire dans l’exécution", "Capacité d’analyse patiente", "Conscience professionnelle élevée"],
+    "shadow": ["Perfectionnisme qui retarde la fin", "Autocritique sévère", "Inquiétude pour des détails mineurs"],
+    "behaviors": ["Vérifier trois fois une pièce jointe", "Reprendre en silence le travail d’un autre pour l’améliorer", "Dresser la liste de ses propres erreurs après une réussite", "Arriver en avance par crainte du retard"],
+    "summary": {
+      "soft": "Tu fais les choses bien parce que tu respectes ce que tu touches. Ton exigence est un soin ; elle mérite seulement de se montrer aussi douce avec toi qu’avec ton travail.",
+      "cash": "Tu rends un travail impeccable en t’excusant qu’il ne soit pas mieux. Tu as repéré la faute d’orthographe du menu avant de voir les plats.",
+      "expert": "Saturne en Vierge renforce l’analyse et le sens du devoir : méthode, précision, exigence d’utilité. L’autocritique et la crainte de l’erreur peuvent freiner l’achèvement."
+    },
+    "roastAngles": {
+      "soft": ["Tu prends soin des détails comme d’un jardin : rien ne pousse par hasard chez toi."],
+      "cash": ["Tu rouvres un courriel déjà envoyé pour vérifier que la pièce jointe y est toujours.", "Tu refais discrètement le lave-vaisselle chargé par quelqu’un d’autre."],
+      "expert": ["Saturne en Vierge soumet tout au contrôle : la valeur d’une tâche s’y juge à son exactitude."]
+    },
+    "roastWeight": 2,
+    "avoid": ["Parler d’hygiène de vie ou du corps", "Qualifier la personne de maniaque"]
+  },
+  "planet_sign:saturn:libra": {
+    "keywords": ["équité", "engagement", "mesure", "sens du contrat", "réserve relationnelle"],
+    "essence": "Saturne en Balance, signe de son exaltation, place l’exigence sur la relation : sérieux de l’engagement, sens de l’équité, lenteur à s’accorder.",
+    "light": ["Loyauté dans les engagements pris", "Jugement équilibré et impartial", "Tact dans les situations tendues"],
+    "shadow": ["Peur du désaccord", "Lenteur à s’engager", "Comptabilité discrète de ce qui est donné et reçu"],
+    "behaviors": ["Peser le pour et le contre par écrit", "Tenir une parole donnée des années plus tôt", "Reformuler une critique jusqu’à la rendre polie", "Se souvenir de qui a payé la dernière fois"],
+    "summary": {
+      "soft": "Tu prends les liens au sérieux : une parole donnée, chez toi, pèse lourd. Tu avances lentement vers l’autre, mais tu restes.",
+      "cash": "Tu mets six mois à dire oui et dix ans à tenir parole. Tu sais exactement qui a invité qui la dernière fois, mais tu n’en parles jamais.",
+      "expert": "Saturne en Balance, en exaltation, donne à l’exigence une forme juste : sens du contrat, impartialité, engagement durable. La prudence relationnelle peut retarder le choix."
+    },
+    "roastAngles": {
+      "soft": ["Tu donnes ta parole rarement, et c’est pour cela qu’elle vaut de l’or."],
+      "cash": ["Tu fais une liste de pour et de contre pour savoir si tu acceptes un café.", "Tu évites une dispute depuis si longtemps qu’elle a pris un abonnement chez toi."],
+      "expert": ["Exalté en Balance, Saturne codifie le lien : l’équité y prime sur l’élan."]
+    },
+    "roastWeight": 1,
+    "avoid": ["Parler de mariage, de séparation ou de droit", "Supposer une solitude"]
+  },
+  "planet_sign:saturn:scorpio": {
+    "keywords": ["maîtrise", "contrôle", "endurance", "méfiance", "pudeur de l’intime"],
+    "essence": "Saturne en Scorpion place l’exigence sur la maîtrise de soi : contrôle des émotions fortes, endurance dans l’épreuve, peur de perdre pied.",
+    "light": ["Résistance hors du commun sous pression", "Loyauté profonde une fois la confiance donnée", "Lucidité sur les rapports de force"],
+    "shadow": ["Méfiance longue à lever", "Refus de montrer une faille", "Rancune tenue avec méthode"],
+    "behaviors": ["Mettre quelqu’un à l’épreuve avant de se confier", "Garder un visage impassible sous le choc", "Se souvenir précisément d’une trahison ancienne", "Tout gérer sans aide plutôt que demander"],
+    "summary": {
+      "soft": "Tu ne donnes pas ta confiance à la légère, et quand tu la donnes, c’est pour de bon. Derrière ta maîtrise, il y a une profondeur que peu de gens ont la chance de voir.",
+      "cash": "Tu fais passer des tests aux gens sans leur dire qu’il y a un examen. Tu pardonnes, bien sûr, mais tu classes le dossier par date.",
+      "expert": "Saturne en Scorpion concentre l’exigence sur le contrôle émotionnel : endurance, lucidité, méfiance défensive. La crainte de la vulnérabilité structure le rapport à l’intime."
+    },
+    "roastAngles": {
+      "soft": ["Tu gardes la porte, c’est vrai, mais ceux qui entrent ne sont jamais mis dehors."],
+      "cash": ["Tu dis « j’ai tourné la page » en citant la date, l’heure et la phrase exacte.", "Tu laisses quelqu’un faire ses preuves pendant trois ans avant de lui prêter un livre."],
+      "expert": ["Saturne en Scorpion verrouille l’accès à l’intime : la confiance s’y obtient par la durée."]
+    },
+    "roastWeight": 2,
+    "avoid": ["Évoquer la sexualité ou des drames", "Parler de vengeance comme d’un trait certain"]
+  },
+  "planet_sign:saturn:sagittarius": {
+    "keywords": ["convictions", "quête de sens", "rigueur morale", "doute", "sérieux"],
+    "essence": "Saturne en Sagittaire place l’exigence sur le sens : besoin de convictions solides, sérieux dans l’étude, crainte de croire à tort.",
+    "light": ["Pensée construite, qui cherche la cohérence", "Intégrité dans les principes", "Goût de l’étude longue"],
+    "shadow": ["Rigidité des opinions une fois formées", "Difficulté à s’accorder l’insouciance", "Tendance à faire la morale"],
+    "behaviors": ["Lire les sources avant d’avoir un avis", "Préparer un voyage avec un dossier complet", "Reprendre quelqu’un sur l’emploi d’un mot", "Douter d’une bonne nouvelle tant qu’elle n’est pas confirmée"],
+    "summary": {
+      "soft": "Tu as besoin que les choses aient un sens, et tu le cherches avec sérieux. Tes convictions ne sont pas des slogans : tu les as gagnées une à une.",
+      "cash": "Tu pars en vacances avec un itinéraire, une bibliographie et un plan B. Ton optimisme demande d’abord à voir les sources.",
+      "expert": "Saturne en Sagittaire structure la quête de sens : convictions éprouvées, rigueur morale, goût du savoir approfondi. Le doute méthodique peut tourner au dogmatisme."
+    },
+    "roastAngles": {
+      "soft": ["Tu cherches la vérité à pied, sans raccourci, et tu arrives plus loin que prévu."],
+      "cash": ["Tu réponds « tout dépend de la définition » à une question sur le dessert.", "Tu imprimes le programme du voyage en double, dont un exemplaire plastifié."],
+      "expert": ["Saturne en Sagittaire exige des preuves à la conviction : la foi y passe par l’examen."]
+    },
+    "roastWeight": 1,
+    "avoid": ["Parler de croyances ou d’opinions précises", "Supposer des études difficiles"]
+  },
+  "planet_sign:saturn:capricorn": {
+    "keywords": ["ambition", "discipline", "responsabilité", "endurance", "autorité"],
+    "essence": "Saturne en Capricorne, en domicile, exprime pleinement sa nature : ambition patiente, sens du devoir, goût de la structure et du long terme.",
+    "light": ["Persévérance à toute épreuve", "Sens des responsabilités précoce", "Capacité à bâtir sur des années"],
+    "shadow": ["Travail utilisé comme refuge", "Difficulté à se reposer sans culpabilité", "Dureté envers la moindre faiblesse"],
+    "behaviors": ["Répondre à un courriel professionnel un dimanche", "Planifier l’année sur un calendrier mural", "Parler d’objectifs pendant les vacances", "Refuser une pause tant que la tâche n’est pas finie"],
+    "summary": {
+      "soft": "Tu portes beaucoup, depuis longtemps, et tu le fais bien. Ta force tranquille rassure ; elle a aussi le droit de s’asseoir de temps en temps.",
+      "cash": "Tu te détends avec une liste de choses à faire pour te détendre. Tu avais déjà un plan de carrière à l’âge où les autres avaient un doudou.",
+      "expert": "Saturne en Capricorne, en domicile, agit avec toute sa cohérence : discipline, stratégie, sens de la hiérarchie et du temps. L’exigence peut s’exercer au détriment du repos."
+    },
+    "roastAngles": {
+      "soft": ["Tu gravis lentement, sans bruit, et c’est toi qui attends les autres en haut."],
+      "cash": ["Tu prends un jour de congé et tu le passes à ranger tes dossiers par couleur.", "Tu dis « je décroche » en gardant ton téléphone professionnel sur la table de nuit."],
+      "expert": ["En domicile, Saturne gouverne par la durée : le résultat s’y construit, il ne s’improvise pas."]
+    },
+    "roastWeight": 2,
+    "avoid": ["Donner un conseil de carrière", "Présenter la réussite comme acquise"]
+  },
+  "planet_sign:saturn:aquarius": {
+    "keywords": ["indépendance", "principes", "distance", "rigueur d’esprit", "sens du collectif"],
+    "essence": "Saturne en Verseau, en domicile, place l’exigence sur les idées et le groupe : principes fermes, indépendance, engagement réfléchi envers le collectif.",
+    "light": ["Pensée structurée et originale", "Fidélité durable en amitié", "Sens des responsabilités envers le groupe"],
+    "shadow": ["Distance émotionnelle érigée en règle", "Principes appliqués sans souplesse", "Sentiment de rester à part"],
+    "behaviors": ["Observer un groupe depuis le bord avant d’y entrer", "Défendre une règle par principe, même à son désavantage", "Garder les mêmes amis pendant vingt ans", "Répondre à une émotion par une analyse"],
+    "summary": {
+      "soft": "Tu tiens à ta liberté autant qu’à tes principes, et tu offres aux autres la même. Ton amitié est discrète, mais elle traverse les années.",
+      "cash": "Tu réponds à « je suis triste » par un schéma en trois parties. Tu aimes le groupe, à condition d’avoir une sortie de secours et ton propre règlement.",
+      "expert": "Saturne en Verseau, en domicile, structure la pensée et le lien social : principes, objectivité, loyauté de groupe. La distance peut tenir lieu de protection affective."
+    },
+    "roastAngles": {
+      "soft": ["Tu restes un peu à l’écart, et c’est de là que tu vois le mieux ce dont chacun a besoin."],
+      "cash": ["Tu rejoins la soirée, tu repères la sortie, et tu restes debout juste à côté.", "Tu appliques une règle que tu as toi-même inventée, sans exception, même pour toi."],
+      "expert": ["En domicile en Verseau, Saturne rationalise le lien : la loyauté s’y fonde sur le principe."]
+    },
+    "roastWeight": 1,
+    "avoid": ["Évoquer des opinions précises", "Parler d’isolement comme d’un destin"]
+  },
+  "planet_sign:saturn:pisces": {
+    "keywords": ["sensibilité contenue", "limites", "compassion responsable", "doute", "retrait"],
+    "essence": "Saturne en Poissons place l’exigence sur le monde intérieur : besoin de donner forme au flou, peur du débordement, compassion tenue par le devoir.",
+    "light": ["Compassion sérieuse, qui agit", "Capacité à donner une forme aux rêves", "Humilité devant ce qui échappe"],
+    "shadow": ["Culpabilité sans objet précis", "Difficulté à poser des limites nettes", "Retrait silencieux quand tout pèse"],
+    "behaviors": ["S’excuser pour une faute commise par quelqu’un d’autre", "S’isoler pour retrouver son calme après une journée en groupe", "Tenir un carnet pour mettre de l’ordre dans ses rêves", "Aider en silence puis disparaître"],
+    "summary": {
+      "soft": "Tu ressens beaucoup et tu cherches où poser tout cela. En donnant une forme à ta sensibilité, tu en fais un abri pour toi et pour les autres.",
+      "cash": "Tu t’excuses quand quelqu’un te marche sur le pied. Tu veux sauver tout le monde, mais uniquement à des horaires que tu n’as pas fixés.",
+      "expert": "Saturne en Poissons cherche à structurer l’informe : sensibilité disciplinée, sens du sacrifice, besoin de retrait. La difficulté tient à la définition des limites personnelles."
+    },
+    "roastAngles": {
+      "soft": ["Tu donnes des contours à la brume, patiemment, jusqu’à ce qu’un paysage apparaisse."],
+      "cash": ["Tu dis « pardon » à une porte que tu viens de heurter.", "Tu culpabilises d’avoir dit non, puis d’avoir dit oui, puis d’y repenser."],
+      "expert": ["Saturne en Poissons impose une forme au diffus : la compassion y devient une responsabilité."]
+    },
+    "roastWeight": 1,
+    "avoid": ["Parler de sacrifice comme d’un destin", "Évoquer des dépendances ou le bien-être médical"]
+  }
+}

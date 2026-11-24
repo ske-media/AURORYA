@@ -1,0 +1,38 @@
+{
+  "name": "aurorya",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.28.0",
+  "engines": {
+    "node": ">=22.13.0 <23"
+  },
+  "scripts": {
+    "typecheck": "pnpm -r typecheck && tsc --noEmit -p tsconfig.json",
+    "lint": "eslint . --max-warnings 0 && node scripts/check-secrets.mjs && node scripts/lint/check-i18n.mjs && node scripts/lint/check-ui-literals.mjs",
+    "test": "vitest run",
+    "assets:placeholders": "node scripts/assets/placeholders.ts",
+    "assets:check": "node scripts/assets/check.ts",
+    "assets:build": "node scripts/assets/build.ts",
+    "assets:report": "node scripts/assets/report.ts",
+    "engine:golden": "vitest run packages/astro-engine",
+    "engine:golden:fetch": "node scripts/engine/make-golden.ts",
+    "db:test": "bash scripts/db/test-local.sh",
+    "kb:seed": "node scripts/kb/build-seed.mjs",
+    "kb:check": "vitest run packages/ai/src/kb",
+    "questions:seed": "node scripts/kb/build-questions-seed.mjs",
+    "geo:build": "node scripts/geo/import-geonames.mjs",
+    "geo:load": "bash scripts/geo/load.sh"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/node": "22.20.5",
+    "eslint": "10.15.0",
+    "globals": "17.14.0",
+    "lucide-static": "1.78.0",
+    "sharp": "0.35.5",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.73.0",
+    "vitest": "5.1.1",
+    "zod": "4.6.7"
+  }
+}

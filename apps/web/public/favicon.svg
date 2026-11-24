@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="32" height="32" role="img" aria-label="Aurorya">
+  <path d="M72 118 A28 28 0 0 1 128 118 Z" fill="#D5BD8A"/>
+  <line x1="30" y1="118" x2="170" y2="118" stroke="#D5BD8A" stroke-width="9"/>
+  <polyline points="54.1,165.5 100,20 145.9,165.5" fill="none" stroke="#D5BD8A" stroke-width="18"
+            stroke-linejoin="miter" stroke-linecap="round"/>
+</svg>

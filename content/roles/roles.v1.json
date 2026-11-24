@@ -1,0 +1,1369 @@
+{
+ "version": "1",
+ "status": "draft",
+ "notes": "Annexe B de la SPEC. friends et couple : libellés et critères de la SPEC. family et colleagues : critères dérivés de l’Annexe B.3, libellés à rédiger par le design (null). Phrases de repli à rédiger (null).",
+ "types": {
+  "friends": [
+   {
+    "id": "caretaker",
+    "labels": {
+     "fr": {
+      "f": "la maman du groupe",
+      "m": "le papa du groupe",
+      "n": "l’ange gardien du groupe"
+     },
+     "en": null
+    },
+    "fallbackLine": null,
+    "criteria": [
+     {
+      "predicate": "in_sign",
+      "bodies": [
+       "sun",
+       "moon"
+      ],
+      "signs": [
+       "cancer"
+      ],
+      "weight": 3
+     },
+     {
+      "predicate": "in_house",
+      "bodies": [
+       "moon"
+      ],
+      "houses": [
+       4
+      ],
+      "weight": 2
+     },
+     {
+      "predicate": "dominant",
+      "key": "water",
+      "weight": 2
+     },
+     {
+      "predicate": "in_sign",
+      "bodies": [
+       "venus"
+      ],
+      "signs": [
+       "taurus",
+       "cancer"
+      ],
+      "weight": 1
+     }
+    ]
+   },
+   {
+    "id": "planner",
+    "labels": {
+     "fr": {
+      "f": "la cheffe de projet",
+      "m": "le chef de projet",
+      "n": "le cerveau logistique"
+     },
+     "en": null
+    },
+    "fallbackLine": null,
+    "criteria": [
+     {
+      "predicate": "in_sign",
+      "bodies": [
+       "sun",
+       "moon",
+       "mercury"
+      ],
+      "signs": [
+       "virgo",
+       "capricorn"
+      ],
+      "weight": 3
+     },
+     {
+      "predicate": "angular",
+      "body": "saturn",
+      "weight": 2
+     },
+     {
+      "predicate": "dominant",
+      "key": "earth",
+      "weight": 2
+     },
+     {
+      "predicate": "in_house",
+      "bodies": [
+       "mars"
+      ],
+      "houses": [
+       6,
+       10
+      ],
+      "weight": 1
+     }
+    ]
+   },
+   {
+    "id": "ghost",
+    "labels": {
+     "fr": {
+      "f": "celle qui disparaît trois jours",
+      "m": "celui qui disparaît trois jours",
+      "n": "l’ermite à éclipses"
+     },
+     "en": null
+    },
+    "fallbackLine": null,
+    "criteria": [
+     {
+      "predicate": "stellium",
+      "kind": "house",
+      "key": "12",
+      "weight": 3
+     },
+     {
+      "predicate": "in_sign",
+      "bodies": [
+       "sun",
+       "moon"
+      ],
+      "signs": [
+       "pisces",
+       "scorpio"
+      ],
+      "weight": 2
+     },
+     {
+      "predicate": "angular",
+      "body": "neptune",
+      "weight": 2
+     },
+     {
+      "predicate": "in_house",
+      "bodies": [
+       "moon"
+      ],
+      "houses": [
+       8,
+       12
+      ],
+      "weight": 2
+     }
+    ]
+   },
+   {
+    "id": "spark",
+    "labels": {
+     "fr": {
+      "f": "celle qui lance toutes les idées",
+      "m": "celui qui lance toutes les idées",
+      "n": "l’étincelle du groupe"
+     },
+     "en": null
+    },
+    "fallbackLine": null,
+    "criteria": [
+     {
+      "predicate": "in_sign",
+      "bodies": [
+       "sun",
+       "mars",
+       "asc"
+      ],
+      "signs": [
+       "aries",
+       "sagittarius"
+      ],
+      "weight": 3
+     },
+     {
+      "predicate": "dominant",
+      "key": "fire",
+      "weight": 2
+     },
+     {
+      "predicate": "angular",
+      "body": "mars",
+      "weight": 2
+     },
+     {
+      "predicate": "dominant",
+      "key": "cardinal",
+      "weight": 1
+     }
+    ]
+   },
+   {
+    "id": "diplomat",
+    "labels": {
+     "fr": {
+      "f": "la médiatrice",
+      "m": "le médiateur",
+      "n": "la voix de la paix"
+     },
+     "en": null
+    },
+    "fallbackLine": null,
+    "criteria": [
+     {
+      "predicate": "in_sign",
+      "bodies": [
+       "sun",
+       "moon",
+       "venus",
+       "asc"
+      ],
+      "signs": [
+       "libra"
+      ],
+      "weight": 3
+     },
+     {
+      "predicate": "angular",
+      "body": "venus",
+      "weight": 2
+     },
+     {
+      "predicate": "in_house",
+      "bodies": [
+       "moon"
+      ],
+      "houses": [
+       7
+      ],
+      "weight": 2
+     },
+     {
+      "predicate": "dominant",
+      "key": "air",
+      "weight": 1
+     }
+    ]
+   },
+   {
+    "id": "truth_teller",
+    "labels": {
+     "fr": {
+      "f": "celle qui dit tout haut ce que tout le monde pense",
+      "m": "celui qui dit tout haut ce que tout le monde pense",
+      "n": "la franchise incarnée"
+     },
+     "en": null
+    },
+    "fallbackLine": null,
+    "criteria": [
+     {
+      "predicate": "aspect",
+      "a": "mercury",
+      "b": "mars",
+      "types": [
+       "conjunction",
+       "square",
+       "opposition"
+      ],
+      "weight": 3
+     },
+     {
+      "predicate": "in_sign",
+      "bodies": [
+       "sun",
+       "mercury",
+       "mars"
+      ],
+      "signs": [
+       "aries",
+       "scorpio",
+       "sagittarius"
+      ],
+      "weight": 2
+     },
+     {
+      "predicate": "angular",
+      "body": "pluto",
+      "weight": 2
+     }
+    ]
+   },
+   {
+    "id": "host",
+    "labels": {
+     "fr": {
+      "f": "celle qui régale",
+      "m": "celui qui régale",
+      "n": "l’art de recevoir"
+     },
+     "en": null
+    },
+    "fallbackLine": null,
+    "criteria": [
+     {
+      "predicate": "in_sign",
+      "bodies": [
+       "sun",
+       "moon",
+       "venus"
+      ],
+      "signs": [
+       "taurus",
+       "leo"
+      ],
+      "weight": 3
+     },
+     {
+      "predicate": "angular",
+      "body": "jupiter",
+      "weight": 2
+     },
+     {
+      "predicate": "in_house",
+      "bodies": [
+       "venus"
+      ],
+      "houses": [
+       2,
+       5
+      ],
+      "weight": 1
+     },
+     {
+      "predicate": "dominant",
+      "key": "fixed",
+      "weight": 1
+     }
+    ]
+   },
+   {
+    "id": "entertainer",
+    "labels": {
+     "fr": {
+      "f": "celle qui fait le show",
+      "m": "celui qui fait le show",
+      "n": "le spectacle permanent"
+     },
+     "en": null
+    },
+    "fallbackLine": null,
+    "criteria": [
+     {
+      "predicate": "in_sign",
+      "bodies": [
+       "sun",
+       "moon",
+       "asc"
+      ],
+      "signs": [
+       "leo",
+       "gemini"
+      ],
+      "weight": 3
+     },
+     {
+      "predicate": "in_house",
+      "bodies": [
+       "sun"
+      ],
+      "houses": [
+       5
+      ],
+      "weight": 2
+     },
+     {
+      "predicate": "aspect",
+      "a": "sun",
+      "b": "jupiter",
+      "types": [
+       "conjunction",
+       "trine",
+       "sextile"
+      ],
+      "weight": 1
+     },
+     {
+      "predicate": "dominant",
+      "key": "fire",
+      "weight": 1
+     }
+    ]
+   },
+   {
+    "id": "oracle",
+    "labels": {
+     "fr": {
+      "f": "celle qui sent tout avant tout le monde",
+      "m": "celui qui sent tout avant tout le monde",
+      "n": "le radar du groupe"
+     },
+     "en": null
+    },
+    "fallbackLine": null,
+    "criteria": [
+     {
+      "predicate": "aspect",
+      "a": "moon",
+      "b": "neptune",
+      "types": [
+       "conjunction",
+       "trine",
+       "square",
+       "opposition"
+      ],
+      "weight": 3
+     },
+     {
+      "predicate": "in_sign",
+      "bodies": [
+       "moon"
+      ],
+      "signs": [
+       "pisces",
+       "scorpio",
+       "cancer"
+      ],
+      "weight": 2
+     },
+     {
+      "predicate": "dominant",
+      "key": "water",
+      "weight": 2
+     },
+     {
+      "predicate": "stellium",
+      "kind": "house",
+      "key": "8",
+      "weight": 1
+     }
+    ]
+   },
+   {
+    "id": "free_spirit",
+    "labels": {
+     "fr": {
+      "f": "l’électron libre",
+      "m": "l’électron libre",
+      "n": "l’électron libre"
+     },
+     "en": null
+    },
+    "fallbackLine": null,
+    "criteria": [
+     {
+      "predicate": "angular",
+      "body": "uranus",
+      "weight": 3
+     },
+     {
+      "predicate": "in_sign",
+      "bodies": [
+       "sun",
+       "moon",
+       "asc"
+      ],
+      "signs": [
+       "aquarius",
+       "sagittarius"
+      ],
+      "weight": 3
+     },
+     {
+      "predicate": "aspect",
+      "a": "sun",
+      "b": "uranus",
+      "types": [
+       "conjunction",
+       "square",
+       "opposition"
+      ],
+      "weight": 2
+     },
+     {
+      "predicate": "dominant",
+      "key": "mutable",
+      "weight": 1
+     }
+    ]
+   }
+  ],
+  "couple": [
+   {
+    "id": "anchor",
+    "labels": {
+     "fr": {
+      "f": "l’ancre",
+      "m": "l’ancre",
+      "n": "l’ancre"
+     },
+     "en": null
+    },
+    "fallbackLine": null,
+    "criteria": [
+     {
+      "predicate": "dominant",
+      "key": "earth",
+      "weight": 3
+     },
+     {
+      "predicate": "in_sign",
+      "bodies": [
+       "sun",
+       "moon"
+      ],
+      "signs": [
+       "taurus",
+       "capricorn"
+      ],
+      "weight": 3
+     },
+     {
+      "predicate": "angular",
+      "body": "saturn",
+      "weight": 2
+     }
+    ]
+   },
+   {
+    "id": "flame",
+    "labels": {
+     "fr": {
+      "f": "la flamme",
+      "m": "la flamme",
+      "n": "la flamme"
+     },
+     "en": null
+    },
+    "fallbackLine": null,
+    "criteria": [
+     {
+      "predicate": "dominant",
+      "key": "fire",
+      "weight": 3
+     },
+     {
+      "predicate": "in_sign",
+      "bodies": [
+       "venus",
+       "mars"
+      ],
+      "signs": [
+       "aries",
+       "leo",
+       "scorpio"
+      ],
+      "weight": 3
+     },
+     {
+      "predicate": "aspect",
+      "a": "venus",
+      "b": "mars",
+      "types": [
+       "conjunction",
+       "square",
+       "opposition"
+      ],
+      "weight": 2
+     }
+    ]
+   },
+   {
+    "id": "strategist",
+    "labels": {
+     "fr": {
+      "f": "la tête pensante",
+      "m": "la tête pensante",
+      "n": "la tête pensante"
+     },
+     "en": null
+    },
+    "fallbackLine": null,
+    "criteria": [
+     {
+      "predicate": "in_sign",
+      "bodies": [
+       "mercury",
+       "sun"
+      ],
+      "signs": [
+       "virgo",
+       "gemini",
+       "aquarius"
+      ],
+      "weight": 3
+     },
+     {
+      "predicate": "dominant",
+      "key": "air",
+      "weight": 2
+     },
+     {
+      "predicate": "angular",
+      "body": "mercury",
+      "weight": 2
+     }
+    ]
+   },
+   {
+    "id": "dreamer",
+    "labels": {
+     "fr": {
+      "f": "l’âme rêveuse",
+      "m": "l’âme rêveuse",
+      "n": "l’âme rêveuse"
+     },
+     "en": null
+    },
+    "fallbackLine": null,
+    "criteria": [
+     {
+      "predicate": "in_sign",
+      "bodies": [
+       "sun",
+       "moon",
+       "venus"
+      ],
+      "signs": [
+       "pisces"
+      ],
+      "weight": 3
+     },
+     {
+      "predicate": "angular",
+      "body": "neptune",
+      "weight": 2
+     },
+     {
+      "predicate": "dominant",
+      "key": "water",
+      "weight": 2
+     }
+    ]
+   },
+   {
+    "id": "nurturer",
+    "labels": {
+     "fr": {
+      "f": "le refuge",
+      "m": "le refuge",
+      "n": "le refuge"
+     },
+     "en": null
+    },
+    "fallbackLine": null,
+    "criteria": [
+     {
+      "predicate": "in_sign",
+      "bodies": [
+       "moon",
+       "venus"
+      ],
+      "signs": [
+       "cancer",
+       "taurus"
+      ],
+      "weight": 3
+     },
+     {
+      "predicate": "in_house",
+      "bodies": [
+       "moon"
+      ],
+      "houses": [
+       4
+      ],
+      "weight": 2
+     },
+     {
+      "predicate": "dominant",
+      "key": "water",
+      "weight": 1
+     }
+    ]
+   },
+   {
+    "id": "explorer",
+    "labels": {
+     "fr": {
+      "f": "l’appel du large",
+      "m": "l’appel du large",
+      "n": "l’appel du large"
+     },
+     "en": null
+    },
+    "fallbackLine": null,
+    "criteria": [
+     {
+      "predicate": "in_sign",
+      "bodies": [
+       "sun",
+       "moon",
+       "mars"
+      ],
+      "signs": [
+       "sagittarius",
+       "aquarius",
+       "gemini"
+      ],
+      "weight": 3
+     },
+     {
+      "predicate": "angular",
+      "body": "jupiter",
+      "weight": 2
+     },
+     {
+      "predicate": "dominant",
+      "key": "mutable",
+      "weight": 1
+     }
+    ]
+   }
+  ],
+  "family": [
+   {
+    "id": "pillar",
+    "labels": {
+     "fr": null,
+     "en": null
+    },
+    "fallbackLine": null,
+    "criteria": [
+     {
+      "predicate": "in_sign",
+      "bodies": [
+       "sun",
+       "moon"
+      ],
+      "signs": [
+       "cancer"
+      ],
+      "weight": 3
+     },
+     {
+      "predicate": "in_house",
+      "bodies": [
+       "moon"
+      ],
+      "houses": [
+       4
+      ],
+      "weight": 2
+     },
+     {
+      "predicate": "dominant",
+      "key": "water",
+      "weight": 2
+     },
+     {
+      "predicate": "in_sign",
+      "bodies": [
+       "venus"
+      ],
+      "signs": [
+       "taurus",
+       "cancer"
+      ],
+      "weight": 1
+     }
+    ]
+   },
+   {
+    "id": "memory_keeper",
+    "labels": {
+     "fr": null,
+     "en": null
+    },
+    "fallbackLine": null,
+    "criteria": [
+     {
+      "predicate": "in_sign",
+      "bodies": [
+       "moon",
+       "sun"
+      ],
+      "signs": [
+       "cancer",
+       "taurus"
+      ],
+      "weight": 3
+     },
+     {
+      "predicate": "in_house",
+      "bodies": [
+       "moon",
+       "saturn"
+      ],
+      "houses": [
+       4
+      ],
+      "weight": 2
+     }
+    ]
+   },
+   {
+    "id": "peacemaker",
+    "labels": {
+     "fr": null,
+     "en": null
+    },
+    "fallbackLine": null,
+    "criteria": [
+     {
+      "predicate": "in_sign",
+      "bodies": [
+       "sun",
+       "moon",
+       "venus",
+       "asc"
+      ],
+      "signs": [
+       "libra"
+      ],
+      "weight": 3
+     },
+     {
+      "predicate": "angular",
+      "body": "venus",
+      "weight": 2
+     },
+     {
+      "predicate": "in_house",
+      "bodies": [
+       "moon"
+      ],
+      "houses": [
+       7
+      ],
+      "weight": 2
+     },
+     {
+      "predicate": "dominant",
+      "key": "air",
+      "weight": 1
+     }
+    ]
+   },
+   {
+    "id": "rebel",
+    "labels": {
+     "fr": null,
+     "en": null
+    },
+    "fallbackLine": null,
+    "criteria": [
+     {
+      "predicate": "angular",
+      "body": "uranus",
+      "weight": 3
+     },
+     {
+      "predicate": "in_sign",
+      "bodies": [
+       "sun",
+       "moon",
+       "asc"
+      ],
+      "signs": [
+       "aquarius",
+       "sagittarius"
+      ],
+      "weight": 3
+     },
+     {
+      "predicate": "aspect",
+      "a": "sun",
+      "b": "uranus",
+      "types": [
+       "conjunction",
+       "square",
+       "opposition"
+      ],
+      "weight": 2
+     },
+     {
+      "predicate": "dominant",
+      "key": "mutable",
+      "weight": 1
+     }
+    ]
+   },
+   {
+    "id": "organizer",
+    "labels": {
+     "fr": null,
+     "en": null
+    },
+    "fallbackLine": null,
+    "criteria": [
+     {
+      "predicate": "in_sign",
+      "bodies": [
+       "sun",
+       "moon",
+       "mercury"
+      ],
+      "signs": [
+       "virgo",
+       "capricorn"
+      ],
+      "weight": 3
+     },
+     {
+      "predicate": "angular",
+      "body": "saturn",
+      "weight": 2
+     },
+     {
+      "predicate": "dominant",
+      "key": "earth",
+      "weight": 2
+     },
+     {
+      "predicate": "in_house",
+      "bodies": [
+       "mars"
+      ],
+      "houses": [
+       6,
+       10
+      ],
+      "weight": 1
+     }
+    ]
+   },
+   {
+    "id": "clown",
+    "labels": {
+     "fr": null,
+     "en": null
+    },
+    "fallbackLine": null,
+    "criteria": [
+     {
+      "predicate": "in_sign",
+      "bodies": [
+       "sun",
+       "moon",
+       "asc"
+      ],
+      "signs": [
+       "leo",
+       "gemini"
+      ],
+      "weight": 3
+     },
+     {
+      "predicate": "in_house",
+      "bodies": [
+       "sun"
+      ],
+      "houses": [
+       5
+      ],
+      "weight": 2
+     },
+     {
+      "predicate": "aspect",
+      "a": "sun",
+      "b": "jupiter",
+      "types": [
+       "conjunction",
+       "trine",
+       "sextile"
+      ],
+      "weight": 1
+     },
+     {
+      "predicate": "dominant",
+      "key": "fire",
+      "weight": 1
+     }
+    ]
+   },
+   {
+    "id": "confidant",
+    "labels": {
+     "fr": null,
+     "en": null
+    },
+    "fallbackLine": null,
+    "criteria": [
+     {
+      "predicate": "aspect",
+      "a": "moon",
+      "b": "neptune",
+      "types": [
+       "conjunction",
+       "trine",
+       "square",
+       "opposition"
+      ],
+      "weight": 3
+     },
+     {
+      "predicate": "in_sign",
+      "bodies": [
+       "moon"
+      ],
+      "signs": [
+       "pisces",
+       "scorpio",
+       "cancer"
+      ],
+      "weight": 2
+     },
+     {
+      "predicate": "dominant",
+      "key": "water",
+      "weight": 2
+     },
+     {
+      "predicate": "stellium",
+      "kind": "house",
+      "key": "8",
+      "weight": 1
+     }
+    ]
+   },
+   {
+    "id": "adventurer",
+    "labels": {
+     "fr": null,
+     "en": null
+    },
+    "fallbackLine": null,
+    "criteria": [
+     {
+      "predicate": "in_sign",
+      "bodies": [
+       "sun",
+       "moon",
+       "mars"
+      ],
+      "signs": [
+       "sagittarius",
+       "aquarius",
+       "gemini"
+      ],
+      "weight": 3
+     },
+     {
+      "predicate": "angular",
+      "body": "jupiter",
+      "weight": 2
+     },
+     {
+      "predicate": "dominant",
+      "key": "mutable",
+      "weight": 1
+     }
+    ]
+   }
+  ],
+  "colleagues": [
+   {
+    "id": "closer",
+    "labels": {
+     "fr": null,
+     "en": null
+    },
+    "fallbackLine": null,
+    "criteria": [
+     {
+      "predicate": "angular",
+      "body": "mars",
+      "weight": 3
+     },
+     {
+      "predicate": "angular",
+      "body": "saturn",
+      "weight": 2
+     },
+     {
+      "predicate": "dominant",
+      "key": "cardinal",
+      "weight": 3
+     },
+     {
+      "predicate": "in_sign",
+      "bodies": [
+       "mars",
+       "saturn"
+      ],
+      "signs": [
+       "aries",
+       "capricorn"
+      ],
+      "weight": 2
+     }
+    ]
+   },
+   {
+    "id": "architect",
+    "labels": {
+     "fr": null,
+     "en": null
+    },
+    "fallbackLine": null,
+    "criteria": [
+     {
+      "predicate": "dominant",
+      "key": "earth",
+      "weight": 3
+     },
+     {
+      "predicate": "angular",
+      "body": "saturn",
+      "weight": 3
+     },
+     {
+      "predicate": "in_sign",
+      "bodies": [
+       "sun",
+       "mercury"
+      ],
+      "signs": [
+       "capricorn",
+       "taurus"
+      ],
+      "weight": 2
+     }
+    ]
+   },
+   {
+    "id": "firefighter",
+    "labels": {
+     "fr": null,
+     "en": null
+    },
+    "fallbackLine": null,
+    "criteria": [
+     {
+      "predicate": "angular",
+      "body": "mars",
+      "weight": 3
+     },
+     {
+      "predicate": "dominant",
+      "key": "fire",
+      "weight": 2
+     },
+     {
+      "predicate": "in_house",
+      "bodies": [
+       "mars",
+       "sun"
+      ],
+      "houses": [
+       6
+      ],
+      "weight": 2
+     },
+     {
+      "predicate": "in_sign",
+      "bodies": [
+       "mars"
+      ],
+      "signs": [
+       "aries",
+       "leo",
+       "sagittarius"
+      ],
+      "weight": 2
+     }
+    ]
+   },
+   {
+    "id": "networker",
+    "labels": {
+     "fr": null,
+     "en": null
+    },
+    "fallbackLine": null,
+    "criteria": [
+     {
+      "predicate": "in_sign",
+      "bodies": [
+       "mercury",
+       "venus"
+      ],
+      "signs": [
+       "gemini",
+       "libra",
+       "aquarius"
+      ],
+      "weight": 3
+     },
+     {
+      "predicate": "in_house",
+      "bodies": [
+       "sun",
+       "mercury",
+       "venus"
+      ],
+      "houses": [
+       11
+      ],
+      "weight": 2
+     },
+     {
+      "predicate": "dominant",
+      "key": "air",
+      "weight": 2
+     }
+    ]
+   },
+   {
+    "id": "visionary",
+    "labels": {
+     "fr": null,
+     "en": null
+    },
+    "fallbackLine": null,
+    "criteria": [
+     {
+      "predicate": "angular",
+      "body": "uranus",
+      "weight": 3
+     },
+     {
+      "predicate": "angular",
+      "body": "jupiter",
+      "weight": 2
+     },
+     {
+      "predicate": "in_sign",
+      "bodies": [
+       "sun",
+       "moon",
+       "asc"
+      ],
+      "signs": [
+       "aquarius",
+       "sagittarius"
+      ],
+      "weight": 3
+     }
+    ]
+   },
+   {
+    "id": "quality_guardian",
+    "labels": {
+     "fr": null,
+     "en": null
+    },
+    "fallbackLine": null,
+    "criteria": [
+     {
+      "predicate": "in_sign",
+      "bodies": [
+       "sun",
+       "moon",
+       "mercury"
+      ],
+      "signs": [
+       "virgo"
+      ],
+      "weight": 3
+     },
+     {
+      "predicate": "in_sign",
+      "bodies": [
+       "mercury"
+      ],
+      "signs": [
+       "taurus",
+       "capricorn"
+      ],
+      "weight": 2
+     },
+     {
+      "predicate": "in_house",
+      "bodies": [
+       "sun",
+       "mercury",
+       "saturn"
+      ],
+      "houses": [
+       6
+      ],
+      "weight": 2
+     }
+    ]
+   },
+   {
+    "id": "morale_officer",
+    "labels": {
+     "fr": null,
+     "en": null
+    },
+    "fallbackLine": null,
+    "criteria": [
+     {
+      "predicate": "in_sign",
+      "bodies": [
+       "sun",
+       "moon",
+       "asc"
+      ],
+      "signs": [
+       "leo"
+      ],
+      "weight": 3
+     },
+     {
+      "predicate": "angular",
+      "body": "venus",
+      "weight": 2
+     },
+     {
+      "predicate": "angular",
+      "body": "jupiter",
+      "weight": 2
+     }
+    ]
+   },
+   {
+    "id": "maverick",
+    "labels": {
+     "fr": null,
+     "en": null
+    },
+    "fallbackLine": null,
+    "criteria": [
+     {
+      "predicate": "angular",
+      "body": "uranus",
+      "weight": 3
+     },
+     {
+      "predicate": "in_sign",
+      "bodies": [
+       "sun",
+       "moon",
+       "asc"
+      ],
+      "signs": [
+       "aquarius",
+       "sagittarius"
+      ],
+      "weight": 3
+     },
+     {
+      "predicate": "aspect",
+      "a": "sun",
+      "b": "uranus",
+      "types": [
+       "conjunction",
+       "square",
+       "opposition"
+      ],
+      "weight": 2
+     },
+     {
+      "predicate": "dominant",
+      "key": "mutable",
+      "weight": 1
+     }
+    ]
+   }
+  ]
+ }
+}

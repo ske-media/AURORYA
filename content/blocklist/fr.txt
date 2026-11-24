@@ -1,0 +1,27 @@
+# Mots refusés dans les prénoms et noms de groupe (SPEC §21.6). Un mot par ligne.
+# Liste de départ, à compléter par l'équipe. Les variantes (accents, répétitions, chiffres) sont gérées par le filtre.
+connard
+connasse
+salope
+salaud
+pute
+putain
+enculé
+encule
+pédé
+tapette
+gouine
+nègre
+bougnoule
+youpin
+bicot
+niquer
+nique
+bite
+couille
+chatte
+merde
+bâtard
+batard
+nazi
+hitler
