@@ -19,7 +19,9 @@
     "db:test": "bash scripts/db/test-local.sh",
     "kb:seed": "node scripts/kb/build-seed.mjs",
     "kb:check": "vitest run packages/ai/src/kb",
-    "questions:seed": "node scripts/kb/build-questions-seed.mjs"
+    "questions:seed": "node scripts/kb/build-questions-seed.mjs",
+    "geo:build": "node scripts/geo/import-geonames.mjs",
+    "geo:load": "bash scripts/geo/load.sh"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",

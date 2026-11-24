@@ -26,7 +26,9 @@ returns text language sql stable set search_path = public, extensions as $$
   select btrim(regexp_replace(lower(unaccent(q)), '[^a-z0-9]+', ' ', 'g'));
 $$;
 
--- Recherche de lieux (SPEC §12.4). Tri : préfixe exact, pays des marchés visés, population décroissante.
+-- Recherche de lieux (SPEC §12.4). `search_text` contient le nom principal puis les autres noms connus,
+-- séparés par « | ». Tri : nom principal commençant par la saisie, autre nom commençant par la saisie,
+-- pays des marchés visés, population décroissante.
 create or replace function public.search_places(q text, lang text default 'fr', max_results int default 8)
 returns table (
   geoname_id bigint, name text, admin1_name text, country_code char(2),
@@ -39,7 +41,7 @@ language sql stable set search_path = public, extensions as $$
          p.admin1_name, p.country_code, p.latitude, p.longitude, p.tz_iana
   from public.geo_places p, needle
   where char_length(needle.n) >= 2
-    and (p.search_text like needle.n || '%' or p.search_text % needle.n)
+    and (p.search_text like needle.n || '%' or p.search_text like '%| ' || needle.n || '%')
   order by (p.search_text like needle.n || '%') desc,
            (p.country_code in ('FR', 'BE', 'CH', 'LU', 'CA')) desc,
            p.population desc,
