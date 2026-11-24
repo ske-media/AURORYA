@@ -220,3 +220,13 @@ Conséquences et risques :
 - La fiche de l'app (`com.aurorya.app`) doit exister dans App Store Connect avant le premier envoi : création par un fondateur (interdit absolu sans validation humaine).
 - `apps/mobile/eas.json` reste dans le dépôt, inutilisé.
 Validé par : fondateur (choix de la voie), mise en œuvre en mode autonome.
+
+## ADR-025 — Fiche App Store : textes et catégories (première version)
+Date : 2026-11-24 · Statut : appliqué sur App Store Connect
+Contexte : un fondateur a créé la fiche de l'app (identifiant Apple 6838627506, langue principale anglais) et demande une fiche soignée. Apple n'autorise pas la création d'une app par l'API, mais autorise la modification des textes.
+Décision :
+- Textes en français et en anglais dans `content/store/app-store.{fr-FR,en-US}.json` (source unique), posés par l'API : sous-titre, description, mots-clés, texte promotionnel.
+- Catégorie principale Style de vie, secondaire Divertissement.
+- Conformes à l'Annexe D : aucune promesse de prédiction, mention « divertissement et introspection », Ava présentée comme une IA. Le moteur est décrit comme « vérifié contre les données de référence de la NASA » (JPL Horizons, ADR-012), sans citer Swiss Ephemeris, qui n'est pas utilisé.
+- Non faits, à décider avec un fondateur : prix et abonnements, classification d'âge, fiche de confidentialité, URL d'assistance et de politique de confidentialité, captures, pays.
+Validé par : mode autonome (ADR-013), à la demande d'un fondateur.
