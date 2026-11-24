@@ -68,6 +68,11 @@ Mis à jour : 2026-11-23, après l'API complète des groupes, le site, l'onboard
 - Vérifié : typage, lint, quatre tests du contenu de la carte, export du bundle iOS. **Non vérifié : tout ce qui est natif** (capture, feuille de partage, autorisation photo), faute d'appareil. Trois nouveaux modules natifs : il faut un nouveau build de développement.
 - Le runbook du premier build gagne une variable facultative : `EXPO_PUBLIC_SITE_HOST`.
 
+## TestFlight par GitHub Actions (2026-11-24)
+- Voie retenue par un fondateur : pas de compte Expo, build sur un Mac de GitHub (ADR-024). Workflow `iOS TestFlight` écrit, **jamais exécuté** : il attend quatre secrets Apple et la fiche de l'app dans App Store Connect (`docs/runbooks/premier-build.md`, § 3 bis).
+- Vérifié ici : `expo prebuild` produit le projet Xcode avec l'équipe, le numéro de build et le texte d'autorisation photo attendus.
+- PR n°2 fusionnée : cache, lecture complète et carte partageable sont en production.
+
 ## Mise en ligne (2026-11-24)
 - **Vercel** : projet `aurorya` créé dans l'équipe SKE, relié au dépôt, racine `apps/web`, Node 22, région `fra1`. Premier déploiement réussi depuis la branche `claude/hopeful-fermat-ttya03` ; la page d'accueil répond avec ses en-têtes de sécurité. Aucune variable d'environnement n'est encore posée : les routes de l'API échouent tant que la base n'existe pas.
 - **Protection des déploiements** : active sur les adresses `*.vercel.app` (connexion Vercel exigée). L'app mobile ne peut pas appeler l'API sans nom de domaine relié au projet ou sans lever cette protection.
