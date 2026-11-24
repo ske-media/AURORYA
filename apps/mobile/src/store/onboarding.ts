@@ -29,7 +29,8 @@ export const useOnboarding = create<OnboardingState>()(
     {
       name: 'aurorya.onboarding',
       storage: createJSONStorage(() => secureStorage),
-      partialize: (state) => ({ draft: state.draft, completed: state.completed, chart: state.chart }),
+      // Le roast est gardé : sans lui, « Mon ciel » perd ses accroches et la carte à la relance de l'app.
+      partialize: (state) => ({ draft: state.draft, completed: state.completed, chart: state.chart, roast: state.roast }),
       onRehydrateStorage: () => () => useOnboarding.setState({ hydrated: true }),
     },
   ),

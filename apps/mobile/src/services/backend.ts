@@ -60,6 +60,8 @@ export const endpoints = (b: Backend) => ({
   postGroupReading: (groupId: string, mode: ToneMode) => b.api.request({ method: 'POST', path: `/groups/${groupId}/readings`, body: { kind: 'roles_duos', mode }, output: GroupReadingSchema }),
   /** Lecture directe sous RLS : aucune donnée de naissance ne part chez un tiers (A-007). */
   searchPlaces: async (query: string, locale: 'fr' | 'en'): Promise<PlaceResult[]> => {
+    // La recherche est réservée aux sessions : au premier lancement, elle arrive avant tout autre appel.
+    await ensureSession(b);
     const { data, error } = await b.supabase.rpc('search_places', { q: query, lang: locale, max_results: 8 });
     if (error) throw error;
     return ((data ?? []) as { geoname_id: number; name: string; admin1_name: string | null; country_code: string }[]).map((r) => ({
