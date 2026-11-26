@@ -150,3 +150,14 @@ export const DailyResponseSchema = z.strictObject({
 });
 export type DailyResponse = z.infer<typeof DailyResponseSchema>;
 export const DailyQuestionsResponseSchema = z.strictObject({ questions: z.array(z.strictObject({ date: z.string(), text: z.string() })) });
+
+// ——— Droit Premium (SPEC §18.3) ———
+export const EntitlementStateSchema = z.strictObject({
+  premium: z.boolean(),
+  productId: z.string().nullable(),
+  periodType: z.enum(['trial', 'intro', 'normal']).nullable(),
+  expiresAt: z.string().datetime().nullable(),
+  willRenew: z.boolean().nullable(),
+  isFounder: z.boolean(),
+});
+export type EntitlementState = z.infer<typeof EntitlementStateSchema>;
