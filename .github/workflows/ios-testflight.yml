@@ -3,6 +3,12 @@
 name: iOS TestFlight
 on:
   workflow_dispatch:
+    inputs:
+      distribution:
+        description: "testflight : envoi à App Store Connect · adhoc : fichier .ipa pour les iPhone enregistrés"
+        type: choice
+        options: [testflight, adhoc]
+        default: testflight
 concurrency:
   group: ios-testflight
   cancel-in-progress: false
@@ -63,14 +69,17 @@ jobs:
             > "$RUNNER_TEMP/archive.log" 2>&1 || { tail -n 150 "$RUNNER_TEMP/archive.log"; exit 1; }
           tail -n 5 "$RUNNER_TEMP/archive.log"
       - name: Signature de distribution et envoi à TestFlight
+        env:
+          DISTRIBUTION: ${{ inputs.distribution || 'testflight' }}
         run: |
+          if [ "$DISTRIBUTION" = "adhoc" ]; then METHOD=release-testing; DEST=export; else METHOD=app-store-connect; DEST=upload; fi
           cat > "$RUNNER_TEMP/ExportOptions.plist" <<PLIST
           <?xml version="1.0" encoding="UTF-8"?>
           <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
           <plist version="1.0">
           <dict>
-            <key>method</key><string>app-store-connect</string>
-            <key>destination</key><string>upload</string>
+            <key>method</key><string>${METHOD}</string>
+            <key>destination</key><string>${DEST}</string>
             <key>signingStyle</key><string>automatic</string>
             <key>teamID</key><string>${APPLE_TEAM_ID}</string>
             <key>manageAppVersionAndBuildNumber</key><false/>
@@ -86,6 +95,15 @@ jobs:
             -authenticationKeyID "$ASC_KEY_ID" -authenticationKeyIssuerID "$ASC_ISSUER_ID" \
             > "$RUNNER_TEMP/export.log" 2>&1 || { tail -n 150 "$RUNNER_TEMP/export.log"; exit 1; }
           tail -n 15 "$RUNNER_TEMP/export.log"
+      # Installation directe (ADR-027) : l'app signée pour les iPhone enregistrés sur le compte Apple.
+      - name: Application pour installation directe
+        if: inputs.distribution == 'adhoc'
+        uses: actions/upload-artifact@v4
+        with:
+          name: aurorya-ios-${{ github.run_number }}
+          path: ${{ runner.temp }}/export/*.ipa
+          if-no-files-found: error
+          retention-days: 14
       - name: Journaux de build
         if: always()
         uses: actions/upload-artifact@v4

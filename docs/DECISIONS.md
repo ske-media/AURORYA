@@ -237,3 +237,10 @@ Contexte : TestFlight externe exige une adresse de politique de confidentialité
 Décision : page `/confidentialite` du site, texte dans `content/legal/privacy.fr.json`, limité à ce que l'app fait réellement aujourd'hui (données saisies, compte anonyme, hébergement Supabase et Vercel à Francfort, aucune mesure d'audience, IA sans donnée identifiante, suppression et export). Marquée « version provisoire, relue par un juriste avant la sortie publique ». Contact : l'adresse donnée par le fondateur pour les retours TestFlight.
 Conséquences : à remplacer par le texte relu au ticket T-073 ; à mettre à jour dès qu'un sous-traitant s'ajoute (fournisseur d'IA, RevenueCat, Mixpanel, Sentry, Resend).
 Validé par : fondateur (principe), rédaction en mode autonome.
+
+## ADR-027 — Installation directe (ad hoc) en plus de TestFlight
+Date : 2026-11-26 · Statut : appliqué
+Contexte : l'invitation TestFlight interne n'arrive pas dans la boîte du fondateur, et la soumission à l'examen TestFlight externe échoue côté Apple (« There was an error processing your request »), y compris depuis le site d'App Store Connect.
+Décision : le workflow iOS prend une option `distribution` (`testflight` par défaut, ou `adhoc`). En `adhoc`, l'app est signée pour les iPhone enregistrés sur le compte Apple et le fichier .ipa est joint à l'exécution, pour une installation depuis un Mac (Finder) sans e-mail ni examen. L'iPhone du fondateur est enregistré par l'API.
+Conséquences : limité à 100 iPhone par an et par type d'appareil ; chaque nouvel iPhone demande un nouveau build. TestFlight reste la voie normale dès que le blocage d'Apple est levé.
+Validé par : fondateur (demande d'une autre voie), mise en œuvre en mode autonome.
