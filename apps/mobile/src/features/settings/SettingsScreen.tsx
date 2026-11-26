@@ -1,15 +1,15 @@
 // Réglages (SPEC §7.7, §7.9) : ton par défaut, création du compte par e-mail avec code, mention IA,
 // suppression du compte en deux étapes. Le reste des réglages arrive avec ses tickets.
-import { TONE_MODES } from '@aurorya/shared';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import * as Application from 'expo-application';
 import { useRouter } from 'expo-router';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { View } from 'react-native';
-import { Banner, Button, Card, Chip, Screen, Text, TextField } from '@/components/ui';
+import { Switch, View } from 'react-native';
+import { Banner, Button, Card, ModeSelector, Screen, Text, TextField } from '@/components/ui';
 import { endpoints, ensureSession, getBackend } from '@/services/backend';
 import { useOnboarding } from '@/store/onboarding';
+import { usePreferences } from '@/store/preferences';
 import { useTheme } from '@/theme/ThemeProvider';
 
 export function SettingsScreen() {
@@ -70,15 +70,23 @@ export function SettingsScreen() {
     router.replace('/');
   });
 
+  const prefs = usePreferences();
   return (
     <Screen>
       <Text variant="title1" accessibilityRole="header">{t('settings.title')}</Text>
       {notice ? <Banner message={notice} /> : null}
       <Card>
         <Text variant="heading">{t('settings.tone')}</Text>
-        <View style={{ flexDirection: 'row', gap: theme.spacing.s8 }}>
-          {TONE_MODES.map((mode) => <Chip key={mode} label={t(`modes.${mode}.name`)} selected={draft.toneMode === mode} onPress={() => update({ toneMode: mode })} />)}
-        </View>
+        <ModeSelector value={draft.toneMode} onChange={(toneMode) => update({ toneMode })} showDescription />
+      </Card>
+      <Card>
+        <Text variant="heading">{t('settings.senses.title')}</Text>
+        {([['sounds', prefs.soundsEnabled, prefs.setSoundsEnabled], ['haptics', prefs.hapticsEnabled, prefs.setHapticsEnabled]] as const).map(([key, value, set]) => (
+          <View key={key} style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', minHeight: theme.minTouchTarget }}>
+            <Text>{t(`settings.senses.${key}`)}</Text>
+            <Switch accessibilityLabel={t(`settings.senses.${key}`)} value={value} onValueChange={set} trackColor={{ true: theme.colors.accent, false: theme.colors.border }} thumbColor={theme.colors.text} />
+          </View>
+        ))}
       </Card>
       <Card>
         <Text variant="heading">{t('settings.account.title')}</Text>

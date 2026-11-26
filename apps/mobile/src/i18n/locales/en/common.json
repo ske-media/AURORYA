@@ -166,7 +166,8 @@
     "expert": {
       "name": "Saturn",
       "description": "Expert: rigorous explanations."
-    }
+    },
+    "label": "Reading tone"
   },
   "onboarding": {
     "progress": "Step {{current}} of {{total}}",
@@ -307,6 +308,11 @@
       "confirm": "Yes, delete everything",
       "cancel": "Cancel",
       "failed": "Deletion did not go through. Try again in a moment."
+    },
+    "senses": {
+      "title": "Sounds and haptics",
+      "sounds": "Sounds",
+      "haptics": "Haptics"
     }
   },
   "reading": {

@@ -166,7 +166,8 @@
     "expert": {
       "name": "Saturne",
       "description": "Experte : expliquer avec rigueur."
-    }
+    },
+    "label": "Ton de la lecture"
   },
   "onboarding": {
     "progress": "Étape {{current}} sur {{total}}",
@@ -307,6 +308,11 @@
       "confirm": "Oui, tout supprimer",
       "cancel": "Annuler",
       "failed": "La suppression n’a pas abouti. Réessaie dans un instant."
+    },
+    "senses": {
+      "title": "Sons et vibrations",
+      "sounds": "Sons",
+      "haptics": "Vibrations"
     }
   },
   "reading": {

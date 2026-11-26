@@ -1,7 +1,7 @@
 // Thème de l'app (SPEC §16, A-005) : tokens typés, StyleSheet, aucun style en dur dans les composants.
 import {
   BORDER_WIDTH, type ColorScheme, MAX_FONT_SCALE, MIN_TOUCH_TARGET, SCREEN_MARGIN, type TextVariant, type ThemeName,
-  colorSchemes, durations, easings, fontFamilies, opacities, radii, spacing, textStyles,
+  colorSchemes, durations, easings, fontFamilies, motion, opacities, radii, spacing, textStyles,
 } from '@aurorya/shared';
 import { type ReactNode, createContext, useContext, useMemo } from 'react';
 import type { TextStyle } from 'react-native';
@@ -31,6 +31,7 @@ export type Theme = Readonly<{
   durations: typeof durations;
   easings: typeof easings;
   opacities: typeof opacities;
+  motion: typeof motion;
   screenMargin: number;
   borderWidth: number;
   minTouchTarget: number;
@@ -38,7 +39,7 @@ export type Theme = Readonly<{
 }>;
 
 const buildTheme = (name: ThemeName): Theme => ({
-  name, colors: colorSchemes[name], typography, spacing, radii, durations, easings, opacities,
+  name, colors: colorSchemes[name], typography, spacing, radii, durations, easings, opacities, motion,
   screenMargin: SCREEN_MARGIN, borderWidth: BORDER_WIDTH, minTouchTarget: MIN_TOUCH_TARGET, maxFontScale: MAX_FONT_SCALE,
 });
 

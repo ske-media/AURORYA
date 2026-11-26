@@ -78,6 +78,12 @@ Mis à jour : 2026-11-23, après l'API complète des groupes, le site, l'onboard
 - Fiche de l'app créée par un fondateur (identifiant Apple 6838627506) ; textes et catégories posés par l'API (ADR-025).
 - Non vérifié : le lancement de l'app sur un iPhone.
 
+## Mission « Ultra-Premium & Conversion » (2026-11-26)
+Vérifié à chaque lot, codes de retour lus : `pnpm typecheck`, `pnpm lint`, `pnpm test`, `pnpm --filter mobile export:ios`. Rien n'est vérifié sur iPhone tant que ce n'est pas écrit ici.
+- **Glyphes** : les 31 tracés astrologiques sont définitifs (`assets:check --promote`, `assets:build`, `assets:report`). Trois tracés de la proposition redessinés après rendu : Capricorne, mode Lune (croissant et point), mode Mars (éclair, pour ne pas doubler l'étoile de la marque).
+- **Lot 1** : service `feedback` (vibrations, sons mêlés à l'audio en cours, mode silencieux respecté), préférences sons et vibrations dans les réglages, fond nébuleux et grain (`Backdrop`), reflet et bordure d'accent des cartes, halo et ressort du bouton principal, icône de bouton, `ModeSelector`, `BlurLock`, `Icon`, `Glyph`. Deux rôles de couleur ajoutés (`highlight`, `accentMuted`) à la place des valeurs en dur de l'ordre de mission.
+- Limites : les cinq sons et le grain sont encore des fichiers provisoires du registre ; l'effet réel ne se jugera qu'avec les fichiers définitifs.
+
 ## Compte Apple (2026-11-24)
 - Clé d'API App Store Connect fournie par un fondateur et vérifiée en lecture. Identifiant d'app `com.aurorya.app` **enregistré chez Apple** (définitif), avec l'accord du fondateur par questionnaire.
 - Restent à la main : créer la fiche de l'app dans App Store Connect, poser le secret GitHub `ASC_KEY_P8`.
