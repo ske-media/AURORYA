@@ -8,7 +8,7 @@ const ROUTE = { welcome: '/welcome', 'birth-date': '/birth-date', 'birth-time': 
 export default function Index() {
   const { hydrated, completed, draft, chart } = useOnboarding();
   if (!hydrated) return null;
-  if (completed) return <Redirect href="/today" />;
+  if (completed) return <Redirect href="/home" />;
   if (chart) return <Redirect href="/reveal" />;
   // Reprise là où la saisie s'était arrêtée.
   const step = firstIncompleteStep(draft);

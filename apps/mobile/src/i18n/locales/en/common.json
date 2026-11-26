@@ -8,12 +8,14 @@
     "disclosure": "{{name}}, Aurorya’s astrologer, is an artificial intelligence."
   },
   "tabs": {
-    "today": "Today",
-    "sky": "My sky",
-    "groups": "My groups"
+    "home": "Home",
+    "horoscope": "Horoscope",
+    "explore": "Explore",
+    "relations": "Relations",
+    "profile": "Profile"
   },
   "today": {
-    "title": "Today",
+    "title": "Horoscope",
     "greeting": "Hello {{name}}",
     "moon": "Moon in {{sign}} · {{phase}}",
     "questionLabel": "Question of the day",
@@ -435,6 +437,27 @@
     "soon": {
       "title": "Aurorya Premium is coming",
       "body": "Purchases aren’t open in this version yet. Your free reading stays whole; the rest will unlock here."
+    }
+  },
+  "home": {
+    "greeting": "Hello {{name}},",
+    "greetingGeneric": "Hello,",
+    "horoscopeLabel": "Your horoscope today",
+    "discover": "Discover",
+    "shortcut": {
+      "chart": "My birth chart",
+      "compatibility": "Relations and groups"
+    },
+    "upcoming": {
+      "title": "Coming to Aurorya",
+      "badge": "coming soon",
+      "memory": "Aurorya Memory",
+      "timeMachine": "Cosmic Time Machine",
+      "cosmicYear": "My Cosmic Year",
+      "letters": "Letter from the Universe",
+      "radio": "Cosmic Radio",
+      "journal": "My journal",
+      "community": "Community"
     }
   }
 }

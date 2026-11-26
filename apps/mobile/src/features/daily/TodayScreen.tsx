@@ -1,18 +1,16 @@
-// Onglet « Aujourd'hui » (SPEC §7.5) : climat lunaire calculé, horoscope du signe, question du jour,
+// Onglet « Horoscope » (SPEC §7.5, §27.3) : climat lunaire calculé, horoscope du signe, question du jour,
 // transit personnel du jour (nommé pour toutes, lu avec le droit Premium).
 import { MOON_PHASES, type MoonPhase, SIGN_NAMES, type ToneMode } from '@aurorya/shared';
-import { useQuery } from '@tanstack/react-query';
 import { useRouter } from 'expo-router';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ActivityIndicator, View } from 'react-native';
 import type { AssetId } from '@/assets/registry';
 import { MoonPhaseIcon } from '@/components/astro/MoonPhaseIcon';
-import { BlurLock, Button, Card, EmptyState, ModeSelector, PhotoHalo, Screen, Text } from '@/components/ui';
+import { BlurLock, Card, EmptyState, ModeSelector, PhotoHalo, Screen, Text } from '@/components/ui';
 import { toIsoDate } from '@/features/onboarding/draft';
 import { paywallHref } from '@/features/paywall/open-paywall';
-import { endpoints, ensureSession, getBackend } from '@/services/backend';
-import { NotConfiguredError } from '@/services/query';
+import { NotConfiguredError, useDaily } from '@/services/query';
 import { useOnboarding } from '@/store/onboarding';
 import { useTheme } from '@/theme/ThemeProvider';
 
@@ -25,20 +23,12 @@ export function TodayScreen() {
   const locale = i18n.language === 'en' ? 'en' : 'fr';
   // Le « jour » est la date locale de l'appareil.
   const date = toIsoDate(new Date());
-  const query = useQuery({
-    queryKey: ['daily', date, mode],
-    queryFn: async () => {
-      const backend = getBackend();
-      if (!backend) throw new NotConfiguredError();
-      await ensureSession(backend);
-      return endpoints(backend).getDaily(date, mode);
-    },
-  });
+  const query = useDaily(date, mode);
 
   const header = (
     <>
       <Text variant="label" color="accent">{new Intl.DateTimeFormat(locale, { weekday: 'long', day: 'numeric', month: 'long' }).format(new Date())}</Text>
-      <Text variant="title1" accessibilityRole="header">{draft.firstName.trim() ? t('today.greeting', { name: draft.firstName.trim() }) : t('today.title')}</Text>
+      <Text variant="title1" accessibilityRole="header">{t('today.title')}</Text>
     </>
   );
   if (query.isPending) return <Screen>{header}<ActivityIndicator color={theme.colors.accent} accessibilityLabel={t('common.loading')} /></Screen>;
@@ -93,7 +83,6 @@ export function TodayScreen() {
             </View>
           ))}
       </Card>
-      <Button variant="ghost" label={t('settings.open')} onPress={() => router.push('/settings')} />
     </Screen>
   );
 }
