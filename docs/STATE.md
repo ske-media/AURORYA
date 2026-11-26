@@ -105,7 +105,9 @@ Vérifié à chaque lot, codes de retour lus : `pnpm typecheck`, `pnpm lint`, `p
   - Rupture connue : le schéma de `/daily` a changé ; un build installé avant ce lot échoue sur l'écran Aujourd'hui tant qu'il n'est pas réinstallé.
 
 ## Chantier « Cahier de Conception v1.0 » (2026-11-26)
-- Arbitrages du Lot 0 consignés dans ADR-029. **Bloqué** : le PDF du cahier n'a pas été transmis ; la SPEC n'est pas encore mise à jour ; aucun code de ce chantier n'existe.
+- Arbitrages du Lot 0 consignés dans ADR-029. Cahier reçu et lu en entier ; la SPEC porte l'amendement v2.1 (Partie E, §27), qui prime sur les parties B à D.
+- **Lot A1, fait** : palette du cahier dans les tokens (ADR-030), fond d'écran de lancement aligné. Vérifié : typecheck, lint, tests (contraste compris), export iOS. Non vérifié à l'écran.
+- **Lot A1, reste** : grille et rayons, retrait de Manrope, identité visuelle personnelle, logo en mot-symbole, inventaire d'icônes, fichiers définitifs. Lots A2 à A4 : non commencés (plan en SPEC §27.9).
 - Lot 5 de la mission précédente (adaptateur d'IA) : non commencé, fournisseur toujours ouvert. Il est repris par le Lot 2 du nouveau chantier.
 - Fonds de carte : générateur écrit (`scripts/assets/card-backgrounds.ts`), fichiers **non installés** ; les gabarits provisoires restent en place jusqu'à la nouvelle palette.
 

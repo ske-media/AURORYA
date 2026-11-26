@@ -6,8 +6,8 @@ import sharp, { type Sharp } from 'sharp';
 import { type Asset, loadManifest, saveManifest, sha256File } from './manifest.ts';
 
 // Valeurs reprises de packages/shared/src/tokens/colors.ts (palette.midnight, palette.ivory).
-const MIDNIGHT = '#11121B';
-const IVORY = '#F5F1E8';
+const MIDNIGHT = '#101827';
+const IVORY = '#F3EFE7';
 const LOGO = readFileSync('apps/mobile/assets/brand/brand-logo-symbol.svg', 'utf8');
 const LOGO_MONO = readFileSync('apps/mobile/assets/brand/brand-logo-symbol-mono.svg', 'utf8');
 

@@ -263,3 +263,9 @@ Validé par : fondateur (demande d'une autre voie, puis d'un lien), mise en œuv
   6. Fonds de carte : générés par `scripts/assets/card-backgrounds.ts`, à refaire aux couleurs de la nouvelle palette au Lot 1 puis à promouvoir.
 - **Restent aux fondateurs** : marque (INPI, EUIPO), entité juridique, relecture RGPD, domaine, comptes RevenueCat et Resend, fournisseur d'IA.
 - **Conséquence** : `docs/SPEC.md` doit être mise à jour à partir du cahier avant tout code de ce chantier ; tant que le PDF n'est pas reçu, la SPEC v2 reste la source de vérité et rien du nouveau périmètre n'est codé.
+
+## ADR-030 — Palette du cahier de conception v1.0 (2026-11-26)
+- **Décision** : les huit teintes du cahier (§12.3) remplacent leurs équivalents dans `tokens/colors.ts`, sous les mêmes noms internes (`midnight` = Midnight Ink, `deepNavy` = Deep Cosmos, `champagne` = Champagne Gold, `ivory` = Warm Ivory, `warmGrey` = Stardust Grey, `lavenderGrey` = Celestial Lilac, `sage` = Quiet Sage, `mutedCoral` = Alert Coral). Les rôles ne changent pas : aucun composant n'est touché.
+- **Teintes dérivées, choisies par le développeur** (le cahier ne les donne pas) : surface relevée `#1F2E48`, bordure `#2C3A54`, fond nébuleux `#131C30` et `#2A3558` (bleus profonds à la place du violet d'ADR-007). Le rose des aspects tendus, le champagne clair et les teintes du thème clair sont conservés.
+- **Vérifié** : test de contraste vert sur les deux thèmes.
+- **Reste à aligner** : couleurs du logo (Annexe C), fichiers d'image provisoires, espacements 20 et 40 hors de l'échelle du cahier, retrait de Manrope.

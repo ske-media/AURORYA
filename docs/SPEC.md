@@ -1,6 +1,6 @@
 # AURORYA — Cahier des charges technique maître & Project Bible
 
-**Version :** 2.0 — 23 novembre 2026
+**Version :** 2.1 — 26 novembre 2026 (v2.0 du 23 novembre, amendée par la Partie E)
 **Remplace :** « Application astrologique premium — Cahier des charges maître v1.0 » (novembre 2026)
 **Destinataire principal :** Claude Code (modèle Fable 5.2), développeur principal du projet
 **Destinataires secondaires :** Steven (développement, moteur), l'associé (design, marketing, réseaux)
@@ -24,6 +24,9 @@
 
 **Partie D — Exécution**
 23. Plan jusqu'au lancement · 24. Backlog ordonné · 25. Budget · 26. Risques
+
+**Partie E — Amendement v2.1 (cahier de conception v1.0)**
+27. Périmètre, navigation, charte et plan d'alignement. **En cas de conflit avec les parties B à D, la Partie E prime.**
 
 **Annexes**
 A. Prompts v1 · B. Catalogue des rôles de groupe · C. Logo canonique (SVG) · D. Checklist App Store · E. Faits externes à revérifier
@@ -3238,3 +3241,88 @@ Lis docs/SPEC.md en entier. Ne code rien encore.
 ```
 
 Ce document est la référence. Toute évolution passe par une entrée de `docs/DECISIONS.md` ou par une nouvelle version de ce fichier.
+
+
+---
+
+# Partie E — Amendement v2.1 : alignement sur le cahier de conception v1.0
+
+> Source : « AURORYA — Business Plan & Cahier de Conception Intégral, v1.0 » (document de travail des fondateurs, 30 pages, reçu le 2026-11-26) et arbitrages du Lot 0 (ADR-029). Le cahier est un document d'hypothèses : seuls les points repris ici sont décidés. **En cas de conflit avec les parties B à D, cette partie prime** ; ce qu'elle ne mentionne pas reste régi par les parties B à D.
+
+# 27. Périmètre, navigation, charte et plan d'alignement
+
+## 27.1 Positionnement `[DÉCIDÉ]`
+- Aurorya devient un **compagnon astrologique complet** : thème natal, interprétation, horoscopes du jour, de la semaine et du mois, transits, identité visuelle personnelle, compatibilité à deux. Le roast, les trois tons et les groupes restent, intégrés (27.3).
+- Principes non négociables du cahier (§2), qui recoupent les lois existantes : le moteur est la source de vérité ; l'IA n'invente ni position, ni transit, ni maison ; chaque lecture peut dire sur quels facteurs elle repose ; l'utilisatrice garde la main sur ses données, ses notifications et son niveau de personnalisation ; l'app reste utile sans abonnement.
+- Garde-fous éditoriaux (cahier §14), ajoutés aux validateurs V1–V9 : pas de science prédictive revendiquée ; aucun diagnostic médical, psychologique, juridique ou financier ; aucun événement grave annoncé comme certain ; ne pas prétendre lire les pensées d'autrui ; ne pas encourager la dépendance à l'app ; rappeler que le contenu est symbolique.
+
+## 27.2 Périmètre par version `[DÉCIDÉ]`
+- **MVP** : compte et profil de naissance, thème natal, interprétation en chapitres, horoscopes jour, semaine et mois, identité visuelle de base, transits essentiels, compatibilité à deux profils, partage de cartes, notifications configurables, abonnement, mesure d'audience consentie, export et suppression de compte. S'y ajoute l'existant v2 : roast, tons, groupes.
+- **V2** (rien n'est codé avant validation du MVP en production) : astrologue conversationnelle, Memory, Love Decoder, Cosmic Time Machine, My Cosmic Year, Astral Wrapped, Letters From the Universe, Cosmic Radio, Astral Mirror, calendrier lunaire, journal complet.
+- **V3** : Cosmic Twin, Cosmic Circle communautaire, tarot, produits imprimés.
+- Règle du cahier (§8) : une fonction n'entre dans une version que si elle répond à un besoin confirmé, a un parcours compréhensible, un coût soutenable, une mesure de succès et une solution de confidentialité.
+
+## 27.3 Navigation : cinq onglets `[DÉCIDÉ]` (remplace §6 pour la barre d'onglets)
+| Onglet | Contenu au MVP |
+|---|---|
+| Aujourd'hui | Horoscope du jour, vues Semaine et Mois, climat lunaire, transit clé, question du jour |
+| Mon thème | Roue natale et légende, placements, fiches planète, maison et aspect, interprétation en chapitres, transits, identité visuelle |
+| Explorer | Compatibilité à deux profils, **groupes** (existant v2), cartes à partager dont la carte du roast |
+| Journal | Lectures et horoscopes sauvegardés, note libre par élément. Le journal complet (écriture, tags, humeur, recherche) est en V2 |
+| Profil | Données de naissance, ton par défaut, préférences, notifications, abonnement, confidentialité, aide |
+- Les trois tons (Lune, Mars, Saturne) restent un réglage global des textes.
+- Écrans de référence du cahier : A01 à A23 et A31 à A35 au MVP ; A24 réduit aux sauvegardes ; A25 à A30 en V2.
+
+## 27.4 Moteur `[DÉCIDÉ]`
+- `astronomy-engine` est conservé (zodiaque tropical, maisons et orbes de §11 inchangés). Ajout du **Nœud Sud**, opposé exact du Nœud Nord. Pas de Chiron. Pas de Swiss Ephemeris.
+- À ajouter : fenêtres temporelles des transits (début, exact, fin), classement par domaine de vie, axes de synastrie exploitables par des chapitres, sans score chiffré.
+- Heure inconnue : inchangé (ni Ascendant ni maisons présentés comme fiables). Ville ambiguë : pays et fuseau retenus affichés et confirmés.
+
+## 27.5 Charte `[DÉCIDÉ]` (remplace les valeurs de §16.2)
+| Teinte du cahier | Valeur | Rôle |
+|---|---|---|
+| Midnight Ink | `#101827` | fond principal sombre |
+| Deep Cosmos | `#17243A` | surfaces, cartes |
+| Champagne Gold | `#C6A66A` | accent, traits, états sélectionnés |
+| Warm Ivory | `#F3EFE7` | texte sur fond sombre, fond clair |
+| Stardust Grey | `#AAB2C0` | texte secondaire |
+| Celestial Lilac | `#A79ACB` | accent secondaire, aspects doux |
+| Quiet Sage | `#9DAE9C` | succès, à faible dose |
+| Alert Coral | `#C96F68` | erreur ou attention, jamais décoratif |
+- Les teintes dérivées (surface relevée, bordure, fond nébuleux) sont définies dans `packages/shared/src/tokens/colors.ts` et tenues par le test de contraste (WCAG AA, 4,5:1 pour le texte courant).
+- Proportions visées : 65 % de fonds, 20 % de surfaces, 10 % de texte, 5 % d'accents. Le doré ne sert pas au petit texte courant si le contraste est insuffisant.
+- Grille de 4 pt ; espacements 4, 8, 12, 16, 24, 32, 48 ; rayons 8 (contrôles), 14 à 18 (cartes), 24 (surfaces éditoriales) ; **deux familles de polices au plus** : Cormorant Garamond et Inter (Manrope est à retirer).
+- Logo : mot-symbole « Aurorya », A majuscule avec étoile intégrée, quatre versions (doré sur nuit, ivoire sur nuit, nuit sur clair, monochrome). Remplace l'Annexe C quand les fichiers définitifs sont livrés ; d'ici là l'Annexe C reste en vigueur.
+- Identité visuelle personnelle : module déterministe et versionné qui transforme des facteurs du thème en tokens (élément dominant → famille de couleurs ; planète dominante → accent ; polarité → intensité ; saison → motif discret). Réglage d'intensité, et retour possible au thème de contraste accessible. L'IA n'intervient pas.
+
+## 27.6 Gratuit et Premium `[DÉCIDÉ]` (complète §7.8)
+| Fonction | Gratuit | Premium |
+|---|---|---|
+| Thème natal | calcul, roue, placements principaux, résumé | interprétation complète en chapitres |
+| Horoscope du jour | lecture de base | lecture personnalisée au thème et aux transits |
+| Semaine, mois | synthèse générale | lecture personnalisée, dates clés |
+| Transits | aperçu, transit clé du jour | transits personnels détaillés |
+| Identité visuelle | profil de base | variantes et ambiances |
+| Compatibilité | aperçu | rapport complet |
+- Interdits du cahier (§16) : aucune offre précochée ; périodicité toujours visible ; une lecture gratuite n'est pas présentée comme complète si elle ne l'est pas ; les données déjà créées restent consultables après expiration ; pas de crédits ni de micro-achats au MVP.
+
+## 27.7 Fournisseurs
+- Mesure d'audience : **PostHog, région UE** `[DÉCIDÉ]` (remplace Mixpanel partout dans ce document), soumise au consentement. Erreurs : Sentry, région UE, sans donnée personnelle.
+- Fournisseur d'IA : `[OUVERT]` (O-08). Achats : RevenueCat (code prêt, compte à ouvrir). E-mail : Resend (compte à ouvrir).
+- Plateformes : **iOS d'abord** `[DÉCIDÉ]` ; le code ne doit rien contenir de propre à iOS sans nécessité.
+
+## 27.8 Données à ajouter (nouvelles migrations uniquement)
+Sauvegarde et progression des lectures, retour « cela me parle / pas vraiment » ; profils tiers pour la compatibilité (données minimales, consentement ou base légitime, suppression) ; horoscopes de la semaine et du mois avec dates clés ; transits personnels avec fenêtres ; `audit_events` sans donnée intime. Chaque table naît avec ses politiques RLS et son test d'isolation.
+
+## 27.9 Plan d'alignement
+| Lot | Contenu | État |
+|---|---|---|
+| A0 | Arbitrages, mise à jour de ce document | fait (ADR-029) |
+| A1 | Palette, grille, polices, identité visuelle personnelle, logo et inventaire d'icônes, fichiers définitifs | palette faite (ADR-030) ; le reste à faire |
+| A2 | Nœud Sud, fenêtres de transits, synastrie détaillée, migrations, prompts et schémas, adaptateur d'IA | à faire ; l'adaptateur attend O-08 |
+| A3 | Cinq onglets, onboarding A01–A08, écrans A09–A23 et A31–A35 | à faire |
+| A4 | Abonnement (code prêt), PostHog, Sentry, Resend, site et pages légales | à faire |
+| A5 | V2 et V3 | différé |
+
+## 27.10 Ce que ce document ne décide pas `[OUVERT]`
+Nom et marque (INPI, EUIPO), entité juridique, textes légaux relus, domaine, grille de prix définitive et quotas d'IA (à mesurer sur prototype), cible prioritaire, achats à l'unité de rapports. Aucun de ces points ne doit être inventé.

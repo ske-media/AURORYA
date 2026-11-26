@@ -6,7 +6,7 @@ import { join } from 'node:path';
 import sharp from 'sharp';
 
 // Valeurs reprises de packages/shared/src/tokens/colors.ts (palette).
-const P = { midnight: '#11121B', deepNavy: '#1A1D2A', aubergine: '#1B1830', nebula: '#3B3360', ivory: '#F5F1E8', champagne: '#D5BD8A', lavender: '#A9A2C6', lavenderDeep: '#7D75A3', rose: '#B98F99', coral: '#D28B86', sage: '#8EA996' } as const;
+const P = { midnight: '#101827', deepNavy: '#17243A', aubergine: '#131C30', nebula: '#2A3558', ivory: '#F3EFE7', champagne: '#C6A66A', lavender: '#A79ACB', lavenderDeep: '#7D75A3', rose: '#B98F99', coral: '#C96F68', sage: '#9DAE9C' } as const;
 const W = 1080;
 const H = 1920;
 // Colonne de texte du gabarit (packages/shared/src/card-layout) : presque aucune étoile dedans.
