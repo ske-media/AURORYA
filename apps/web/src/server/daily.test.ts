@@ -68,7 +68,7 @@ describe('GET /daily', () => {
     // Deux questions approuvées par signe : position = jour julien modulo 2. Le brouillon n'est jamais servi.
     expect(body.question).toBe(`Question ${sky.moon.sign} ${'ab'[julianDayNumber('2026-11-23') % 2]} ?`);
     expect(body.signHoroscope).toBeNull();
-    expect(body.personal).toEqual({ locked: true });
+    expect(body.personal).toEqual({ locked: true, headline: null });
   });
   it('refuse une date mal formée ou éloignée de plus d’un jour, et une requête sans jeton', async () => {
     expect((await get(getDaily, 'date=2026-11-24')).status).toBe(200);

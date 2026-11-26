@@ -70,6 +70,11 @@ export const RoastResponseSchema = z.strictObject({
 });
 export type RoastResponse = z.infer<typeof RoastResponseSchema>;
 
+// ——— Feuille de placement (SPEC §7.2) ———
+/** Résumés d'interprétation du thème courant, par fait (`placement:sun`, `angle:asc`…), dans un mode. Gratuit, sans LLM. */
+export const ChartSummariesSchema = z.strictObject({ chartId: z.string().uuid(), mode: z.enum(TONE_MODES), summaries: z.record(z.string(), z.string()) });
+export type ChartSummaries = z.infer<typeof ChartSummariesSchema>;
+
 // ——— Lecture complète (SPEC §7.4, §13.3) ———
 const sectionHead = { key: z.enum(SECTION_KEYS), mode: z.enum(TONE_MODES), hook: z.string() };
 /** Sans le droit Premium, le serveur ne renvoie que l'accroche : le texte n'est ni généré ni transmis (D-014). */
@@ -131,10 +136,17 @@ export type GroupReading = z.infer<typeof GroupReadingSchema>;
 export const DailyResponseSchema = z.strictObject({
   date: z.string(),
   sky: z.strictObject({ moonSign: z.enum(SIGN_IDS), moonPhase: z.string() }),
-  /** Horoscope du signe solaire ; null tant qu'il n'est pas généré pour ce jour. */
-  signHoroscope: z.strictObject({ sign: z.enum(SIGN_IDS), headline: z.string(), body: z.string() }).nullable(),
+  /** Horoscope du signe solaire : texte généré, ou repli tiré de la base de règles. Null sans thème ni fiche. */
+  signHoroscope: z.strictObject({ sign: z.enum(SIGN_IDS), headline: z.string(), body: z.string(), status: z.enum(['ok', 'fallback']) }).nullable(),
   question: z.string().nullable(),
-  personal: z.strictObject({ locked: z.boolean() }),
+  /**
+   * Horoscope personnel. Sans droit Premium : seul le nom factuel du transit principal part (D-014), jamais
+   * d'interprétation. Avec le droit : les transits du jour et leur lecture.
+   */
+  personal: z.discriminatedUnion('locked', [
+    z.strictObject({ locked: z.literal(true), headline: z.string().nullable() }),
+    z.strictObject({ locked: z.literal(false), headline: z.string().nullable(), items: z.array(z.strictObject({ label: z.string(), text: z.string() })) }),
+  ]),
 });
 export type DailyResponse = z.infer<typeof DailyResponseSchema>;
 export const DailyQuestionsResponseSchema = z.strictObject({ questions: z.array(z.strictObject({ date: z.string(), text: z.string() })) });
