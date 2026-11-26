@@ -104,6 +104,11 @@ Vérifié à chaque lot, codes de retour lus : `pnpm typecheck`, `pnpm lint`, `p
   - **Non vérifié** : sur iPhone, rien de ce lot ; dans le navigateur, le résumé de placement et l'écran Aujourd'hui (la production servait encore l'ancienne API au moment du parcours) ; le sens des arcs de `MoonPhaseIcon` ; la capture Skia de la carte sur appareil (repli `react-native-view-shot` non ajouté) ; l'écran de groupe à deux membres.
   - Rupture connue : le schéma de `/daily` a changé ; un build installé avant ce lot échoue sur l'écran Aujourd'hui tant qu'il n'est pas réinstallé.
 
+## Chantier « Cahier de Conception v1.0 » (2026-11-26)
+- Arbitrages du Lot 0 consignés dans ADR-029. **Bloqué** : le PDF du cahier n'a pas été transmis ; la SPEC n'est pas encore mise à jour ; aucun code de ce chantier n'existe.
+- Lot 5 de la mission précédente (adaptateur d'IA) : non commencé, fournisseur toujours ouvert. Il est repris par le Lot 2 du nouveau chantier.
+- Fonds de carte : générateur écrit (`scripts/assets/card-backgrounds.ts`), fichiers **non installés** ; les gabarits provisoires restent en place jusqu'à la nouvelle palette.
+
 ## Compte Apple (2026-11-24)
 - Clé d'API App Store Connect fournie par un fondateur et vérifiée en lecture. Identifiant d'app `com.aurorya.app` **enregistré chez Apple** (définitif), avec l'accord du fondateur par questionnaire.
 - Restent à la main : créer la fiche de l'app dans App Store Connect, poser le secret GitHub `ASC_KEY_P8`.

@@ -251,3 +251,15 @@ Validé par : fondateur (demande d'une autre voie, puis d'un lien), mise en œuv
 - **Décision** : webhook et rattrapage partagent une seule fonction pure (`entitlementFromSubscriber`). Le webhook sert de signal et d'horodatage (`rc_event_at`) ; l'état vient de la fiche. Un transfert relit l'ancienne et la nouvelle propriétaire.
 - **Conséquences** : un appel sortant par événement (borné, 8 s) ; un nouveau type d'événement ne casse rien. L'en-tête d'autorisation attendu est `Bearer <REVENUECAT_WEBHOOK_SECRET>`. La signature HMAC proposée par RevenueCat n'est pas utilisée pour l'instant.
 - **Écart avec l'ordre de mission** : pas d'offre fondatrice à l'écran (O-03 ouvert, SPEC §18.4) ; conditions d'utilisation = contrat standard d'Apple en attendant des conditions propres (à valider par un fondateur, sujet juridique).
+
+## ADR-029 — Passage au périmètre du Cahier de Conception v1.0 : arbitrages du Lot 0 (2026-11-26)
+- **Contexte** : un fondateur a transmis un ordre de mission « Alignement sur le Cahier de Conception v1.0 » (cinq onglets, identité visuelle générative, horoscopes jour, semaine et mois, transits détaillés, synastrie à deux profils). Il contredit la SPEC v2 sur le périmètre, la palette et la navigation. Le cahier lui-même (PDF) n'a pas encore été transmis.
+- **Décisions du fondateur, par questionnaire** :
+  1. Existant v2 : **intégré**. Les trois tons restent un réglage global, le roast et sa carte vont dans le partage, les groupes dans Explorer à côté de la synastrie.
+  2. Navigation : **cinq onglets**, avec un Journal minimal au MVP (lectures et horoscopes sauvegardés, note libre) ; le journal complet reste en V2.
+  3. Moteur : **astronomy-engine conservé**, ajout du Nœud Sud. Pas de Chiron, pas de Swiss Ephemeris.
+  4. Plateformes : **iOS d'abord**. Le code reste compatible Android, sans build ni fiche Google Play.
+  5. Mesure d'audience : **PostHog, région UE**, à la place de Mixpanel. Fournisseur d'IA : **toujours ouvert** (O-08) ; l'adaptateur réel attend ce choix.
+  6. Fonds de carte : générés par `scripts/assets/card-backgrounds.ts`, à refaire aux couleurs de la nouvelle palette au Lot 1 puis à promouvoir.
+- **Restent aux fondateurs** : marque (INPI, EUIPO), entité juridique, relecture RGPD, domaine, comptes RevenueCat et Resend, fournisseur d'IA.
+- **Conséquence** : `docs/SPEC.md` doit être mise à jour à partir du cahier avant tout code de ce chantier ; tant que le PDF n'est pas reçu, la SPEC v2 reste la source de vérité et rien du nouveau périmètre n'est codé.
