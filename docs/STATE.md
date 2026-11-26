@@ -107,7 +107,10 @@ Vérifié à chaque lot, codes de retour lus : `pnpm typecheck`, `pnpm lint`, `p
 ## Chantier « Cahier de Conception v1.0 » (2026-11-26)
 - Arbitrages du Lot 0 consignés dans ADR-029. Cahier reçu et lu en entier ; la SPEC porte l'amendement v2.1 (Partie E, §27), qui prime sur les parties B à D.
 - **Lot A1, fait** : palette du cahier dans les tokens (ADR-030), fond d'écran de lancement aligné. Vérifié : typecheck, lint, tests (contraste compris), export iOS. Non vérifié à l'écran.
-- **Lot A1, reste** : grille et rayons, retrait de Manrope, identité visuelle personnelle, logo en mot-symbole, inventaire d'icônes, fichiers définitifs. Lots A2 à A4 : non commencés (plan en SPEC §27.9).
+- **Lot A1, fait aussi** : Manrope retirée (ADR-031), titres fonctionnels et étiquettes en Inter Medium ; non revu à l'écran.
+- **Direction « ivoire et doré » (ADR-032)** : thème clair par défaut en place. Vérifié : typecheck, lint, 371 tests, export iOS ; rendu vu dans un navigateur sur l'accueil, la révélation, Mon ciel, Aujourd'hui et le paywall. Non vérifié sur iPhone.
+- **À faire pour coller aux maquettes** : cinq onglets (Accueil, Horoscope, Explorer, Relations, Profil), écran d'accueil avec carte d'horoscope illustrée, menu latéral avec les fonctions « à venir », images générées (Higgsfield), mot-symbole du logo.
+- **Lot A1, reste** : grille et rayons, identité visuelle personnelle, logo en mot-symbole, inventaire d'icônes, fichiers définitifs. Lots A2 à A4 : non commencés (plan en SPEC §27.9).
 - Lot 5 de la mission précédente (adaptateur d'IA) : non commencé, fournisseur toujours ouvert. Il est repris par le Lot 2 du nouveau chantier.
 - Fonds de carte : les quatre fichiers définitifs sont installés, aux couleurs du cahier, et promus au registre (`assets:check --promote` : 126 fichiers conformes, 65 encore provisoires). Planche validée par le fondateur avant la nouvelle palette ; rendu sur la carte non revu à l'écran.
 

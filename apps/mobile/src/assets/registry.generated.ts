@@ -53,7 +53,6 @@ export const assetModules = {
   "sfx-aurora-rise": require("../../assets/sounds/sfx-aurora-rise.wav"),
   "CormorantGaramond-Medium": require("../../assets/fonts/CormorantGaramond-Medium.ttf"),
   "CormorantGaramond-MediumItalic": require("../../assets/fonts/CormorantGaramond-MediumItalic.ttf"),
-  "Manrope-SemiBold": require("../../assets/fonts/Manrope-SemiBold.ttf"),
   "Inter-Regular": require("../../assets/fonts/Inter-Regular.ttf"),
   "Inter-Medium": require("../../assets/fonts/Inter-Medium.ttf"),
 } as const;

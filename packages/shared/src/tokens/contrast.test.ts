@@ -35,5 +35,8 @@ describe('contraste', () => {
     it('onAccent sur accent ≥ 4.5', () => {
       expect(contrastRatio(scheme.onAccent, scheme.accent)).toBeGreaterThanOrEqual(BODY);
     });
+    it('onAccent sur accentFill ≥ 4.5', () => {
+      expect(contrastRatio(scheme.onAccent, scheme.accentFill)).toBeGreaterThanOrEqual(BODY);
+    });
   });
 });

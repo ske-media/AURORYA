@@ -1,9 +1,9 @@
 // Configuration de l'app (SPEC §15.10). Les valeurs d'environnement viennent de la machine de build, jamais du dépôt.
 import type { ConfigContext, ExpoConfig } from 'expo/config';
 
-// Même valeur que palette.midnight (packages/shared) : ce fichier est lu par l'outillage natif,
-// hors du bundle. Un test vérifie que les deux restent identiques.
-const SPLASH_BACKGROUND = '#101827';
+// Même valeur que palette.ivory (packages/shared), fond du thème clair par défaut (ADR-032) : ce fichier est lu
+// par l'outillage natif, hors du bundle. Un test vérifie que les deux restent identiques.
+const SPLASH_BACKGROUND = '#F3EFE7';
 
 export default ({ config }: ConfigContext): ExpoConfig => ({
   ...config,
@@ -12,7 +12,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   version: '0.1.0',
   scheme: 'aurorya',
   orientation: 'portrait',
-  userInterfaceStyle: 'dark',
+  userInterfaceStyle: 'light',
   backgroundColor: SPLASH_BACKGROUND,
   icon: './assets/icons/icon-app-ios.png',
   ios: {

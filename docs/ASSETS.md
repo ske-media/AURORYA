@@ -2,7 +2,7 @@
 
 Rapport généré par `pnpm assets:report` à partir de `assets.manifest.json`. Ne pas modifier à la main.
 
-- 126 fichiers au registre : 61 définitifs, 65 provisoires.
+- 125 fichiers au registre : 60 définitifs, 65 provisoires.
 - 58 fichiers provisoires bloquent une mise en production.
 
 ## Livrer un fichier
@@ -197,6 +197,5 @@ Rapport généré par `pnpm assets:report` à partir de `assets.manifest.json`. 
 | `apps/mobile/assets/cards/card-bg-group.webp` | Création interne (scripts/assets/card-backgrounds.ts) | Création interne | Fond de la carte de groupe. Aucun texte. |
 | `apps/mobile/assets/fonts/CormorantGaramond-Medium.ttf` | https://github.com/CatharsisFonts/Cormorant (fonts/ttf) | OFL-1.1 | Fichier d'origine, non modifié. |
 | `apps/mobile/assets/fonts/CormorantGaramond-MediumItalic.ttf` | https://github.com/CatharsisFonts/Cormorant (fonts/ttf) | OFL-1.1 | Fichier d'origine, non modifié. |
-| `apps/mobile/assets/fonts/Manrope-SemiBold.ttf` | https://github.com/google/fonts (ofl/manrope/Manrope[wght].ttf) | OFL-1.1 | Instance statique wght=600 tirée de la police variable officielle avec fontTools 4.68.0 (aucun fichier statique publié). Récupérée le 2026-11-23. |
 | `apps/mobile/assets/fonts/Inter-Regular.ttf` | https://github.com/rsms/inter/releases/tag/v4.1 (extras/ttf) | OFL-1.1 | Fichier d'origine, non modifié. |
 | `apps/mobile/assets/fonts/Inter-Medium.ttf` | https://github.com/rsms/inter/releases/tag/v4.1 (extras/ttf) | OFL-1.1 | Fichier d'origine, non modifié. |

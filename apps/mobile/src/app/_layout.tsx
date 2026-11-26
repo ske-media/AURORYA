@@ -16,9 +16,13 @@ initI18n();
 function Navigator() {
   const theme = useTheme();
   return (
+    <>
+      {/* Texte de la barre d'état à l'inverse du fond. */}
+      <StatusBar style={theme.name === 'light' ? 'dark' : 'light'} />
     <Stack screenOptions={{ headerShown: false, contentStyle: { backgroundColor: theme.colors.bg } }}>
       <Stack.Screen name="paywall" options={{ presentation: 'modal' }} />
     </Stack>
+    </>
   );
 }
 
@@ -27,7 +31,6 @@ export default function RootLayout() {
   const [loaded, error] = useFonts({
     [fontFamilies.serif]: getAsset('CormorantGaramond-Medium'),
     [fontFamilies.serifItalic]: getAsset('CormorantGaramond-MediumItalic'),
-    [fontFamilies.heading]: getAsset('Manrope-SemiBold'),
     [fontFamilies.body]: getAsset('Inter-Regular'),
     [fontFamilies.bodyMedium]: getAsset('Inter-Medium'),
   });
@@ -40,7 +43,6 @@ export default function RootLayout() {
   return (
     <ThemeProvider>
       <QueryProvider>
-        <StatusBar style="light" />
         <Navigator />
       </QueryProvider>
     </ThemeProvider>

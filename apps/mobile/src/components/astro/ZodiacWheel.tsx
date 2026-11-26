@@ -1,6 +1,6 @@
 // Roue astrale (SPEC §7.2, §16.6), dessinée avec Skia. Toute la géométrie vient de wheel-geometry.ts ;
 // ce composant ne fait aucun calcul astrologique. Les glyphes viennent du registre, jamais d'Unicode.
-import { type ChartPayload, type House, LOGO, SIGN_IDS, houseToRoman, logoColors } from '@aurorya/shared';
+import { type ChartPayload, type House, LOGO, SIGN_IDS, houseToRoman } from '@aurorya/shared';
 import { BlurMask, Canvas, Circle, DashPathEffect, Group, Line, Path, Skia, vec } from '@shopify/react-native-skia';
 import { useMemo } from 'react';
 import { Pressable, View } from 'react-native';
@@ -64,7 +64,7 @@ export function ZodiacWheel({ chart, size, selected, onSelect, accessibilityLabe
         </Circle>
         {star ? (
           <Group transform={[{ translateX: c }, { translateY: c }, { scale: starScale }, { translateX: -LOGO.letter.apex.x }, { translateY: -LOGO.letter.apex.y }]}>
-            <Path path={star} color={logoColors.star} />
+            <Path path={star} color={theme.colors.accent} />
           </Group>
         ) : null}
         {SIGN_IDS.map((sign, i) => {
