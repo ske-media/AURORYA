@@ -32,62 +32,85 @@ export const COLOR_ROLES = [
 export type ColorRole = (typeof COLOR_ROLES)[number];
 export type ColorScheme = Readonly<Record<ColorRole, string>>;
 
+/**
+ * Direction « nuit, papier et braise » (ADR-033) : noir profond, bleu nuit, papier beige, orange brûlé,
+ * fines lignes de bronze. Ces teintes ne servent qu'aux deux thèmes ci-dessous.
+ */
+const night = {
+  ink: '#0B0B0D',
+  coal: '#141416',
+  coalRaised: '#1C1C20',
+  seam: '#2E2823',
+  navy: '#10283F',
+  navyDeep: '#0D1A28',
+  paper: '#DCCDB5',
+  paperLight: '#E4D7C2',
+  paperLighter: '#EBE0CE',
+  paperEdge: '#BFAE94',
+  paperShade: '#D3C2A6',
+  parchment: '#E9DDC9',
+  ash: '#A69B8B',
+  ember: '#E2711D',
+  emberDeep: '#AD4705',
+  emberInk: '#7E3403',
+  bronze: '#B08A5E',
+} as const;
+
+/** Thème sombre, par défaut (ADR-033) : encre noire, texte parchemin, accent braise. */
 export const darkColors: ColorScheme = {
-  bg: palette.midnight,
-  surface: palette.deepNavy,
-  surfaceRaised: palette.slate,
-  border: '#2C3A54',
-  text: palette.ivory,
-  textSecondary: palette.warmGrey,
-  accent: palette.champagne,
-  accentFill: palette.champagne,
-  accentText: palette.champagne,
-  onAccent: palette.midnight,
-  aspectSoft: palette.lavenderGrey,
-  aspectHard: palette.dustyRose,
+  bg: night.ink,
+  surface: night.coal,
+  surfaceRaised: night.coalRaised,
+  border: night.seam,
+  text: night.parchment,
+  textSecondary: night.ash,
+  accent: night.ember,
+  accentFill: night.ember,
+  accentText: night.ember,
+  onAccent: night.ink,
+  aspectSoft: '#7FA3C7',
+  aspectHard: '#D46A4A',
   success: palette.sage,
-  danger: palette.mutedCoral,
-  scrim: 'rgba(16,24,39,0.72)',
-  // ADR-007 : fond nébuleux (dégradé de `backdrop` vers `backdropTint`) et halo ciblé.
-  backdrop: palette.aubergine,
-  backdropTint: palette.nebula,
-  glow: 'rgba(233,214,172,0.35)',
-  // Finition « verre et laiton » : reflet intérieur des surfaces, bordure d'accent atténuée.
-  highlight: 'rgba(243,239,231,0.08)',
-  accentMuted: 'rgba(198,166,106,0.35)',
+  danger: '#E0584B',
+  scrim: 'rgba(11,11,13,0.76)',
+  // Fond : une lueur bleu nuit très douce en haut d'écran.
+  backdrop: night.navyDeep,
+  backdropTint: night.navy,
+  glow: 'rgba(226,113,29,0.30)',
+  highlight: 'rgba(233,221,201,0.06)',
+  // Lignes d'orbite, filets et bordures mises en avant : bronze atténué.
+  accentMuted: 'rgba(176,138,94,0.55)',
 };
 
-/**
- * Thème clair, par défaut depuis ADR-032 (planche « ivoire et doré ») : fond ivoire chaud, cartes crème,
- * encre nuit, doré profond pour les traits et les états. Valide seulement si le test de contraste passe.
- */
+/** Thème clair : le même univers sur papier beige, encre noire, braise approfondie pour rester lisible. */
 export const lightColors: ColorScheme = {
-  bg: palette.ivory,
-  surface: '#FAF6EE',
-  surfaceRaised: '#FFFDF8',
-  border: '#E3D9C8',
-  text: palette.midnight,
-  textSecondary: '#55596A',
-  // Champagne Gold est trop clair sur ivoire pour un trait ou un petit texte : sa version profonde le remplace.
-  accent: palette.champagneDeep,
-  // Aplat des boutons et des pastilles actives : le Champagne Gold de la charte, sous un texte encre nuit.
-  accentFill: palette.champagne,
-  accentText: palette.champagneInk,
-  onAccent: palette.midnight,
-  aspectSoft: palette.lavenderDeep,
-  aspectHard: '#8E5F6B',
-  success: '#4F7A5C',
-  danger: '#A8504A',
-  scrim: 'rgba(16,24,39,0.40)',
-  backdrop: '#F2ECE1',
-  backdropTint: '#F0E7D8',
-  glow: 'rgba(156,124,64,0.22)',
-  highlight: 'rgba(255,255,255,0.70)',
-  accentMuted: 'rgba(156,124,64,0.35)',
+  bg: night.paper,
+  surface: night.paperLight,
+  surfaceRaised: night.paperLighter,
+  border: night.paperEdge,
+  text: night.ink,
+  textSecondary: '#4A443C',
+  accent: night.emberDeep,
+  accentFill: night.ember,
+  accentText: night.emberInk,
+  onAccent: night.ink,
+  aspectSoft: '#2F5E86',
+  aspectHard: '#A8401F',
+  success: '#3F6B4C',
+  danger: '#9E2F25',
+  scrim: 'rgba(11,11,13,0.40)',
+  backdrop: night.paper,
+  backdropTint: night.paperShade,
+  glow: 'rgba(173,71,5,0.22)',
+  highlight: 'rgba(255,255,255,0.45)',
+  accentMuted: 'rgba(126,52,3,0.40)',
 };
+
+/** Couleurs du symbole selon le fond (remplace celles de l'Annexe C tant que le logo définitif n'est pas livré). */
+export const brandInk = { paper: night.parchment, ink: night.ink, bronze: night.bronze, emberFrom: '#C9541A', emberTo: '#F08A2E', emberDeep: night.emberDeep } as const;
 
 export const THEME_NAMES = ['dark', 'light'] as const;
 export type ThemeName = (typeof THEME_NAMES)[number];
-/** Thème servi par défaut (ADR-032). Le sombre reste disponible. */
-export const DEFAULT_THEME: ThemeName = 'light';
+/** Thème servi par défaut (ADR-033). Le clair, sur papier, reste disponible. */
+export const DEFAULT_THEME: ThemeName = 'dark';
 export const colorSchemes: Readonly<Record<ThemeName, ColorScheme>> = { dark: darkColors, light: lightColors };

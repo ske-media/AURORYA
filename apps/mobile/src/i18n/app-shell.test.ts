@@ -1,5 +1,5 @@
 import { readFileSync } from 'node:fs';
-import { palette } from '@aurorya/shared';
+import { darkColors } from '@aurorya/shared';
 import { describe, expect, it } from 'vitest';
 import en from './locales/en/common.json';
 import fr from './locales/fr/common.json';
@@ -24,7 +24,7 @@ describe('langue de l’app', () => {
 describe('configuration native', () => {
   const config = readFileSync(new URL('../../app.config.ts', import.meta.url), 'utf8');
   it('utilise la couleur de fond des tokens', () => {
-    expect(config).toContain(`SPLASH_BACKGROUND = '${palette.ivory}'`);
+    expect(config).toContain(`SPLASH_BACKGROUND = '${darkColors.bg}'`);
   });
   it('cible l’iPhone en portrait, avec l’identifiant de bundle validé (ADR-003)', () => {
     expect(config).toContain("bundleIdentifier: 'com.aurorya.app'");

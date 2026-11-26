@@ -5,8 +5,8 @@ import { mkdirSync } from 'node:fs';
 import { join } from 'node:path';
 import sharp from 'sharp';
 
-// Valeurs reprises de packages/shared/src/tokens/colors.ts (palette).
-const P = { midnight: '#101827', deepNavy: '#17243A', aubergine: '#131C30', nebula: '#2A3558', ivory: '#F3EFE7', champagne: '#C6A66A', lavender: '#A79ACB', lavenderDeep: '#7D75A3', rose: '#B98F99', coral: '#C96F68', sage: '#9DAE9C' } as const;
+// Valeurs reprises de packages/shared/src/tokens/colors.ts (direction « nuit, papier et braise », ADR-033).
+const P = { midnight: '#0B0B0D', deepNavy: '#0D1A28', aubergine: '#10283F', nebula: '#10283F', ivory: '#E9DDC9', champagne: '#B08A5E', lavender: '#7FA3C7', lavenderDeep: '#10283F', rose: '#C9541A', coral: '#E2711D', sage: '#9DAE9C' } as const;
 const W = 1080;
 const H = 1920;
 // Colonne de texte du gabarit (packages/shared/src/card-layout) : presque aucune étoile dedans.

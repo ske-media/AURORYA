@@ -283,3 +283,10 @@ Validé par : fondateur (demande d'une autre voie, puis d'un lien), mise en œuv
   4. Images : générées avec le connecteur Higgsfield du fondateur (ses crédits), montrées avant installation, sans portrait de personne.
 - **Fait dans ce commit** : thème clair par défaut, rôle `accentFill` (aplat doré des boutons), couleurs du logo selon le fond, barre d'état et écran de lancement accordés. Test de contraste vert sur les deux thèmes.
 - **Limites connues** : la carte de partage reste sur fond nuit (choix : elle doit ressortir dans une story) ; les sigles AC et MC peuvent chevaucher un glyphe de signe au bord de la roue ; les titres en Inter Medium n'ont pas été revus sur iPhone.
+
+## ADR-033 — Direction visuelle « nuit, papier et braise » (2026-11-26)
+- **Contexte** : une heure après ADR-032, le fondateur a transmis une nouvelle référence (planche de gabarits de stories : noir profond, bleu nuit, papier beige, orange brûlé, fines lignes d'orbite, photos de lune et de ciel nocturne) avec la consigne de reprendre tout le design dans cet esprit.
+- **Décision** : cette direction **remplace** la planche « ivoire et doré » d'ADR-032 **et la palette du cahier** (ADR-030, SPEC §27.5). Thème sombre par défaut : encre `#0B0B0D`, surfaces charbon, texte parchemin `#E9DDC9`, accent braise `#E2711D`, lignes de bronze `#B08A5E`, lueur bleu nuit `#10283F`. Thème clair conservé, sur papier `#DCCDB5`. La référence sert d'inspiration (couleurs, lignes, ambiance) ; aucun gabarit n'est recopié.
+- **Fait** : les deux thèmes réécrits et tenus par le test de contraste ; lignes d'orbite dans le fond d'écran ; couleurs du symbole ; fonds de carte régénérés ; écran de lancement noir.
+- **Reste d'ADR-032 en vigueur** : les cinq onglets, les fonctions V2 marquées « à venir », la génération d'images par Higgsfield.
+- **Conséquences** : l'image d'accueil générée pour l'ancienne direction (lune pêche) ne convient plus ; elle reste au registre mais n'est plus affichée sur la carte d'accueil, et la série d'images est à refaire dans le nouveau style. La palette du cahier v1.0 n'est plus appliquée : écart assumé, à la demande du fondateur.
