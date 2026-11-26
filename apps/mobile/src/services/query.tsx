@@ -1,5 +1,5 @@
 // État serveur (SPEC §15.2) : TanStack Query, clés centralisées.
-import { type ChartPayload, ChartPayloadSchema, type ChartSummaries, type SectionKey, type SectionResponse, type ToneMode } from '@aurorya/shared';
+import { type ChartPayload, ChartPayloadSchema, type ChartSummaries, type DailyResponse, type SectionKey, type SectionResponse, type ToneMode } from '@aurorya/shared';
 import { QueryClient, QueryClientProvider, useQuery } from '@tanstack/react-query';
 import { type ReactNode, useEffect } from 'react';
 import { AppState } from 'react-native';
@@ -10,6 +10,7 @@ export const queryKeys = {
   currentChart: ['chart', 'current'] as const,
   section: (key: SectionKey, mode: ToneMode) => ['reading', 'section', key, mode] as const,
   summaries: (chartId: string, mode: ToneMode) => ['chart', 'summaries', chartId, mode] as const,
+  daily: (date: string, mode: ToneMode) => ['daily', date, mode] as const,
   entitlement: ['entitlement'] as const,
   offers: ['offers'] as const,
 };
@@ -76,6 +77,18 @@ export const useSection = (key: SectionKey, mode: ToneMode) =>
       if (!backend) throw new NotConfiguredError();
       await ensureSession(backend);
       return endpoints(backend).getSection(key, mode);
+    },
+  });
+
+/** La page du jour (climat lunaire, horoscope du signe, question, transit personnel), partagée par l'accueil et l'horoscope. */
+export const useDaily = (date: string, mode: ToneMode) =>
+  useQuery({
+    queryKey: queryKeys.daily(date, mode),
+    queryFn: async (): Promise<DailyResponse> => {
+      const backend = getBackend();
+      if (!backend) throw new NotConfiguredError();
+      await ensureSession(backend);
+      return endpoints(backend).getDaily(date, mode);
     },
   });
 
