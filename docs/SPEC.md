@@ -3305,7 +3305,8 @@ Ce document est la référence. Toute évolution passe par une entrée de `docs/
 - Logo : mot-symbole « Aurorya », A majuscule avec étoile intégrée, quatre versions (doré sur nuit, ivoire sur nuit, nuit sur clair, monochrome). Remplace l'Annexe C quand les fichiers définitifs sont livrés ; d'ici là l'Annexe C reste en vigueur.
 - Identité visuelle personnelle : module déterministe et versionné qui transforme des facteurs du thème en tokens (élément dominant → famille de couleurs ; planète dominante → accent ; polarité → intensité ; saison → motif discret). Réglage d'intensité, et retour possible au thème de contraste accessible. L'IA n'intervient pas.
 
-- **Direction visuelle (ADR-032)** : thème **clair par défaut**, ivoire chaud et doré (planche 1 des maquettes) ; cartes crème à coins arrondis, titres en Cormorant, boutons en aplat Champagne Gold sous texte encre nuit, photos douces. Le thème sombre reste disponible. D-024 est remplacée.
+- **Direction visuelle en vigueur (ADR-033, remplace le tableau de teintes ci-dessus et ADR-032)** : « nuit, papier et braise ». Thème sombre par défaut : encre noire, surfaces charbon, texte parchemin, accent orange brûlé, fines lignes d'orbite en bronze, lueur bleu nuit ; thème clair sur papier beige. Les valeurs vivent dans `packages/shared/src/tokens/colors.ts`, tenues par le test de contraste.
+- Direction précédente, abandonnée (ADR-032) : thème **clair par défaut**, ivoire chaud et doré (planche 1 des maquettes) ; cartes crème à coins arrondis, titres en Cormorant, boutons en aplat Champagne Gold sous texte encre nuit, photos douces. Le thème sombre reste disponible. D-024 est remplacée.
 
 ## 27.6 Gratuit et Premium `[DÉCIDÉ]` (complète §7.8)
 | Fonction | Gratuit | Premium |

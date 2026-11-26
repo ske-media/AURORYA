@@ -32,9 +32,7 @@ describe('contraste', () => {
     it.each(cases)('%s sur %s ≥ %d', (fg, bg, min) => {
       expect(contrastRatio(scheme[fg], scheme[bg])).toBeGreaterThanOrEqual(min);
     });
-    it('onAccent sur accent ≥ 4.5', () => {
-      expect(contrastRatio(scheme.onAccent, scheme.accent)).toBeGreaterThanOrEqual(BODY);
-    });
+    // `onAccent` ne se pose que sur l'aplat `accentFill` (boutons) : `accent` sert aux traits et aux icônes.
     it('onAccent sur accentFill ≥ 4.5', () => {
       expect(contrastRatio(scheme.onAccent, scheme.accentFill)).toBeGreaterThanOrEqual(BODY);
     });

@@ -9,7 +9,7 @@ export function PhotoHalo({ id, height, strength = 'halo' }: { id: AssetId; heig
   if (isProvisional(id)) return null;
   return (
     <View pointerEvents="none" accessible={false} style={[styles.box, { height, borderRadius: theme.radii.xl }]}>
-      <Image source={getAsset(id)} resizeMode="cover" style={[styles.image, { opacity: strength === 'halo' ? theme.opacities.photoHalo : theme.opacities.photoBackdrop }]} />
+      <Image source={getAsset(id)} resizeMode="cover" style={[styles.image, { opacity: theme.name === 'light' ? theme.opacities.photoOnLight : strength === 'halo' ? theme.opacities.photoHalo : theme.opacities.photoBackdrop }]} />
     </View>
   );
 }

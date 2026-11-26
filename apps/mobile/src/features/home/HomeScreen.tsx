@@ -39,7 +39,7 @@ export function HomeScreen() {
         <Text variant="label" color="textSecondary">{new Intl.DateTimeFormat(locale, { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }).format(today)}</Text>
       </View>
       <Card raised glow>
-        <Text variant="label" color="accent">{t('home.horoscopeLabel')}</Text>
+        <Text variant="label" color="accentText">{t('home.horoscopeLabel')}</Text>
         {daily.isPending ? <ActivityIndicator color={theme.colors.accent} accessibilityLabel={t('common.loading')} />
           : horoscope ? (
             <>

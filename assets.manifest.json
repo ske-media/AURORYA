@@ -1733,13 +1733,13 @@
       "tintable": false,
       "maxBytes": 400000,
       "maxDurationMs": null,
-      "status": "placeholder",
+      "status": "final",
       "requiredForRelease": true,
-      "owner": "design",
-      "sha256": "7361e8faf8cd7afe495f4c45f15c07fdcf9014e42984d2fef249fbc24d941b54",
-      "source": null,
-      "license": null,
-      "notes": "Photo céleste (ADR-007) : lune, ciel étoilé ou nébuleuse, bords fondus vers la transparence, violet désaturé et bleu nuit, aucun texte. Origine et licence à consigner."
+      "owner": "dev",
+      "sha256": "82ae5c80f1caded5328891f9899888ee45f7ec58ebbe073356f261aec3fd8c94",
+      "source": "Image générée avec Higgsfield (modèle GPT Image 2.6) sur le compte du fondateur, 2026-11-26",
+      "license": "Sortie d’IA générée par le fondateur ; droits d’usage selon les conditions de Higgsfield, à confirmer avant publication",
+      "notes": "Lune voilée au-dessus de montagnes dans la brume (ADR-032, planche « ivoire et doré »), bords fondus vers la transparence, aucun texte."
     },
     {
       "id": "photo-scene-notif-primer",
@@ -1896,7 +1896,7 @@
       "status": "final",
       "requiredForRelease": true,
       "owner": "dev",
-      "sha256": "f5b0e50acd02c0b11b83158f22e9e285a31bf21670ce13ae47cf5126e8192e37",
+      "sha256": "b2ae910daf69d8163d8e55b4b67b4d4661707ac6eadf48e18de9b15ab4bd72b4",
       "source": "Création interne (scripts/assets/card-backgrounds.ts)",
       "license": "Création interne",
       "notes": "Fond de la carte en mode Lune. Zones du §16.7 laissées calmes. Aucun texte."
@@ -1916,7 +1916,7 @@
       "status": "final",
       "requiredForRelease": true,
       "owner": "dev",
-      "sha256": "20e49c254859e8eb7f33ad28e78dca30f72836f633c6cf31e46d15592acff385",
+      "sha256": "c63f0fd80ef9e78c87f60e8763903bc346001f8e1db5e6f40a501b7348583c90",
       "source": "Création interne (scripts/assets/card-backgrounds.ts)",
       "license": "Création interne",
       "notes": "Fond de la carte en mode Mars. Aucun texte."
@@ -1936,7 +1936,7 @@
       "status": "final",
       "requiredForRelease": true,
       "owner": "dev",
-      "sha256": "9d474996a516b9c54026ffd0a6c55d651820d35d61c494ca29918653b128670a",
+      "sha256": "6de2af8bc525b5c4a5a8895aaf1b680597bf060d37802fe9d0f35e4f38f23d1d",
       "source": "Création interne (scripts/assets/card-backgrounds.ts)",
       "license": "Création interne",
       "notes": "Fond de la carte en mode Saturne. Aucun texte."
@@ -1956,7 +1956,7 @@
       "status": "final",
       "requiredForRelease": true,
       "owner": "dev",
-      "sha256": "c562600e0763e691f5a13d9f6c85d6f759ace164c89598ddb9c9d3adfafbec03",
+      "sha256": "3ebe99936797a8fadf4314b78d20b9287137589c8611aa10e8672de4db7b52d5",
       "source": "Création interne (scripts/assets/card-backgrounds.ts)",
       "license": "Création interne",
       "notes": "Fond de la carte de groupe. Aucun texte."

@@ -1,6 +1,6 @@
 // Géométrie canonique du symbole Aurorya (SPEC Annexe C.1), dans un repère 200 × 200.
 // Seule source des cotes : le fichier SVG du registre et l'animation AuroraRise en dérivent.
-import { palette } from './colors';
+import { brandInk } from './colors';
 
 export const LOGO = {
   box: 200,
@@ -15,16 +15,16 @@ export const LOGO = {
 
 /** Couleurs du symbole sur fond sombre (Annexe C.1). Le logo ne se recolore pas hors palette. */
 const logoOnDark = {
-  ring: palette.ivory,
-  halo: palette.lavenderGrey,
-  sunFrom: palette.dustyRose,
-  sunTo: palette.champagneLight,
-  horizon: palette.ivory,
-  letter: palette.champagne,
-  star: palette.ivory,
+  ring: brandInk.paper,
+  halo: brandInk.bronze,
+  sunFrom: brandInk.emberFrom,
+  sunTo: brandInk.emberTo,
+  horizon: brandInk.paper,
+  letter: brandInk.bronze,
+  star: brandInk.paper,
 } as const;
-/** Sur fond clair, les traits ivoire deviennent encre nuit et le doré s'approfondit pour rester lisible. */
-const logoOnLight = { ...logoOnDark, ring: palette.midnight, halo: palette.lavenderDeep, horizon: palette.midnight, letter: palette.champagneDeep, star: palette.midnight } as const;
+/** Sur papier, les traits clairs deviennent encre noire. */
+const logoOnLight = { ...logoOnDark, ring: brandInk.ink, horizon: brandInk.ink, letter: brandInk.emberDeep, star: brandInk.ink } as const;
 export const logoColorsFor = { dark: logoOnDark, light: logoOnLight } as const;
 /** Couleurs du logo sur fond nuit (carte de partage, visuels de marque). */
 export const logoColors = logoOnDark;
