@@ -1,10 +1,10 @@
 // Une section de la lecture complète (SPEC §7.4). Le serveur décide du droit : texte complet, ou accroche et zone floutée.
 import { SECTION_KEYS, type SectionKey, TONE_MODES, type ToneMode } from '@aurorya/shared';
-import { useLocalSearchParams } from 'expo-router';
+import { useLocalSearchParams, useRouter } from 'expo-router';
 import { useTranslation } from 'react-i18next';
 import { ActivityIndicator } from 'react-native';
-import { Banner, Card, EmptyState, Screen, Text } from '@/components/ui';
-import { BlurredFiller } from '@/components/ui/BlurredFiller';
+import { Banner, BlurLock, Card, EmptyState, Screen, Text } from '@/components/ui';
+import { paywallHref } from '@/features/paywall/open-paywall';
 import { ApiError } from '@/services/api-client';
 import { useCurrentChart, useSection } from '@/services/query';
 import { useTheme } from '@/theme/ThemeProvider';
@@ -18,6 +18,7 @@ export function SectionScreen() {
   const mode: ToneMode = isToneMode(params.mode) ? params.mode : 'soft';
   const { t } = useTranslation();
   const theme = useTheme();
+  const router = useRouter();
   const query = useSection(key, mode);
   const chart = useCurrentChart();
 
@@ -37,12 +38,9 @@ export function SectionScreen() {
     <Screen>
       {header}
       {chart.data && chart.data.chart.angles === null ? <Banner message={t('reading.noTimeNote')} /> : null}
-      <Text variant="heading">{section.hook}</Text>
+      <Text variant="quote">{section.hook}</Text>
       {section.locked ? (
-        <>
-          <BlurredFiller />
-          <Card raised><Text color="textSecondary">{t('reading.locked')}</Text></Card>
-        </>
+        <BlurLock message={t('reading.lockedTeaser')} actionLabel={t('paywall.unlock')} onPress={() => router.push(paywallHref('section', key))} />
       ) : (
         <>
           {section.paragraphs.map((paragraph) => <Text key={paragraph}>{paragraph}</Text>)}

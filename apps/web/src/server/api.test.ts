@@ -4,7 +4,7 @@ import type { LlmPort, RoastPrompts } from '@aurorya/ai';
 import { RoleCatalogSchema } from '@aurorya/ai';
 import { DEFAULT_ENGINE_CONFIG } from '@aurorya/astro-engine';
 import rolesJson from '../../../../content/roles/roles.v1.json';
-import { ChartSummarySchema, type KbEntry, type RoastOutput, RoastResponseSchema, SECTION_KEYS, SectionResponseSchema, err, ok } from '@aurorya/shared';
+import { ChartSummariesSchema, ChartSummarySchema, DailyResponseSchema, type KbEntry, type RoastOutput, RoastResponseSchema, SECTION_KEYS, SectionResponseSchema, err, ok } from '@aurorya/shared';
 import { afterAll, beforeAll, beforeEach, describe, expect, inject, it } from 'vitest';
 import type { AppDeps, AuthPort } from './deps';
 import { createLogger } from './log';
@@ -13,7 +13,9 @@ import { createPgSql } from './pg-sql';
 import { invalidateConfigCache } from './remote-config';
 import { ageOn, postCharts } from './routes/charts';
 import { getConfig, putProfile } from './routes/profile';
+import { getDaily } from './routes/daily';
 import { getSection } from './routes/readings';
+import { getChartSummaries } from './routes/summaries';
 import { postRoasts, roastSheetFor } from './routes/roasts';
 
 const roleCatalog = RoleCatalogSchema.parse(rolesJson);
@@ -320,5 +322,36 @@ describe('GET /readings/sections/{key}', () => {
     const later = await call(postRoasts, 'POST', { chartId: lea?.id, mode: 'expert' });
     expect(later.status).toBe(200);
     expect((await later.json()).readingId).toBe(roast.readingId);
+  });
+});
+
+describe('feuille de placement et page du jour', () => {
+  const get = (route: (r: Request, d: AppDeps) => Promise<Response>, path: string, token: string | null = 'lea') =>
+    route(new Request(`https://test.invalid/api/v1/${path}`, { headers: { ...(token ? { authorization: `Bearer ${token}` } : {}), 'x-app-build': '1' } }), deps());
+
+  it('donne le résumé de chaque placement dans le mode demandé, sans LLM', async () => {
+    expect((await get(getChartSummaries, 'charts/current/summaries?mode=cash', null)).status).toBe(401);
+    expect((await get(getChartSummaries, 'charts/current/summaries')).status).toBe(400);
+    const body = ChartSummariesSchema.parse(await (await get(getChartSummaries, 'charts/current/summaries?mode=cash')).json());
+    expect(body.summaries['placement:sun']).toBe('Franc.');
+    expect(Object.keys(body.summaries).every((id) => id.startsWith('placement:') || id.startsWith('angle:'))).toBe(true);
+    const soft = ChartSummariesSchema.parse(await (await get(getChartSummaries, 'charts/current/summaries?mode=soft')).json());
+    expect(soft.summaries['placement:sun']).toBe('Doux.');
+  });
+  it('sert un horoscope de repli et, sans droit, le seul nom du transit du jour', async () => {
+    clock = new Date('2027-02-01T10:00:00Z'); // droit expiré
+    const body = DailyResponseSchema.parse(await (await get(getDaily, 'daily?date=2027-02-01&mode=cash')).json());
+    expect(body.signHoroscope).toMatchObject({ status: 'fallback', body: 'Franc.' });
+    expect(body.signHoroscope?.headline).toBe('A · b · c');
+    expect(body.personal.locked).toBe(true);
+    expect(Object.keys(body.personal).sort()).toEqual(['headline', 'locked']);
+    if (body.personal.headline !== null) expect(body.personal.headline).toMatch(/ (ton|ta) /);
+  });
+  it('avec le droit, détaille les transits du jour', async () => {
+    const body = DailyResponseSchema.parse(await (await get(getDaily, 'daily?date=2026-11-23&mode=expert')).json());
+    if (body.personal.locked) throw new Error('horoscope personnel verrouillé');
+    expect(body.personal.items.length).toBeLessThanOrEqual(3);
+    for (const item of body.personal.items) { expect(item.label).toContain(' votre '); expect(item.text).toBe('Précis.'); }
+    if (body.personal.items[0]) expect(body.personal.headline).toBe(body.personal.items[0].label);
   });
 });

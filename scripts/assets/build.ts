@@ -27,6 +27,9 @@ ${entries(binary, (a) => `require(${JSON.stringify(relative(mobileDir, a.path))}
 } as const;
 
 export type AssetId = keyof typeof assetModules;
+
+/** Fichiers encore provisoires : un décor ne les affiche pas tant que le fichier définitif n'est pas livré. */
+export const provisionalAssetIds: ReadonlySet<string> = new Set(${JSON.stringify(binary.filter((a) => a.status === 'placeholder').map((a) => a.id))});
 `,
 );
 

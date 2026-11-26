@@ -78,6 +78,24 @@ Mis à jour : 2026-11-23, après l'API complète des groupes, le site, l'onboard
 - Fiche de l'app créée par un fondateur (identifiant Apple 6838627506) ; textes et catégories posés par l'API (ADR-025).
 - Non vérifié : le lancement de l'app sur un iPhone.
 
+## Mission « Ultra-Premium & Conversion » (2026-11-26)
+Vérifié à chaque lot, codes de retour lus : `pnpm typecheck`, `pnpm lint`, `pnpm test`, `pnpm --filter mobile export:ios`. Rien n'est vérifié sur iPhone tant que ce n'est pas écrit ici.
+- **Glyphes** : les 31 tracés astrologiques sont définitifs (`assets:check --promote`, `assets:build`, `assets:report`). Trois tracés de la proposition redessinés après rendu : Capricorne, mode Lune (croissant et point), mode Mars (éclair, pour ne pas doubler l'étoile de la marque).
+- **Lot 1** : service `feedback` (vibrations, sons mêlés à l'audio en cours, mode silencieux respecté), préférences sons et vibrations dans les réglages, fond nébuleux et grain (`Backdrop`), reflet et bordure d'accent des cartes, halo et ressort du bouton principal, icône de bouton, `ModeSelector`, `BlurLock`, `Icon`, `Glyph`. Deux rôles de couleur ajoutés (`highlight`, `accentMuted`) à la place des valeurs en dur de l'ordre de mission.
+- **Lot 2** : animation `AuroraRise` (Annexe C.5) pilotée par les étapes réelles du calcul, avec fondu en mouvement réduit ; géométrie du symbole centralisée (`LOGO`) ; accueil avec le symbole qui se trace ; barre de progression à point lumineux ; révélation chorégraphiée (en-tête, `ModeSelector`, punchlines en citation échelonnées avec son et vibration, quatre actions hiérarchisées). Vérifié visuellement dans un navigateur au format iPhone, contre la production.
+- **Écart assumé avec l'ordre de mission** : pas de halo derrière le symbole (accueil, carte). L'Annexe C.4 de la SPEC interdit d'ajouter une lueur au logo ; la SPEC prime.
+- **Décors provisoires masqués** : les photos et le grain du registre sont encore des gabarits portant leur nom en toutes lettres. `PhotoHalo` et le grain ne s'affichent qu'une fois le fichier définitif livré (`isProvisional`).
+- Limites : les cinq sons et le grain sont encore des fichiers provisoires du registre ; l'effet réel ne se jugera qu'avec les fichiers définitifs.
+- **Lot 3** (2026-11-26) :
+  - Serveur : `GET /api/v1/charts/current/summaries?mode=` (résumés de placement par ton, depuis la base de règles) ; horoscope du jour de secours tiré de la base de règles quand aucun texte n'est publié (`status: 'fallback'`) ; titre personnel calculé sur le vrai transit le plus serré (« Saturne carré à ton Soleil ») ; rôles et duos de groupe servis avec leurs trois phrases par ton (`roles.v1.json` complet, 32 rôles et 2 duos, validés par `checkText`).
+  - Mon ciel : halo et étoile au centre de la roue, maisons en chiffres romains, sigles AC et MC, anneau de sélection ; fiche de placement (ton choisi, maison et degrés, résumé du serveur, aspects, lien vers le chapitre correspondant) ; chapitres numérotés I à VIII avec badge Premium décidé par le droit lu sous RLS.
+  - Chapitre : verrou `BlurLock` vers `/paywall`. Carte du roast : trio flanqué de filets, filet gauche par punchline, symbole tracé par `AuroraRise`, capture possible seulement une fois fond et symbole prêts ; écran de partage avec choix du ton (roast de l'autre ton demandé au serveur, mis en cache), son et vibration après partage ou enregistrement.
+  - Aujourd'hui : choix du ton, icône de phase de Lune, mention quand l'horoscope est le texte de secours, bloc personnel avec titre réel et verrou. Groupe : en-tête photo du type de groupe, verrou sous les rôles et duos quand le serveur retient le détail.
+  - `/paywall` existe mais **n'offre rien à l'achat** : il dit que les achats ne sont pas ouverts (aucun prix simulé). Le vrai paywall est le Lot 4.
+  - Vérifié : typecheck, lint, 348 tests, export iOS (codes de retour 0) ; parcours dans un navigateur (rendu web temporaire, démonté ensuite) pour Mon ciel, fiche de placement, chapitres, chapitre verrouillé, carte de partage, paywall.
+  - **Non vérifié** : sur iPhone, rien de ce lot ; dans le navigateur, le résumé de placement et l'écran Aujourd'hui (la production servait encore l'ancienne API au moment du parcours) ; le sens des arcs de `MoonPhaseIcon` ; la capture Skia de la carte sur appareil (repli `react-native-view-shot` non ajouté) ; l'écran de groupe à deux membres.
+  - Rupture connue : le schéma de `/daily` a changé ; un build installé avant ce lot échoue sur l'écran Aujourd'hui tant qu'il n'est pas réinstallé.
+
 ## Compte Apple (2026-11-24)
 - Clé d'API App Store Connect fournie par un fondateur et vérifiée en lecture. Identifiant d'app `com.aurorya.app` **enregistré chez Apple** (définitif), avec l'accord du fondateur par questionnaire.
 - Restent à la main : créer la fiche de l'app dans App Store Connect, poser le secret GitHub `ASC_KEY_P8`.

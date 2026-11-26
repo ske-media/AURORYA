@@ -1,1369 +1,1577 @@
 {
- "version": "1",
- "status": "draft",
- "notes": "Annexe B de la SPEC. friends et couple : libellés et critères de la SPEC. family et colleagues : critères dérivés de l’Annexe B.3, libellés à rédiger par le design (null). Phrases de repli à rédiger (null).",
- "types": {
-  "friends": [
-   {
-    "id": "caretaker",
-    "labels": {
-     "fr": {
-      "f": "la maman du groupe",
-      "m": "le papa du groupe",
-      "n": "l’ange gardien du groupe"
-     },
-     "en": null
-    },
-    "fallbackLine": null,
-    "criteria": [
-     {
-      "predicate": "in_sign",
-      "bodies": [
-       "sun",
-       "moon"
-      ],
-      "signs": [
-       "cancer"
-      ],
-      "weight": 3
-     },
-     {
-      "predicate": "in_house",
-      "bodies": [
-       "moon"
-      ],
-      "houses": [
-       4
-      ],
-      "weight": 2
-     },
-     {
-      "predicate": "dominant",
-      "key": "water",
-      "weight": 2
-     },
-     {
-      "predicate": "in_sign",
-      "bodies": [
-       "venus"
-      ],
-      "signs": [
-       "taurus",
-       "cancer"
-      ],
-      "weight": 1
-     }
+  "version": "1",
+  "status": "draft",
+  "notes": "Annexe B de la SPEC. friends et couple : libellés et critères de la SPEC. family et colleagues : critères dérivés de l’Annexe B.3, libellés rédigés par le développement (ADR-017), à relire par le design. Phrases de repli rédigées par le développement, sans accord de genre, à relire.",
+  "types": {
+    "friends": [
+      {
+        "id": "caretaker",
+        "labels": {
+          "fr": {
+            "f": "la maman du groupe",
+            "m": "le papa du groupe",
+            "n": "l’ange gardien du groupe"
+          },
+          "en": null
+        },
+        "fallbackLine": {
+          "soft": "Vérifie que tout le monde est bien rentré, et y pense encore le lendemain.",
+          "cash": "A déjà demandé trois fois si quelqu’un avait froid.",
+          "expert": "Le soin porté aux autres organise sa place dans le groupe."
+        },
+        "criteria": [
+          {
+            "predicate": "in_sign",
+            "bodies": [
+              "sun",
+              "moon"
+            ],
+            "signs": [
+              "cancer"
+            ],
+            "weight": 3
+          },
+          {
+            "predicate": "in_house",
+            "bodies": [
+              "moon"
+            ],
+            "houses": [
+              4
+            ],
+            "weight": 2
+          },
+          {
+            "predicate": "dominant",
+            "key": "water",
+            "weight": 2
+          },
+          {
+            "predicate": "in_sign",
+            "bodies": [
+              "venus"
+            ],
+            "signs": [
+              "taurus",
+              "cancer"
+            ],
+            "weight": 1
+          }
+        ]
+      },
+      {
+        "id": "planner",
+        "labels": {
+          "fr": {
+            "f": "la cheffe de projet",
+            "m": "le chef de projet",
+            "n": "le cerveau logistique"
+          },
+          "en": null
+        },
+        "fallbackLine": {
+          "soft": "Transforme une vague envie en date, en lieu et en heure.",
+          "cash": "A créé le tableau partagé avant la fin de la discussion.",
+          "expert": "Donne une structure aux projets communs et tient le calendrier."
+        },
+        "criteria": [
+          {
+            "predicate": "in_sign",
+            "bodies": [
+              "sun",
+              "moon",
+              "mercury"
+            ],
+            "signs": [
+              "virgo",
+              "capricorn"
+            ],
+            "weight": 3
+          },
+          {
+            "predicate": "angular",
+            "body": "saturn",
+            "weight": 2
+          },
+          {
+            "predicate": "dominant",
+            "key": "earth",
+            "weight": 2
+          },
+          {
+            "predicate": "in_house",
+            "bodies": [
+              "mars"
+            ],
+            "houses": [
+              6,
+              10
+            ],
+            "weight": 1
+          }
+        ]
+      },
+      {
+        "id": "ghost",
+        "labels": {
+          "fr": {
+            "f": "celle qui disparaît trois jours",
+            "m": "celui qui disparaît trois jours",
+            "n": "l’ermite à éclipses"
+          },
+          "en": null
+        },
+        "fallbackLine": {
+          "soft": "S’éloigne pour recharger, puis revient comme si de rien n’était.",
+          "cash": "Répond au message de mardi le vendredi, avec un seul émoji.",
+          "expert": "Alterne présence intense et retrait : un besoin de solitude régulier."
+        },
+        "criteria": [
+          {
+            "predicate": "stellium",
+            "kind": "house",
+            "key": "12",
+            "weight": 3
+          },
+          {
+            "predicate": "in_sign",
+            "bodies": [
+              "sun",
+              "moon"
+            ],
+            "signs": [
+              "pisces",
+              "scorpio"
+            ],
+            "weight": 2
+          },
+          {
+            "predicate": "angular",
+            "body": "neptune",
+            "weight": 2
+          },
+          {
+            "predicate": "in_house",
+            "bodies": [
+              "moon"
+            ],
+            "houses": [
+              8,
+              12
+            ],
+            "weight": 2
+          }
+        ]
+      },
+      {
+        "id": "spark",
+        "labels": {
+          "fr": {
+            "f": "celle qui lance toutes les idées",
+            "m": "celui qui lance toutes les idées",
+            "n": "l’étincelle du groupe"
+          },
+          "en": null
+        },
+        "fallbackLine": {
+          "soft": "Voit une possibilité là où les autres voient un dimanche vide.",
+          "cash": "Lance douze idées à la minute et en oublie onze en route.",
+          "expert": "Apporte l’impulsion initiale ; le suivi revient à d’autres."
+        },
+        "criteria": [
+          {
+            "predicate": "in_sign",
+            "bodies": [
+              "sun",
+              "mars",
+              "asc"
+            ],
+            "signs": [
+              "aries",
+              "sagittarius"
+            ],
+            "weight": 3
+          },
+          {
+            "predicate": "dominant",
+            "key": "fire",
+            "weight": 2
+          },
+          {
+            "predicate": "angular",
+            "body": "mars",
+            "weight": 2
+          },
+          {
+            "predicate": "dominant",
+            "key": "cardinal",
+            "weight": 1
+          }
+        ]
+      },
+      {
+        "id": "diplomat",
+        "labels": {
+          "fr": {
+            "f": "la médiatrice",
+            "m": "le médiateur",
+            "n": "la voix de la paix"
+          },
+          "en": null
+        },
+        "fallbackLine": {
+          "soft": "Trouve la phrase qui permet à chacun de garder la face.",
+          "cash": "Est d’accord avec les deux camps, et le pense vraiment.",
+          "expert": "Cherche l’équilibre des points de vue avant toute décision."
+        },
+        "criteria": [
+          {
+            "predicate": "in_sign",
+            "bodies": [
+              "sun",
+              "moon",
+              "venus",
+              "asc"
+            ],
+            "signs": [
+              "libra"
+            ],
+            "weight": 3
+          },
+          {
+            "predicate": "angular",
+            "body": "venus",
+            "weight": 2
+          },
+          {
+            "predicate": "in_house",
+            "bodies": [
+              "moon"
+            ],
+            "houses": [
+              7
+            ],
+            "weight": 2
+          },
+          {
+            "predicate": "dominant",
+            "key": "air",
+            "weight": 1
+          }
+        ]
+      },
+      {
+        "id": "truth_teller",
+        "labels": {
+          "fr": {
+            "f": "celle qui dit tout haut ce que tout le monde pense",
+            "m": "celui qui dit tout haut ce que tout le monde pense",
+            "n": "la franchise incarnée"
+          },
+          "en": null
+        },
+        "fallbackLine": {
+          "soft": "Dit les choses avec assez de soin pour qu’on les entende.",
+          "cash": "A un avis sur la question. Le donne. Sans qu’on demande.",
+          "expert": "Privilégie la franchise à la diplomatie, par exigence de clarté."
+        },
+        "criteria": [
+          {
+            "predicate": "aspect",
+            "a": "mercury",
+            "b": "mars",
+            "types": [
+              "conjunction",
+              "square",
+              "opposition"
+            ],
+            "weight": 3
+          },
+          {
+            "predicate": "in_sign",
+            "bodies": [
+              "sun",
+              "mercury",
+              "mars"
+            ],
+            "signs": [
+              "aries",
+              "scorpio",
+              "sagittarius"
+            ],
+            "weight": 2
+          },
+          {
+            "predicate": "angular",
+            "body": "pluto",
+            "weight": 2
+          }
+        ]
+      },
+      {
+        "id": "host",
+        "labels": {
+          "fr": {
+            "f": "celle qui régale",
+            "m": "celui qui régale",
+            "n": "l’art de recevoir"
+          },
+          "en": null
+        },
+        "fallbackLine": {
+          "soft": "Fait de chaque soirée un endroit où l’on a envie de rester.",
+          "cash": "A prévu à manger pour douze. Le groupe compte quatre personnes.",
+          "expert": "Exprime l’attachement par l’accueil et la générosité matérielle."
+        },
+        "criteria": [
+          {
+            "predicate": "in_sign",
+            "bodies": [
+              "sun",
+              "moon",
+              "venus"
+            ],
+            "signs": [
+              "taurus",
+              "leo"
+            ],
+            "weight": 3
+          },
+          {
+            "predicate": "angular",
+            "body": "jupiter",
+            "weight": 2
+          },
+          {
+            "predicate": "in_house",
+            "bodies": [
+              "venus"
+            ],
+            "houses": [
+              2,
+              5
+            ],
+            "weight": 1
+          },
+          {
+            "predicate": "dominant",
+            "key": "fixed",
+            "weight": 1
+          }
+        ]
+      },
+      {
+        "id": "entertainer",
+        "labels": {
+          "fr": {
+            "f": "celle qui fait le show",
+            "m": "celui qui fait le show",
+            "n": "le spectacle permanent"
+          },
+          "en": null
+        },
+        "fallbackLine": {
+          "soft": "Remet de la légèreté dans la pièce dès que l’ambiance retombe.",
+          "cash": "Raconte la même histoire pour la troisième fois, et on rit encore.",
+          "expert": "Occupe naturellement le centre de l’attention et fédère par l’humour."
+        },
+        "criteria": [
+          {
+            "predicate": "in_sign",
+            "bodies": [
+              "sun",
+              "moon",
+              "asc"
+            ],
+            "signs": [
+              "leo",
+              "gemini"
+            ],
+            "weight": 3
+          },
+          {
+            "predicate": "in_house",
+            "bodies": [
+              "sun"
+            ],
+            "houses": [
+              5
+            ],
+            "weight": 2
+          },
+          {
+            "predicate": "aspect",
+            "a": "sun",
+            "b": "jupiter",
+            "types": [
+              "conjunction",
+              "trine",
+              "sextile"
+            ],
+            "weight": 1
+          },
+          {
+            "predicate": "dominant",
+            "key": "fire",
+            "weight": 1
+          }
+        ]
+      },
+      {
+        "id": "oracle",
+        "labels": {
+          "fr": {
+            "f": "celle qui sent tout avant tout le monde",
+            "m": "celui qui sent tout avant tout le monde",
+            "n": "le radar du groupe"
+          },
+          "en": null
+        },
+        "fallbackLine": {
+          "soft": "Sent l’humeur de chacun avant le premier mot.",
+          "cash": "Avait tout compris depuis le début. Lève juste un sourcil.",
+          "expert": "Perçoit les dynamiques implicites du groupe avec une grande finesse."
+        },
+        "criteria": [
+          {
+            "predicate": "aspect",
+            "a": "moon",
+            "b": "neptune",
+            "types": [
+              "conjunction",
+              "trine",
+              "square",
+              "opposition"
+            ],
+            "weight": 3
+          },
+          {
+            "predicate": "in_sign",
+            "bodies": [
+              "moon"
+            ],
+            "signs": [
+              "pisces",
+              "scorpio",
+              "cancer"
+            ],
+            "weight": 2
+          },
+          {
+            "predicate": "dominant",
+            "key": "water",
+            "weight": 2
+          },
+          {
+            "predicate": "stellium",
+            "kind": "house",
+            "key": "8",
+            "weight": 1
+          }
+        ]
+      },
+      {
+        "id": "free_spirit",
+        "labels": {
+          "fr": {
+            "f": "l’électron libre",
+            "m": "l’électron libre",
+            "n": "l’électron libre"
+          },
+          "en": null
+        },
+        "fallbackLine": {
+          "soft": "Suit sa propre route et revient avec des histoires pour tout le monde.",
+          "cash": "Confirme sa venue par « on verra », ce qui veut dire non.",
+          "expert": "Tient à son indépendance et s’engage à ses propres conditions."
+        },
+        "criteria": [
+          {
+            "predicate": "angular",
+            "body": "uranus",
+            "weight": 3
+          },
+          {
+            "predicate": "in_sign",
+            "bodies": [
+              "sun",
+              "moon",
+              "asc"
+            ],
+            "signs": [
+              "aquarius",
+              "sagittarius"
+            ],
+            "weight": 3
+          },
+          {
+            "predicate": "aspect",
+            "a": "sun",
+            "b": "uranus",
+            "types": [
+              "conjunction",
+              "square",
+              "opposition"
+            ],
+            "weight": 2
+          },
+          {
+            "predicate": "dominant",
+            "key": "mutable",
+            "weight": 1
+          }
+        ]
+      }
+    ],
+    "couple": [
+      {
+        "id": "anchor",
+        "labels": {
+          "fr": {
+            "f": "l’ancre",
+            "m": "l’ancre",
+            "n": "l’ancre"
+          },
+          "en": null
+        },
+        "fallbackLine": {
+          "soft": "Offre un point fixe quand tout bouge autour.",
+          "cash": "Ne change pas d’avis, ni de restaurant, ni de côté du lit.",
+          "expert": "Apporte stabilité et constance à la relation."
+        },
+        "criteria": [
+          {
+            "predicate": "dominant",
+            "key": "earth",
+            "weight": 3
+          },
+          {
+            "predicate": "in_sign",
+            "bodies": [
+              "sun",
+              "moon"
+            ],
+            "signs": [
+              "taurus",
+              "capricorn"
+            ],
+            "weight": 3
+          },
+          {
+            "predicate": "angular",
+            "body": "saturn",
+            "weight": 2
+          }
+        ]
+      },
+      {
+        "id": "flame",
+        "labels": {
+          "fr": {
+            "f": "la flamme",
+            "m": "la flamme",
+            "n": "la flamme"
+          },
+          "en": null
+        },
+        "fallbackLine": {
+          "soft": "Rallume l’envie avec un regard ou une idée de dernière minute.",
+          "cash": "Transforme un mardi soir en événement, que ça plaise ou non.",
+          "expert": "Nourrit le désir et l’élan ; l’intensité est son registre."
+        },
+        "criteria": [
+          {
+            "predicate": "dominant",
+            "key": "fire",
+            "weight": 3
+          },
+          {
+            "predicate": "in_sign",
+            "bodies": [
+              "venus",
+              "mars"
+            ],
+            "signs": [
+              "aries",
+              "leo",
+              "scorpio"
+            ],
+            "weight": 3
+          },
+          {
+            "predicate": "aspect",
+            "a": "venus",
+            "b": "mars",
+            "types": [
+              "conjunction",
+              "square",
+              "opposition"
+            ],
+            "weight": 2
+          }
+        ]
+      },
+      {
+        "id": "strategist",
+        "labels": {
+          "fr": {
+            "f": "la tête pensante",
+            "m": "la tête pensante",
+            "n": "la tête pensante"
+          },
+          "en": null
+        },
+        "fallbackLine": {
+          "soft": "Pense à deux coups d’avance pour que le duo avance sereinement.",
+          "cash": "A un plan. Et un plan B. Et un tableau comparatif.",
+          "expert": "Aborde la relation avec méthode et anticipe les décisions communes."
+        },
+        "criteria": [
+          {
+            "predicate": "in_sign",
+            "bodies": [
+              "mercury",
+              "sun"
+            ],
+            "signs": [
+              "virgo",
+              "gemini",
+              "aquarius"
+            ],
+            "weight": 3
+          },
+          {
+            "predicate": "dominant",
+            "key": "air",
+            "weight": 2
+          },
+          {
+            "predicate": "angular",
+            "body": "mercury",
+            "weight": 2
+          }
+        ]
+      },
+      {
+        "id": "dreamer",
+        "labels": {
+          "fr": {
+            "f": "l’âme rêveuse",
+            "m": "l’âme rêveuse",
+            "n": "l’âme rêveuse"
+          },
+          "en": null
+        },
+        "fallbackLine": {
+          "soft": "Imagine pour deux ce que le quotidien oublie de promettre.",
+          "cash": "Planifie un tour du monde, mais pas la liste de courses.",
+          "expert": "Apporte l’imaginaire et l’idéal ; le concret demande un relais."
+        },
+        "criteria": [
+          {
+            "predicate": "in_sign",
+            "bodies": [
+              "sun",
+              "moon",
+              "venus"
+            ],
+            "signs": [
+              "pisces"
+            ],
+            "weight": 3
+          },
+          {
+            "predicate": "angular",
+            "body": "neptune",
+            "weight": 2
+          },
+          {
+            "predicate": "dominant",
+            "key": "water",
+            "weight": 2
+          }
+        ]
+      },
+      {
+        "id": "nurturer",
+        "labels": {
+          "fr": {
+            "f": "le refuge",
+            "m": "le refuge",
+            "n": "le refuge"
+          },
+          "en": null
+        },
+        "fallbackLine": {
+          "soft": "Fait de la relation un endroit où l’on peut poser les armes.",
+          "cash": "Demande « tu as mangé ? » comme d’autres disent « je t’aime ».",
+          "expert": "Exprime l’attachement par la protection et l’attention quotidienne."
+        },
+        "criteria": [
+          {
+            "predicate": "in_sign",
+            "bodies": [
+              "moon",
+              "venus"
+            ],
+            "signs": [
+              "cancer",
+              "taurus"
+            ],
+            "weight": 3
+          },
+          {
+            "predicate": "in_house",
+            "bodies": [
+              "moon"
+            ],
+            "houses": [
+              4
+            ],
+            "weight": 2
+          },
+          {
+            "predicate": "dominant",
+            "key": "water",
+            "weight": 1
+          }
+        ]
+      },
+      {
+        "id": "explorer",
+        "labels": {
+          "fr": {
+            "f": "l’appel du large",
+            "m": "l’appel du large",
+            "n": "l’appel du large"
+          },
+          "en": null
+        },
+        "fallbackLine": {
+          "soft": "Ouvre des fenêtres et donne envie d’aller voir plus loin.",
+          "cash": "A déjà réservé les billets avant d’en parler.",
+          "expert": "Recherche la nouveauté et l’espace ; la routine pèse vite."
+        },
+        "criteria": [
+          {
+            "predicate": "in_sign",
+            "bodies": [
+              "sun",
+              "moon",
+              "mars"
+            ],
+            "signs": [
+              "sagittarius",
+              "aquarius",
+              "gemini"
+            ],
+            "weight": 3
+          },
+          {
+            "predicate": "angular",
+            "body": "jupiter",
+            "weight": 2
+          },
+          {
+            "predicate": "dominant",
+            "key": "mutable",
+            "weight": 1
+          }
+        ]
+      }
+    ],
+    "family": [
+      {
+        "id": "pillar",
+        "labels": {
+          "fr": {
+            "f": "le pilier de la famille",
+            "m": "le pilier de la famille",
+            "n": "le pilier de la famille"
+          },
+          "en": null
+        },
+        "fallbackLine": {
+          "soft": "Tient la maison debout, même à distance.",
+          "cash": "Organise Noël depuis septembre, et personne n’ose s’y opposer.",
+          "expert": "Assume la continuité et la responsabilité au sein de la famille."
+        },
+        "criteria": [
+          {
+            "predicate": "in_sign",
+            "bodies": [
+              "sun",
+              "moon"
+            ],
+            "signs": [
+              "cancer"
+            ],
+            "weight": 3
+          },
+          {
+            "predicate": "in_house",
+            "bodies": [
+              "moon"
+            ],
+            "houses": [
+              4
+            ],
+            "weight": 2
+          },
+          {
+            "predicate": "dominant",
+            "key": "water",
+            "weight": 2
+          },
+          {
+            "predicate": "in_sign",
+            "bodies": [
+              "venus"
+            ],
+            "signs": [
+              "taurus",
+              "cancer"
+            ],
+            "weight": 1
+          }
+        ]
+      },
+      {
+        "id": "memory_keeper",
+        "labels": {
+          "fr": {
+            "f": "la gardienne des souvenirs",
+            "m": "le gardien des souvenirs",
+            "n": "la mémoire de la famille"
+          },
+          "en": null
+        },
+        "fallbackLine": {
+          "soft": "Se souvient des dates, des recettes et de qui aimait quoi.",
+          "cash": "Ressort la photo gênante du collège à chaque repas.",
+          "expert": "Conserve l’histoire familiale et en assure la transmission."
+        },
+        "criteria": [
+          {
+            "predicate": "in_sign",
+            "bodies": [
+              "moon",
+              "sun"
+            ],
+            "signs": [
+              "cancer",
+              "taurus"
+            ],
+            "weight": 3
+          },
+          {
+            "predicate": "in_house",
+            "bodies": [
+              "moon",
+              "saturn"
+            ],
+            "houses": [
+              4
+            ],
+            "weight": 2
+          }
+        ]
+      },
+      {
+        "id": "peacemaker",
+        "labels": {
+          "fr": {
+            "f": "celle qui apaise",
+            "m": "celui qui apaise",
+            "n": "la paix du foyer"
+          },
+          "en": null
+        },
+        "fallbackLine": {
+          "soft": "Change de sujet au bon moment, avec un sourire.",
+          "cash": "Propose du dessert dès que le ton monte.",
+          "expert": "Régule les tensions et maintient le lien entre les membres."
+        },
+        "criteria": [
+          {
+            "predicate": "in_sign",
+            "bodies": [
+              "sun",
+              "moon",
+              "venus",
+              "asc"
+            ],
+            "signs": [
+              "libra"
+            ],
+            "weight": 3
+          },
+          {
+            "predicate": "angular",
+            "body": "venus",
+            "weight": 2
+          },
+          {
+            "predicate": "in_house",
+            "bodies": [
+              "moon"
+            ],
+            "houses": [
+              7
+            ],
+            "weight": 2
+          },
+          {
+            "predicate": "dominant",
+            "key": "air",
+            "weight": 1
+          }
+        ]
+      },
+      {
+        "id": "rebel",
+        "labels": {
+          "fr": {
+            "f": "celle qui fait autrement",
+            "m": "celui qui fait autrement",
+            "n": "l’esprit libre de la famille"
+          },
+          "en": null
+        },
+        "fallbackLine": {
+          "soft": "Ouvre des chemins que la famille n’avait pas envisagés.",
+          "cash": "A annoncé une grande décision au milieu du plat principal.",
+          "expert": "Questionne les habitudes familiales et affirme sa singularité."
+        },
+        "criteria": [
+          {
+            "predicate": "angular",
+            "body": "uranus",
+            "weight": 3
+          },
+          {
+            "predicate": "in_sign",
+            "bodies": [
+              "sun",
+              "moon",
+              "asc"
+            ],
+            "signs": [
+              "aquarius",
+              "sagittarius"
+            ],
+            "weight": 3
+          },
+          {
+            "predicate": "aspect",
+            "a": "sun",
+            "b": "uranus",
+            "types": [
+              "conjunction",
+              "square",
+              "opposition"
+            ],
+            "weight": 2
+          },
+          {
+            "predicate": "dominant",
+            "key": "mutable",
+            "weight": 1
+          }
+        ]
+      },
+      {
+        "id": "organizer",
+        "labels": {
+          "fr": {
+            "f": "la cheffe d’orchestre",
+            "m": "le chef d’orchestre",
+            "n": "la logistique en personne"
+          },
+          "en": null
+        },
+        "fallbackLine": {
+          "soft": "Fait en sorte que tout le monde arrive, et à l’heure.",
+          "cash": "A envoyé le planning. Puis un rappel. Puis un rappel du rappel.",
+          "expert": "Coordonne les rencontres et répartit les tâches avec méthode."
+        },
+        "criteria": [
+          {
+            "predicate": "in_sign",
+            "bodies": [
+              "sun",
+              "moon",
+              "mercury"
+            ],
+            "signs": [
+              "virgo",
+              "capricorn"
+            ],
+            "weight": 3
+          },
+          {
+            "predicate": "angular",
+            "body": "saturn",
+            "weight": 2
+          },
+          {
+            "predicate": "dominant",
+            "key": "earth",
+            "weight": 2
+          },
+          {
+            "predicate": "in_house",
+            "bodies": [
+              "mars"
+            ],
+            "houses": [
+              6,
+              10
+            ],
+            "weight": 1
+          }
+        ]
+      },
+      {
+        "id": "clown",
+        "labels": {
+          "fr": {
+            "f": "celle qui fait rire la table",
+            "m": "celui qui fait rire la table",
+            "n": "le rire de la famille"
+          },
+          "en": null
+        },
+        "fallbackLine": {
+          "soft": "Désamorce les silences avec une blague bien placée.",
+          "cash": "Imite tout le monde, y compris les personnes présentes.",
+          "expert": "Allège le climat familial par l’humour et le jeu."
+        },
+        "criteria": [
+          {
+            "predicate": "in_sign",
+            "bodies": [
+              "sun",
+              "moon",
+              "asc"
+            ],
+            "signs": [
+              "leo",
+              "gemini"
+            ],
+            "weight": 3
+          },
+          {
+            "predicate": "in_house",
+            "bodies": [
+              "sun"
+            ],
+            "houses": [
+              5
+            ],
+            "weight": 2
+          },
+          {
+            "predicate": "aspect",
+            "a": "sun",
+            "b": "jupiter",
+            "types": [
+              "conjunction",
+              "trine",
+              "sextile"
+            ],
+            "weight": 1
+          },
+          {
+            "predicate": "dominant",
+            "key": "fire",
+            "weight": 1
+          }
+        ]
+      },
+      {
+        "id": "confidant",
+        "labels": {
+          "fr": {
+            "f": "la confidente",
+            "m": "le confident",
+            "n": "l’oreille de la famille"
+          },
+          "en": null
+        },
+        "fallbackLine": {
+          "soft": "Écoute sans juger, et garde ce qu’on lui confie.",
+          "cash": "Sait tout sur tout le monde. Ne dira rien. Sourit beaucoup.",
+          "expert": "Reçoit les confidences et tient un rôle de confiance."
+        },
+        "criteria": [
+          {
+            "predicate": "aspect",
+            "a": "moon",
+            "b": "neptune",
+            "types": [
+              "conjunction",
+              "trine",
+              "square",
+              "opposition"
+            ],
+            "weight": 3
+          },
+          {
+            "predicate": "in_sign",
+            "bodies": [
+              "moon"
+            ],
+            "signs": [
+              "pisces",
+              "scorpio",
+              "cancer"
+            ],
+            "weight": 2
+          },
+          {
+            "predicate": "dominant",
+            "key": "water",
+            "weight": 2
+          },
+          {
+            "predicate": "stellium",
+            "kind": "house",
+            "key": "8",
+            "weight": 1
+          }
+        ]
+      },
+      {
+        "id": "adventurer",
+        "labels": {
+          "fr": {
+            "f": "celle qui part loin",
+            "m": "celui qui part loin",
+            "n": "le grand voyage"
+          },
+          "en": null
+        },
+        "fallbackLine": {
+          "soft": "Rapporte des histoires et des envies d’ailleurs à chaque retour.",
+          "cash": "Appelle depuis un fuseau horaire que personne ne situe.",
+          "expert": "Élargit l’horizon familial par le goût du départ et de la découverte."
+        },
+        "criteria": [
+          {
+            "predicate": "in_sign",
+            "bodies": [
+              "sun",
+              "moon",
+              "mars"
+            ],
+            "signs": [
+              "sagittarius",
+              "aquarius",
+              "gemini"
+            ],
+            "weight": 3
+          },
+          {
+            "predicate": "angular",
+            "body": "jupiter",
+            "weight": 2
+          },
+          {
+            "predicate": "dominant",
+            "key": "mutable",
+            "weight": 1
+          }
+        ]
+      }
+    ],
+    "colleagues": [
+      {
+        "id": "closer",
+        "labels": {
+          "fr": {
+            "f": "celle qui boucle les dossiers",
+            "m": "celui qui boucle les dossiers",
+            "n": "la ligne d’arrivée"
+          },
+          "en": null
+        },
+        "fallbackLine": {
+          "soft": "Aime voir les choses terminées, et aide chacun à y arriver.",
+          "cash": "A fini pendant que les autres relisaient l’ordre du jour.",
+          "expert": "Mène les projets à leur terme avec constance et sens du résultat."
+        },
+        "criteria": [
+          {
+            "predicate": "angular",
+            "body": "mars",
+            "weight": 3
+          },
+          {
+            "predicate": "angular",
+            "body": "saturn",
+            "weight": 2
+          },
+          {
+            "predicate": "dominant",
+            "key": "cardinal",
+            "weight": 3
+          },
+          {
+            "predicate": "in_sign",
+            "bodies": [
+              "mars",
+              "saturn"
+            ],
+            "signs": [
+              "aries",
+              "capricorn"
+            ],
+            "weight": 2
+          }
+        ]
+      },
+      {
+        "id": "architect",
+        "labels": {
+          "fr": {
+            "f": "l’architecte",
+            "m": "l’architecte",
+            "n": "l’architecte"
+          },
+          "en": null
+        },
+        "fallbackLine": {
+          "soft": "Dessine le plan qui permet à tout le monde de s’y retrouver.",
+          "cash": "A refait l’arborescence des dossiers. Encore.",
+          "expert": "Structure les projets et pense les systèmes avant l’exécution."
+        },
+        "criteria": [
+          {
+            "predicate": "dominant",
+            "key": "earth",
+            "weight": 3
+          },
+          {
+            "predicate": "angular",
+            "body": "saturn",
+            "weight": 3
+          },
+          {
+            "predicate": "in_sign",
+            "bodies": [
+              "sun",
+              "mercury"
+            ],
+            "signs": [
+              "capricorn",
+              "taurus"
+            ],
+            "weight": 2
+          }
+        ]
+      },
+      {
+        "id": "firefighter",
+        "labels": {
+          "fr": {
+            "f": "la pompière de service",
+            "m": "le pompier de service",
+            "n": "le numéro d’urgence"
+          },
+          "en": null
+        },
+        "fallbackLine": {
+          "soft": "Garde son calme quand tout presse, et rassure l’équipe.",
+          "cash": "Brille dans l’urgence, et s’ennuie un peu quand tout va bien.",
+          "expert": "Réagit vite et efficacement sous pression."
+        },
+        "criteria": [
+          {
+            "predicate": "angular",
+            "body": "mars",
+            "weight": 3
+          },
+          {
+            "predicate": "dominant",
+            "key": "fire",
+            "weight": 2
+          },
+          {
+            "predicate": "in_house",
+            "bodies": [
+              "mars",
+              "sun"
+            ],
+            "houses": [
+              6
+            ],
+            "weight": 2
+          },
+          {
+            "predicate": "in_sign",
+            "bodies": [
+              "mars"
+            ],
+            "signs": [
+              "aries",
+              "leo",
+              "sagittarius"
+            ],
+            "weight": 2
+          }
+        ]
+      },
+      {
+        "id": "networker",
+        "labels": {
+          "fr": {
+            "f": "celle qui connaît tout le monde",
+            "m": "celui qui connaît tout le monde",
+            "n": "le carnet d’adresses"
+          },
+          "en": null
+        },
+        "fallbackLine": {
+          "soft": "Met les bonnes personnes en relation, naturellement.",
+          "cash": "Connaît quelqu’un qui connaît quelqu’un. Toujours.",
+          "expert": "Crée et entretient les liens utiles au collectif."
+        },
+        "criteria": [
+          {
+            "predicate": "in_sign",
+            "bodies": [
+              "mercury",
+              "venus"
+            ],
+            "signs": [
+              "gemini",
+              "libra",
+              "aquarius"
+            ],
+            "weight": 3
+          },
+          {
+            "predicate": "in_house",
+            "bodies": [
+              "sun",
+              "mercury",
+              "venus"
+            ],
+            "houses": [
+              11
+            ],
+            "weight": 2
+          },
+          {
+            "predicate": "dominant",
+            "key": "air",
+            "weight": 2
+          }
+        ]
+      },
+      {
+        "id": "visionary",
+        "labels": {
+          "fr": {
+            "f": "la visionnaire",
+            "m": "le visionnaire",
+            "n": "la longue-vue"
+          },
+          "en": null
+        },
+        "fallbackLine": {
+          "soft": "Voit où l’équipe pourrait aller, et donne envie d’y aller.",
+          "cash": "Décrit la vision d’ensemble pendant que l’équipe cherche le fichier d’hier.",
+          "expert": "Porte la vision à long terme et ouvre des perspectives."
+        },
+        "criteria": [
+          {
+            "predicate": "angular",
+            "body": "uranus",
+            "weight": 3
+          },
+          {
+            "predicate": "angular",
+            "body": "jupiter",
+            "weight": 2
+          },
+          {
+            "predicate": "in_sign",
+            "bodies": [
+              "sun",
+              "moon",
+              "asc"
+            ],
+            "signs": [
+              "aquarius",
+              "sagittarius"
+            ],
+            "weight": 3
+          }
+        ]
+      },
+      {
+        "id": "quality_guardian",
+        "labels": {
+          "fr": {
+            "f": "la gardienne de la qualité",
+            "m": "le gardien de la qualité",
+            "n": "le dernier contrôle"
+          },
+          "en": null
+        },
+        "fallbackLine": {
+          "soft": "Repère le détail qui change tout, avec bienveillance.",
+          "cash": "A trouvé une faute en bas de page. Et une autre dans la correction.",
+          "expert": "Veille à la rigueur et à la fiabilité du travail rendu."
+        },
+        "criteria": [
+          {
+            "predicate": "in_sign",
+            "bodies": [
+              "sun",
+              "moon",
+              "mercury"
+            ],
+            "signs": [
+              "virgo"
+            ],
+            "weight": 3
+          },
+          {
+            "predicate": "in_sign",
+            "bodies": [
+              "mercury"
+            ],
+            "signs": [
+              "taurus",
+              "capricorn"
+            ],
+            "weight": 2
+          },
+          {
+            "predicate": "in_house",
+            "bodies": [
+              "sun",
+              "mercury",
+              "saturn"
+            ],
+            "houses": [
+              6
+            ],
+            "weight": 2
+          }
+        ]
+      },
+      {
+        "id": "morale_officer",
+        "labels": {
+          "fr": {
+            "f": "celle qui remonte le moral",
+            "m": "celui qui remonte le moral",
+            "n": "le moral de l’équipe"
+          },
+          "en": null
+        },
+        "fallbackLine": {
+          "soft": "Remarque qui a besoin d’un café et d’un mot gentil.",
+          "cash": "Organise le pot de départ, le pot d’arrivée et le pot du jeudi.",
+          "expert": "Soutient la cohésion et l’énergie du collectif."
+        },
+        "criteria": [
+          {
+            "predicate": "in_sign",
+            "bodies": [
+              "sun",
+              "moon",
+              "asc"
+            ],
+            "signs": [
+              "leo"
+            ],
+            "weight": 3
+          },
+          {
+            "predicate": "angular",
+            "body": "venus",
+            "weight": 2
+          },
+          {
+            "predicate": "angular",
+            "body": "jupiter",
+            "weight": 2
+          }
+        ]
+      },
+      {
+        "id": "maverick",
+        "labels": {
+          "fr": {
+            "f": "celle qui sort du cadre",
+            "m": "celui qui sort du cadre",
+            "n": "le hors-piste"
+          },
+          "en": null
+        },
+        "fallbackLine": {
+          "soft": "Propose l’angle auquel personne n’avait pensé.",
+          "cash": "A lu la procédure. A fait autrement. Ça a marché.",
+          "expert": "Remet en cause les méthodes établies et innove en autonomie."
+        },
+        "criteria": [
+          {
+            "predicate": "angular",
+            "body": "uranus",
+            "weight": 3
+          },
+          {
+            "predicate": "in_sign",
+            "bodies": [
+              "sun",
+              "moon",
+              "asc"
+            ],
+            "signs": [
+              "aquarius",
+              "sagittarius"
+            ],
+            "weight": 3
+          },
+          {
+            "predicate": "aspect",
+            "a": "sun",
+            "b": "uranus",
+            "types": [
+              "conjunction",
+              "square",
+              "opposition"
+            ],
+            "weight": 2
+          },
+          {
+            "predicate": "dominant",
+            "key": "mutable",
+            "weight": 1
+          }
+        ]
+      }
     ]
-   },
-   {
-    "id": "planner",
-    "labels": {
-     "fr": {
-      "f": "la cheffe de projet",
-      "m": "le chef de projet",
-      "n": "le cerveau logistique"
-     },
-     "en": null
+  },
+  "duos": {
+    "duo_fusion": {
+      "fallbackLine": {
+        "soft": "Se comprennent à demi-mot, souvent avant la fin de la phrase.",
+        "cash": "Deux cerveaux, un seul avis. Inutile de les départager.",
+        "expert": "Leurs thèmes se répondent : entente spontanée et rythme commun."
+      }
     },
-    "fallbackLine": null,
-    "criteria": [
-     {
-      "predicate": "in_sign",
-      "bodies": [
-       "sun",
-       "moon",
-       "mercury"
-      ],
-      "signs": [
-       "virgo",
-       "capricorn"
-      ],
-      "weight": 3
-     },
-     {
-      "predicate": "angular",
-      "body": "saturn",
-      "weight": 2
-     },
-     {
-      "predicate": "dominant",
-      "key": "earth",
-      "weight": 2
-     },
-     {
-      "predicate": "in_house",
-      "bodies": [
-       "mars"
-      ],
-      "houses": [
-       6,
-       10
-      ],
-      "weight": 1
-     }
-    ]
-   },
-   {
-    "id": "ghost",
-    "labels": {
-     "fr": {
-      "f": "celle qui disparaît trois jours",
-      "m": "celui qui disparaît trois jours",
-      "n": "l’ermite à éclipses"
-     },
-     "en": null
-    },
-    "fallbackLine": null,
-    "criteria": [
-     {
-      "predicate": "stellium",
-      "kind": "house",
-      "key": "12",
-      "weight": 3
-     },
-     {
-      "predicate": "in_sign",
-      "bodies": [
-       "sun",
-       "moon"
-      ],
-      "signs": [
-       "pisces",
-       "scorpio"
-      ],
-      "weight": 2
-     },
-     {
-      "predicate": "angular",
-      "body": "neptune",
-      "weight": 2
-     },
-     {
-      "predicate": "in_house",
-      "bodies": [
-       "moon"
-      ],
-      "houses": [
-       8,
-       12
-      ],
-      "weight": 2
-     }
-    ]
-   },
-   {
-    "id": "spark",
-    "labels": {
-     "fr": {
-      "f": "celle qui lance toutes les idées",
-      "m": "celui qui lance toutes les idées",
-      "n": "l’étincelle du groupe"
-     },
-     "en": null
-    },
-    "fallbackLine": null,
-    "criteria": [
-     {
-      "predicate": "in_sign",
-      "bodies": [
-       "sun",
-       "mars",
-       "asc"
-      ],
-      "signs": [
-       "aries",
-       "sagittarius"
-      ],
-      "weight": 3
-     },
-     {
-      "predicate": "dominant",
-      "key": "fire",
-      "weight": 2
-     },
-     {
-      "predicate": "angular",
-      "body": "mars",
-      "weight": 2
-     },
-     {
-      "predicate": "dominant",
-      "key": "cardinal",
-      "weight": 1
-     }
-    ]
-   },
-   {
-    "id": "diplomat",
-    "labels": {
-     "fr": {
-      "f": "la médiatrice",
-      "m": "le médiateur",
-      "n": "la voix de la paix"
-     },
-     "en": null
-    },
-    "fallbackLine": null,
-    "criteria": [
-     {
-      "predicate": "in_sign",
-      "bodies": [
-       "sun",
-       "moon",
-       "venus",
-       "asc"
-      ],
-      "signs": [
-       "libra"
-      ],
-      "weight": 3
-     },
-     {
-      "predicate": "angular",
-      "body": "venus",
-      "weight": 2
-     },
-     {
-      "predicate": "in_house",
-      "bodies": [
-       "moon"
-      ],
-      "houses": [
-       7
-      ],
-      "weight": 2
-     },
-     {
-      "predicate": "dominant",
-      "key": "air",
-      "weight": 1
-     }
-    ]
-   },
-   {
-    "id": "truth_teller",
-    "labels": {
-     "fr": {
-      "f": "celle qui dit tout haut ce que tout le monde pense",
-      "m": "celui qui dit tout haut ce que tout le monde pense",
-      "n": "la franchise incarnée"
-     },
-     "en": null
-    },
-    "fallbackLine": null,
-    "criteria": [
-     {
-      "predicate": "aspect",
-      "a": "mercury",
-      "b": "mars",
-      "types": [
-       "conjunction",
-       "square",
-       "opposition"
-      ],
-      "weight": 3
-     },
-     {
-      "predicate": "in_sign",
-      "bodies": [
-       "sun",
-       "mercury",
-       "mars"
-      ],
-      "signs": [
-       "aries",
-       "scorpio",
-       "sagittarius"
-      ],
-      "weight": 2
-     },
-     {
-      "predicate": "angular",
-      "body": "pluto",
-      "weight": 2
-     }
-    ]
-   },
-   {
-    "id": "host",
-    "labels": {
-     "fr": {
-      "f": "celle qui régale",
-      "m": "celui qui régale",
-      "n": "l’art de recevoir"
-     },
-     "en": null
-    },
-    "fallbackLine": null,
-    "criteria": [
-     {
-      "predicate": "in_sign",
-      "bodies": [
-       "sun",
-       "moon",
-       "venus"
-      ],
-      "signs": [
-       "taurus",
-       "leo"
-      ],
-      "weight": 3
-     },
-     {
-      "predicate": "angular",
-      "body": "jupiter",
-      "weight": 2
-     },
-     {
-      "predicate": "in_house",
-      "bodies": [
-       "venus"
-      ],
-      "houses": [
-       2,
-       5
-      ],
-      "weight": 1
-     },
-     {
-      "predicate": "dominant",
-      "key": "fixed",
-      "weight": 1
-     }
-    ]
-   },
-   {
-    "id": "entertainer",
-    "labels": {
-     "fr": {
-      "f": "celle qui fait le show",
-      "m": "celui qui fait le show",
-      "n": "le spectacle permanent"
-     },
-     "en": null
-    },
-    "fallbackLine": null,
-    "criteria": [
-     {
-      "predicate": "in_sign",
-      "bodies": [
-       "sun",
-       "moon",
-       "asc"
-      ],
-      "signs": [
-       "leo",
-       "gemini"
-      ],
-      "weight": 3
-     },
-     {
-      "predicate": "in_house",
-      "bodies": [
-       "sun"
-      ],
-      "houses": [
-       5
-      ],
-      "weight": 2
-     },
-     {
-      "predicate": "aspect",
-      "a": "sun",
-      "b": "jupiter",
-      "types": [
-       "conjunction",
-       "trine",
-       "sextile"
-      ],
-      "weight": 1
-     },
-     {
-      "predicate": "dominant",
-      "key": "fire",
-      "weight": 1
-     }
-    ]
-   },
-   {
-    "id": "oracle",
-    "labels": {
-     "fr": {
-      "f": "celle qui sent tout avant tout le monde",
-      "m": "celui qui sent tout avant tout le monde",
-      "n": "le radar du groupe"
-     },
-     "en": null
-    },
-    "fallbackLine": null,
-    "criteria": [
-     {
-      "predicate": "aspect",
-      "a": "moon",
-      "b": "neptune",
-      "types": [
-       "conjunction",
-       "trine",
-       "square",
-       "opposition"
-      ],
-      "weight": 3
-     },
-     {
-      "predicate": "in_sign",
-      "bodies": [
-       "moon"
-      ],
-      "signs": [
-       "pisces",
-       "scorpio",
-       "cancer"
-      ],
-      "weight": 2
-     },
-     {
-      "predicate": "dominant",
-      "key": "water",
-      "weight": 2
-     },
-     {
-      "predicate": "stellium",
-      "kind": "house",
-      "key": "8",
-      "weight": 1
-     }
-    ]
-   },
-   {
-    "id": "free_spirit",
-    "labels": {
-     "fr": {
-      "f": "l’électron libre",
-      "m": "l’électron libre",
-      "n": "l’électron libre"
-     },
-     "en": null
-    },
-    "fallbackLine": null,
-    "criteria": [
-     {
-      "predicate": "angular",
-      "body": "uranus",
-      "weight": 3
-     },
-     {
-      "predicate": "in_sign",
-      "bodies": [
-       "sun",
-       "moon",
-       "asc"
-      ],
-      "signs": [
-       "aquarius",
-       "sagittarius"
-      ],
-      "weight": 3
-     },
-     {
-      "predicate": "aspect",
-      "a": "sun",
-      "b": "uranus",
-      "types": [
-       "conjunction",
-       "square",
-       "opposition"
-      ],
-      "weight": 2
-     },
-     {
-      "predicate": "dominant",
-      "key": "mutable",
-      "weight": 1
-     }
-    ]
-   }
-  ],
-  "couple": [
-   {
-    "id": "anchor",
-    "labels": {
-     "fr": {
-      "f": "l’ancre",
-      "m": "l’ancre",
-      "n": "l’ancre"
-     },
-     "en": null
-    },
-    "fallbackLine": null,
-    "criteria": [
-     {
-      "predicate": "dominant",
-      "key": "earth",
-      "weight": 3
-     },
-     {
-      "predicate": "in_sign",
-      "bodies": [
-       "sun",
-       "moon"
-      ],
-      "signs": [
-       "taurus",
-       "capricorn"
-      ],
-      "weight": 3
-     },
-     {
-      "predicate": "angular",
-      "body": "saturn",
-      "weight": 2
-     }
-    ]
-   },
-   {
-    "id": "flame",
-    "labels": {
-     "fr": {
-      "f": "la flamme",
-      "m": "la flamme",
-      "n": "la flamme"
-     },
-     "en": null
-    },
-    "fallbackLine": null,
-    "criteria": [
-     {
-      "predicate": "dominant",
-      "key": "fire",
-      "weight": 3
-     },
-     {
-      "predicate": "in_sign",
-      "bodies": [
-       "venus",
-       "mars"
-      ],
-      "signs": [
-       "aries",
-       "leo",
-       "scorpio"
-      ],
-      "weight": 3
-     },
-     {
-      "predicate": "aspect",
-      "a": "venus",
-      "b": "mars",
-      "types": [
-       "conjunction",
-       "square",
-       "opposition"
-      ],
-      "weight": 2
-     }
-    ]
-   },
-   {
-    "id": "strategist",
-    "labels": {
-     "fr": {
-      "f": "la tête pensante",
-      "m": "la tête pensante",
-      "n": "la tête pensante"
-     },
-     "en": null
-    },
-    "fallbackLine": null,
-    "criteria": [
-     {
-      "predicate": "in_sign",
-      "bodies": [
-       "mercury",
-       "sun"
-      ],
-      "signs": [
-       "virgo",
-       "gemini",
-       "aquarius"
-      ],
-      "weight": 3
-     },
-     {
-      "predicate": "dominant",
-      "key": "air",
-      "weight": 2
-     },
-     {
-      "predicate": "angular",
-      "body": "mercury",
-      "weight": 2
-     }
-    ]
-   },
-   {
-    "id": "dreamer",
-    "labels": {
-     "fr": {
-      "f": "l’âme rêveuse",
-      "m": "l’âme rêveuse",
-      "n": "l’âme rêveuse"
-     },
-     "en": null
-    },
-    "fallbackLine": null,
-    "criteria": [
-     {
-      "predicate": "in_sign",
-      "bodies": [
-       "sun",
-       "moon",
-       "venus"
-      ],
-      "signs": [
-       "pisces"
-      ],
-      "weight": 3
-     },
-     {
-      "predicate": "angular",
-      "body": "neptune",
-      "weight": 2
-     },
-     {
-      "predicate": "dominant",
-      "key": "water",
-      "weight": 2
-     }
-    ]
-   },
-   {
-    "id": "nurturer",
-    "labels": {
-     "fr": {
-      "f": "le refuge",
-      "m": "le refuge",
-      "n": "le refuge"
-     },
-     "en": null
-    },
-    "fallbackLine": null,
-    "criteria": [
-     {
-      "predicate": "in_sign",
-      "bodies": [
-       "moon",
-       "venus"
-      ],
-      "signs": [
-       "cancer",
-       "taurus"
-      ],
-      "weight": 3
-     },
-     {
-      "predicate": "in_house",
-      "bodies": [
-       "moon"
-      ],
-      "houses": [
-       4
-      ],
-      "weight": 2
-     },
-     {
-      "predicate": "dominant",
-      "key": "water",
-      "weight": 1
-     }
-    ]
-   },
-   {
-    "id": "explorer",
-    "labels": {
-     "fr": {
-      "f": "l’appel du large",
-      "m": "l’appel du large",
-      "n": "l’appel du large"
-     },
-     "en": null
-    },
-    "fallbackLine": null,
-    "criteria": [
-     {
-      "predicate": "in_sign",
-      "bodies": [
-       "sun",
-       "moon",
-       "mars"
-      ],
-      "signs": [
-       "sagittarius",
-       "aquarius",
-       "gemini"
-      ],
-      "weight": 3
-     },
-     {
-      "predicate": "angular",
-      "body": "jupiter",
-      "weight": 2
-     },
-     {
-      "predicate": "dominant",
-      "key": "mutable",
-      "weight": 1
-     }
-    ]
-   }
-  ],
-  "family": [
-   {
-    "id": "pillar",
-    "labels": {
-     "fr": null,
-     "en": null
-    },
-    "fallbackLine": null,
-    "criteria": [
-     {
-      "predicate": "in_sign",
-      "bodies": [
-       "sun",
-       "moon"
-      ],
-      "signs": [
-       "cancer"
-      ],
-      "weight": 3
-     },
-     {
-      "predicate": "in_house",
-      "bodies": [
-       "moon"
-      ],
-      "houses": [
-       4
-      ],
-      "weight": 2
-     },
-     {
-      "predicate": "dominant",
-      "key": "water",
-      "weight": 2
-     },
-     {
-      "predicate": "in_sign",
-      "bodies": [
-       "venus"
-      ],
-      "signs": [
-       "taurus",
-       "cancer"
-      ],
-      "weight": 1
-     }
-    ]
-   },
-   {
-    "id": "memory_keeper",
-    "labels": {
-     "fr": null,
-     "en": null
-    },
-    "fallbackLine": null,
-    "criteria": [
-     {
-      "predicate": "in_sign",
-      "bodies": [
-       "moon",
-       "sun"
-      ],
-      "signs": [
-       "cancer",
-       "taurus"
-      ],
-      "weight": 3
-     },
-     {
-      "predicate": "in_house",
-      "bodies": [
-       "moon",
-       "saturn"
-      ],
-      "houses": [
-       4
-      ],
-      "weight": 2
-     }
-    ]
-   },
-   {
-    "id": "peacemaker",
-    "labels": {
-     "fr": null,
-     "en": null
-    },
-    "fallbackLine": null,
-    "criteria": [
-     {
-      "predicate": "in_sign",
-      "bodies": [
-       "sun",
-       "moon",
-       "venus",
-       "asc"
-      ],
-      "signs": [
-       "libra"
-      ],
-      "weight": 3
-     },
-     {
-      "predicate": "angular",
-      "body": "venus",
-      "weight": 2
-     },
-     {
-      "predicate": "in_house",
-      "bodies": [
-       "moon"
-      ],
-      "houses": [
-       7
-      ],
-      "weight": 2
-     },
-     {
-      "predicate": "dominant",
-      "key": "air",
-      "weight": 1
-     }
-    ]
-   },
-   {
-    "id": "rebel",
-    "labels": {
-     "fr": null,
-     "en": null
-    },
-    "fallbackLine": null,
-    "criteria": [
-     {
-      "predicate": "angular",
-      "body": "uranus",
-      "weight": 3
-     },
-     {
-      "predicate": "in_sign",
-      "bodies": [
-       "sun",
-       "moon",
-       "asc"
-      ],
-      "signs": [
-       "aquarius",
-       "sagittarius"
-      ],
-      "weight": 3
-     },
-     {
-      "predicate": "aspect",
-      "a": "sun",
-      "b": "uranus",
-      "types": [
-       "conjunction",
-       "square",
-       "opposition"
-      ],
-      "weight": 2
-     },
-     {
-      "predicate": "dominant",
-      "key": "mutable",
-      "weight": 1
-     }
-    ]
-   },
-   {
-    "id": "organizer",
-    "labels": {
-     "fr": null,
-     "en": null
-    },
-    "fallbackLine": null,
-    "criteria": [
-     {
-      "predicate": "in_sign",
-      "bodies": [
-       "sun",
-       "moon",
-       "mercury"
-      ],
-      "signs": [
-       "virgo",
-       "capricorn"
-      ],
-      "weight": 3
-     },
-     {
-      "predicate": "angular",
-      "body": "saturn",
-      "weight": 2
-     },
-     {
-      "predicate": "dominant",
-      "key": "earth",
-      "weight": 2
-     },
-     {
-      "predicate": "in_house",
-      "bodies": [
-       "mars"
-      ],
-      "houses": [
-       6,
-       10
-      ],
-      "weight": 1
-     }
-    ]
-   },
-   {
-    "id": "clown",
-    "labels": {
-     "fr": null,
-     "en": null
-    },
-    "fallbackLine": null,
-    "criteria": [
-     {
-      "predicate": "in_sign",
-      "bodies": [
-       "sun",
-       "moon",
-       "asc"
-      ],
-      "signs": [
-       "leo",
-       "gemini"
-      ],
-      "weight": 3
-     },
-     {
-      "predicate": "in_house",
-      "bodies": [
-       "sun"
-      ],
-      "houses": [
-       5
-      ],
-      "weight": 2
-     },
-     {
-      "predicate": "aspect",
-      "a": "sun",
-      "b": "jupiter",
-      "types": [
-       "conjunction",
-       "trine",
-       "sextile"
-      ],
-      "weight": 1
-     },
-     {
-      "predicate": "dominant",
-      "key": "fire",
-      "weight": 1
-     }
-    ]
-   },
-   {
-    "id": "confidant",
-    "labels": {
-     "fr": null,
-     "en": null
-    },
-    "fallbackLine": null,
-    "criteria": [
-     {
-      "predicate": "aspect",
-      "a": "moon",
-      "b": "neptune",
-      "types": [
-       "conjunction",
-       "trine",
-       "square",
-       "opposition"
-      ],
-      "weight": 3
-     },
-     {
-      "predicate": "in_sign",
-      "bodies": [
-       "moon"
-      ],
-      "signs": [
-       "pisces",
-       "scorpio",
-       "cancer"
-      ],
-      "weight": 2
-     },
-     {
-      "predicate": "dominant",
-      "key": "water",
-      "weight": 2
-     },
-     {
-      "predicate": "stellium",
-      "kind": "house",
-      "key": "8",
-      "weight": 1
-     }
-    ]
-   },
-   {
-    "id": "adventurer",
-    "labels": {
-     "fr": null,
-     "en": null
-    },
-    "fallbackLine": null,
-    "criteria": [
-     {
-      "predicate": "in_sign",
-      "bodies": [
-       "sun",
-       "moon",
-       "mars"
-      ],
-      "signs": [
-       "sagittarius",
-       "aquarius",
-       "gemini"
-      ],
-      "weight": 3
-     },
-     {
-      "predicate": "angular",
-      "body": "jupiter",
-      "weight": 2
-     },
-     {
-      "predicate": "dominant",
-      "key": "mutable",
-      "weight": 1
-     }
-    ]
-   }
-  ],
-  "colleagues": [
-   {
-    "id": "closer",
-    "labels": {
-     "fr": null,
-     "en": null
-    },
-    "fallbackLine": null,
-    "criteria": [
-     {
-      "predicate": "angular",
-      "body": "mars",
-      "weight": 3
-     },
-     {
-      "predicate": "angular",
-      "body": "saturn",
-      "weight": 2
-     },
-     {
-      "predicate": "dominant",
-      "key": "cardinal",
-      "weight": 3
-     },
-     {
-      "predicate": "in_sign",
-      "bodies": [
-       "mars",
-       "saturn"
-      ],
-      "signs": [
-       "aries",
-       "capricorn"
-      ],
-      "weight": 2
-     }
-    ]
-   },
-   {
-    "id": "architect",
-    "labels": {
-     "fr": null,
-     "en": null
-    },
-    "fallbackLine": null,
-    "criteria": [
-     {
-      "predicate": "dominant",
-      "key": "earth",
-      "weight": 3
-     },
-     {
-      "predicate": "angular",
-      "body": "saturn",
-      "weight": 3
-     },
-     {
-      "predicate": "in_sign",
-      "bodies": [
-       "sun",
-       "mercury"
-      ],
-      "signs": [
-       "capricorn",
-       "taurus"
-      ],
-      "weight": 2
-     }
-    ]
-   },
-   {
-    "id": "firefighter",
-    "labels": {
-     "fr": null,
-     "en": null
-    },
-    "fallbackLine": null,
-    "criteria": [
-     {
-      "predicate": "angular",
-      "body": "mars",
-      "weight": 3
-     },
-     {
-      "predicate": "dominant",
-      "key": "fire",
-      "weight": 2
-     },
-     {
-      "predicate": "in_house",
-      "bodies": [
-       "mars",
-       "sun"
-      ],
-      "houses": [
-       6
-      ],
-      "weight": 2
-     },
-     {
-      "predicate": "in_sign",
-      "bodies": [
-       "mars"
-      ],
-      "signs": [
-       "aries",
-       "leo",
-       "sagittarius"
-      ],
-      "weight": 2
-     }
-    ]
-   },
-   {
-    "id": "networker",
-    "labels": {
-     "fr": null,
-     "en": null
-    },
-    "fallbackLine": null,
-    "criteria": [
-     {
-      "predicate": "in_sign",
-      "bodies": [
-       "mercury",
-       "venus"
-      ],
-      "signs": [
-       "gemini",
-       "libra",
-       "aquarius"
-      ],
-      "weight": 3
-     },
-     {
-      "predicate": "in_house",
-      "bodies": [
-       "sun",
-       "mercury",
-       "venus"
-      ],
-      "houses": [
-       11
-      ],
-      "weight": 2
-     },
-     {
-      "predicate": "dominant",
-      "key": "air",
-      "weight": 2
-     }
-    ]
-   },
-   {
-    "id": "visionary",
-    "labels": {
-     "fr": null,
-     "en": null
-    },
-    "fallbackLine": null,
-    "criteria": [
-     {
-      "predicate": "angular",
-      "body": "uranus",
-      "weight": 3
-     },
-     {
-      "predicate": "angular",
-      "body": "jupiter",
-      "weight": 2
-     },
-     {
-      "predicate": "in_sign",
-      "bodies": [
-       "sun",
-       "moon",
-       "asc"
-      ],
-      "signs": [
-       "aquarius",
-       "sagittarius"
-      ],
-      "weight": 3
-     }
-    ]
-   },
-   {
-    "id": "quality_guardian",
-    "labels": {
-     "fr": null,
-     "en": null
-    },
-    "fallbackLine": null,
-    "criteria": [
-     {
-      "predicate": "in_sign",
-      "bodies": [
-       "sun",
-       "moon",
-       "mercury"
-      ],
-      "signs": [
-       "virgo"
-      ],
-      "weight": 3
-     },
-     {
-      "predicate": "in_sign",
-      "bodies": [
-       "mercury"
-      ],
-      "signs": [
-       "taurus",
-       "capricorn"
-      ],
-      "weight": 2
-     },
-     {
-      "predicate": "in_house",
-      "bodies": [
-       "sun",
-       "mercury",
-       "saturn"
-      ],
-      "houses": [
-       6
-      ],
-      "weight": 2
-     }
-    ]
-   },
-   {
-    "id": "morale_officer",
-    "labels": {
-     "fr": null,
-     "en": null
-    },
-    "fallbackLine": null,
-    "criteria": [
-     {
-      "predicate": "in_sign",
-      "bodies": [
-       "sun",
-       "moon",
-       "asc"
-      ],
-      "signs": [
-       "leo"
-      ],
-      "weight": 3
-     },
-     {
-      "predicate": "angular",
-      "body": "venus",
-      "weight": 2
-     },
-     {
-      "predicate": "angular",
-      "body": "jupiter",
-      "weight": 2
-     }
-    ]
-   },
-   {
-    "id": "maverick",
-    "labels": {
-     "fr": null,
-     "en": null
-    },
-    "fallbackLine": null,
-    "criteria": [
-     {
-      "predicate": "angular",
-      "body": "uranus",
-      "weight": 3
-     },
-     {
-      "predicate": "in_sign",
-      "bodies": [
-       "sun",
-       "moon",
-       "asc"
-      ],
-      "signs": [
-       "aquarius",
-       "sagittarius"
-      ],
-      "weight": 3
-     },
-     {
-      "predicate": "aspect",
-      "a": "sun",
-      "b": "uranus",
-      "types": [
-       "conjunction",
-       "square",
-       "opposition"
-      ],
-      "weight": 2
-     },
-     {
-      "predicate": "dominant",
-      "key": "mutable",
-      "weight": 1
-     }
-    ]
-   }
-  ]
- }
+    "duo_sparks": {
+      "fallbackLine": {
+        "soft": "Se bousculent un peu, et se font grandir beaucoup.",
+        "cash": "Le débat est lancé avant même le choix du sujet.",
+        "expert": "Des tensions fécondes : chacun stimule ce que l’autre évite."
+      }
+    }
+  }
 }

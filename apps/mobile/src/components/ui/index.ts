@@ -6,3 +6,8 @@ export { EmptyState, type EmptyStateProps } from './EmptyState';
 export { Screen } from './Screen';
 export { Text, type TextProps } from './Text';
 export { TextField, type TextFieldProps } from './TextField';
+export { BlurLock, type BlurLockProps } from './BlurLock';
+export { Icon } from './Icon';
+export { ModeSelector, type ModeSelectorProps } from './ModeSelector';
+export { BrandMark } from './BrandMark';
+export { PhotoHalo } from './PhotoHalo';

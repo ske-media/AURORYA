@@ -7,9 +7,9 @@ import { Button, Screen, Text } from '@/components/ui';
 import { useTheme } from '@/theme/ThemeProvider';
 import { ONBOARDING_STEPS, type OnboardingStep } from './draft';
 
-type Props = { step: OnboardingStep; title: string; subtitle?: string; canContinue: boolean; onContinue: () => void; continueLabel?: string; children: ReactNode };
+type Props = { step: OnboardingStep; header?: ReactNode; title: string; subtitle?: string; canContinue: boolean; onContinue: () => void; continueLabel?: string; children: ReactNode };
 
-export function OnboardingScaffold({ step, title, subtitle, canContinue, onContinue, continueLabel, children }: Props) {
+export function OnboardingScaffold({ step, header, title, subtitle, canContinue, onContinue, continueLabel, children }: Props) {
   const theme = useTheme();
   const router = useRouter();
   const { t } = useTranslation();
@@ -18,9 +18,15 @@ export function OnboardingScaffold({ step, title, subtitle, canContinue, onConti
     <Screen>
       <View style={{ flexDirection: 'row', gap: theme.spacing.s8 }} accessibilityRole="progressbar" accessibilityLabel={t('onboarding.progress', { current: index + 1, total: ONBOARDING_STEPS.length })}>
         {ONBOARDING_STEPS.map((s, i) => (
-          <View key={s} style={{ flex: 1, height: theme.spacing.s2, borderRadius: theme.radii.pill, backgroundColor: i <= index ? theme.colors.accent : theme.colors.border }} />
+          <View key={s} style={{ flex: 1, height: theme.spacing.s2, borderRadius: theme.radii.pill, backgroundColor: i <= index ? theme.colors.accent : theme.colors.border }}>
+            {/* Le segment courant porte un point lumineux à son extrémité. */}
+            {i === index ? (
+              <View style={{ position: 'absolute', right: 0, top: -theme.spacing.s2, width: theme.spacing.s4 + theme.spacing.s2, height: theme.spacing.s4 + theme.spacing.s2, borderRadius: theme.radii.pill, backgroundColor: theme.colors.accent, shadowColor: theme.colors.glow, shadowOpacity: 1, shadowRadius: theme.spacing.s8, shadowOffset: { width: 0, height: 0 } }} />
+            ) : null}
+          </View>
         ))}
       </View>
+      {header}
       <View style={{ gap: theme.spacing.s8 }}>
         <Text variant="title1" accessibilityRole="header">{title}</Text>
         {subtitle ? <Text color="textSecondary">{subtitle}</Text> : null}

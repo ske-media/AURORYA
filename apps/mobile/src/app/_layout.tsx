@@ -16,7 +16,9 @@ initI18n();
 function Navigator() {
   const theme = useTheme();
   return (
-    <Stack screenOptions={{ headerShown: false, contentStyle: { backgroundColor: theme.colors.bg } }} />
+    <Stack screenOptions={{ headerShown: false, contentStyle: { backgroundColor: theme.colors.bg } }}>
+      <Stack.Screen name="paywall" options={{ presentation: 'modal' }} />
+    </Stack>
   );
 }
 

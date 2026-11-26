@@ -39,7 +39,12 @@
         "body": "Vérifie ta connexion, puis réessaie."
       },
       "noHoroscope": "L’horoscope de ton signe n’est pas encore prêt pour aujourd’hui."
-    }
+    },
+    "personalLabel": "Ton horoscope personnel",
+    "personalHeadline": "Aujourd’hui pour toi : {{headline}}",
+    "personalTeaser": "La lecture de ce transit, écrite pour ton thème, fait partie d’Aurorya Premium.",
+    "personalEmpty": "Aucun transit marquant aujourd’hui : une journée calme dans ton ciel.",
+    "fallbackNote": "En attendant la lecture du jour, voici ce que ton signe porte en lui."
   },
   "sky": {
     "title": "Mon ciel",
@@ -70,7 +75,13 @@
       "trine": "Trigone",
       "square": "Carré",
       "sextile": "Sextile"
-    }
+    },
+    "deepen": "Approfondir dans ma lecture",
+    "summaryUnavailable": "L’interprétation de ce placement n’est pas encore disponible.",
+    "houseLabel": "{{house}} · {{degrees}}",
+    "acLabel": "AC",
+    "mcLabel": "MC",
+    "aspectsLabel": "Ses aspects"
   },
   "groups": {
     "title": "Mes groupes",
@@ -126,7 +137,8 @@
       "unavailable": "La lecture de ce groupe n’est pas encore disponible.",
       "leave": "Quitter le groupe",
       "open": "Ouvrir"
-    }
+    },
+    "lockedTeaser": "Le détail de chaque rôle et de chaque duo fait partie d’Aurorya Premium."
   },
   "common": {
     "retry": "Réessayer",
@@ -166,7 +178,8 @@
     "expert": {
       "name": "Saturne",
       "description": "Experte : expliquer avec rigueur."
-    }
+    },
+    "label": "Ton de la lecture"
   },
   "onboarding": {
     "progress": "Étape {{current}} sur {{total}}",
@@ -271,7 +284,7 @@
       },
       "unavailable": "Ta lecture n’est pas encore disponible. Ton thème, lui, est calculé.",
       "modeLabel": "Ton de la lecture",
-      "continue": "Continuer",
+      "continue": "Accéder à mon ciel",
       "timeUnknown": "Sans heure de naissance, l’Ascendant et les maisons ne sont pas calculés.",
       "share": "Partager ma carte",
       "fullReading": "Lire mon thème complet",
@@ -307,6 +320,11 @@
       "confirm": "Oui, tout supprimer",
       "cancel": "Annuler",
       "failed": "La suppression n’a pas abouti. Réessaie dans un instant."
+    },
+    "senses": {
+      "title": "Sons et vibrations",
+      "sounds": "Sons",
+      "haptics": "Vibrations"
     }
   },
   "reading": {
@@ -334,7 +352,9 @@
         "title": "Ta lecture n’est pas encore prête",
         "body": "Elle s’ouvrira dès que ta carte sera écrite dans ce ton."
       }
-    }
+    },
+    "premiumBadge": "Premium",
+    "lockedTeaser": "La suite de ce chapitre, écrite pour ton thème, fait partie d’Aurorya Premium."
   },
   "ui": {
     "blurFiller": "Ce passage reste réservé. Il parle de ce que ton ciel raconte ici, de ce qui te porte et de ce qui te retient, avec les mots du ton que tu as choisi."
@@ -351,13 +371,21 @@
     "notice": {
       "saved": "Image enregistrée dans tes photos.",
       "denied": "Aurorya n’a pas l’autorisation d’ajouter une image à tes photos. Tu peux la donner dans les réglages d’iOS.",
-      "failed": "La carte n’a pas pu être préparée. Réessaie dans un instant."
+      "failed": "La carte n’a pas pu être préparée. Réessaie dans un instant.",
+      "modeUnavailable": "Ce ton n’est pas disponible pour l’instant. Réessaie dans un moment."
     },
     "state": {
       "empty": {
         "title": "Pas encore de carte",
         "body": "Ta carte apparaîtra ici dès que ta lecture sera écrite."
       }
+    }
+  },
+  "paywall": {
+    "unlock": "Débloquer avec Premium",
+    "soon": {
+      "title": "Aurorya Premium arrive",
+      "body": "Les achats ne sont pas encore ouverts dans cette version. Ta lecture gratuite reste entière ; la suite se débloquera ici."
     }
   }
 }

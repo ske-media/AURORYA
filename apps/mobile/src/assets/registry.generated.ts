@@ -59,3 +59,6 @@ export const assetModules = {
 } as const;
 
 export type AssetId = keyof typeof assetModules;
+
+/** Fichiers encore provisoires : un décor ne les affiche pas tant que le fichier définitif n'est pas livré. */
+export const provisionalAssetIds: ReadonlySet<string> = new Set(["icon-app-ios","icon-app-ios-dark","icon-app-ios-tinted","splash-symbol","icon-notification","photo-sign-aries","photo-sign-taurus","photo-sign-gemini","photo-sign-cancer","photo-sign-leo","photo-sign-virgo","photo-sign-libra","photo-sign-scorpio","photo-sign-sagittarius","photo-sign-capricorn","photo-sign-aquarius","photo-sign-pisces","photo-body-sun","photo-body-moon","photo-body-mercury","photo-body-venus","photo-body-mars","photo-body-jupiter","photo-body-saturn","photo-body-uranus","photo-body-neptune","photo-body-pluto","photo-group-friends","photo-group-couple","photo-group-family","photo-group-colleagues","photo-scene-welcome","photo-scene-notif-primer","photo-scene-account","photo-scene-paywall","photo-scene-empty-groups","photo-scene-offline","photo-scene-error","photo-scene-age-gate","card-bg-roast-soft","card-bg-roast-cash","card-bg-roast-expert","card-bg-group","texture-grain","sfx-reveal","sfx-tap-soft","sfx-share","sfx-join","sfx-aurora-rise"]);

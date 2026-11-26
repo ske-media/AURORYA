@@ -26,7 +26,7 @@ export const palette = {
 export const COLOR_ROLES = [
   'bg', 'surface', 'surfaceRaised', 'border', 'text', 'textSecondary',
   'accent', 'accentText', 'onAccent', 'aspectSoft', 'aspectHard',
-  'success', 'danger', 'scrim', 'backdrop', 'backdropTint', 'glow',
+  'success', 'danger', 'scrim', 'backdrop', 'backdropTint', 'glow', 'highlight', 'accentMuted',
 ] as const;
 export type ColorRole = (typeof COLOR_ROLES)[number];
 export type ColorScheme = Readonly<Record<ColorRole, string>>;
@@ -50,6 +50,9 @@ export const darkColors: ColorScheme = {
   backdrop: palette.aubergine,
   backdropTint: palette.nebula,
   glow: 'rgba(233,214,172,0.35)',
+  // Finition « verre et laiton » : reflet intérieur des surfaces, bordure d'accent atténuée.
+  highlight: 'rgba(245,241,232,0.08)',
+  accentMuted: 'rgba(213,189,138,0.35)',
 };
 
 /** Thème clair : V1.1 (D-024). Proposition, valide seulement si le test de contraste passe. */
@@ -72,6 +75,8 @@ export const lightColors: ColorScheme = {
   backdrop: palette.ivory,
   backdropTint: '#E8E3EE',
   glow: 'rgba(156,124,64,0.20)',
+  highlight: 'rgba(255,255,255,0.60)',
+  accentMuted: 'rgba(156,124,64,0.35)',
 };
 
 export const THEME_NAMES = ['dark', 'light'] as const;

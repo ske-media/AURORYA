@@ -1,4 +1,5 @@
 import { Pressable } from 'react-native';
+import { feedback } from '@/services/feedback';
 import { useTheme } from '@/theme/ThemeProvider';
 import { Text } from './Text';
 
@@ -12,7 +13,7 @@ export function Chip({ label, selected = false, onPress, testID }: ChipProps) {
       accessibilityRole="button"
       accessibilityState={{ selected }}
       accessibilityLabel={label}
-      onPress={onPress}
+      onPress={() => { feedback.select(); onPress(); }}
       testID={testID}
       style={{
         minHeight: theme.minTouchTarget,

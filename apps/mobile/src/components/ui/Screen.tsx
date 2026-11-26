@@ -1,8 +1,9 @@
-// Cadre d'écran : marges, zones sûres, défilement, fond (SPEC §16.5).
+// Cadre d'écran : marges, zones sûres, défilement, fond nébuleux (SPEC §16.5, ADR-007).
 import type { ReactNode } from 'react';
 import { ScrollView, StyleSheet, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTheme } from '@/theme/ThemeProvider';
+import { Backdrop } from './Backdrop';
 
 export function Screen({ children, scroll = true }: { children: ReactNode; scroll?: boolean }) {
   const theme = useTheme();
@@ -13,11 +14,11 @@ export function Screen({ children, scroll = true }: { children: ReactNode; scrol
     paddingHorizontal: theme.screenMargin,
     gap: theme.spacing.s24,
   };
-  if (!scroll) return <View style={[styles.fill, { backgroundColor: theme.colors.bg }, padding]}>{children}</View>;
   return (
-    <ScrollView style={[styles.fill, { backgroundColor: theme.colors.bg }]} contentContainerStyle={padding}>
-      {children}
-    </ScrollView>
+    <View style={[styles.fill, { backgroundColor: theme.colors.bg }]}>
+      <Backdrop />
+      {scroll ? <ScrollView style={styles.fill} contentContainerStyle={padding}>{children}</ScrollView> : <View style={[styles.fill, padding]}>{children}</View>}
+    </View>
   );
 }
 

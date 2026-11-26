@@ -52,3 +52,19 @@ export function formatAspect(locale: Locale, a: LabelBodyId, b: LabelBodyId, typ
   const pair = `${BODY_NAMES[locale][a]}–${BODY_NAMES[locale][b]}`;
   return locale === 'fr' ? `${ASPECT_NAMES.fr[type]} ${pair}` : `${pair} ${ASPECT_NAMES.en[type].toLowerCase()}`;
 }
+
+const TRANSIT_VERBS: Readonly<Record<Locale, Readonly<Record<AspectId, string>>>> = {
+  fr: { conjunction: 'conjoint à', opposition: 'opposé à', trine: 'en trigone à', square: 'carré à', sextile: 'en sextile à' },
+  en: { conjunction: 'conjunct', opposition: 'opposite', trine: 'trine', square: 'square', sextile: 'sextile' },
+};
+const FEMININE_POINTS: readonly LabelBodyId[] = ['moon', 'venus'];
+
+/**
+ * « Saturne carré à ton Soleil » / « Saturn square your Sun » : nom factuel d'un transit, sans interprétation.
+ * `formal` passe au vouvoiement (mode expert).
+ */
+export function formatTransit(locale: Locale, transiting: LabelBodyId, natal: LabelBodyId, type: AspectId, formal = false): string {
+  if (locale === 'en') return `${BODY_NAMES.en[transiting]} ${TRANSIT_VERBS.en[type]} your ${BODY_NAMES.en[natal]}`;
+  const possessive = formal ? 'votre' : FEMININE_POINTS.includes(natal) ? 'ta' : 'ton';
+  return `${BODY_NAMES.fr[transiting]} ${TRANSIT_VERBS.fr[type]} ${possessive} ${BODY_NAMES.fr[natal]}`;
+}

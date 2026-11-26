@@ -1,7 +1,7 @@
 // Accès au serveur : session Supabase (anonyme d'abord, A-003), lectures directes sous RLS,
 // écritures par l'API uniquement (A-002).
 import {
-  ChartSummarySchema, DailyResponseSchema, GroupReadingSchema, GroupSchema, type GroupType, InviteCreatedSchema, InvitePreviewSchema, type PostChartsInput, type ToneMode, type PostRoastsInput, ProfileSchema, type PutProfileInput, RoastResponseSchema, type SectionKey, SectionResponseSchema,
+  ChartSummariesSchema, ChartSummarySchema, DailyResponseSchema, GroupReadingSchema, GroupSchema, type GroupType, InviteCreatedSchema, InvitePreviewSchema, type PostChartsInput, type ToneMode, type PostRoastsInput, ProfileSchema, type PutProfileInput, RoastResponseSchema, type SectionKey, SectionResponseSchema,
 } from '@aurorya/shared';
 import { type SupabaseClient, createClient } from '@supabase/supabase-js';
 import * as Application from 'expo-application';
@@ -48,6 +48,7 @@ export const endpoints = (b: Backend) => ({
   postCharts: (input: PostChartsInput) => b.api.request({ method: 'POST', path: '/charts', body: input, output: ChartSummarySchema, idempotencyKey: randomUUID() }),
   postRoasts: (input: Pick<PostRoastsInput, 'chartId' | 'mode'>) => b.api.request({ method: 'POST', path: '/roasts', body: { ...input, regenerate: false }, output: RoastResponseSchema }),
   getSection: (key: SectionKey, mode: ToneMode) => b.api.request({ method: 'GET', path: `/readings/sections/${key}?mode=${mode}`, output: SectionResponseSchema }),
+  getChartSummaries: (mode: ToneMode) => b.api.request({ method: 'GET', path: `/charts/current/summaries?mode=${mode}`, output: ChartSummariesSchema }),
   getDaily: (date: string, mode: ToneMode) => b.api.request({ method: 'GET', path: `/daily?date=${date}&mode=${mode}`, output: DailyResponseSchema }),
   exportAccount: () => b.api.request({ method: 'POST', path: '/account/export', output: null }),
   deleteAccount: () => b.api.request({ method: 'DELETE', path: '/account', body: { confirm: 'DELETE' }, output: null }),
