@@ -104,6 +104,16 @@ jobs:
           path: ${{ runner.temp }}/export/*.ipa
           if-no-files-found: error
           retention-days: 14
+      - name: Publication du lien d'installation
+        if: inputs.distribution == 'adhoc'
+        env:
+          BLOB_READ_WRITE_TOKEN: ${{ secrets.BLOB_READ_WRITE_TOKEN }}
+        run: |
+          if [ -z "$BLOB_READ_WRITE_TOKEN" ]; then echo "::warning::Secret BLOB_READ_WRITE_TOKEN absent : lien d'installation non mis à jour."; exit 0; fi
+          mkdir -p "$RUNNER_TEMP/blob" && cd "$RUNNER_TEMP/blob" && echo '{}' > package.json && npm i --silent @vercel/blob@2.9.0
+          VERSION=$(node -p "require('$GITHUB_WORKSPACE/apps/mobile/package.json').version")
+          cp "$GITHUB_WORKSPACE/scripts/ios/publish-adhoc.mjs" "$RUNNER_TEMP/blob/"
+          node "$RUNNER_TEMP/blob/publish-adhoc.mjs" "$RUNNER_TEMP/export" "$VERSION" "$IOS_BUILD_NUMBER"
       - name: Journaux de build
         if: always()
         uses: actions/upload-artifact@v4

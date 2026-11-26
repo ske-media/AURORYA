@@ -1,6 +1,11 @@
 {
-  "brand": { "name": "Aurorya", "tagline": "The sky, unfiltered" },
-  "home": { "aiNotice": "L’astrologue d’Aurorya est une intelligence artificielle. Aurorya est un outil de divertissement et d’introspection." },
+  "brand": {
+    "name": "Aurorya",
+    "tagline": "The sky, unfiltered"
+  },
+  "home": {
+    "aiNotice": "L’astrologue d’Aurorya est une intelligence artificielle. Aurorya est un outil de divertissement et d’introspection."
+  },
   "waitlist": {
     "title": "Être prévenue du lancement",
     "email": "Adresse e-mail",
@@ -20,5 +25,11 @@
     "open": "Ouvrir dans l’app",
     "howTo": "Dans l’app Aurorya, ouvre « Mes groupes », puis saisis ce code.",
     "invalid": "Cette invitation n’est plus valide."
+  },
+  "installer": {
+    "title": "Installer la version de test",
+    "body": "À ouvrir dans Safari, sur un iPhone enregistré. L’installation remplace la version précédente.",
+    "action": "Installer Aurorya",
+    "pageTitle": "Installer"
   }
 }
