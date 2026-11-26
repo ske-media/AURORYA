@@ -25,12 +25,16 @@ const RoleSchema = z.strictObject({
   criteria: z.array(CriterionSchema).min(1),
 });
 export type Role = z.infer<typeof RoleSchema>;
+const modeLines = z.strictObject(Object.fromEntries(TONE_MODES.map((m) => [m, z.string().min(1)])) as Record<(typeof TONE_MODES)[number], z.ZodString>);
+const DuoTextSchema = z.strictObject({ fallbackLine: modeLines });
 
 export const RoleCatalogSchema = z.strictObject({
   version: z.string(),
   status: z.enum(['draft', 'approved']),
   notes: z.string(),
   types: z.strictObject(Object.fromEntries(GROUP_TYPES.map((t) => [t, z.array(RoleSchema).min(6)])) as Record<GroupType, z.ZodArray<typeof RoleSchema>>),
+  /** Phrases de repli des deux duos, par mode. */
+  duos: z.strictObject({ duo_fusion: DuoTextSchema, duo_sparks: DuoTextSchema }),
 });
 export type RoleCatalog = z.infer<typeof RoleCatalogSchema>;
 

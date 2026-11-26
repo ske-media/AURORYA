@@ -45,20 +45,21 @@ export const postGroupReadings = defineRoute({
     const uid = (index: number): string => members[index]?.user_id ?? '';
     const body: GroupReading = {
       kind: 'roles_duos',
-      status: 'structure',
+      // Sans LLM, chaque rôle et chaque duo porte sa phrase de repli du catalogue ; le détail attend la génération.
+      status: 'fallback',
       roles: assigned.map((r) => {
         const member = members[r.memberIndex];
         const role = roles.find((x) => x.id === r.roleId);
         const labels = role?.labels[locale] ?? role?.labels.fr;
         return {
           userId: member?.user_id ?? '', displayName: member?.display_name ?? '', roleId: r.roleId,
-          label: labels?.[member?.grammatical_gender ?? 'n'] ?? r.roleId, line: null, detail: null, locked: !premium,
+          label: labels?.[member?.grammatical_gender ?? 'n'] ?? r.roleId, line: role?.fallbackLine?.[input.mode] ?? null, detail: null, locked: !premium,
         };
       }),
       // Les scores de synastrie ne servent qu'à choisir les duos : ils ne sortent jamais du serveur (SPEC §11.7).
       duos: [
-        { kind: 'duo_fusion', a: uid(duos.fusion.a), b: uid(duos.fusion.b), title: null, line: null, detail: null, locked: !premium },
-        { kind: 'duo_sparks', a: uid(duos.sparks.a), b: uid(duos.sparks.b), title: null, line: null, detail: null, locked: !premium },
+        { kind: 'duo_fusion', a: uid(duos.fusion.a), b: uid(duos.fusion.b), title: null, line: deps.roleCatalog.duos.duo_fusion.fallbackLine[input.mode], detail: null, locked: !premium },
+        { kind: 'duo_sparks', a: uid(duos.sparks.a), b: uid(duos.sparks.b), title: null, line: deps.roleCatalog.duos.duo_sparks.fallbackLine[input.mode], detail: null, locked: !premium },
       ],
     };
     return { body };

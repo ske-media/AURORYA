@@ -3,6 +3,7 @@ import { describe, expect, it } from 'vitest';
 import catalogJson from '../../../../content/roles/roles.v1.json';
 import exactJson from '../__fixtures__/chart-exact.json';
 import unknownJson from '../__fixtures__/chart-unknown-time.json';
+import { checkText } from '../validation/checks';
 import { type Role, RoleCatalogSchema, assignRoles, criterionAnchors, pickDuos, scoreRole } from './roles';
 
 const catalog = RoleCatalogSchema.parse(catalogJson);
@@ -91,5 +92,25 @@ describe('duos', () => {
   it('à égalité, garde la première paire', () => {
     const pairs = [{ a: 0, b: 1, harmony: 5, tension: 1 }, { a: 0, b: 2, harmony: 5, tension: 1 }, { a: 1, b: 2, harmony: 5, tension: 1 }];
     expect(pickDuos(pairs)).toEqual({ fusion: pairs[0], sparks: pairs[1] });
+  });
+});
+
+describe('contenus du catalogue', () => {
+  const all = Object.values(catalog.types).flat();
+  const lines = [...all.flatMap((r) => Object.values(r.fallbackLine ?? {})), ...Object.values(catalog.duos).flatMap((d) => Object.values(d.fallbackLine))];
+  it('donne à chaque rôle un libellé français et une phrase de repli par mode', () => {
+    for (const r of all) {
+      expect(r.labels.fr, r.id).not.toBeNull();
+      expect(r.fallbackLine, r.id).not.toBeNull();
+    }
+    expect(lines).toHaveLength((all.length + 2) * 3);
+  });
+  it('garde des phrases courtes, uniques, sans prédiction, santé ni conseil', () => {
+    expect(new Set(lines).size).toBe(lines.length);
+    const problems = lines.flatMap((text) => {
+      const failures = checkText(text, { field: 'role', locale: 'fr', mode: 'cash', gender: 'n', allowedMentions: new Set(), allowedTokens: [], maxLength: 110 });
+      return failures.map((f) => `${text} → ${f.code}:${f.detail}`);
+    });
+    expect(problems).toEqual([]);
   });
 });
