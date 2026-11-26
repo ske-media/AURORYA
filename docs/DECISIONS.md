@@ -230,3 +230,10 @@ Décision :
 - Conformes à l'Annexe D : aucune promesse de prédiction, mention « divertissement et introspection », Ava présentée comme une IA. Le moteur est décrit comme « vérifié contre les données de référence de la NASA » (JPL Horizons, ADR-012), sans citer Swiss Ephemeris, qui n'est pas utilisé.
 - Non faits, à décider avec un fondateur : prix et abonnements, classification d'âge, fiche de confidentialité, URL d'assistance et de politique de confidentialité, captures, pays.
 Validé par : mode autonome (ADR-013), à la demande d'un fondateur.
+
+## ADR-026 — Politique de confidentialité provisoire pour TestFlight
+Date : 2026-11-26 · Statut : appliqué, à relire par un juriste
+Contexte : TestFlight externe exige une adresse de politique de confidentialité. Aucune n'existait (T-073 non fait). Choix d'un fondateur par questionnaire : publier une version provisoire.
+Décision : page `/confidentialite` du site, texte dans `content/legal/privacy.fr.json`, limité à ce que l'app fait réellement aujourd'hui (données saisies, compte anonyme, hébergement Supabase et Vercel à Francfort, aucune mesure d'audience, IA sans donnée identifiante, suppression et export). Marquée « version provisoire, relue par un juriste avant la sortie publique ». Contact : l'adresse donnée par le fondateur pour les retours TestFlight.
+Conséquences : à remplacer par le texte relu au ticket T-073 ; à mettre à jour dès qu'un sous-traitant s'ajoute (fournisseur d'IA, RevenueCat, Mixpanel, Sentry, Resend).
+Validé par : fondateur (principe), rédaction en mode autonome.
