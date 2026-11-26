@@ -41,3 +41,8 @@ export type AiTier = (typeof AI_TIERS)[number];
 
 export const ENTITLEMENTS = ['premium'] as const;
 export type Entitlement = (typeof ENTITLEMENTS)[number];
+
+/** Identifiants de produit de l'App Store (SPEC §18.1). Définitifs une fois créés : ne jamais les renommer. */
+export const PRODUCT_IDS = { monthly: 'aurorya.premium.monthly', annual: 'aurorya.premium.annual', founder: 'aurorya.premium.annual.founder' } as const;
+/** Offres RevenueCat (SPEC §18.2). */
+export const OFFERING_IDS = { default: 'default', founders: 'founders' } as const;

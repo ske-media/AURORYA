@@ -325,6 +325,11 @@
       "title": "Sounds and haptics",
       "sounds": "Sounds",
       "haptics": "Haptics"
+    },
+    "premium": {
+      "title": "Aurorya Premium",
+      "active": "Your subscription is active. You manage it in your Apple account settings.",
+      "inactive": "Full chart, personal horoscope and the detail of your groups."
     }
   },
   "reading": {
@@ -382,7 +387,51 @@
     }
   },
   "paywall": {
-    "unlock": "Unlock with Premium",
+    "unlock": "Unlock Premium",
+    "title": "{{name}}’s full sky",
+    "titleGeneric": "Your full sky",
+    "fromSection": "To read the rest of “{{section}}”, and everything else.",
+    "benefit": {
+      "reading": "Your full chart in eight chapters: love, shadow side, ambition…",
+      "daily": "Your personal horoscope every morning, from your real transits.",
+      "groups": "The full detail of your groups (roles, duos, weekly weather), up to 20 groups."
+    },
+    "plan": {
+      "annual": {
+        "name": "Yearly",
+        "badge": "Most chosen",
+        "price": "{{price}} per year",
+        "equivalent": "Equivalent to {{price}} per month, billed once a year."
+      },
+      "monthly": {
+        "name": "Monthly",
+        "price": "{{price}} per month"
+      }
+    },
+    "cta": {
+      "trial": "Try 7 days free",
+      "continue": "Continue"
+    },
+    "reassurance": {
+      "trial": {
+        "annual": "Nothing to pay today. Then {{price}} per year after the 7-day trial. Cancel anytime in your Apple settings.",
+        "monthly": "Nothing to pay today. Then {{price}} per month after the 7-day trial. Cancel anytime in your Apple settings."
+      },
+      "direct": {
+        "annual": "{{price}} per year. Cancel anytime in your Apple settings.",
+        "monthly": "{{price}} per month. Cancel anytime in your Apple settings."
+      }
+    },
+    "restore": "Restore purchases",
+    "terms": "Terms of use",
+    "privacy": "Privacy",
+    "legal": "The subscription renews automatically at the same price unless cancelled at least 24 hours before the end of the current period. Payment is charged to your Apple account. You manage and cancel your subscription in your Apple account settings.",
+    "unavailable": "Offers aren’t available right now. Try again in a moment.",
+    "notice": {
+      "failed": "The purchase didn’t go through. Aurorya charged nothing; you can try again.",
+      "pending": "Apple recorded your purchase, but its confirmation is taking a while. Reopen this screen in a moment or tap “Restore purchases”.",
+      "nothingToRestore": "No active subscription was found for this Apple account."
+    },
     "soon": {
       "title": "Aurorya Premium is coming",
       "body": "Purchases aren’t open in this version yet. Your free reading stays whole; the rest will unlock here."

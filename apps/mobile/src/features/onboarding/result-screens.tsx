@@ -11,8 +11,11 @@ import { type AuroraStage, AuroraRise } from '@/components/astro/AuroraRise';
 import { Banner, Button, Card, EmptyState, ModeSelector, PhotoHalo, Screen, Text } from '@/components/ui';
 import { ApiError } from '@/services/api-client';
 import { endpoints, ensureSession, getBackend } from '@/services/backend';
+import { paywallHref } from '@/features/paywall/open-paywall';
 import { feedback } from '@/services/feedback';
+import { purchasesEnabled } from '@/services/purchases';
 import { useOnboarding } from '@/store/onboarding';
+import { usePreferences } from '@/store/preferences';
 import { useTheme } from '@/theme/ThemeProvider';
 import { toChartInput, toProfileInput } from './draft';
 
@@ -104,6 +107,7 @@ export function RevealScreen() {
   const theme = useTheme();
   const router = useRouter();
   const { draft, chart, roast, complete, setResult } = useOnboarding();
+  const { firstPaywallShownAt, markFirstPaywallShown } = usePreferences();
   const [mode, setMode] = useState<ToneMode>(roast?.mode ?? draft.toneMode);
   const [shown, setShown] = useState<RoastResponse | null>(roast);
   const [loading, setLoading] = useState(false);
@@ -142,6 +146,12 @@ export function RevealScreen() {
   const leave = (to: '/share/roast' | '/groups' | '/sky' | `/reading/big_three?mode=${ToneMode}`, finish: boolean): void => {
     if (shown) setResult(chart, shown);
     if (finish) { complete(); router.replace(to); } else router.push(to);
+    // Première sortie de la révélation : le paywall s'ouvre une seule fois, hors parcours d'invitation (D-021).
+    // Tant que les achats ne sont pas ouverts, il ne s'impose pas.
+    if (purchasesEnabled && firstPaywallShownAt === null && !draft.pendingInviteToken) {
+      markFirstPaywallShown();
+      router.push(paywallHref('after_roast'));
+    }
   };
   return (
     <Screen>

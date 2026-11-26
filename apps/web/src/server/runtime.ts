@@ -5,6 +5,7 @@ import { RoleCatalogSchema } from '@aurorya/ai';
 import { DEFAULT_ENGINE_CONFIG } from '@aurorya/astro-engine';
 import { createSupabaseAuth } from './auth-supabase';
 import type { AppDeps } from './deps';
+import { createRevenueCatClient } from './entitlements';
 import { createLogger } from './log';
 import { createNameFilter, parseBlocklist } from './names';
 import { createPgSql, poolConfigFromUrl } from './pg-sql';
@@ -48,6 +49,8 @@ export function getDeps(): AppDeps {
     roleCatalog: RoleCatalogSchema.parse(JSON.parse(readContent('roles/roles.v1.json') ?? '{}')),
     publicSiteUrl: process.env.PUBLIC_SITE_URL?.replace(/\/$/, '') || null,
     nameFilter: createNameFilter(blocklist),
+    revenueCat: process.env.REVENUECAT_SECRET_KEY ? createRevenueCatClient(process.env.REVENUECAT_SECRET_KEY) : null,
+    revenueCatWebhookSecret: process.env.REVENUECAT_WEBHOOK_SECRET || null,
     deleteAuthUser: async (uid) => {
       // API d'administration de Supabase Auth, avec la clé de service (côté serveur uniquement).
       const response = await fetch(`${required('SUPABASE_URL').replace(/\/$/, '')}/auth/v1/admin/users/${uid}`, {

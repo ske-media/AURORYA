@@ -245,3 +245,9 @@ Décision : le workflow iOS prend une option `distribution` (`testflight` par d�
 Conséquences : limité à 100 iPhone par an et par type d'appareil ; chaque nouvel iPhone demande un nouveau build. TestFlight reste la voie normale dès que le blocage d'Apple est levé.
 Complément (même jour) : à la demande du fondateur, l'installation se fait par un lien à ouvrir dans Safari sur l'iPhone. Le workflow dépose le .ipa et son manifeste dans l'espace Vercel Blob public `aurorya-installation` (adresse fixe, écrasée à chaque build) ; la page `/installer` du site porte le lien `itms-services`. Il faut le secret GitHub `BLOB_READ_WRITE_TOKEN`. Seuls les iPhone enregistrés peuvent installer l'app, même si le fichier est téléchargeable.
 Validé par : fondateur (demande d'une autre voie, puis d'un lien), mise en œuvre en mode autonome.
+
+## ADR-028 — Le droit Premium se lit toujours dans la fiche cliente de RevenueCat (2026-11-26)
+- **Contexte** : SPEC §18.3 demande un webhook qui « met à jour » le droit à partir de l'événement. La documentation de RevenueCat recommande au contraire d'appeler `GET /subscribers` après chaque webhook plutôt que d'interpréter chaque type d'événement.
+- **Décision** : webhook et rattrapage partagent une seule fonction pure (`entitlementFromSubscriber`). Le webhook sert de signal et d'horodatage (`rc_event_at`) ; l'état vient de la fiche. Un transfert relit l'ancienne et la nouvelle propriétaire.
+- **Conséquences** : un appel sortant par événement (borné, 8 s) ; un nouveau type d'événement ne casse rien. L'en-tête d'autorisation attendu est `Bearer <REVENUECAT_WEBHOOK_SECRET>`. La signature HMAC proposée par RevenueCat n'est pas utilisée pour l'instant.
+- **Écart avec l'ordre de mission** : pas d'offre fondatrice à l'écran (O-03 ouvert, SPEC §18.4) ; conditions d'utilisation = contrat standard d'Apple en attendant des conditions propres (à valider par un fondateur, sujet juridique).

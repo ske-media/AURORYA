@@ -2,6 +2,7 @@
 // ce qui rend l'API testable sans réseau.
 import type { LlmPort, RoastPrompts, RoleCatalog } from '@aurorya/ai';
 import type { EngineConfig } from '@aurorya/astro-engine';
+import type { RevenueCatPort } from './entitlements';
 import type { createLogger } from './log';
 
 export type SqlRow = Record<string, unknown>;
@@ -37,5 +38,9 @@ export type AppDeps = Readonly<{
   deleteAuthUser: (uid: string) => Promise<void>;
   /** Envoi d'e-mails (Resend). Absent tant que le service n'est pas configuré : l'inscription est enregistrée sans envoi. */
   sendEmail?: (email: OutgoingEmail) => Promise<void>;
+  /** API de RevenueCat. Null tant que la clé secrète n'est pas posée : le droit reste celui de la table. */
+  revenueCat?: RevenueCatPort | null;
+  /** Secret attendu dans l'en-tête d'autorisation du webhook RevenueCat. */
+  revenueCatWebhookSecret?: string | null;
   nameFilter: { firstName(input: string): string | null; groupName(input: string): string | null };
 }>;

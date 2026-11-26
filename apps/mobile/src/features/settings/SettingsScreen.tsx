@@ -3,6 +3,8 @@
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import * as Application from 'expo-application';
 import { useRouter } from 'expo-router';
+import { paywallHref } from '@/features/paywall/open-paywall';
+import { useEntitlement } from '@/services/query';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Switch, View } from 'react-native';
@@ -71,10 +73,16 @@ export function SettingsScreen() {
   });
 
   const prefs = usePreferences();
+  const premium = useEntitlement().data?.premium === true;
   return (
     <Screen>
       <Text variant="title1" accessibilityRole="header">{t('settings.title')}</Text>
       {notice ? <Banner message={notice} /> : null}
+      <Card glow>
+        <Text variant="heading">{t('settings.premium.title')}</Text>
+        <Text color="textSecondary">{t(premium ? 'settings.premium.active' : 'settings.premium.inactive')}</Text>
+        {premium ? null : <Button label={t('paywall.unlock')} icon="icon-ui-sparkle" onPress={() => router.push(paywallHref('settings'))} />}
+      </Card>
       <Card>
         <Text variant="heading">{t('settings.tone')}</Text>
         <ModeSelector value={draft.toneMode} onChange={(toneMode) => update({ toneMode })} showDescription />
