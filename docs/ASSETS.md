@@ -2,8 +2,8 @@
 
 Rapport généré par `pnpm assets:report` à partir de `assets.manifest.json`. Ne pas modifier à la main.
 
-- 125 fichiers au registre : 60 définitifs, 65 provisoires.
-- 58 fichiers provisoires bloquent une mise en production.
+- 125 fichiers au registre : 61 définitifs, 64 provisoires.
+- 57 fichiers provisoires bloquent une mise en production.
 
 ## Livrer un fichier
 
@@ -61,7 +61,6 @@ Rapport généré par `pnpm assets:report` à partir de `assets.manifest.json`. 
 
 | Fichier | Dimensions | Transparence | Poids max. | Bloquant | Contraintes |
 |---|---|---|---|---|---|
-| `photo-scene-welcome.webp` | 1200 × 1200 | oui | 400 Ko | oui | Photo céleste (ADR-007) : lune, ciel étoilé ou nébuleuse, bords fondus vers la transparence, violet désaturé et bleu nuit, aucun texte. Origine et licence à consigner. |
 | `photo-scene-notif-primer.webp` | 1200 × 1200 | oui | 400 Ko | oui | Photo céleste (ADR-007) : lune, ciel étoilé ou nébuleuse, bords fondus vers la transparence, violet désaturé et bleu nuit, aucun texte. Origine et licence à consigner. |
 | `photo-scene-account.webp` | 1200 × 1200 | oui | 400 Ko | oui | Photo céleste (ADR-007) : lune, ciel étoilé ou nébuleuse, bords fondus vers la transparence, violet désaturé et bleu nuit, aucun texte. Origine et licence à consigner. |
 | `photo-scene-paywall.webp` | 1200 × 1200 | oui | 400 Ko | oui | Photo céleste (ADR-007) : lune, ciel étoilé ou nébuleuse, bords fondus vers la transparence, violet désaturé et bleu nuit, aucun texte. Origine et licence à consigner. |
@@ -191,6 +190,7 @@ Rapport généré par `pnpm assets:report` à partir de `assets.manifest.json`. 
 | `apps/mobile/assets/glyphs/modes/glyph-mode-soft.svg` | Création interne (tracés géométriques 24×24) | Création interne | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
 | `apps/mobile/assets/glyphs/modes/glyph-mode-cash.svg` | Création interne (tracés géométriques 24×24) | Création interne | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
 | `apps/mobile/assets/glyphs/modes/glyph-mode-expert.svg` | Création interne (tracés géométriques 24×24) | Création interne | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
+| `apps/mobile/assets/photos/scenes/photo-scene-welcome.webp` | Image générée avec Higgsfield (modèle GPT Image 2.6) sur le compte du fondateur, 2026-11-26 | Sortie d’IA générée par le fondateur ; droits d’usage selon les conditions de Higgsfield, à confirmer avant publication | Lune voilée au-dessus de montagnes dans la brume (ADR-032, planche « ivoire et doré »), bords fondus vers la transparence, aucun texte. |
 | `apps/mobile/assets/cards/card-bg-roast-soft.webp` | Création interne (scripts/assets/card-backgrounds.ts) | Création interne | Fond de la carte en mode Lune. Zones du §16.7 laissées calmes. Aucun texte. |
 | `apps/mobile/assets/cards/card-bg-roast-cash.webp` | Création interne (scripts/assets/card-backgrounds.ts) | Création interne | Fond de la carte en mode Mars. Aucun texte. |
 | `apps/mobile/assets/cards/card-bg-roast-expert.webp` | Création interne (scripts/assets/card-backgrounds.ts) | Création interne | Fond de la carte en mode Saturne. Aucun texte. |

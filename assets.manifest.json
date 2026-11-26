@@ -1733,13 +1733,13 @@
       "tintable": false,
       "maxBytes": 400000,
       "maxDurationMs": null,
-      "status": "placeholder",
+      "status": "final",
       "requiredForRelease": true,
-      "owner": "design",
-      "sha256": "7361e8faf8cd7afe495f4c45f15c07fdcf9014e42984d2fef249fbc24d941b54",
-      "source": null,
-      "license": null,
-      "notes": "Photo céleste (ADR-007) : lune, ciel étoilé ou nébuleuse, bords fondus vers la transparence, violet désaturé et bleu nuit, aucun texte. Origine et licence à consigner."
+      "owner": "dev",
+      "sha256": "82ae5c80f1caded5328891f9899888ee45f7ec58ebbe073356f261aec3fd8c94",
+      "source": "Image générée avec Higgsfield (modèle GPT Image 2.6) sur le compte du fondateur, 2026-11-26",
+      "license": "Sortie d’IA générée par le fondateur ; droits d’usage selon les conditions de Higgsfield, à confirmer avant publication",
+      "notes": "Lune voilée au-dessus de montagnes dans la brume (ADR-032, planche « ivoire et doré »), bords fondus vers la transparence, aucun texte."
     },
     {
       "id": "photo-scene-notif-primer",

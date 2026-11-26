@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { ActivityIndicator, Pressable, View } from 'react-native';
 import type { GlyphId } from '@/assets/registry';
 import { Glyph } from '@/components/astro/Glyph';
-import { Button, Card, Screen, Text } from '@/components/ui';
+import { Button, Card, PhotoHalo, Screen, Text } from '@/components/ui';
 import { toIsoDate } from '@/features/onboarding/draft';
 import { feedback } from '@/services/feedback';
 import { useDaily } from '@/services/query';
@@ -39,7 +39,8 @@ export function HomeScreen() {
         <Text variant="label" color="textSecondary">{new Intl.DateTimeFormat(locale, { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }).format(today)}</Text>
       </View>
       <Card raised glow>
-        <Text variant="label" color="accent">{t('home.horoscopeLabel')}</Text>
+        <PhotoHalo id="photo-scene-welcome" height={theme.spacing.s56 * 4} />
+        <Text variant="label" color="accentText">{t('home.horoscopeLabel')}</Text>
         {daily.isPending ? <ActivityIndicator color={theme.colors.accent} accessibilityLabel={t('common.loading')} />
           : horoscope ? (
             <>
