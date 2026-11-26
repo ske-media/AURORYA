@@ -1,0 +1,40 @@
+{
+  "title": "Politique de confidentialité",
+  "status": "Version provisoire du 26 novembre 2026, publiée pour la phase de test. Elle sera relue par un juriste avant la sortie publique de l'app.",
+  "sections": [
+    {
+      "heading": "Ce que l'app enregistre",
+      "paragraphs": [
+        "Pour calculer ton thème natal, Aurorya enregistre ton prénom, l'accord grammatical que tu choisis (elle, il ou neutre), ta date, ton heure et ton lieu de naissance, tes réponses aux trois questions d'accueil et le ton de lecture choisi.",
+        "L'app crée un compte anonyme à la première ouverture : un identifiant technique, sans adresse e-mail. Si tu crées un compte, ton adresse e-mail est enregistrée pour te connecter.",
+        "Si tu rejoins un groupe, ton prénom d'affichage et ton thème servent aux lectures du groupe, visibles par ses membres."
+      ]
+    },
+    {
+      "heading": "Ce que l'app ne fait pas",
+      "paragraphs": [
+        "Aurorya ne lit ni ta position, ni tes contacts, ni tes photos. Elle demande seulement l'autorisation d'ajouter une image à tes photos, au moment où tu enregistres ta carte.",
+        "Aucune publicité, aucun traceur publicitaire, aucune revente de données. Pendant la phase de test, aucune mesure d'audience n'est en place.",
+        "Ava, l'astrologue d'Aurorya, est une intelligence artificielle. Quand des textes sont rédigés par une IA, le fournisseur ne reçoit que des positions astrologiques calculées : jamais ton prénom, ta date, ton heure ou ton lieu de naissance."
+      ]
+    },
+    {
+      "heading": "Où sont tes données",
+      "paragraphs": [
+        "Les données sont stockées chez Supabase, à Francfort (Allemagne). Le serveur de l'app est hébergé par Vercel, avec des fonctions exécutées à Francfort. Pendant la phase de test, Apple distribue l'app par TestFlight et reçoit à ce titre les informations techniques que TestFlight collecte."
+      ]
+    },
+    {
+      "heading": "Combien de temps",
+      "paragraphs": [
+        "Tes données sont gardées tant que ton compte existe. La suppression du compte, dans les réglages de l'app, efface ton profil, tes données de naissance, tes thèmes et tes lectures."
+      ]
+    },
+    {
+      "heading": "Tes droits",
+      "paragraphs": [
+        "Tu peux obtenir une copie de tes données depuis les réglages de l'app, les corriger, ou supprimer ton compte à tout moment. Pour toute question sur tes données, écris à sckeldring@protonmail.com."
+      ]
+    }
+  ]
+}
