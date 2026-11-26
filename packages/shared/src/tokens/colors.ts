@@ -26,7 +26,7 @@ export const palette = {
 
 export const COLOR_ROLES = [
   'bg', 'surface', 'surfaceRaised', 'border', 'text', 'textSecondary',
-  'accent', 'accentText', 'onAccent', 'aspectSoft', 'aspectHard',
+  'accent', 'accentFill', 'accentText', 'onAccent', 'aspectSoft', 'aspectHard',
   'success', 'danger', 'scrim', 'backdrop', 'backdropTint', 'glow', 'highlight', 'accentMuted',
 ] as const;
 export type ColorRole = (typeof COLOR_ROLES)[number];
@@ -40,6 +40,7 @@ export const darkColors: ColorScheme = {
   text: palette.ivory,
   textSecondary: palette.warmGrey,
   accent: palette.champagne,
+  accentFill: palette.champagne,
   accentText: palette.champagne,
   onAccent: palette.midnight,
   aspectSoft: palette.lavenderGrey,
@@ -56,30 +57,37 @@ export const darkColors: ColorScheme = {
   accentMuted: 'rgba(198,166,106,0.35)',
 };
 
-/** Thème clair : V1.1 (D-024). Proposition, valide seulement si le test de contraste passe. */
+/**
+ * Thème clair, par défaut depuis ADR-032 (planche « ivoire et doré ») : fond ivoire chaud, cartes crème,
+ * encre nuit, doré profond pour les traits et les états. Valide seulement si le test de contraste passe.
+ */
 export const lightColors: ColorScheme = {
   bg: palette.ivory,
-  surface: '#FBF8F1',
-  surfaceRaised: '#FFFFFF',
-  border: palette.ivoryDim,
+  surface: '#FAF6EE',
+  surfaceRaised: '#FFFDF8',
+  border: '#E3D9C8',
   text: palette.midnight,
-  textSecondary: palette.graphite,
+  textSecondary: '#55596A',
+  // Champagne Gold est trop clair sur ivoire pour un trait ou un petit texte : sa version profonde le remplace.
   accent: palette.champagneDeep,
+  // Aplat des boutons et des pastilles actives : le Champagne Gold de la charte, sous un texte encre nuit.
+  accentFill: palette.champagne,
   accentText: palette.champagneInk,
-  // La proposition de la SPEC (ivoire) ne donne que 3,47:1 sur champagneDeep : remplacée par midnight (4,77:1).
   onAccent: palette.midnight,
   aspectSoft: palette.lavenderDeep,
   aspectHard: '#8E5F6B',
   success: '#4F7A5C',
   danger: '#A8504A',
   scrim: 'rgba(16,24,39,0.40)',
-  backdrop: palette.ivory,
-  backdropTint: '#E8E3EE',
-  glow: 'rgba(156,124,64,0.20)',
-  highlight: 'rgba(255,255,255,0.60)',
+  backdrop: '#F2ECE1',
+  backdropTint: '#F0E7D8',
+  glow: 'rgba(156,124,64,0.22)',
+  highlight: 'rgba(255,255,255,0.70)',
   accentMuted: 'rgba(156,124,64,0.35)',
 };
 
 export const THEME_NAMES = ['dark', 'light'] as const;
 export type ThemeName = (typeof THEME_NAMES)[number];
+/** Thème servi par défaut (ADR-032). Le sombre reste disponible. */
+export const DEFAULT_THEME: ThemeName = 'light';
 export const colorSchemes: Readonly<Record<ThemeName, ColorScheme>> = { dark: darkColors, light: lightColors };

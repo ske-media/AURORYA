@@ -273,3 +273,13 @@ Validé par : fondateur (demande d'une autre voie, puis d'un lien), mise en œuv
 ## ADR-031 — Retrait de Manrope : deux familles de polices (2026-11-26)
 - **Décision** : conformément au cahier (§12.5, « jamais plus de deux familles »), les styles `heading` et `label` passent de Manrope 600 à **Inter 500** (`Inter-Medium`, déjà embarquée). Le fichier Manrope, sa licence et son entrée de registre sont supprimés.
 - **Conséquence** : titres fonctionnels, boutons et étiquettes sont un peu moins gras. Si le rendu manque de présence à l'écran, ajouter `Inter-SemiBold` au registre (nouveau fichier, à valider).
+
+## ADR-032 — Direction visuelle « ivoire et doré », onglets des planches, fonctions à venir visibles (2026-11-26)
+- **Contexte** : un fondateur a transmis quatre planches de maquettes (quatre directions). Choix faits par questionnaire.
+- **Décisions** :
+  1. Direction : **planche 1**, thème clair ivoire chaud, cartes crème, boutons Champagne Gold sous texte encre nuit, photos douces (lune, montagnes). Le thème clair devient le thème par défaut (`DEFAULT_THEME`) ; le sombre reste dans les tokens. Remplace D-024 (« sombre uniquement au lancement »).
+  2. Barre d'onglets : **Accueil, Horoscope, Explorer, Relations, Profil** (celle des planches). Remplace le choix du matin (ADR-029, point 2) : pas d'onglet Journal au MVP ; les sauvegardes vont dans Profil ; compatibilité et groupes dans Relations.
+  3. Fonctions V2 (Memory, Cosmic Time Machine, My Cosmic Year, Lettre de l'Univers, Cosmic Radio, journal, communauté) : **listées dans le menu, marquées « à venir »**, sans écran factice derrière. La loi « pas d'écran qui simule » est précisée en ce sens : une entrée de menu annoncée comme à venir est permise ; un écran qui fait semblant de fonctionner reste interdit.
+  4. Images : générées avec le connecteur Higgsfield du fondateur (ses crédits), montrées avant installation, sans portrait de personne.
+- **Fait dans ce commit** : thème clair par défaut, rôle `accentFill` (aplat doré des boutons), couleurs du logo selon le fond, barre d'état et écran de lancement accordés. Test de contraste vert sur les deux thèmes.
+- **Limites connues** : la carte de partage reste sur fond nuit (choix : elle doit ressortir dans une story) ; les sigles AC et MC peuvent chevaucher un glyphe de signe au bord de la roue ; les titres en Inter Medium n'ont pas été revus sur iPhone.

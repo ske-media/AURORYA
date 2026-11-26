@@ -55,7 +55,7 @@ export function Button({ label, onPress, variant = 'primary', loading = false, d
             minHeight: theme.minTouchTarget + theme.spacing.s8,
             paddingHorizontal: theme.spacing.s24,
             borderRadius: theme.radii.pill,
-            backgroundColor: primary ? theme.colors.accent : 'transparent',
+            backgroundColor: primary ? theme.colors.accentFill : 'transparent',
             borderWidth: variant === 'secondary' ? theme.borderWidth : 0,
             borderColor: theme.colors.border,
             opacity: disabled ? theme.opacities.disabled : pressed ? theme.opacities.pressed : 1,

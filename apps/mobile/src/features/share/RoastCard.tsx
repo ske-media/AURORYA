@@ -40,7 +40,7 @@ export function RoastCard({ model, onReady, ref }: { model: RoastCardModel; onRe
         {/* Grain photographique, seulement quand le fichier définitif est livré. Pas de halo derrière le symbole : Annexe C.4. */}
         {isProvisional('texture-grain') ? null : <Image source={getAsset('texture-grain')} resizeMode="repeat" style={[StyleSheet.absoluteFill, { opacity: opacities.grainCard }]} />}
         <View style={{ position: 'absolute', left: cardPt(CARD.centerX) - symbolSize / 2, top: cardPt(CARD.symbol.y) - symbolSize / 2 }}>
-          <AuroraRise stage={4} size={symbolSize} onFinished={mark('symbol')} />
+          <AuroraRise stage={4} size={symbolSize} on="dark" onFinished={mark('symbol')} />
         </View>
         <NativeText allowFontScaling={false} numberOfLines={1} adjustsFontSizeToFit
           style={{ ...centered, top: cardPt(CARD.title.y), fontFamily: fontFamilies.serif, fontSize: cardPt(CARD.title.fontSize), color: colors.text }}>

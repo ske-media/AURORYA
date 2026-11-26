@@ -3271,6 +3271,16 @@ Ce document est la référence. Toute évolution passe par une entrée de `docs/
 | Journal | Lectures et horoscopes sauvegardés, note libre par élément. Le journal complet (écriture, tags, humeur, recherche) est en V2 |
 | Profil | Données de naissance, ton par défaut, préférences, notifications, abonnement, confidentialité, aide |
 - Les trois tons (Lune, Mars, Saturne) restent un réglage global des textes.
+- **Mise à jour du 2026-11-26 (ADR-032), qui remplace le tableau ci-dessus** : la barre d'onglets est celle des maquettes du fondateur.
+
+| Onglet | Contenu au MVP |
+|---|---|
+| Accueil | Salutation, horoscope du jour en tête, raccourcis vers Mon thème natal et la compatibilité |
+| Horoscope | Jour, Semaine, Mois ; climat lunaire, transit clé, question du jour |
+| Explorer | Mon thème (roue, placements, interprétation, transits), identité visuelle, cartes à partager |
+| Relations | Compatibilité à deux profils, groupes |
+| Profil | Informations de naissance, préférences astrologiques, identité visuelle, sauvegardes, données et confidentialité, abonnement, aide |
+- Un menu latéral liste aussi les fonctions V2 (Aurorya Memory, Cosmic Time Machine, My Cosmic Year, Lettre de l'Univers, Cosmic Radio, Mon journal, Communauté), **marquées « à venir » et non cliquables** : aucun écran factice.
 - Écrans de référence du cahier : A01 à A23 et A31 à A35 au MVP ; A24 réduit aux sauvegardes ; A25 à A30 en V2.
 
 ## 27.4 Moteur `[DÉCIDÉ]`
@@ -3294,6 +3304,8 @@ Ce document est la référence. Toute évolution passe par une entrée de `docs/
 - Grille de 4 pt ; espacements 4, 8, 12, 16, 24, 32, 48 ; rayons 8 (contrôles), 14 à 18 (cartes), 24 (surfaces éditoriales) ; **deux familles de polices au plus** : Cormorant Garamond et Inter (Manrope retirée, ADR-031).
 - Logo : mot-symbole « Aurorya », A majuscule avec étoile intégrée, quatre versions (doré sur nuit, ivoire sur nuit, nuit sur clair, monochrome). Remplace l'Annexe C quand les fichiers définitifs sont livrés ; d'ici là l'Annexe C reste en vigueur.
 - Identité visuelle personnelle : module déterministe et versionné qui transforme des facteurs du thème en tokens (élément dominant → famille de couleurs ; planète dominante → accent ; polarité → intensité ; saison → motif discret). Réglage d'intensité, et retour possible au thème de contraste accessible. L'IA n'intervient pas.
+
+- **Direction visuelle (ADR-032)** : thème **clair par défaut**, ivoire chaud et doré (planche 1 des maquettes) ; cartes crème à coins arrondis, titres en Cormorant, boutons en aplat Champagne Gold sous texte encre nuit, photos douces. Le thème sombre reste disponible. D-024 est remplacée.
 
 ## 27.6 Gratuit et Premium `[DÉCIDÉ]` (complète §7.8)
 | Fonction | Gratuit | Premium |

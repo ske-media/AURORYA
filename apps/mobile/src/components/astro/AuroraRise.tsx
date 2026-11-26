@@ -2,7 +2,7 @@
 // `stage` : 0 rien · 1 le cercle se trace depuis l'Ascendant · 2 l'horizon s'étend, l'Ascendant s'allume ·
 // 3 le soleil se lève, les halos s'ouvrent · 4 les jambes du A montent, l'étoile paraît.
 // Les phases s'enchaînent sans attente : si une étape arrive tôt, l'animation rattrape à vitesse constante.
-import { LOGO, logoColors } from '@aurorya/shared';
+import { LOGO, type ThemeName, logoColorsFor } from '@aurorya/shared';
 import { BlurMask, Canvas, Circle, Group, LinearGradient, Path, Skia, vec } from '@shopify/react-native-skia';
 import { useEffect, useMemo, useRef } from 'react';
 import { Easing, runOnJS, useDerivedValue, useReducedMotion, useSharedValue, withTiming } from 'react-native-reanimated';
@@ -32,8 +32,9 @@ const buildPaths = () => {
   };
 };
 
-export function AuroraRise({ stage, size, onFinished }: { stage: AuroraStage; size: number; onFinished?: () => void }) {
+export function AuroraRise({ stage, size, onFinished, on }: { stage: AuroraStage; size: number; onFinished?: () => void; /** Fond sur lequel le symbole est posé ; celui du thème par défaut. */ on?: ThemeName }) {
   const theme = useTheme();
+  const logoColors = logoColorsFor[on ?? theme.name];
   const reducedMotion = useReducedMotion();
   const paths = useMemo(buildPaths, []);
   const progress = useSharedValue(0);

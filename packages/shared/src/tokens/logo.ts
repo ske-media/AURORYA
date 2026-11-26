@@ -14,7 +14,7 @@ export const LOGO = {
 } as const;
 
 /** Couleurs du symbole sur fond sombre (Annexe C.1). Le logo ne se recolore pas hors palette. */
-export const logoColors = {
+const logoOnDark = {
   ring: palette.ivory,
   halo: palette.lavenderGrey,
   sunFrom: palette.dustyRose,
@@ -23,3 +23,8 @@ export const logoColors = {
   letter: palette.champagne,
   star: palette.ivory,
 } as const;
+/** Sur fond clair, les traits ivoire deviennent encre nuit et le doré s'approfondit pour rester lisible. */
+const logoOnLight = { ...logoOnDark, ring: palette.midnight, halo: palette.lavenderDeep, horizon: palette.midnight, letter: palette.champagneDeep, star: palette.midnight } as const;
+export const logoColorsFor = { dark: logoOnDark, light: logoOnLight } as const;
+/** Couleurs du logo sur fond nuit (carte de partage, visuels de marque). */
+export const logoColors = logoOnDark;

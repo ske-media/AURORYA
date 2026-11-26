@@ -1,6 +1,6 @@
 // Thème de l'app (SPEC §16, A-005) : tokens typés, StyleSheet, aucun style en dur dans les composants.
 import {
-  BORDER_WIDTH, type ColorScheme, MAX_FONT_SCALE, MIN_TOUCH_TARGET, SCREEN_MARGIN, type TextVariant, type ThemeName,
+  BORDER_WIDTH, type ColorScheme, DEFAULT_THEME, MAX_FONT_SCALE, MIN_TOUCH_TARGET, SCREEN_MARGIN, type TextVariant, type ThemeName,
   colorSchemes, durations, easings, fontFamilies, motion, opacities, radii, spacing, textStyles,
 } from '@aurorya/shared';
 import { type ReactNode, createContext, useContext, useMemo } from 'react';
@@ -43,10 +43,10 @@ const buildTheme = (name: ThemeName): Theme => ({
   screenMargin: SCREEN_MARGIN, borderWidth: BORDER_WIDTH, minTouchTarget: MIN_TOUCH_TARGET, maxFontScale: MAX_FONT_SCALE,
 });
 
-const ThemeContext = createContext<Theme>(buildTheme('dark'));
+const ThemeContext = createContext<Theme>(buildTheme(DEFAULT_THEME));
 
-/** Sombre uniquement au lancement (D-024). Le thème clair s'activera par drapeau distant en V1.1. */
-export function ThemeProvider({ children, name = 'dark' }: { children: ReactNode; name?: ThemeName }) {
+/** Clair par défaut (ADR-032). Le choix du thème par l'utilisatrice viendra avec l'écran Identité visuelle. */
+export function ThemeProvider({ children, name = DEFAULT_THEME }: { children: ReactNode; name?: ThemeName }) {
   const theme = useMemo(() => buildTheme(name), [name]);
   return <ThemeContext.Provider value={theme}>{children}</ThemeContext.Provider>;
 }
