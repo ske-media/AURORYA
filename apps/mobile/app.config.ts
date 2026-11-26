@@ -3,7 +3,7 @@ import type { ConfigContext, ExpoConfig } from 'expo/config';
 
 // Même valeur que palette.midnight (packages/shared) : ce fichier est lu par l'outillage natif,
 // hors du bundle. Un test vérifie que les deux restent identiques.
-const SPLASH_BACKGROUND = '#11121B';
+const SPLASH_BACKGROUND = '#101827';
 
 export default ({ config }: ConfigContext): ExpoConfig => ({
   ...config,

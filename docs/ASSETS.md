@@ -2,8 +2,8 @@
 
 Rapport généré par `pnpm assets:report` à partir de `assets.manifest.json`. Ne pas modifier à la main.
 
-- 126 fichiers au registre : 57 définitifs, 69 provisoires.
-- 62 fichiers provisoires bloquent une mise en production.
+- 126 fichiers au registre : 61 définitifs, 65 provisoires.
+- 58 fichiers provisoires bloquent une mise en production.
 
 ## Livrer un fichier
 
@@ -22,15 +22,6 @@ Rapport généré par `pnpm assets:report` à partir de `assets.manifest.json`. 
 | `brand-wordmark.svg` | 640 × 96 | — | 100 Ko | oui | « AURORYA » vectorisé (Cormorant Garamond 500, interlettrage 0,34 em), une seule couleur. |
 | `brand-lockup-vertical.svg` | 640 × 520 | — | 100 Ko | oui | Symbole au-dessus du nom. |
 | `brand-lockup-horizontal.svg` | 760 × 200 | — | 100 Ko | oui | Symbole à gauche du nom. |
-
-### `apps/mobile/assets/cards/`
-
-| Fichier | Dimensions | Transparence | Poids max. | Bloquant | Contraintes |
-|---|---|---|---|---|---|
-| `card-bg-roast-soft.webp` | 1080 × 1920 | non | 600 Ko | oui | Fond de la carte en mode Lune. Zones du §16.7 laissées calmes. Aucun texte. |
-| `card-bg-roast-cash.webp` | 1080 × 1920 | non | 600 Ko | oui | Fond de la carte en mode Mars. Aucun texte. |
-| `card-bg-roast-expert.webp` | 1080 × 1920 | non | 600 Ko | oui | Fond de la carte en mode Saturne. Aucun texte. |
-| `card-bg-group.webp` | 1080 × 1920 | non | 600 Ko | oui | Fond de la carte de groupe. Aucun texte. |
 
 ### `apps/mobile/assets/icons/`
 
@@ -200,6 +191,10 @@ Rapport généré par `pnpm assets:report` à partir de `assets.manifest.json`. 
 | `apps/mobile/assets/glyphs/modes/glyph-mode-soft.svg` | Création interne (tracés géométriques 24×24) | Création interne | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
 | `apps/mobile/assets/glyphs/modes/glyph-mode-cash.svg` | Création interne (tracés géométriques 24×24) | Création interne | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
 | `apps/mobile/assets/glyphs/modes/glyph-mode-expert.svg` | Création interne (tracés géométriques 24×24) | Création interne | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
+| `apps/mobile/assets/cards/card-bg-roast-soft.webp` | Création interne (scripts/assets/card-backgrounds.ts) | Création interne | Fond de la carte en mode Lune. Zones du §16.7 laissées calmes. Aucun texte. |
+| `apps/mobile/assets/cards/card-bg-roast-cash.webp` | Création interne (scripts/assets/card-backgrounds.ts) | Création interne | Fond de la carte en mode Mars. Aucun texte. |
+| `apps/mobile/assets/cards/card-bg-roast-expert.webp` | Création interne (scripts/assets/card-backgrounds.ts) | Création interne | Fond de la carte en mode Saturne. Aucun texte. |
+| `apps/mobile/assets/cards/card-bg-group.webp` | Création interne (scripts/assets/card-backgrounds.ts) | Création interne | Fond de la carte de groupe. Aucun texte. |
 | `apps/mobile/assets/fonts/CormorantGaramond-Medium.ttf` | https://github.com/CatharsisFonts/Cormorant (fonts/ttf) | OFL-1.1 | Fichier d'origine, non modifié. |
 | `apps/mobile/assets/fonts/CormorantGaramond-MediumItalic.ttf` | https://github.com/CatharsisFonts/Cormorant (fonts/ttf) | OFL-1.1 | Fichier d'origine, non modifié. |
 | `apps/mobile/assets/fonts/Manrope-SemiBold.ttf` | https://github.com/google/fonts (ofl/manrope/Manrope[wght].ttf) | OFL-1.1 | Instance statique wght=600 tirée de la police variable officielle avec fontTools 4.68.0 (aucun fichier statique publié). Récupérée le 2026-11-23. |
