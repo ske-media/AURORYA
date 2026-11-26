@@ -1,7 +1,7 @@
 // Accès au serveur : session Supabase (anonyme d'abord, A-003), lectures directes sous RLS,
 // écritures par l'API uniquement (A-002).
 import {
-  ChartSummariesSchema, ChartSummarySchema, DailyResponseSchema, GroupReadingSchema, GroupSchema, type GroupType, InviteCreatedSchema, InvitePreviewSchema, type PostChartsInput, type ToneMode, type PostRoastsInput, ProfileSchema, type PutProfileInput, RoastResponseSchema, type SectionKey, SectionResponseSchema,
+  ChartSummariesSchema, ChartSummarySchema, DailyResponseSchema, EntitlementStateSchema, GroupReadingSchema, GroupSchema, type GroupType, InviteCreatedSchema, InvitePreviewSchema, type PostChartsInput, type ToneMode, type PostRoastsInput, ProfileSchema, type PutProfileInput, RoastResponseSchema, type SectionKey, SectionResponseSchema,
 } from '@aurorya/shared';
 import { type SupabaseClient, createClient } from '@supabase/supabase-js';
 import * as Application from 'expo-application';
@@ -9,6 +9,7 @@ import { randomUUID } from 'expo-crypto';
 import i18n from 'i18next';
 import { type ApiClient, createApiClient } from './api-client';
 import { type AppEnv, readEnv } from './env';
+import { identifyPurchaser } from './purchases';
 import { secureStorage } from './secure-storage';
 
 export type Backend = Readonly<{ supabase: SupabaseClient; api: ApiClient; env: AppEnv }>;
@@ -36,9 +37,14 @@ export function getBackend(): Backend | null {
 /** Ouvre une session anonyme au premier lancement ; l'identifiant ne changera pas à la création du compte. */
 export async function ensureSession(b: Backend): Promise<void> {
   const { data } = await b.supabase.auth.getSession();
-  if (data.session) return;
-  const { error } = await b.supabase.auth.signInAnonymously();
-  if (error) throw error;
+  let uid = data.session?.user.id ?? null;
+  if (!uid) {
+    const created = await b.supabase.auth.signInAnonymously();
+    if (created.error) throw created.error;
+    uid = created.data.user?.id ?? null;
+  }
+  // Les achats suivent l'identifiant Supabase (SPEC §18.2). Une panne de RevenueCat ne bloque jamais l'app.
+  if (uid) await identifyPurchaser(uid).catch(() => undefined);
 }
 
 export type PlaceResult = Readonly<{ geonameId: number; name: string; admin1Name: string | null; countryCode: string }>;
@@ -49,6 +55,7 @@ export const endpoints = (b: Backend) => ({
   postRoasts: (input: Pick<PostRoastsInput, 'chartId' | 'mode'>) => b.api.request({ method: 'POST', path: '/roasts', body: { ...input, regenerate: false }, output: RoastResponseSchema }),
   getSection: (key: SectionKey, mode: ToneMode) => b.api.request({ method: 'GET', path: `/readings/sections/${key}?mode=${mode}`, output: SectionResponseSchema }),
   getChartSummaries: (mode: ToneMode) => b.api.request({ method: 'GET', path: `/charts/current/summaries?mode=${mode}`, output: ChartSummariesSchema }),
+  refreshEntitlement: () => b.api.request({ method: 'POST', path: '/entitlements/refresh', output: EntitlementStateSchema }),
   getDaily: (date: string, mode: ToneMode) => b.api.request({ method: 'GET', path: `/daily?date=${date}&mode=${mode}`, output: DailyResponseSchema }),
   exportAccount: () => b.api.request({ method: 'POST', path: '/account/export', output: null }),
   deleteAccount: () => b.api.request({ method: 'DELETE', path: '/account', body: { confirm: 'DELETE' }, output: null }),

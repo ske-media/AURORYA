@@ -22,6 +22,8 @@ jobs:
       EXPO_PUBLIC_SUPABASE_URL: https://glvtyivmnrniwguenwaf.supabase.co
       EXPO_PUBLIC_SUPABASE_ANON_KEY: sb_publishable_xBUGPDaBCeq7CIGm7D6QaA_OVdwZX9v
       EXPO_PUBLIC_SITE_HOST: aurorya.vercel.app
+      # Clé publique RevenueCat (variable du dépôt). Vide tant que le compte n'existe pas : le paywall l'annonce.
+      EXPO_PUBLIC_REVENUECAT_IOS_KEY: ${{ vars.EXPO_PUBLIC_REVENUECAT_IOS_KEY }}
       APP_ENV: production
       # Identifiants, pas des secrets : sans le fichier .p8 (secret ASC_KEY_P8), ils n'ouvrent rien.
       APPLE_TEAM_ID: C8T4LVB6QG
@@ -53,8 +55,8 @@ jobs:
       - name: Projet natif iOS
         working-directory: apps/mobile
         run: |
-          printf 'EXPO_PUBLIC_API_BASE_URL=%s\nEXPO_PUBLIC_SUPABASE_URL=%s\nEXPO_PUBLIC_SUPABASE_ANON_KEY=%s\nEXPO_PUBLIC_SITE_HOST=%s\n' \
-            "$EXPO_PUBLIC_API_BASE_URL" "$EXPO_PUBLIC_SUPABASE_URL" "$EXPO_PUBLIC_SUPABASE_ANON_KEY" "$EXPO_PUBLIC_SITE_HOST" > .env
+          printf 'EXPO_PUBLIC_API_BASE_URL=%s\nEXPO_PUBLIC_SUPABASE_URL=%s\nEXPO_PUBLIC_SUPABASE_ANON_KEY=%s\nEXPO_PUBLIC_SITE_HOST=%s\nEXPO_PUBLIC_REVENUECAT_IOS_KEY=%s\n' \
+            "$EXPO_PUBLIC_API_BASE_URL" "$EXPO_PUBLIC_SUPABASE_URL" "$EXPO_PUBLIC_SUPABASE_ANON_KEY" "$EXPO_PUBLIC_SITE_HOST" "$EXPO_PUBLIC_REVENUECAT_IOS_KEY" > .env
           npx expo prebuild --platform ios
       # Archive sans signature : signer ici exigerait un profil de développement, donc un appareil enregistré
       # sur le compte. La signature de distribution est posée à l'étape suivante.

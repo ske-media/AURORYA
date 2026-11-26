@@ -77,7 +77,7 @@ export async function postRevenueCatWebhook(request: Request, deps: AppDeps): Pr
   const { event } = parsed;
   const eventAt = new Date(event.event_timestamp_ms);
   // Les attributs d'abonnée ne sont pas conservés : rien de personnel ne doit dormir dans ce journal.
-  const { subscriber_attributes: _dropped, ...stored } = event as Record<string, unknown>;
+  const stored = Object.fromEntries(Object.entries(event).filter(([key]) => key !== 'subscriber_attributes'));
   const candidates = [event.app_user_id, event.original_app_user_id, ...(event.aliases ?? []), ...(event.transferred_from ?? []), ...(event.transferred_to ?? [])];
   const uids = [...new Set(candidates.filter((id): id is string => typeof id === 'string' && UUID.test(id)).map((id) => id.toLowerCase()))];
 

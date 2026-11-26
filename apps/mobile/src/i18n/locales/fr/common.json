@@ -325,6 +325,11 @@
       "title": "Sons et vibrations",
       "sounds": "Sons",
       "haptics": "Vibrations"
+    },
+    "premium": {
+      "title": "Aurorya Premium",
+      "active": "Ton abonnement est actif. Tu le gères dans les réglages de ton compte Apple.",
+      "inactive": "Thème complet, horoscope personnel et détail de tes groupes."
     }
   },
   "reading": {
@@ -382,7 +387,51 @@
     }
   },
   "paywall": {
-    "unlock": "Débloquer avec Premium",
+    "unlock": "Débloquer Premium",
+    "title": "Le ciel complet de {{name}}",
+    "titleGeneric": "Ton ciel complet",
+    "fromSection": "Pour lire la suite de « {{section}} », et tout le reste.",
+    "benefit": {
+      "reading": "Ton thème complet en huit chapitres : amour, part d’ombre, ambition…",
+      "daily": "Ton horoscope personnel chaque matin, d’après tes vrais transits.",
+      "groups": "Le détail complet de tes groupes (rôles, duos, météo de la semaine), jusqu’à 20 groupes."
+    },
+    "plan": {
+      "annual": {
+        "name": "Annuel",
+        "badge": "Le plus choisi",
+        "price": "{{price}} par an",
+        "equivalent": "Soit l’équivalent de {{price}} par mois, prélevé en une fois par an."
+      },
+      "monthly": {
+        "name": "Mensuel",
+        "price": "{{price}} par mois"
+      }
+    },
+    "cta": {
+      "trial": "Essayer 7 jours gratuitement",
+      "continue": "Continuer"
+    },
+    "reassurance": {
+      "trial": {
+        "annual": "Rien à payer aujourd’hui. Puis {{price}} par an après les 7 jours d’essai. Annulable à tout moment dans les réglages Apple.",
+        "monthly": "Rien à payer aujourd’hui. Puis {{price}} par mois après les 7 jours d’essai. Annulable à tout moment dans les réglages Apple."
+      },
+      "direct": {
+        "annual": "{{price}} par an. Annulable à tout moment dans les réglages Apple.",
+        "monthly": "{{price}} par mois. Annulable à tout moment dans les réglages Apple."
+      }
+    },
+    "restore": "Restaurer mes achats",
+    "terms": "Conditions d’utilisation",
+    "privacy": "Confidentialité",
+    "legal": "L’abonnement se renouvelle automatiquement au même tarif, sauf annulation au moins 24 heures avant la fin de la période en cours. Le paiement est débité sur ton compte Apple. Tu gères et annules ton abonnement dans les réglages de ton compte Apple.",
+    "unavailable": "Les offres ne sont pas disponibles pour l’instant. Réessaie dans un moment.",
+    "notice": {
+      "failed": "L’achat n’a pas abouti. Rien n’a été débité par Aurorya ; tu peux réessayer.",
+      "pending": "Ton achat est enregistré par Apple, mais sa confirmation tarde. Rouvre cet écran dans un instant ou touche « Restaurer mes achats ».",
+      "nothingToRestore": "Aucun abonnement actif n’a été trouvé pour ce compte Apple."
+    },
     "soon": {
       "title": "Aurorya Premium arrive",
       "body": "Les achats ne sont pas encore ouverts dans cette version. Ta lecture gratuite reste entière ; la suite se débloquera ici."
