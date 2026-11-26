@@ -53,7 +53,7 @@ export function RoastCard({ model, onReady, ref }: { model: RoastCardModel; onRe
         <View style={{ position: 'absolute', top: cardPt(CARD.rule.y), left: cardPt(CARD.centerX - CARD.rule.width / 2), width: cardPt(CARD.rule.width), height: 1, backgroundColor: colors.accent }} />
         <View style={{ position: 'absolute', top: cardPt(CARD.modeBadge.y), left: 0, right: 0, flexDirection: 'row', justifyContent: 'center', alignItems: 'center', gap: cardPt(CARD.blocks.labelFontSize) / 2 }}>
           <Canvas style={{ width: badgeGlyphSize, height: badgeGlyphSize }}>
-            {glyph ? <Group transform={[{ scale: badgeGlyphSize / GLYPH_BOX }]}><Path path={glyph} color={colors.accent} /></Group> : null}
+            {glyph ? <Group transform={[{ scale: badgeGlyphSize / GLYPH_BOX }]}><Path path={glyph} color={colors.accent} style="stroke" strokeWidth={1.5} strokeCap="round" strokeJoin="round" /></Group> : null}
           </Canvas>
           <NativeText allowFontScaling={false} style={{ fontFamily: fontFamilies.bodyMedium, fontSize: cardPt(CARD.blocks.labelFontSize), color: colors.accent }}>{model.modeName}</NativeText>
         </View>

@@ -2,8 +2,8 @@
 
 Rapport généré par `pnpm assets:report` à partir de `assets.manifest.json`. Ne pas modifier à la main.
 
-- 126 fichiers au registre : 26 définitifs, 100 provisoires.
-- 93 fichiers provisoires bloquent une mise en production.
+- 126 fichiers au registre : 57 définitifs, 69 provisoires.
+- 62 fichiers provisoires bloquent une mise en production.
 
 ## Livrer un fichier
 
@@ -31,57 +31,6 @@ Rapport généré par `pnpm assets:report` à partir de `assets.manifest.json`. 
 | `card-bg-roast-cash.webp` | 1080 × 1920 | non | 600 Ko | oui | Fond de la carte en mode Mars. Aucun texte. |
 | `card-bg-roast-expert.webp` | 1080 × 1920 | non | 600 Ko | oui | Fond de la carte en mode Saturne. Aucun texte. |
 | `card-bg-group.webp` | 1080 × 1920 | non | 600 Ko | oui | Fond de la carte de groupe. Aucun texte. |
-
-### `apps/mobile/assets/glyphs/aspects/`
-
-| Fichier | Dimensions | Transparence | Poids max. | Bloquant | Contraintes |
-|---|---|---|---|---|---|
-| `glyph-aspect-conjunction.svg` | 24 × 24 | — | 10 Ko | oui | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
-| `glyph-aspect-opposition.svg` | 24 × 24 | — | 10 Ko | oui | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
-| `glyph-aspect-trine.svg` | 24 × 24 | — | 10 Ko | oui | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
-| `glyph-aspect-square.svg` | 24 × 24 | — | 10 Ko | oui | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
-| `glyph-aspect-sextile.svg` | 24 × 24 | — | 10 Ko | oui | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
-
-### `apps/mobile/assets/glyphs/bodies/`
-
-| Fichier | Dimensions | Transparence | Poids max. | Bloquant | Contraintes |
-|---|---|---|---|---|---|
-| `glyph-body-sun.svg` | 24 × 24 | — | 10 Ko | oui | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
-| `glyph-body-moon.svg` | 24 × 24 | — | 10 Ko | oui | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
-| `glyph-body-mercury.svg` | 24 × 24 | — | 10 Ko | oui | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
-| `glyph-body-venus.svg` | 24 × 24 | — | 10 Ko | oui | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
-| `glyph-body-mars.svg` | 24 × 24 | — | 10 Ko | oui | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
-| `glyph-body-jupiter.svg` | 24 × 24 | — | 10 Ko | oui | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
-| `glyph-body-saturn.svg` | 24 × 24 | — | 10 Ko | oui | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
-| `glyph-body-uranus.svg` | 24 × 24 | — | 10 Ko | oui | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
-| `glyph-body-neptune.svg` | 24 × 24 | — | 10 Ko | oui | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
-| `glyph-body-pluto.svg` | 24 × 24 | — | 10 Ko | oui | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
-| `glyph-body-north-node.svg` | 24 × 24 | — | 10 Ko | oui | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
-
-### `apps/mobile/assets/glyphs/modes/`
-
-| Fichier | Dimensions | Transparence | Poids max. | Bloquant | Contraintes |
-|---|---|---|---|---|---|
-| `glyph-mode-soft.svg` | 24 × 24 | — | 10 Ko | oui | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
-| `glyph-mode-cash.svg` | 24 × 24 | — | 10 Ko | oui | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
-| `glyph-mode-expert.svg` | 24 × 24 | — | 10 Ko | oui | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
-
-### `apps/mobile/assets/glyphs/signs/`
-
-| Fichier | Dimensions | Transparence | Poids max. | Bloquant | Contraintes |
-|---|---|---|---|---|---|
-| `glyph-sign-aries.svg` | 24 × 24 | — | 10 Ko | oui | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
-| `glyph-sign-taurus.svg` | 24 × 24 | — | 10 Ko | oui | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
-| `glyph-sign-gemini.svg` | 24 × 24 | — | 10 Ko | oui | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
-| `glyph-sign-cancer.svg` | 24 × 24 | — | 10 Ko | oui | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
-| `glyph-sign-leo.svg` | 24 × 24 | — | 10 Ko | oui | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
-| `glyph-sign-virgo.svg` | 24 × 24 | — | 10 Ko | oui | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
-| `glyph-sign-libra.svg` | 24 × 24 | — | 10 Ko | oui | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
-| `glyph-sign-scorpio.svg` | 24 × 24 | — | 10 Ko | oui | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
-| `glyph-sign-sagittarius.svg` | 24 × 24 | — | 10 Ko | oui | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
-| `glyph-sign-capricorn.svg` | 24 × 24 | — | 10 Ko | oui | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
-| `glyph-sign-aquarius.svg` | 24 × 24 | — | 10 Ko | oui | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
-| `glyph-sign-pisces.svg` | 24 × 24 | — | 10 Ko | oui | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
 
 ### `apps/mobile/assets/icons/`
 
@@ -220,6 +169,37 @@ Rapport généré par `pnpm assets:report` à partir de `assets.manifest.json`. 
 | `apps/mobile/assets/icons/ui/icon-ui-copy.svg` | https://lucide.dev (paquet lucide-static 1.78.0) | ISC | Trait ramené de 2 à 1,5. Remplaçable. |
 | `apps/mobile/assets/icons/ui/icon-ui-users.svg` | https://lucide.dev (paquet lucide-static 1.78.0) | ISC | Trait ramené de 2 à 1,5. Remplaçable. |
 | `apps/mobile/assets/icons/ui/icon-ui-sparkle.svg` | https://lucide.dev (paquet lucide-static 1.78.0) | ISC | Trait ramené de 2 à 1,5. Remplaçable. |
+| `apps/mobile/assets/glyphs/bodies/glyph-body-sun.svg` | Création interne (tracés géométriques 24×24) | Création interne | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
+| `apps/mobile/assets/glyphs/bodies/glyph-body-moon.svg` | Création interne (tracés géométriques 24×24) | Création interne | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
+| `apps/mobile/assets/glyphs/bodies/glyph-body-mercury.svg` | Création interne (tracés géométriques 24×24) | Création interne | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
+| `apps/mobile/assets/glyphs/bodies/glyph-body-venus.svg` | Création interne (tracés géométriques 24×24) | Création interne | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
+| `apps/mobile/assets/glyphs/bodies/glyph-body-mars.svg` | Création interne (tracés géométriques 24×24) | Création interne | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
+| `apps/mobile/assets/glyphs/bodies/glyph-body-jupiter.svg` | Création interne (tracés géométriques 24×24) | Création interne | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
+| `apps/mobile/assets/glyphs/bodies/glyph-body-saturn.svg` | Création interne (tracés géométriques 24×24) | Création interne | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
+| `apps/mobile/assets/glyphs/bodies/glyph-body-uranus.svg` | Création interne (tracés géométriques 24×24) | Création interne | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
+| `apps/mobile/assets/glyphs/bodies/glyph-body-neptune.svg` | Création interne (tracés géométriques 24×24) | Création interne | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
+| `apps/mobile/assets/glyphs/bodies/glyph-body-pluto.svg` | Création interne (tracés géométriques 24×24) | Création interne | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
+| `apps/mobile/assets/glyphs/bodies/glyph-body-north-node.svg` | Création interne (tracés géométriques 24×24) | Création interne | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
+| `apps/mobile/assets/glyphs/signs/glyph-sign-aries.svg` | Création interne (tracés géométriques 24×24) | Création interne | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
+| `apps/mobile/assets/glyphs/signs/glyph-sign-taurus.svg` | Création interne (tracés géométriques 24×24) | Création interne | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
+| `apps/mobile/assets/glyphs/signs/glyph-sign-gemini.svg` | Création interne (tracés géométriques 24×24) | Création interne | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
+| `apps/mobile/assets/glyphs/signs/glyph-sign-cancer.svg` | Création interne (tracés géométriques 24×24) | Création interne | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
+| `apps/mobile/assets/glyphs/signs/glyph-sign-leo.svg` | Création interne (tracés géométriques 24×24) | Création interne | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
+| `apps/mobile/assets/glyphs/signs/glyph-sign-virgo.svg` | Création interne (tracés géométriques 24×24) | Création interne | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
+| `apps/mobile/assets/glyphs/signs/glyph-sign-libra.svg` | Création interne (tracés géométriques 24×24) | Création interne | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
+| `apps/mobile/assets/glyphs/signs/glyph-sign-scorpio.svg` | Création interne (tracés géométriques 24×24) | Création interne | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
+| `apps/mobile/assets/glyphs/signs/glyph-sign-sagittarius.svg` | Création interne (tracés géométriques 24×24) | Création interne | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
+| `apps/mobile/assets/glyphs/signs/glyph-sign-capricorn.svg` | Création interne (tracés géométriques 24×24) | Création interne | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
+| `apps/mobile/assets/glyphs/signs/glyph-sign-aquarius.svg` | Création interne (tracés géométriques 24×24) | Création interne | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
+| `apps/mobile/assets/glyphs/signs/glyph-sign-pisces.svg` | Création interne (tracés géométriques 24×24) | Création interne | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
+| `apps/mobile/assets/glyphs/aspects/glyph-aspect-conjunction.svg` | Création interne (tracés géométriques 24×24) | Création interne | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
+| `apps/mobile/assets/glyphs/aspects/glyph-aspect-opposition.svg` | Création interne (tracés géométriques 24×24) | Création interne | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
+| `apps/mobile/assets/glyphs/aspects/glyph-aspect-trine.svg` | Création interne (tracés géométriques 24×24) | Création interne | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
+| `apps/mobile/assets/glyphs/aspects/glyph-aspect-square.svg` | Création interne (tracés géométriques 24×24) | Création interne | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
+| `apps/mobile/assets/glyphs/aspects/glyph-aspect-sextile.svg` | Création interne (tracés géométriques 24×24) | Création interne | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
+| `apps/mobile/assets/glyphs/modes/glyph-mode-soft.svg` | Création interne (tracés géométriques 24×24) | Création interne | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
+| `apps/mobile/assets/glyphs/modes/glyph-mode-cash.svg` | Création interne (tracés géométriques 24×24) | Création interne | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
+| `apps/mobile/assets/glyphs/modes/glyph-mode-expert.svg` | Création interne (tracés géométriques 24×24) | Création interne | viewBox 0 0 24 24, un seul <path>, trait seul de 1,5 à extrémités arrondies, sans remplissage, transformation ni style ; marge intérieure de 2. |
 | `apps/mobile/assets/fonts/CormorantGaramond-Medium.ttf` | https://github.com/CatharsisFonts/Cormorant (fonts/ttf) | OFL-1.1 | Fichier d'origine, non modifié. |
 | `apps/mobile/assets/fonts/CormorantGaramond-MediumItalic.ttf` | https://github.com/CatharsisFonts/Cormorant (fonts/ttf) | OFL-1.1 | Fichier d'origine, non modifié. |
 | `apps/mobile/assets/fonts/Manrope-SemiBold.ttf` | https://github.com/google/fonts (ofl/manrope/Manrope[wght].ttf) | OFL-1.1 | Instance statique wght=600 tirée de la police variable officielle avec fontTools 4.68.0 (aucun fichier statique publié). Récupérée le 2026-11-23. |
