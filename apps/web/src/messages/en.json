@@ -1,6 +1,11 @@
 {
-  "brand": { "name": "Aurorya", "tagline": "The sky, unfiltered" },
-  "home": { "aiNotice": "Aurorya’s astrologer is an artificial intelligence. Aurorya is a tool for entertainment and self-reflection." },
+  "brand": {
+    "name": "Aurorya",
+    "tagline": "The sky, unfiltered"
+  },
+  "home": {
+    "aiNotice": "Aurorya’s astrologer is an artificial intelligence. Aurorya is a tool for entertainment and self-reflection."
+  },
   "waitlist": {
     "title": "Hear about the launch",
     "email": "Email address",
@@ -20,5 +25,11 @@
     "open": "Open in the app",
     "howTo": "In the Aurorya app, open “My groups”, then enter this code.",
     "invalid": "This invitation is no longer valid."
+  },
+  "installer": {
+    "title": "Install the test version",
+    "body": "Open in Safari on a registered iPhone. Installing replaces the previous version.",
+    "action": "Install Aurorya",
+    "pageTitle": "Install"
   }
 }
