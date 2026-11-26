@@ -2,7 +2,7 @@
 // Purement décoratif : ne reçoit aucun geste et n'est pas lu par VoiceOver.
 import { Canvas, Fill, Image, RadialGradient, Rect, useImage, vec } from '@shopify/react-native-skia';
 import { StyleSheet, useWindowDimensions } from 'react-native';
-import { getAsset } from '@/assets/registry';
+import { getAsset, isProvisional } from '@/assets/registry';
 import { useTheme } from '@/theme/ThemeProvider';
 
 const NEBULA_RADIUS_RATIO = 0.9;
@@ -10,7 +10,7 @@ const NEBULA_RADIUS_RATIO = 0.9;
 export function Backdrop() {
   const theme = useTheme();
   const { width, height } = useWindowDimensions();
-  const grain = useImage(getAsset('texture-grain'));
+  const grain = useImage(isProvisional('texture-grain') ? null : getAsset('texture-grain'));
   return (
     <Canvas pointerEvents="none" accessible={false} style={StyleSheet.absoluteFill}>
       <Fill color={theme.colors.bg} />

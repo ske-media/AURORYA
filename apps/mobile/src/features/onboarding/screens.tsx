@@ -5,7 +5,7 @@ import { useRouter } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ActivityIndicator, View } from 'react-native';
-import { Banner, Card, Chip, Text, TextField } from '@/components/ui';
+import { Banner, BrandMark, Card, Chip, PhotoHalo, Text, TextField } from '@/components/ui';
 import { type PlaceResult, endpoints, getBackend } from '@/services/backend';
 import { useOnboarding } from '@/store/onboarding';
 import { useTheme } from '@/theme/ThemeProvider';
@@ -24,12 +24,20 @@ const Row = ({ children }: { children: React.ReactNode }) => {
 
 export function WelcomeScreen() {
   const { t } = useTranslation();
+  const theme = useTheme();
   const router = useRouter();
   const { draft, update } = useOnboarding();
   const [touched, setTouched] = useState(false);
   const invalid = touched && draft.firstName.trim().length > 0 && !isFirstNameWellFormed(draft.firstName);
   return (
-    <OnboardingScaffold step="welcome" title={t('onboarding.welcome.title')} subtitle={t('onboarding.welcome.subtitle')}
+    <OnboardingScaffold step="welcome"
+      header={(
+        <View style={{ alignItems: 'center' }}>
+          <PhotoHalo id="photo-scene-welcome" height={theme.spacing.s56 * 3} strength="backdrop" />
+          <BrandMark size={theme.spacing.s56 * 2} />
+        </View>
+      )}
+      title={t('onboarding.welcome.title')} subtitle={t('onboarding.welcome.subtitle')}
       canContinue={isStepComplete('welcome', draft)} onContinue={() => router.push('/birth-date')}>
       <TextField label={t('onboarding.welcome.firstName')} value={draft.firstName} onChangeText={(firstName) => update({ firstName })} onBlur={() => setTouched(true)}
         autoCapitalize="words" autoCorrect={false} maxLength={24} textContentType="givenName" error={invalid ? t('onboarding.welcome.firstNameError') : null} />

@@ -9,3 +9,5 @@ export { TextField, type TextFieldProps } from './TextField';
 export { BlurLock, type BlurLockProps } from './BlurLock';
 export { Icon } from './Icon';
 export { ModeSelector, type ModeSelectorProps } from './ModeSelector';
+export { BrandMark } from './BrandMark';
+export { PhotoHalo } from './PhotoHalo';
