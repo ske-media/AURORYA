@@ -109,7 +109,7 @@ Vérifié à chaque lot, codes de retour lus : `pnpm typecheck`, `pnpm lint`, `p
 - **Lot A1, fait** : palette du cahier dans les tokens (ADR-030), fond d'écran de lancement aligné. Vérifié : typecheck, lint, tests (contraste compris), export iOS. Non vérifié à l'écran.
 - **Lot A1, reste** : grille et rayons, retrait de Manrope, identité visuelle personnelle, logo en mot-symbole, inventaire d'icônes, fichiers définitifs. Lots A2 à A4 : non commencés (plan en SPEC §27.9).
 - Lot 5 de la mission précédente (adaptateur d'IA) : non commencé, fournisseur toujours ouvert. Il est repris par le Lot 2 du nouveau chantier.
-- Fonds de carte : générateur écrit (`scripts/assets/card-backgrounds.ts`), fichiers **non installés** ; les gabarits provisoires restent en place jusqu'à la nouvelle palette.
+- Fonds de carte : les quatre fichiers définitifs sont installés, aux couleurs du cahier, et promus au registre (`assets:check --promote` : 126 fichiers conformes, 65 encore provisoires). Planche validée par le fondateur avant la nouvelle palette ; rendu sur la carte non revu à l'écran.
 
 ## Compte Apple (2026-11-24)
 - Clé d'API App Store Connect fournie par un fondateur et vérifiée en lecture. Identifiant d'app `com.aurorya.app` **enregistré chez Apple** (définitif), avec l'accord du fondateur par questionnaire.
