@@ -1,9 +1,11 @@
-// Typographie (SPEC §16.3). Un seul composant `Text` consomme ces styles via `variant`.
+// Typographie (SPEC §16.3, §27.5). Deux familles au plus : Cormorant Garamond pour l'éditorial, Inter pour l'interface.
+// Un seul composant `Text` consomme ces styles via `variant`.
 
 export const fontFamilies = {
   serif: 'CormorantGaramond-Medium',
   serifItalic: 'CormorantGaramond-MediumItalic',
-  heading: 'Manrope-SemiBold',
+  // Titres fonctionnels, boutons, étiquettes : Inter Medium depuis le retrait de Manrope (ADR-031).
+  heading: 'Inter-Medium',
   body: 'Inter-Regular',
   bodyMedium: 'Inter-Medium',
 } as const;

@@ -27,7 +27,6 @@ export default function RootLayout() {
   const [loaded, error] = useFonts({
     [fontFamilies.serif]: getAsset('CormorantGaramond-Medium'),
     [fontFamilies.serifItalic]: getAsset('CormorantGaramond-MediumItalic'),
-    [fontFamilies.heading]: getAsset('Manrope-SemiBold'),
     [fontFamilies.body]: getAsset('Inter-Regular'),
     [fontFamilies.bodyMedium]: getAsset('Inter-Medium'),
   });

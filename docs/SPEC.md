@@ -1025,7 +1025,7 @@ Conséquence : les tables n'ont **aucune politique d'écriture** pour les rôles
 | Tests | Vitest ; React Native Testing Library ; Maestro (parcours) | |
 | CI/CD | GitHub Actions ; EAS Build et Submit | |
 
-Polices : Cormorant Garamond, Manrope, Inter, intégrées localement avec leurs fichiers de licence (§17.5).
+Polices : Cormorant Garamond et Inter, intégrées localement avec leurs fichiers de licence (§17.5).
 
 ---
 
@@ -2285,8 +2285,8 @@ Les valeurs du thème clair sont une proposition : elles ne sont validées que s
 | `title2` | Cormorant Garamond | 500 | 26 / 32 | titres de section |
 | `punchline` | Cormorant Garamond | 500 | 24 / 32 | punchlines dans l'app |
 | `quote` | Cormorant Garamond | 500 italique | 20 / 28 | accroches |
-| `heading` | Manrope | 600 | 18 / 24 | titres fonctionnels, boutons |
-| `label` | Manrope | 600 | 12 / 16, capitales, interlettrage 0,14 em | étiquettes, placements |
+| `heading` | Inter | 500 | 18 / 24 | titres fonctionnels, boutons |
+| `label` | Inter | 500 | 12 / 16, capitales, interlettrage 0,14 em | étiquettes, placements |
 | `body` | Inter | 400 | 16 / 24 | texte courant |
 | `bodySmall` | Inter | 400 | 14 / 20 | secondaire |
 | `caption` | Inter | 500 | 12 / 16 | mentions |
@@ -2495,7 +2495,7 @@ Aucun texte dans ces images. Les mêmes fonds servent au rendu serveur des carte
 
 ### Polices — `fonts/`
 
-`CormorantGaramond-Medium.ttf`, `CormorantGaramond-MediumItalic.ttf`, `Manrope-SemiBold.ttf`, `Inter-Regular.ttf`, `Inter-Medium.ttf` — fichiers réels, téléchargés depuis leur source officielle au ticket T-002, avec le fichier de licence de chacune dans `fonts/licenses/`. Licences `[À VÉRIFIER]` avant intégration. Aucune police chargée depuis le réseau dans l'app.
+`CormorantGaramond-Medium.ttf`, `CormorantGaramond-MediumItalic.ttf`, `Inter-Regular.ttf`, `Inter-Medium.ttf` — fichiers réels, téléchargés depuis leur source officielle au ticket T-002, avec le fichier de licence de chacune dans `fonts/licenses/`. Licences `[À VÉRIFIER]` avant intégration. Aucune police chargée depuis le réseau dans l'app.
 
 ### Site — `apps/web/public/`
 
@@ -3291,7 +3291,7 @@ Ce document est la référence. Toute évolution passe par une entrée de `docs/
 | Alert Coral | `#C96F68` | erreur ou attention, jamais décoratif |
 - Les teintes dérivées (surface relevée, bordure, fond nébuleux) sont définies dans `packages/shared/src/tokens/colors.ts` et tenues par le test de contraste (WCAG AA, 4,5:1 pour le texte courant).
 - Proportions visées : 65 % de fonds, 20 % de surfaces, 10 % de texte, 5 % d'accents. Le doré ne sert pas au petit texte courant si le contraste est insuffisant.
-- Grille de 4 pt ; espacements 4, 8, 12, 16, 24, 32, 48 ; rayons 8 (contrôles), 14 à 18 (cartes), 24 (surfaces éditoriales) ; **deux familles de polices au plus** : Cormorant Garamond et Inter (Manrope est à retirer).
+- Grille de 4 pt ; espacements 4, 8, 12, 16, 24, 32, 48 ; rayons 8 (contrôles), 14 à 18 (cartes), 24 (surfaces éditoriales) ; **deux familles de polices au plus** : Cormorant Garamond et Inter (Manrope retirée, ADR-031).
 - Logo : mot-symbole « Aurorya », A majuscule avec étoile intégrée, quatre versions (doré sur nuit, ivoire sur nuit, nuit sur clair, monochrome). Remplace l'Annexe C quand les fichiers définitifs sont livrés ; d'ici là l'Annexe C reste en vigueur.
 - Identité visuelle personnelle : module déterministe et versionné qui transforme des facteurs du thème en tokens (élément dominant → famille de couleurs ; planète dominante → accent ; polarité → intensité ; saison → motif discret). Réglage d'intensité, et retour possible au thème de contraste accessible. L'IA n'intervient pas.
 

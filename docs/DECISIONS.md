@@ -269,3 +269,7 @@ Validé par : fondateur (demande d'une autre voie, puis d'un lien), mise en œuv
 - **Teintes dérivées, choisies par le développeur** (le cahier ne les donne pas) : surface relevée `#1F2E48`, bordure `#2C3A54`, fond nébuleux `#131C30` et `#2A3558` (bleus profonds à la place du violet d'ADR-007). Le rose des aspects tendus, le champagne clair et les teintes du thème clair sont conservés.
 - **Vérifié** : test de contraste vert sur les deux thèmes.
 - **Reste à aligner** : couleurs du logo (Annexe C), fichiers d'image provisoires, espacements 20 et 40 hors de l'échelle du cahier, retrait de Manrope.
+
+## ADR-031 — Retrait de Manrope : deux familles de polices (2026-11-26)
+- **Décision** : conformément au cahier (§12.5, « jamais plus de deux familles »), les styles `heading` et `label` passent de Manrope 600 à **Inter 500** (`Inter-Medium`, déjà embarquée). Le fichier Manrope, sa licence et son entrée de registre sont supprimés.
+- **Conséquence** : titres fonctionnels, boutons et étiquettes sont un peu moins gras. Si le rendu manque de présence à l'écran, ajouter `Inter-SemiBold` au registre (nouveau fichier, à valider).
