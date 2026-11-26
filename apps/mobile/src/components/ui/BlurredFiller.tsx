@@ -17,12 +17,17 @@ export function BlurredFiller() {
   const paragraph = useMemo(() => {
     if (width === 0) return null;
     const { fontSize, lineHeight } = textStyles.body;
-    const built = Skia.ParagraphBuilder.Make({})
-      .pushStyle({ color: Skia.Color(theme.colors.textSecondary), fontSize, heightMultiplier: lineHeight / fontSize })
-      .addText(Array.from({ length: FILLER_REPEATS }, () => t('ui.blurFiller')).join(' '))
-      .build();
-    built.layout(width);
-    return built;
+    // Sans moteur de texte disponible, le verrou s'affiche sans son faux texte plutôt que de faire tomber l'écran.
+    try {
+      const built = Skia.ParagraphBuilder.Make({})
+        .pushStyle({ color: Skia.Color(theme.colors.textSecondary), fontSize, heightMultiplier: lineHeight / fontSize })
+        .addText(Array.from({ length: FILLER_REPEATS }, () => t('ui.blurFiller')).join(' '))
+        .build();
+      built.layout(width);
+      return built;
+    } catch {
+      return null;
+    }
   }, [width, theme, t]);
 
   return (

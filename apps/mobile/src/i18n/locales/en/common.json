@@ -39,7 +39,12 @@
         "body": "Check your connection, then try again."
       },
       "noHoroscope": "Your sign’s horoscope is not ready for today yet."
-    }
+    },
+    "personalLabel": "Your personal horoscope",
+    "personalHeadline": "Today for you: {{headline}}",
+    "personalTeaser": "The reading of this transit, written for your chart, is part of Aurorya Premium.",
+    "personalEmpty": "No major transit today: a quiet day in your sky.",
+    "fallbackNote": "While today’s reading is being written, here is what your sign carries."
   },
   "sky": {
     "title": "My sky",
@@ -70,7 +75,13 @@
       "trine": "Trine",
       "square": "Square",
       "sextile": "Sextile"
-    }
+    },
+    "deepen": "Go deeper in my reading",
+    "summaryUnavailable": "The interpretation of this placement is not available yet.",
+    "houseLabel": "{{house}} · {{degrees}}",
+    "acLabel": "AC",
+    "mcLabel": "MC",
+    "aspectsLabel": "Its aspects"
   },
   "groups": {
     "title": "My groups",
@@ -126,7 +137,8 @@
       "unavailable": "This group’s reading is not available yet.",
       "leave": "Leave the group",
       "open": "Open"
-    }
+    },
+    "lockedTeaser": "The detail of each role and each duo is part of Aurorya Premium."
   },
   "common": {
     "retry": "Try again",
@@ -340,7 +352,9 @@
         "title": "Your reading is not ready yet",
         "body": "It will open as soon as your card is written in this tone."
       }
-    }
+    },
+    "premiumBadge": "Premium",
+    "lockedTeaser": "The rest of this chapter, written for your chart, is part of Aurorya Premium."
   },
   "ui": {
     "blurFiller": "This passage stays reserved. It tells what your sky says here, what carries you and what holds you back, in the words of the tone you chose."
@@ -357,13 +371,21 @@
     "notice": {
       "saved": "Image saved to your photos.",
       "denied": "Aurorya is not allowed to add an image to your photos. You can allow it in iOS settings.",
-      "failed": "The card could not be prepared. Try again in a moment."
+      "failed": "The card could not be prepared. Try again in a moment.",
+      "modeUnavailable": "This tone isn’t available right now. Try again in a moment."
     },
     "state": {
       "empty": {
         "title": "No card yet",
         "body": "Your card will appear here as soon as your reading is written."
       }
+    }
+  },
+  "paywall": {
+    "unlock": "Unlock with Premium",
+    "soon": {
+      "title": "Aurorya Premium is coming",
+      "body": "Purchases aren’t open in this version yet. Your free reading stays whole; the rest will unlock here."
     }
   }
 }

@@ -6,6 +6,9 @@ import { secureStorage } from '@/services/secure-storage';
 type PreferencesState = {
   soundsEnabled: boolean;
   hapticsEnabled: boolean;
+  /** Date du premier paywall affiché après le roast (D-021) : il ne s'ouvre seul qu'une fois. */
+  firstPaywallShownAt: string | null;
+  markFirstPaywallShown: () => void;
   setSoundsEnabled: (value: boolean) => void;
   setHapticsEnabled: (value: boolean) => void;
 };
@@ -15,6 +18,8 @@ export const usePreferences = create<PreferencesState>()(
     (set) => ({
       soundsEnabled: true,
       hapticsEnabled: true,
+      firstPaywallShownAt: null,
+      markFirstPaywallShown: () => set({ firstPaywallShownAt: new Date().toISOString() }),
       setSoundsEnabled: (soundsEnabled) => set({ soundsEnabled }),
       setHapticsEnabled: (hapticsEnabled) => set({ hapticsEnabled }),
     }),

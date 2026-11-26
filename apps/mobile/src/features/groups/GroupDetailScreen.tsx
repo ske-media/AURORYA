@@ -4,8 +4,10 @@ import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ActivityIndicator, Share } from 'react-native';
-import { Banner, Button, Card, EmptyState, Screen, Text } from '@/components/ui';
+import { ActivityIndicator, Share, View } from 'react-native';
+import type { AssetId } from '@/assets/registry';
+import { Banner, BlurLock, Button, Card, EmptyState, PhotoHalo, Screen, Text } from '@/components/ui';
+import { paywallHref } from '@/features/paywall/open-paywall';
 import { endpoints, ensureSession, getBackend } from '@/services/backend';
 import { NotConfiguredError } from '@/services/query';
 import { useOnboarding } from '@/store/onboarding';
@@ -82,8 +84,11 @@ export function GroupDetailScreen() {
   const nameOf = (uid: string): string => group.data?.members.find((m) => m.user_id === uid)?.display_name ?? '';
   return (
     <Screen>
-      <Text variant="title1" accessibilityRole="header">{group.data.info.name}</Text>
-      <Text variant="label" color="accent">{t(`groups.create.type.${group.data.info.type}`)} · {t('groups.detail.members', { count: memberCount })}</Text>
+      <View style={{ gap: theme.spacing.s8, paddingVertical: theme.spacing.s16 }}>
+        <PhotoHalo id={`photo-group-${group.data.info.type}` as AssetId} height={theme.spacing.s56 * 2} strength="backdrop" />
+        <Text variant="title1" accessibilityRole="header">{group.data.info.name}</Text>
+        <Text variant="label" color="accent">{t(`groups.create.type.${group.data.info.type}`)} · {t('groups.detail.members', { count: memberCount })}</Text>
+      </View>
       {failed ? <Banner message={t('groups.error.generic')} /> : null}
       <Button label={t('groups.detail.invite')} onPress={() => void invite()} loading={busy} />
       {memberCount < 2 ? <Card><Text color="textSecondary">{t('groups.detail.needTwo')}</Text></Card> : null}
@@ -97,6 +102,7 @@ export function GroupDetailScreen() {
               <Text variant="label" color="accent">{role.displayName}</Text>
               <Text variant="title2">{role.label}</Text>
               {role.line ? <Text>{role.line}</Text> : null}
+              {role.detail ? <Text color="textSecondary">{role.detail}</Text> : null}
             </Card>
           ))}
           <Text variant="heading">{t('groups.detail.duos')}</Text>
@@ -105,8 +111,12 @@ export function GroupDetailScreen() {
               <Text variant="label" color="accent">{t(`groups.detail.${duo.kind}`)}</Text>
               <Text variant="title2">{t('groups.detail.and', { a: nameOf(duo.a), b: nameOf(duo.b) })}</Text>
               {duo.line ? <Text>{duo.line}</Text> : null}
+              {duo.detail ? <Text color="textSecondary">{duo.detail}</Text> : null}
             </Card>
           ))}
+          {/* Le détail n'arrive jamais sans le droit : c'est le serveur qui le retient (ADR-020). */}
+          {reading.data.roles.some((r) => r.locked) || reading.data.duos.some((d) => d.locked)
+            ? <BlurLock message={t('groups.lockedTeaser')} actionLabel={t('paywall.unlock')} onPress={() => router.push(paywallHref('group'))} /> : null}
         </>
       ) : null}
       <Button variant="ghost" label={t('groups.detail.leave')} onPress={() => void leave()} disabled={busy} />
